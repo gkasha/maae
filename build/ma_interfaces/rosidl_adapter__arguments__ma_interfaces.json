@@ -1,0 +1,16 @@
+{
+  "package_name": "ma_interfaces",
+  "non_idl_tuples": [
+    "/home/gkasha/Documents/maae/src/ma_interfaces:msg/AuctionMsg.msg",
+    "/home/gkasha/Documents/maae/src/ma_interfaces:msg/Node.msg",
+    "/home/gkasha/Documents/maae/src/ma_interfaces:msg/Bid.msg",
+    "/home/gkasha/Documents/maae/src/ma_interfaces:msg/Task.msg",
+    "/home/gkasha/Documents/maae/src/ma_interfaces:msg/Goal.msg",
+    "/home/gkasha/Documents/maae/src/ma_interfaces:srv/Register.srv",
+    "/home/gkasha/Documents/maae/src/ma_interfaces:srv/AuctionSrv.srv",
+    "/home/gkasha/Documents/maae/src/ma_interfaces:srv/AuctionResult.srv",
+    "/home/gkasha/Documents/maae/src/ma_interfaces:srv/GetGoal.srv",
+    "/home/gkasha/Documents/maae/src/ma_interfaces:srv/GetBid.srv",
+    "/home/gkasha/Documents/maae/src/ma_interfaces:srv/AddGoal.srv"
+  ]
+}

@@ -1,0 +1,7 @@
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In function ‘[01m[Kvoid start_auction(std::shared_ptr<ma_interfaces::srv::AuctionSrv_Request_<std::allocator<void> > >, std::shared_ptr<ma_interfaces::srv::AuctionSrv_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:70:72:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktmp_req[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   70 |         [01;35m[Kconst std::shared_ptr<ma_interfaces::srv::AuctionSrv::Request> tmp_req[m[K,
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:71:67:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktmp_rep[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   71 |         [01;35m[Kstd::shared_ptr<ma_interfaces::srv::AuctionSrv::Response> tmp_rep[m[K)
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K

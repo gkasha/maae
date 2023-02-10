@@ -1,0 +1,33 @@
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In function ‘[01m[Kvoid send_auction_result(std::shared_ptr<ma_interfaces::srv::AuctionResult_Request_<std::allocator<void> > >, std::shared_ptr<ma_interfaces::srv::AuctionResult_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:92:70:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krep[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   92 |         [01;35m[Kstd::shared_ptr<ma_interfaces::srv::AuctionResult::Response> rep[m[K)
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In function ‘[01m[Kvoid publish_auction_winner(std::shared_ptr<rclcpp::Node>, ma_interfaces::msg::Task, std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > >, ma_interfaces::msg::Bid)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:215:98:[m[K [01;31m[Kerror: [m[K‘[01m[Kb[m[K’ was not declared in this scope
+  215 |             client_node->create_client<ma_interfaces::srv::AuctionResult>("send_auction_result_"+[01;31m[Kb[m[K.id);
+      |                                                                                                  [01;31m[K^[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/build/rclcpp/include/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:231:91:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct ma_interfaces::msg::Bid_<std::allocator<void> >[m[K’ has no member named ‘[01m[Ki[m[K’; did you mean ‘[01m[Kid[m[K’?
+  231 |             RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Failed to send result to %d", bid.[01;31m[Ki[m[K);
+      |                                                                                           [01;31m[K^[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In function ‘[01m[Kvoid start_auction(std::shared_ptr<ma_interfaces::srv::AuctionSrv_Request_<std::allocator<void> > >, std::shared_ptr<ma_interfaces::srv::AuctionSrv_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:239:72:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktmp_req[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  239 |         [01;35m[Kconst std::shared_ptr<ma_interfaces::srv::AuctionSrv::Request> tmp_req[m[K,
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:240:67:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktmp_rep[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  240 |         [01;35m[Kstd::shared_ptr<ma_interfaces::srv::AuctionSrv::Response> tmp_rep[m[K)
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/agent.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,3 @@
+
+#Describes outcome
+string status

@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from ma_interfaces/msg/Node.msg
+// generated code does not contain a copyright notice
+
+
+module ma_interfaces {
+  module msg {
+    struct Node {
+      string name;
+
+      sequence<string> children;
+
+      string next;
+
+      double value;
+    };
+  };
+};

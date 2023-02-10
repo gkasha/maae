@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from ma_interfaces/srv/AuctionSrv.srv
+// generated code does not contain a copyright notice
+
+
+module ma_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "Task id/name")
+    struct AuctionSrv_Request {
+      string name;
+    };
+    @verbatim (language="comment", text=
+      "Describes outcome")
+    struct AuctionSrv_Response {
+      string status;
+    };
+  };
+};

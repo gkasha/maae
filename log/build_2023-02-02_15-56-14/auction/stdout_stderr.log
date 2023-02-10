@@ -1,0 +1,142 @@
+-- Found ament_cmake: 1.3.3 (/home/gkasha/ros2_humble/install/ament_cmake/share/ament_cmake/cmake)
+-- Found rclcpp: 16.0.3 (/home/gkasha/ros2_humble/install/rclcpp/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.4 (/home/gkasha/ros2_humble/install/rosidl_generator_c/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.4 (/home/gkasha/ros2_humble/install/rosidl_adapter/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.4 (/home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_introspection_c;rosidl_typesupport_fastrtps_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp;rosidl_typesupport_fastrtps_cpp
+-- Found rmw_implementation_cmake: 6.1.1 (/home/gkasha/ros2_humble/install/rmw_implementation_cmake/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.2 (/home/gkasha/ros2_humble/install/rmw_fastrtps_cpp/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found ma_interfaces: 0.0.0 (/home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake)
+-- Found ament_lint_auto: 0.12.5 (/home/gkasha/ros2_humble/install/ament_lint_auto/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: 
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/gkasha/Documents/maae/build/auction
+[35m[1mConsolidate compiler generated dependencies of target server[0m
+[35m[1mConsolidate compiler generated dependencies of target agent[0m
+[35m[1mConsolidate compiler generated dependencies of target goal_manager[0m
+[35m[1mConsolidate compiler generated dependencies of target client[0m
+[ 12%] [32mBuilding CXX object CMakeFiles/server.dir/src/auctioneer.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/agent.dir/src/agent.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/client.dir/src/client.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/goal_manager.dir/src/goal_manager.cpp.o[0m
+In file included from [01m[K/home/gkasha/ros2_humble/build/rclcpp/include/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In function ‘[01m[Kvoid get_bid(std::shared_ptr<ma_interfaces::srv::GetBid_Request_<std::allocator<void> > >, std::shared_ptr<ma_interfaces::srv::GetBid_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:36:79:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct ma_interfaces::srv::GetBid_Request_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct ma_interfaces::srv::GetBid_Request_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kname[m[K’
+   36 |     RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Generating a bid for %s", req->[01;31m[Kname[m[K.c_str());
+      |                                                                               [01;31m[K^~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:40:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct ma_interfaces::msg::Bid_<std::allocator<void> >[m[K’ has no member named ‘[01m[Kid[m[K’; did you mean ‘[01m[KBid_[m[K’?
+   40 |     bid.[01;31m[Kid[m[K = master->id_;
+      |         [01;31m[K^~[m[K
+      |         [32m[KBid_[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K At global scope:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:51:51:[m[K [01;31m[Kerror: [m[K‘[01m[KAuctionSrv[m[K’ is not a member of ‘[01m[Kma_interfaces::srv[m[K’
+   51 |         const std::shared_ptr<ma_interfaces::srv::[01;31m[KAuctionSrv[m[K::Request> tmp_req,
+      |                                                   [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:51:70:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   51 |         const std::shared_ptr<ma_interfaces::srv::AuctionSrv::Request[01;31m[K>[m[K tmp_req,
+      |                                                                      [01;31m[K^[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:51:51:[m[K [01;31m[Kerror: [m[K‘[01m[KAuctionSrv[m[K’ is not a member of ‘[01m[Kma_interfaces::srv[m[K’
+   51 |         const std::shared_ptr<ma_interfaces::srv::[01;31m[KAuctionSrv[m[K::Request> tmp_req,
+      |                                                   [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:51:70:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   51 |         const std::shared_ptr<ma_interfaces::srv::AuctionSrv::Request[01;31m[K>[m[K tmp_req,
+      |                                                                      [01;31m[K^[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:51:51:[m[K [01;31m[Kerror: [m[K‘[01m[KAuctionSrv[m[K’ is not a member of ‘[01m[Kma_interfaces::srv[m[K’
+   51 |         const std::shared_ptr<ma_interfaces::srv::[01;31m[KAuctionSrv[m[K::Request> tmp_req,
+      |                                                   [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:51:70:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   51 |         const std::shared_ptr<ma_interfaces::srv::AuctionSrv::Request[01;31m[K>[m[K tmp_req,
+      |                                                                      [01;31m[K^[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:51:15:[m[K [01;31m[Kerror: [m[Kinvalid template-id
+   51 |         const [01;31m[Kstd[m[K::shared_ptr<ma_interfaces::srv::AuctionSrv::Request> tmp_req,
+      |               [01;31m[K^~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:51:51:[m[K [01;31m[Kerror: [m[K‘[01m[KAuctionSrv[m[K’ is not a member of ‘[01m[Kma_interfaces::srv[m[K’
+   51 |         const std::shared_ptr<ma_interfaces::srv::[01;31m[KAuctionSrv[m[K::Request> tmp_req,
+      |                                                   [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:50:6:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kstart_auction[m[K’ declared void
+   50 | void [01;31m[Kstart_auction[m[K(
+      |      [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:51:9:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kconst[m[K’
+   51 |         [01;31m[Kconst[m[K std::shared_ptr<ma_interfaces::srv::AuctionSrv::Request> tmp_req,
+      |         [01;31m[K^~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:52:45:[m[K [01;31m[Kerror: [m[K‘[01m[KAuctionSrv[m[K’ is not a member of ‘[01m[Kma_interfaces::srv[m[K’
+   52 |         std::shared_ptr<ma_interfaces::srv::[01;31m[KAuctionSrv[m[K::Response> tmp_rep)
+      |                                             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:52:65:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   52 |         std::shared_ptr<ma_interfaces::srv::AuctionSrv::Response[01;31m[K>[m[K tmp_rep)
+      |                                                                 [01;31m[K^[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:119:30:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kchar*[m[K’ to ‘[01m[Kint[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  119 |     master = new Agent([01;31m[Kargv[0][m[K);
+      |                        [01;31m[K~~~~~~^[m[K
+      |                              [01;31m[K|[m[K
+      |                              [01;31m[Kchar*[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:16:19:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[KAgent::Agent(int)[m[K’
+   16 |         Agent([01;36m[Kint id[m[K) : Node("agent_server_"+std::to_string(id))
+      |               [01;36m[K~~~~^~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:127:17:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kspin(Agent*&)[m[K’
+  127 |     [01;31m[Krclcpp::spin(master)[m[K;
+      |     [01;31m[K~~~~~~~~~~~~^~~~~~~~[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:45:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rclcpp::spin(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr)[m[K’
+   45 | [01;36m[Kspin[m[K(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr);
+      | [01;36m[K^~~~[m[K
+[01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:45:60:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KAgent*[m[K’ to ‘[01m[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<rclcpp::node_interfaces::NodeBaseInterface>[m[K’}
+   45 | spin([01;36m[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr[m[K);
+      |      [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:49:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rclcpp::spin(rclcpp::Node::SharedPtr)[m[K’
+   49 | [01;36m[Kspin[m[K(rclcpp::Node::SharedPtr node_ptr);
+      | [01;36m[K^~~~[m[K
+[01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:49:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KAgent*[m[K’ to ‘[01m[Krclcpp::Node::SharedPtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<rclcpp::Node>[m[K’}
+   49 | spin([01;36m[Krclcpp::Node::SharedPtr node_ptr[m[K);
+      |      [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/goal_manager.cpp:[m[K In function ‘[01m[Kvoid register_agent(std::shared_ptr<ma_interfaces::srv::Register_Request_<std::allocator<void> > >, std::shared_ptr<ma_interfaces::srv::Register_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/goal_manager.cpp:17:82:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   17 | void register_agent([01;35m[Kconst std::shared_ptr<ma_interfaces::srv::Register::Request> request[m[K,
+      |                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/goal_manager.cpp:[m[K In function ‘[01m[Kvoid get_goal(std::shared_ptr<ma_interfaces::srv::GetGoal_Request_<std::allocator<void> > >, std::shared_ptr<ma_interfaces::srv::GetGoal_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/goal_manager.cpp:31:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   31 | void get_goal([01;35m[Kconst std::shared_ptr<ma_interfaces::srv::GetGoal::Request> request[m[K,
+      |               [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/goal_manager.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/goal_manager.cpp:50:41:[m[K [01;31m[Kerror: [m[K‘[01m[KRegistesr[m[K’ is not a member of ‘[01m[Kma_interfaces::srv[m[K’; did you mean ‘[01m[KRegister[m[K’?
+   50 |     rclcpp::Service<ma_interfaces::srv::[01;31m[KRegistesr[m[K>::SharedPtr register_service =
+      |                                         [01;31m[K^~~~~~~~~[m[K
+      |                                         [32m[KRegister[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/goal_manager.cpp:50:50:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   50 |     rclcpp::Service<ma_interfaces::srv::Registesr[01;31m[K>[m[K::SharedPtr register_service =
+      |                                                  [01;31m[K^[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/goal_manager.cpp:50:63:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kregister_service[m[K’
+   50 |     rclcpp::Service<ma_interfaces::srv::Registesr>::SharedPtr [01;31m[Kregister_service[m[K =
+      |                                                               [01;31m[K^~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/agent.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/goal_manager.dir/build.make:76: CMakeFiles/goal_manager.dir/src/goal_manager.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/goal_manager.dir/all] Error 2
+[ 62%] [32m[1mLinking CXX executable client[0m
+[ 62%] Built target client
+[ 75%] [32m[1mLinking CXX executable server[0m
+[ 75%] Built target server
+gmake: *** [Makefile:146: all] Error 2

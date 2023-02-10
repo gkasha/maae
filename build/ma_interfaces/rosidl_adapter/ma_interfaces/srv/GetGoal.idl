@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from ma_interfaces/srv/GetGoal.srv
+// generated code does not contain a copyright notice
+
+#include "ma_interfaces/msg/Goal.idl"
+
+module ma_interfaces {
+  module srv {
+    struct GetGoal_Request {
+      string id;
+    };
+    struct GetGoal_Response {
+      ma_interfaces::msg::Goal g;
+
+      int64 num_agents;
+    };
+  };
+};

@@ -1,0 +1,4 @@
+source;share/auction/local_setup.bash
+source;share/auction/local_setup.dsv
+source;share/auction/local_setup.sh
+source;share/auction/local_setup.zsh

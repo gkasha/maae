@@ -1,0 +1,77 @@
+[01m[K/home/gkasha/Documents/maae/src/auction/src/auctioneer.cpp:[m[K In member function ‘[01m[Kvoid Auctioneer::start_auction(std::shared_ptr<ma_interfaces::srv::AuctionSrv_Request_<std::allocator<void> > >, std::shared_ptr<ma_interfaces::srv::AuctionSrv_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/auctioneer.cpp:19:76:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreq[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   19 |             [01;35m[Kconst std::shared_ptr<ma_interfaces::srv::AuctionSrv::Request> req[m[K,
+      |             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/client.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/client.cpp:12:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_loggeR[m[K’ is not a member of ‘[01m[Krclcpp[m[K’; did you mean ‘[01m[Kget_logger[m[K’?
+   12 |         RCLCPP_INFO(rclcpp::[01;31m[Kget_loggeR[m[K("rclcpp"), "usage: signal auction X");
+      |                             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/client.cpp:12:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_loggeR[m[K’ is not a member of ‘[01m[Krclcpp[m[K’; did you mean ‘[01m[Kget_logger[m[K’?
+[01m[K/home/gkasha/Documents/maae/src/auction/src/client.cpp:12:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   12 |         [01;31m[KRCLCPP_INFO[m[K(rclcpp::get_loggeR("rclcpp"), "usage: signal auction X");
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/client.cpp:12:9:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   12 |         [01;31m[KRCLCPP_INFO[m[K(rclcpp::get_loggeR("rclcpp"), "usage: signal auction X");
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/client.cpp:12:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   12 |         [01;31m[KRCLCPP_INFO[m[K(rclcpp::get_loggeR("rclcpp"), "usage: signal auction X");
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/client.cpp:12:9:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   12 |         [01;31m[KRCLCPP_INFO[m[K(rclcpp::get_loggeR("rclcpp"), "usage: signal auction X");
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/client.cpp:12:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   12 |         [01;31m[KRCLCPP_INFO[m[K(rclcpp::get_loggeR("rclcpp"), "usage: signal auction X");
+      |         [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/build/rclcpp/include/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/client.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/client.cpp:12:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_loggeR[m[K’ is not a member of ‘[01m[Krclcpp[m[K’; did you mean ‘[01m[Kget_logger[m[K’?
+   12 |         RCLCPP_INFO(rclcpp::[01;31m[Kget_loggeR[m[K("rclcpp"), "usage: signal auction X");
+      |                             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/client.cpp:12:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_loggeR[m[K’ is not a member of ‘[01m[Krclcpp[m[K’; did you mean ‘[01m[Kget_logger[m[K’?
+   12 |         RCLCPP_INFO(rclcpp::[01;31m[Kget_loggeR[m[K("rclcpp"), "usage: signal auction X");
+      |                             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/auctioneer.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/auctioneer.cpp:34:86:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = class rclcpp::Node[m[K’ {aka ‘[01m[Kclass rclcpp::Node[m[K’} has no member named ‘[01m[Kstart_auction[m[K’
+   34 |     node->create_service<ma_interfaces::srv::AuctionSrv>("start_auction", &node->[01;31m[Kstart_auction[m[K);
+      |                                                                                  [01;31m[K^~~~~~~~~~~~~[m[K
+
+[01m[K/home/gkasha/Documents/maae/src/auction/src/client.cpp:22:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct ma_interfaces::srv::AuctionSrv_Request_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct ma_interfaces::srv::AuctionSrv_Request_<std::allocator<void> >[m[K’} has no member named ‘[01m[Ks[m[K’
+   22 |     req->[01;31m[Ks[m[K = argv[1];
+      |          [01;31m[K^[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/client.cpp:24:60:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before numeric constant
+   24 |     while (!client->wait_for_service(std::chrono_literals::[01;31m[K1s[m[K)){
+      |                                                            [01;31m[K^~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/client.cpp:34:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kspin_until_future_compelte[m[K’ is not a member of ‘[01m[Krclcpp[m[K’; did you mean ‘[01m[Kspin_until_future_complete[m[K’?
+   34 |     if (rclcpp::[01;31m[Kspin_until_future_compelte[m[K(node, result) ==
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                 [32m[Kspin_until_future_complete[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/client.cpp:34:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult[m[K’ was not declared in this scope
+   34 |     if (rclcpp::spin_until_future_compelte(node, [01;31m[Kresult[m[K) ==
+      |                                                  [01;31m[K^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/client.dir/build.make:76: CMakeFiles/client.dir/src/client.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/client.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/server.dir/build.make:76: CMakeFiles/server.dir/src/auctioneer.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/server.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

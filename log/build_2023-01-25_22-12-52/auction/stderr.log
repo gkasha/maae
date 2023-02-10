@@ -1,0 +1,19 @@
+[01m[K/home/gkasha/Documents/maae/src/auction/src/auctioneer.cpp:[m[K In function ‘[01m[Kvoid start_auction(std::shared_ptr<ma_interfaces::srv::AuctionSrv_Request_<std::allocator<void> > >, std::shared_ptr<ma_interfaces::srv::AuctionSrv_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/auctioneer.cpp:28:72:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreq[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   28 |         [01;35m[Kconst std::shared_ptr<ma_interfaces::srv::AuctionSrv::Request> req[m[K,
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/client.cpp:24:60:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before numeric constant
+   24 |     while (!client->wait_for_service(std::chrono_literals::[01;31m[K1s[m[K)){
+      |                                                            [01;31m[K^~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/client.cpp:34:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kspin_until_future_compelte[m[K’ is not a member of ‘[01m[Krclcpp[m[K’; did you mean ‘[01m[Kspin_until_future_complete[m[K’?
+   34 |     if (rclcpp::[01;31m[Kspin_until_future_compelte[m[K(node, result) ==
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                 [32m[Kspin_until_future_complete[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/client.cpp:34:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult[m[K’ was not declared in this scope
+   34 |     if (rclcpp::spin_until_future_compelte(node, [01;31m[Kresult[m[K) ==
+      |                                                  [01;31m[K^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/client.dir/build.make:76: CMakeFiles/client.dir/src/client.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/client.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

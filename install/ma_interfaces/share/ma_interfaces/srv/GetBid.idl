@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from ma_interfaces/srv/GetBid.srv
+// generated code does not contain a copyright notice
+
+#include "ma_interfaces/msg/Bid.idl"
+#include "ma_interfaces/msg/Task.idl"
+
+module ma_interfaces {
+  module srv {
+    struct GetBid_Request {
+      ma_interfaces::msg::Task t;
+    };
+    struct GetBid_Response {
+      ma_interfaces::msg::Bid b;
+    };
+  };
+};

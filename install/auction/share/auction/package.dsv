@@ -1,0 +1,8 @@
+source;share/auction/hook/cmake_prefix_path.ps1
+source;share/auction/hook/cmake_prefix_path.dsv
+source;share/auction/hook/cmake_prefix_path.sh
+source;share/auction/local_setup.bash
+source;share/auction/local_setup.dsv
+source;share/auction/local_setup.ps1
+source;share/auction/local_setup.sh
+source;share/auction/local_setup.zsh

@@ -1,0 +1,13 @@
+/home/gkasha/Documents/maae/build/auction/CMakeFiles/uninstall.dir
+/home/gkasha/Documents/maae/build/auction/CMakeFiles/auction_uninstall.dir
+/home/gkasha/Documents/maae/build/auction/CMakeFiles/server.dir
+/home/gkasha/Documents/maae/build/auction/CMakeFiles/client.dir
+/home/gkasha/Documents/maae/build/auction/CMakeFiles/agent.dir
+/home/gkasha/Documents/maae/build/auction/CMakeFiles/goal_manager.dir
+/home/gkasha/Documents/maae/build/auction/CMakeFiles/test.dir
+/home/gkasha/Documents/maae/build/auction/CMakeFiles/edit_cache.dir
+/home/gkasha/Documents/maae/build/auction/CMakeFiles/rebuild_cache.dir
+/home/gkasha/Documents/maae/build/auction/CMakeFiles/list_install_components.dir
+/home/gkasha/Documents/maae/build/auction/CMakeFiles/install.dir
+/home/gkasha/Documents/maae/build/auction/CMakeFiles/install/local.dir
+/home/gkasha/Documents/maae/build/auction/CMakeFiles/install/strip.dir

@@ -1,0 +1,65 @@
+[35m[1mConsolidate compiler generated dependencies of target agent[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/agent.dir/src/agent.cpp.o[0m
+[ 62%] Built target client
+[ 62%] Built target server
+[ 87%] Built target goal_manager
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In function ‘[01m[Kvoid send_auction_result(std::shared_ptr<ma_interfaces::srv::AuctionResult_Request_<std::allocator<void> > >, std::shared_ptr<ma_interfaces::srv::AuctionResult_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:93:70:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krep[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   93 |         [01;35m[Kstd::shared_ptr<ma_interfaces::srv::AuctionResult::Response> rep[m[K)
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/build/rclcpp/include/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In function ‘[01m[Kvoid publish_auction_winner(std::shared_ptr<rclcpp::Node>, ma_interfaces::msg::Task, std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > >, ma_interfaces::msg::Bid)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:233:56:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 5 has type ‘[01m[Kma_interfaces::msg::Bid_<std::allocator<void> >::_id_type[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  233 |             RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), [01;35m[K"Failed to send result to %d"[m[K, bid.id);
+      |                                                        [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:233:83:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  233 |             RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Failed to send result to [01;36m[K%d[m[K", bid.id);
+      |                                                                                  [01;36m[K~^[m[K
+      |                                                                                   [01;36m[K|[m[K
+      |                                                                                   [01;36m[Kint[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In function ‘[01m[Kvoid start_auction(std::shared_ptr<ma_interfaces::srv::AuctionSrv_Request_<std::allocator<void> > >, std::shared_ptr<ma_interfaces::srv::AuctionSrv_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:266:9:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kstatus[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  266 |     int [01;35m[Kstatus[m[K = 0;
+      |         [01;35m[K^~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:241:72:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktmp_req[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  241 |         [01;35m[Kconst std::shared_ptr<ma_interfaces::srv::AuctionSrv::Request> tmp_req[m[K,
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:242:67:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktmp_rep[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  242 |         [01;35m[Kstd::shared_ptr<ma_interfaces::srv::AuctionSrv::Response> tmp_rep[m[K)
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In function ‘[01m[Kvoid send_auction_result(std::shared_ptr<ma_interfaces::srv::AuctionResult_Request_<std::allocator<void> > >, std::shared_ptr<ma_interfaces::srv::AuctionResult_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:106:17:[m[K [01;35m[Kwarning: [m[K‘[01m[Kprev[m[K’ may be used uninitialized [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmaybe-uninitialized-Wmaybe-uninitialized]8;;[m[K]
+  106 |                 [01;35m[Kif[m[K (prev) {
+      |                 [01;35m[K^~[m[K
+[100%] [32m[1mLinking CXX executable agent[0m
+[100%] Built target agent
+-- Install configuration: ""
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/lib/auction/server
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/lib/auction/client
+-- Installing: /home/gkasha/Documents/maae/install/auction/lib/auction/agent
+-- Set runtime path of "/home/gkasha/Documents/maae/install/auction/lib/auction/agent" to ""
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/lib/auction/goal_manager
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/share/ament_index/resource_index/package_run_dependencies/auction
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/share/ament_index/resource_index/parent_prefix_path/auction
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/share/auction/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/share/auction/environment/path.dsv
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/share/auction/local_setup.bash
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/share/auction/local_setup.sh
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/share/auction/local_setup.zsh
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/share/auction/local_setup.dsv
+-- Installing: /home/gkasha/Documents/maae/install/auction/share/auction/package.dsv
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/share/ament_index/resource_index/packages/auction
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/share/auction/cmake/auctionConfig.cmake
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/share/auction/cmake/auctionConfig-version.cmake
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/share/auction/package.xml

@@ -1,0 +1,11 @@
+/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:msg/AuctionMsg.idl
+/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:msg/Node.idl
+/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:msg/Bid.idl
+/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:msg/Task.idl
+/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:msg/Goal.idl
+/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:srv/Register.idl
+/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:srv/AuctionSrv.idl
+/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:srv/AuctionResult.idl
+/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:srv/GetGoal.idl
+/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:srv/GetBid.idl
+/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:srv/AddGoal.idl

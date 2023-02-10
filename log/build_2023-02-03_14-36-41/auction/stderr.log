@@ -1,0 +1,17 @@
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In function ‘[01m[Kvoid start_auction(std::shared_ptr<ma_interfaces::srv::AuctionSrv_Request_<std::allocator<void> > >, std::shared_ptr<ma_interfaces::srv::AuctionSrv_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:57:72:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktmp_req[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   57 |         [01;35m[Kconst std::shared_ptr<ma_interfaces::srv::AuctionSrv::Request> tmp_req[m[K,
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:58:67:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktmp_rep[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   58 |         [01;35m[Kstd::shared_ptr<ma_interfaces::srv::AuctionSrv::Response> tmp_rep[m[K)
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp: In instantiation of ‘[01m[Krclcpp::FutureReturnCode rclcpp::spin_until_future_complete(std::shared_ptr<_Tp>, const FutureT&, std::chrono::duration<_Rep2, _Period2>) [with NodeT = rclcpp::Client<ma_interfaces::srv::GetGoal>; FutureT = rclcpp::Client<ma_interfaces::srv::GetGoal>::FutureAndRequestId; TimeRepT = long int; TimeT = std::ratio<1, 1000>][m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:79:43:[m[K   required from here
+[01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:122:55:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = class rclcpp::Client<ma_interfaces::srv::GetGoal>[m[K’ {aka ‘[01m[Kclass rclcpp::Client<ma_interfaces::srv::GetGoal>[m[K’} has no member named ‘[01m[Kget_node_base_interface[m[K’
+  122 |   return rclcpp::spin_until_future_complete([01;31m[Knode_ptr->get_node_base_interface[m[K(), future, timeout);
+      |                                             [01;31m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/agent.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

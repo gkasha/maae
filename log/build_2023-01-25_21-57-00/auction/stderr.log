@@ -1,0 +1,19 @@
+[01m[K/home/gkasha/Documents/maae/src/auction/src/client.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Kma_interfaces/srv/AuctionSrv.hpp: No such file or directory
+    2 | #include [01;31m[K"ma_interfaces/srv/AuctionSrv.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/client.dir/build.make:76: CMakeFiles/client.dir/src/client.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/client.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[01m[K/home/gkasha/Documents/maae/src/auction/src/auctioneer.cpp:[m[K In member function ‘[01m[Kvoid Auctioneer::start_auction(std::shared_ptr<ma_interfaces::srv::AuctionSrv_Request_<std::allocator<void> > >, std::shared_ptr<ma_interfaces::srv::AuctionSrv_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/auctioneer.cpp:19:76:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreq[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   19 |             [01;35m[Kconst std::shared_ptr<ma_interfaces::srv::AuctionSrv::Request> req[m[K,
+      |             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/auctioneer.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/auctioneer.cpp:34:86:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = class rclcpp::Node[m[K’ {aka ‘[01m[Kclass rclcpp::Node[m[K’} has no member named ‘[01m[Kstart_auction[m[K’
+   34 |     node->create_service<ma_interfaces::srv::AuctionSrv>("start_auction", &node->[01;31m[Kstart_auction[m[K);
+      |                                                                                  [01;31m[K^~~~~~~~~~~~~[m[K
+
+gmake[2]: *** [CMakeFiles/server.dir/build.make:76: CMakeFiles/server.dir/src/auctioneer.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/server.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

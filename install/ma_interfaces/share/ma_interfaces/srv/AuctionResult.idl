@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from ma_interfaces/srv/AuctionResult.srv
+// generated code does not contain a copyright notice
+
+#include "ma_interfaces/msg/Bid.idl"
+#include "ma_interfaces/msg/Task.idl"
+
+module ma_interfaces {
+  module srv {
+    struct AuctionResult_Request {
+      ma_interfaces::msg::Task t;
+
+      ma_interfaces::msg::Bid b;
+    };
+    struct AuctionResult_Response {
+      uint8 structure_needs_at_least_one_member;
+    };
+  };
+};

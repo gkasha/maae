@@ -1,0 +1,33 @@
+[35m[1mConsolidate compiler generated dependencies of target agent[0m
+[ 25%] Built target server
+[ 50%] Built target client
+[ 75%] Built target goal_manager
+[ 87%] [32mBuilding CXX object CMakeFiles/agent.dir/src/agent.cpp.o[0m
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In function ‘[01m[Kvoid start_auction(std::shared_ptr<ma_interfaces::srv::AuctionSrv_Request_<std::allocator<void> > >, std::shared_ptr<ma_interfaces::srv::AuctionSrv_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:54:72:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktmp_req[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   54 |         [01;35m[Kconst std::shared_ptr<ma_interfaces::srv::AuctionSrv::Request> tmp_req[m[K,
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:55:67:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktmp_rep[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   55 |         [01;35m[Kstd::shared_ptr<ma_interfaces::srv::AuctionSrv::Response> tmp_rep[m[K)
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable agent[0m
+[100%] Built target agent
+-- Install configuration: ""
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/lib/auction/server
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/lib/auction/client
+-- Installing: /home/gkasha/Documents/maae/install/auction/lib/auction/agent
+-- Set runtime path of "/home/gkasha/Documents/maae/install/auction/lib/auction/agent" to ""
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/lib/auction/goal_manager
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/share/ament_index/resource_index/package_run_dependencies/auction
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/share/ament_index/resource_index/parent_prefix_path/auction
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/share/auction/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/share/auction/environment/path.dsv
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/share/auction/local_setup.bash
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/share/auction/local_setup.sh
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/share/auction/local_setup.zsh
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/share/auction/local_setup.dsv
+-- Installing: /home/gkasha/Documents/maae/install/auction/share/auction/package.dsv
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/share/ament_index/resource_index/packages/auction
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/share/auction/cmake/auctionConfig.cmake
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/share/auction/cmake/auctionConfig-version.cmake
+-- Up-to-date: /home/gkasha/Documents/maae/install/auction/share/auction/package.xml

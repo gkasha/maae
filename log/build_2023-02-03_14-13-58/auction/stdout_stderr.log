@@ -1,0 +1,35 @@
+[35m[1mConsolidate compiler generated dependencies of target agent[0m
+[ 25%] Built target server
+[ 50%] Built target client
+[ 62%] [32mBuilding CXX object CMakeFiles/agent.dir/src/agent.cpp.o[0m
+[ 87%] Built target goal_manager
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In constructor ‘[01m[KAgent::Agent(int)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:27:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kmaster[m[K’ was not declared in this scope
+   27 |             [01;31m[Kmaster[m[K->bid_service_ =
+      |             [01;31m[K^~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:28:66:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   28 |                 master->create_service<ma_interfaces::srv::GetBid[01;31m[K>[m[K(
+      |                                                                  [01;31m[K^[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:31:70:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   31 |                 master->create_service<ma_interfaces::srv::AuctionSrv[01;31m[K>[m[K(
+      |                                                                      [01;31m[K^[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::get_bid(std::shared_ptr<ma_interfaces::srv::GetBid_Request_<std::allocator<void> > >, std::shared_ptr<ma_interfaces::srv::GetBid_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:48:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kmaster[m[K’ was not declared in this scope
+   48 |             bid.id = std::to_string([01;31m[Kmaster[m[K->id_);
+      |                                     [01;31m[K^~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::start_auction(std::shared_ptr<ma_interfaces::srv::AuctionSrv_Request_<std::allocator<void> > >, std::shared_ptr<ma_interfaces::srv::AuctionSrv_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:67:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kmaster[m[K’ was not declared in this scope
+   67 |             request->id = [01;31m[Kmaster[m[K->id_;
+      |                           [01;31m[K^~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:103:77:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+  103 |                             master->create_client<ma_interfaces::srv::GetBid[01;31m[K>[m[K("get_bid_"+std::to_string(i));
+      |                                                                             [01;31m[K^[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:59:80:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktmp_req[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   59 |                 [01;35m[Kconst std::shared_ptr<ma_interfaces::srv::AuctionSrv::Request> tmp_req[m[K,
+      |                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:60:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktmp_rep[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   60 |                 [01;35m[Kstd::shared_ptr<ma_interfaces::srv::AuctionSrv::Response> tmp_rep[m[K)
+      |                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/agent.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

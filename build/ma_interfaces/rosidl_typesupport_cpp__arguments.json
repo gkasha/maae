@@ -1,0 +1,37 @@
+{
+  "package_name": "ma_interfaces",
+  "output_dir": "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_cpp/ma_interfaces",
+  "template_dir": "/home/gkasha/ros2_humble/install/rosidl_typesupport_cpp/share/rosidl_typesupport_cpp/resource",
+  "idl_tuples": [
+    "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:msg/AuctionMsg.idl",
+    "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:msg/Node.idl",
+    "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:msg/Bid.idl",
+    "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:msg/Task.idl",
+    "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:msg/Goal.idl",
+    "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:srv/Register.idl",
+    "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:srv/AuctionSrv.idl",
+    "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:srv/AuctionResult.idl",
+    "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:srv/GetGoal.idl",
+    "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:srv/GetBid.idl",
+    "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:srv/AddGoal.idl"
+  ],
+  "target_dependencies": [
+    "/home/gkasha/ros2_humble/install/rosidl_typesupport_cpp/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp",
+    "/home/gkasha/ros2_humble/install/rosidl_typesupport_cpp/local/lib/python3.10/dist-packages/rosidl_typesupport_cpp/__init__.py",
+    "/home/gkasha/ros2_humble/install/rosidl_typesupport_cpp/share/rosidl_typesupport_cpp/resource/action__type_support.cpp.em",
+    "/home/gkasha/ros2_humble/install/rosidl_typesupport_cpp/share/rosidl_typesupport_cpp/resource/idl__type_support.cpp.em",
+    "/home/gkasha/ros2_humble/install/rosidl_typesupport_cpp/share/rosidl_typesupport_cpp/resource/msg__type_support.cpp.em",
+    "/home/gkasha/ros2_humble/install/rosidl_typesupport_cpp/share/rosidl_typesupport_cpp/resource/srv__type_support.cpp.em",
+    "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces/msg/AuctionMsg.idl",
+    "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces/msg/Node.idl",
+    "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces/msg/Bid.idl",
+    "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces/msg/Task.idl",
+    "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces/msg/Goal.idl",
+    "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces/srv/Register.idl",
+    "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces/srv/AuctionSrv.idl",
+    "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces/srv/AuctionResult.idl",
+    "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces/srv/GetGoal.idl",
+    "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces/srv/GetBid.idl",
+    "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces/srv/AddGoal.idl"
+  ]
+}

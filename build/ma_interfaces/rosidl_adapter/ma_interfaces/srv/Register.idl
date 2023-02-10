@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from ma_interfaces/srv/Register.srv
+// generated code does not contain a copyright notice
+
+
+module ma_interfaces {
+  module srv {
+    struct Register_Request {
+      string id;
+    };
+    struct Register_Response {
+      boolean status;
+    };
+  };
+};
