@@ -21,16 +21,32 @@ namespace msg
 namespace builder
 {
 
-class Init_Goal_name
+class Init_Goal_owner
 {
 public:
-  Init_Goal_name()
+  explicit Init_Goal_owner(::ma_interfaces::msg::Goal & msg)
+  : msg_(msg)
+  {}
+  ::ma_interfaces::msg::Goal owner(::ma_interfaces::msg::Goal::_owner_type arg)
+  {
+    msg_.owner = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::ma_interfaces::msg::Goal msg_;
+};
+
+class Init_Goal_id
+{
+public:
+  Init_Goal_id()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::ma_interfaces::msg::Goal name(::ma_interfaces::msg::Goal::_name_type arg)
+  Init_Goal_owner id(::ma_interfaces::msg::Goal::_id_type arg)
   {
-    msg_.name = std::move(arg);
-    return std::move(msg_);
+    msg_.id = std::move(arg);
+    return Init_Goal_owner(msg_);
   }
 
 private:
@@ -48,7 +64,7 @@ template<>
 inline
 auto build<::ma_interfaces::msg::Goal>()
 {
-  return ma_interfaces::msg::builder::Init_Goal_name();
+  return ma_interfaces::msg::builder::Init_Goal_id();
 }
 
 }  // namespace ma_interfaces

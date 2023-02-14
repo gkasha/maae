@@ -619,6 +619,10 @@ CMakeFiles/goal_manager.dir/src/goal_manager.cpp.o: \
  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__struct.hpp \
  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__builder.hpp \
  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__traits.hpp \
+ /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/bid.hpp \
+ /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__struct.hpp \
+ /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__builder.hpp \
+ /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__traits.hpp \
  /usr/include/c++/11/queue /usr/include/c++/11/deque \
  /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
  /usr/include/c++/11/bits/stl_queue.h

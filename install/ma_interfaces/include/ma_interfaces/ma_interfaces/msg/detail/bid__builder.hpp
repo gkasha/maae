@@ -69,15 +69,15 @@ private:
   ::ma_interfaces::msg::Bid msg_;
 };
 
-class Init_Bid_name
+class Init_Bid_auction_id
 {
 public:
-  explicit Init_Bid_name(::ma_interfaces::msg::Bid & msg)
+  explicit Init_Bid_auction_id(::ma_interfaces::msg::Bid & msg)
   : msg_(msg)
   {}
-  Init_Bid_st name(::ma_interfaces::msg::Bid::_name_type arg)
+  Init_Bid_st auction_id(::ma_interfaces::msg::Bid::_auction_id_type arg)
   {
-    msg_.name = std::move(arg);
+    msg_.auction_id = std::move(arg);
     return Init_Bid_st(msg_);
   }
 
@@ -85,16 +85,16 @@ private:
   ::ma_interfaces::msg::Bid msg_;
 };
 
-class Init_Bid_id
+class Init_Bid_agent_id
 {
 public:
-  Init_Bid_id()
+  Init_Bid_agent_id()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_Bid_name id(::ma_interfaces::msg::Bid::_id_type arg)
+  Init_Bid_auction_id agent_id(::ma_interfaces::msg::Bid::_agent_id_type arg)
   {
-    msg_.id = std::move(arg);
-    return Init_Bid_name(msg_);
+    msg_.agent_id = std::move(arg);
+    return Init_Bid_auction_id(msg_);
   }
 
 private:
@@ -112,7 +112,7 @@ template<>
 inline
 auto build<::ma_interfaces::msg::Bid>()
 {
-  return ma_interfaces::msg::builder::Init_Bid_id();
+  return ma_interfaces::msg::builder::Init_Bid_agent_id();
 }
 
 }  // namespace ma_interfaces

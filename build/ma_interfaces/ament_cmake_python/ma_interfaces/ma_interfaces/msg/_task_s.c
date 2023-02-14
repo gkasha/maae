@@ -68,6 +68,24 @@ bool ma_interfaces__msg__task__convert_from_py(PyObject * _pymsg, void * _ros_me
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
+  {  // duration
+    PyObject * field = PyObject_GetAttrString(_pymsg, "duration");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->duration = PyLong_AsLongLong(field);
+    Py_DECREF(field);
+  }
+  {  // value
+    PyObject * field = PyObject_GetAttrString(_pymsg, "value");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->value = PyLong_AsLongLong(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -101,6 +119,28 @@ PyObject * ma_interfaces__msg__task__convert_to_py(void * raw_ros_message)
     }
     {
       int rc = PyObject_SetAttrString(_pymessage, "name", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // duration
+    PyObject * field = NULL;
+    field = PyLong_FromLongLong(ros_message->duration);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "duration", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // value
+    PyObject * field = NULL;
+    field = PyLong_FromLongLong(ros_message->value);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "value", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

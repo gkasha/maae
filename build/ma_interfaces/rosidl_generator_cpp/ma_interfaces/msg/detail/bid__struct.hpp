@@ -38,8 +38,8 @@ struct Bid_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->id = "";
-      this->name = "";
+      this->agent_id = "";
+      this->auction_id = "";
       this->st = 0ll;
       this->et = 0ll;
       this->value = 0ll;
@@ -47,14 +47,14 @@ struct Bid_
   }
 
   explicit Bid_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : id(_alloc),
-    name(_alloc)
+  : agent_id(_alloc),
+    auction_id(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->id = "";
-      this->name = "";
+      this->agent_id = "";
+      this->auction_id = "";
       this->st = 0ll;
       this->et = 0ll;
       this->value = 0ll;
@@ -62,12 +62,12 @@ struct Bid_
   }
 
   // field types and members
-  using _id_type =
+  using _agent_id_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
-  _id_type id;
-  using _name_type =
+  _agent_id_type agent_id;
+  using _auction_id_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
-  _name_type name;
+  _auction_id_type auction_id;
   using _st_type =
     int64_t;
   _st_type st;
@@ -79,16 +79,16 @@ struct Bid_
   _value_type value;
 
   // setters for named parameter idiom
-  Type & set__id(
+  Type & set__agent_id(
     const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
   {
-    this->id = _arg;
+    this->agent_id = _arg;
     return *this;
   }
-  Type & set__name(
+  Type & set__auction_id(
     const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
   {
-    this->name = _arg;
+    this->auction_id = _arg;
     return *this;
   }
   Type & set__st(
@@ -152,10 +152,10 @@ struct Bid_
   // comparison operators
   bool operator==(const Bid_ & other) const
   {
-    if (this->id != other.id) {
+    if (this->agent_id != other.agent_id) {
       return false;
     }
-    if (this->name != other.name) {
+    if (this->auction_id != other.auction_id) {
       return false;
     }
     if (this->st != other.st) {

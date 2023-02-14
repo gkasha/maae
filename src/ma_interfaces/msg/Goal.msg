@@ -1,2 +1,2 @@
-string name
+string id
 string owner

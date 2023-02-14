@@ -34,8 +34,8 @@ extern "C"
 {
 #endif
 
-#include "rosidl_runtime_c/string.h"  // name
-#include "rosidl_runtime_c/string_functions.h"  // name
+#include "rosidl_runtime_c/string.h"  // id, owner
+#include "rosidl_runtime_c/string_functions.h"  // id, owner
 
 // forward declare type support functions
 
@@ -51,9 +51,23 @@ static bool _Goal__cdr_serialize(
     return false;
   }
   const _Goal__ros_msg_type * ros_message = static_cast<const _Goal__ros_msg_type *>(untyped_ros_message);
-  // Field name: name
+  // Field name: id
   {
-    const rosidl_runtime_c__String * str = &ros_message->name;
+    const rosidl_runtime_c__String * str = &ros_message->id;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
+  }
+
+  // Field name: owner
+  {
+    const rosidl_runtime_c__String * str = &ros_message->owner;
     if (str->capacity == 0 || str->capacity <= str->size) {
       fprintf(stderr, "string capacity not greater than size\n");
       return false;
@@ -77,18 +91,34 @@ static bool _Goal__cdr_deserialize(
     return false;
   }
   _Goal__ros_msg_type * ros_message = static_cast<_Goal__ros_msg_type *>(untyped_ros_message);
-  // Field name: name
+  // Field name: id
   {
     std::string tmp;
     cdr >> tmp;
-    if (!ros_message->name.data) {
-      rosidl_runtime_c__String__init(&ros_message->name);
+    if (!ros_message->id.data) {
+      rosidl_runtime_c__String__init(&ros_message->id);
     }
     bool succeeded = rosidl_runtime_c__String__assign(
-      &ros_message->name,
+      &ros_message->id,
       tmp.c_str());
     if (!succeeded) {
-      fprintf(stderr, "failed to assign string into field 'name'\n");
+      fprintf(stderr, "failed to assign string into field 'id'\n");
+      return false;
+    }
+  }
+
+  // Field name: owner
+  {
+    std::string tmp;
+    cdr >> tmp;
+    if (!ros_message->owner.data) {
+      rosidl_runtime_c__String__init(&ros_message->owner);
+    }
+    bool succeeded = rosidl_runtime_c__String__assign(
+      &ros_message->owner,
+      tmp.c_str());
+    if (!succeeded) {
+      fprintf(stderr, "failed to assign string into field 'owner'\n");
       return false;
     }
   }
@@ -110,10 +140,14 @@ size_t get_serialized_size_ma_interfaces__msg__Goal(
   (void)padding;
   (void)wchar_size;
 
-  // field.name name
+  // field.name id
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->name.size + 1);
+    (ros_message->id.size + 1);
+  // field.name owner
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->owner.size + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -141,7 +175,19 @@ size_t max_serialized_size_ma_interfaces__msg__Goal(
   full_bounded = true;
   is_plain = true;
 
-  // member: name
+  // member: id
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+  // member: owner
   {
     size_t array_size = 1;
 

@@ -21,38 +21,19 @@ int main(int argc, char** argv)
         return 1;
     }
     */
-    std::shared_ptr<rclcpp::Node> node = rclcpp::Node::make_shared("goal_client");
-    rclcpp::Client<ma_interfaces::srv::AddGoal>::SharedPtr client = 
-        node->create_client<ma_interfaces::srv::AddGoal>("add_goal");
 
-    int num_tasks = 10;
+    std::shared_ptr<rclcpp::Node> node = rclcpp::Node::make_shared("goal_client");
+    rclcpp::Publisher<ma_interfaces::msg::Goal>::SharedPtr publisher = 
+        node->create_publisher<ma_interfaces::msg::Goal>("add_goals_topic", 10);
+
+    int num_tasks = 1;
 
     for (int i = 0; i < num_tasks; i++) {
-
-
         ma_interfaces::msg::Goal g;
 
-        g.name = "task" + std::to_string(i);
-        auto req = std::make_shared<ma_interfaces::srv::AddGoal::Request>();
-        req->g = g;
-
-        while (!client->wait_for_service(1s)){
-            if (!rclcpp::ok()) {
-                RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Interrupted while waiting");
-                return 0;
-            }
-            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "service not available, waiting again...");
-        }
-
-        auto res = client->async_send_request(req);
-
-        if (rclcpp::spin_until_future_complete(node, res) ==
-                rclcpp::FutureReturnCode::SUCCESS)
-        {
-            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Added goal");
-        } else {
-            RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Failed to call service");
-        }
+        g.id = "task" + std::to_string(i);
+        g.owner = "";
+        publisher->publish(g);
     }
 
     rclcpp::shutdown();

@@ -685,6 +685,10 @@ CMakeFiles/goal_manager.dir/src/goal_manager.cpp.o: /home/gkasha/Documents/maae/
   /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__struct.hpp \
   /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__builder.hpp \
   /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__traits.hpp \
+  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/bid.hpp \
+  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__struct.hpp \
+  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__builder.hpp \
+  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__traits.hpp \
   /usr/include/c++/11/queue \
   /usr/include/c++/11/deque \
   /usr/include/c++/11/bits/stl_deque.h \
@@ -697,6 +701,8 @@ CMakeFiles/goal_manager.dir/src/goal_manager.cpp.o: /home/gkasha/Documents/maae/
 /usr/include/c++/11/bits/stl_deque.h:
 
 /usr/include/c++/11/deque:
+
+/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__builder.hpp:
 
 /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__builder.hpp:
 
@@ -741,6 +747,8 @@ CMakeFiles/goal_manager.dir/src/goal_manager.cpp.o: /home/gkasha/Documents/maae/
 /home/gkasha/ros2_humble/build/rcl_interfaces/rosidl_generator_cpp/rcl_interfaces/srv/detail/list_parameters__builder.hpp:
 
 /home/gkasha/ros2_humble/build/rcl_interfaces/rosidl_generator_cpp/rcl_interfaces/srv/detail/list_parameters__struct.hpp:
+
+/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__traits.hpp:
 
 /home/gkasha/ros2_humble/build/rcl_interfaces/rosidl_generator_cpp/rcl_interfaces/srv/detail/get_parameters__traits.hpp:
 
@@ -863,6 +871,8 @@ CMakeFiles/goal_manager.dir/src/goal_manager.cpp.o: /home/gkasha/Documents/maae/
 /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/is_ros_compatible_type.hpp:
 
 /usr/include/c++/11/queue:
+
+/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__struct.hpp:
 
 /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/get_message_type_support_handle.hpp:
 
@@ -1537,6 +1547,8 @@ CMakeFiles/goal_manager.dir/src/goal_manager.cpp.o: /home/gkasha/Documents/maae/
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
+
+/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/bid.hpp:
 
 /usr/include/c++/11/unordered_set:
 

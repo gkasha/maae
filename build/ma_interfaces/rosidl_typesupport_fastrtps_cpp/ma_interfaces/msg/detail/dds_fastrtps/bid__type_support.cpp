@@ -32,10 +32,10 @@ cdr_serialize(
   const ma_interfaces::msg::Bid & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: id
-  cdr << ros_message.id;
-  // Member: name
-  cdr << ros_message.name;
+  // Member: agent_id
+  cdr << ros_message.agent_id;
+  // Member: auction_id
+  cdr << ros_message.auction_id;
   // Member: st
   cdr << ros_message.st;
   // Member: et
@@ -51,11 +51,11 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   ma_interfaces::msg::Bid & ros_message)
 {
-  // Member: id
-  cdr >> ros_message.id;
+  // Member: agent_id
+  cdr >> ros_message.agent_id;
 
-  // Member: name
-  cdr >> ros_message.name;
+  // Member: auction_id
+  cdr >> ros_message.auction_id;
 
   // Member: st
   cdr >> ros_message.st;
@@ -82,14 +82,14 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: id
+  // Member: agent_id
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.id.size() + 1);
-  // Member: name
+    (ros_message.agent_id.size() + 1);
+  // Member: auction_id
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.name.size() + 1);
+    (ros_message.auction_id.size() + 1);
   // Member: st
   {
     size_t item_size = sizeof(ros_message.st);
@@ -130,7 +130,7 @@ max_serialized_size_Bid(
   is_plain = true;
 
 
-  // Member: id
+  // Member: agent_id
   {
     size_t array_size = 1;
 
@@ -143,7 +143,7 @@ max_serialized_size_Bid(
     }
   }
 
-  // Member: name
+  // Member: auction_id
   {
     size_t array_size = 1;
 

@@ -56,14 +56,20 @@ class Task(metaclass=Metaclass_Task):
 
     __slots__ = [
         '_name',
+        '_duration',
+        '_value',
     ]
 
     _fields_and_field_types = {
         'name': 'string',
+        'duration': 'int64',
+        'value': 'int64',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
+        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -71,6 +77,8 @@ class Task(metaclass=Metaclass_Task):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.name = kwargs.get('name', str())
+        self.duration = kwargs.get('duration', int())
+        self.value = kwargs.get('value', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -103,6 +111,10 @@ class Task(metaclass=Metaclass_Task):
             return False
         if self.name != other.name:
             return False
+        if self.duration != other.duration:
+            return False
+        if self.value != other.value:
+            return False
         return True
 
     @classmethod
@@ -122,3 +134,33 @@ class Task(metaclass=Metaclass_Task):
                 isinstance(value, str), \
                 "The 'name' field must be of type 'str'"
         self._name = value
+
+    @builtins.property
+    def duration(self):
+        """Message field 'duration'."""
+        return self._duration
+
+    @duration.setter
+    def duration(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'duration' field must be of type 'int'"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'duration' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._duration = value
+
+    @builtins.property
+    def value(self):
+        """Message field 'value'."""
+        return self._value
+
+    @value.setter
+    def value(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'value' field must be of type 'int'"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'value' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._value = value

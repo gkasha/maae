@@ -6,9 +6,9 @@
 module ma_interfaces {
   module msg {
     struct Bid {
-      string id;
+      string agent_id;
 
-      string name;
+      string auction_id;
 
       int64 st;
 

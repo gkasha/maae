@@ -57,18 +57,24 @@ class Bid(metaclass=Metaclass_Bid):
     __slots__ = [
         '_id',
         '_name',
-        '_val',
+        '_st',
+        '_et',
+        '_value',
     ]
 
     _fields_and_field_types = {
         'id': 'string',
         'name': 'string',
-        'val': 'int64',
+        'st': 'int64',
+        'et': 'int64',
+        'value': 'int64',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
+        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
     )
 
@@ -78,7 +84,9 @@ class Bid(metaclass=Metaclass_Bid):
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.id = kwargs.get('id', str())
         self.name = kwargs.get('name', str())
-        self.val = kwargs.get('val', int())
+        self.st = kwargs.get('st', int())
+        self.et = kwargs.get('et', int())
+        self.value = kwargs.get('value', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -113,7 +121,11 @@ class Bid(metaclass=Metaclass_Bid):
             return False
         if self.name != other.name:
             return False
-        if self.val != other.val:
+        if self.st != other.st:
+            return False
+        if self.et != other.et:
+            return False
+        if self.value != other.value:
             return False
         return True
 
@@ -149,16 +161,46 @@ class Bid(metaclass=Metaclass_Bid):
         self._name = value
 
     @builtins.property
-    def val(self):
-        """Message field 'val'."""
-        return self._val
+    def st(self):
+        """Message field 'st'."""
+        return self._st
 
-    @val.setter
-    def val(self, value):
+    @st.setter
+    def st(self, value):
         if __debug__:
             assert \
                 isinstance(value, int), \
-                "The 'val' field must be of type 'int'"
+                "The 'st' field must be of type 'int'"
             assert value >= -9223372036854775808 and value < 9223372036854775808, \
-                "The 'val' field must be an integer in [-9223372036854775808, 9223372036854775807]"
-        self._val = value
+                "The 'st' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._st = value
+
+    @builtins.property
+    def et(self):
+        """Message field 'et'."""
+        return self._et
+
+    @et.setter
+    def et(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'et' field must be of type 'int'"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'et' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._et = value
+
+    @builtins.property
+    def value(self):
+        """Message field 'value'."""
+        return self._value
+
+    @value.setter
+    def value(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'value' field must be of type 'int'"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'value' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._value = value

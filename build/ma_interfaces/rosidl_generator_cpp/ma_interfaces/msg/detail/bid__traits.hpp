@@ -25,17 +25,17 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: id
+  // member: agent_id
   {
-    out << "id: ";
-    rosidl_generator_traits::value_to_yaml(msg.id, out);
+    out << "agent_id: ";
+    rosidl_generator_traits::value_to_yaml(msg.agent_id, out);
     out << ", ";
   }
 
-  // member: name
+  // member: auction_id
   {
-    out << "name: ";
-    rosidl_generator_traits::value_to_yaml(msg.name, out);
+    out << "auction_id: ";
+    rosidl_generator_traits::value_to_yaml(msg.auction_id, out);
     out << ", ";
   }
 
@@ -65,23 +65,23 @@ inline void to_block_style_yaml(
   const Bid & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: id
+  // member: agent_id
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "id: ";
-    rosidl_generator_traits::value_to_yaml(msg.id, out);
+    out << "agent_id: ";
+    rosidl_generator_traits::value_to_yaml(msg.agent_id, out);
     out << "\n";
   }
 
-  // member: name
+  // member: auction_id
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "name: ";
-    rosidl_generator_traits::value_to_yaml(msg.name, out);
+    out << "auction_id: ";
+    rosidl_generator_traits::value_to_yaml(msg.auction_id, out);
     out << "\n";
   }
 

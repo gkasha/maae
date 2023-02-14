@@ -18,13 +18,15 @@ extern "C"
 // Constants defined in the message
 
 // Include directives for member types
-// Member 'name'
+// Member 'id'
+// Member 'owner'
 #include "rosidl_runtime_c/string.h"
 
 /// Struct defined in msg/Goal in the package ma_interfaces.
 typedef struct ma_interfaces__msg__Goal
 {
-  rosidl_runtime_c__String name;
+  rosidl_runtime_c__String id;
+  rosidl_runtime_c__String owner;
 } ma_interfaces__msg__Goal;
 
 // Struct for a sequence of ma_interfaces__msg__Goal.

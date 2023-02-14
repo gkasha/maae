@@ -266,6 +266,9 @@ CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_genera
   rosidl_generator_c/ma_interfaces/srv/detail/auction_srv__type_support.h \
   rosidl_generator_c/ma_interfaces/srv/detail/auction_srv__struct.h \
   rosidl_generator_c/ma_interfaces/srv/detail/auction_srv__functions.h \
+  rosidl_generator_c/ma_interfaces/srv/detail/auction_result__type_support.h \
+  rosidl_generator_c/ma_interfaces/srv/detail/auction_result__struct.h \
+  rosidl_generator_c/ma_interfaces/srv/detail/auction_result__functions.h \
   rosidl_generator_c/ma_interfaces/srv/detail/get_goal__type_support.h \
   rosidl_generator_c/ma_interfaces/srv/detail/get_goal__struct.h \
   rosidl_generator_c/ma_interfaces/srv/detail/get_goal__functions.h \
@@ -286,6 +289,10 @@ rosidl_generator_c/ma_interfaces/srv/detail/add_goal__type_support.h:
 rosidl_generator_c/ma_interfaces/srv/detail/get_bid__functions.h:
 
 rosidl_generator_c/ma_interfaces/srv/detail/get_goal__struct.h:
+
+rosidl_generator_c/ma_interfaces/srv/detail/auction_result__struct.h:
+
+rosidl_generator_c/ma_interfaces/srv/detail/auction_result__type_support.h:
 
 rosidl_generator_c/ma_interfaces/srv/detail/auction_srv__struct.h:
 
@@ -416,6 +423,8 @@ rosidl_generator_c/ma_interfaces/srv/detail/auction_srv__functions.h:
 /usr/include/python3.10/methodobject.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+
+rosidl_generator_c/ma_interfaces/srv/detail/auction_result__functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 

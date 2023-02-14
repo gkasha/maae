@@ -13,8 +13,8 @@
 
 
 // Include directives for member types
-// Member `id`
-// Member `name`
+// Member `agent_id`
+// Member `auction_id`
 #include "rosidl_runtime_c/string_functions.h"
 
 #ifdef __cplusplus
@@ -38,14 +38,14 @@ void ma_interfaces__msg__Bid__rosidl_typesupport_introspection_c__Bid_fini_funct
 
 static rosidl_typesupport_introspection_c__MessageMember ma_interfaces__msg__Bid__rosidl_typesupport_introspection_c__Bid_message_member_array[5] = {
   {
-    "id",  // name
+    "agent_id",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(ma_interfaces__msg__Bid, id),  // bytes offset in struct
+    offsetof(ma_interfaces__msg__Bid, agent_id),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -55,14 +55,14 @@ static rosidl_typesupport_introspection_c__MessageMember ma_interfaces__msg__Bid
     NULL  // resize(index) function pointer
   },
   {
-    "name",  // name
+    "auction_id",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(ma_interfaces__msg__Bid, name),  // bytes offset in struct
+    offsetof(ma_interfaces__msg__Bid, auction_id),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer

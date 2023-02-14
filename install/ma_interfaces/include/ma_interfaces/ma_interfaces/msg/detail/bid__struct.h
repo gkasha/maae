@@ -18,15 +18,15 @@ extern "C"
 // Constants defined in the message
 
 // Include directives for member types
-// Member 'id'
-// Member 'name'
+// Member 'agent_id'
+// Member 'auction_id'
 #include "rosidl_runtime_c/string.h"
 
 /// Struct defined in msg/Bid in the package ma_interfaces.
 typedef struct ma_interfaces__msg__Bid
 {
-  rosidl_runtime_c__String id;
-  rosidl_runtime_c__String name;
+  rosidl_runtime_c__String agent_id;
+  rosidl_runtime_c__String auction_id;
   int64_t st;
   int64_t et;
   int64_t value;

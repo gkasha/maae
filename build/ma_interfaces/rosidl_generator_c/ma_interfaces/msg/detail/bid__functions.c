@@ -12,8 +12,8 @@
 
 
 // Include directives for member types
-// Member `id`
-// Member `name`
+// Member `agent_id`
+// Member `auction_id`
 #include "rosidl_runtime_c/string_functions.h"
 
 bool
@@ -22,13 +22,13 @@ ma_interfaces__msg__Bid__init(ma_interfaces__msg__Bid * msg)
   if (!msg) {
     return false;
   }
-  // id
-  if (!rosidl_runtime_c__String__init(&msg->id)) {
+  // agent_id
+  if (!rosidl_runtime_c__String__init(&msg->agent_id)) {
     ma_interfaces__msg__Bid__fini(msg);
     return false;
   }
-  // name
-  if (!rosidl_runtime_c__String__init(&msg->name)) {
+  // auction_id
+  if (!rosidl_runtime_c__String__init(&msg->auction_id)) {
     ma_interfaces__msg__Bid__fini(msg);
     return false;
   }
@@ -44,10 +44,10 @@ ma_interfaces__msg__Bid__fini(ma_interfaces__msg__Bid * msg)
   if (!msg) {
     return;
   }
-  // id
-  rosidl_runtime_c__String__fini(&msg->id);
-  // name
-  rosidl_runtime_c__String__fini(&msg->name);
+  // agent_id
+  rosidl_runtime_c__String__fini(&msg->agent_id);
+  // auction_id
+  rosidl_runtime_c__String__fini(&msg->auction_id);
   // st
   // et
   // value
@@ -59,15 +59,15 @@ ma_interfaces__msg__Bid__are_equal(const ma_interfaces__msg__Bid * lhs, const ma
   if (!lhs || !rhs) {
     return false;
   }
-  // id
+  // agent_id
   if (!rosidl_runtime_c__String__are_equal(
-      &(lhs->id), &(rhs->id)))
+      &(lhs->agent_id), &(rhs->agent_id)))
   {
     return false;
   }
-  // name
+  // auction_id
   if (!rosidl_runtime_c__String__are_equal(
-      &(lhs->name), &(rhs->name)))
+      &(lhs->auction_id), &(rhs->auction_id)))
   {
     return false;
   }
@@ -94,15 +94,15 @@ ma_interfaces__msg__Bid__copy(
   if (!input || !output) {
     return false;
   }
-  // id
+  // agent_id
   if (!rosidl_runtime_c__String__copy(
-      &(input->id), &(output->id)))
+      &(input->agent_id), &(output->agent_id)))
   {
     return false;
   }
-  // name
+  // auction_id
   if (!rosidl_runtime_c__String__copy(
-      &(input->name), &(output->name)))
+      &(input->auction_id), &(output->auction_id)))
   {
     return false;
   }

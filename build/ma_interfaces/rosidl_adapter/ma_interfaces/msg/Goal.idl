@@ -6,7 +6,9 @@
 module ma_interfaces {
   module msg {
     struct Goal {
-      string name;
+      string id;
+
+      string owner;
     };
   };
 };

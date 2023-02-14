@@ -38,30 +38,42 @@ struct Goal_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->name = "";
+      this->id = "";
+      this->owner = "";
     }
   }
 
   explicit Goal_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : name(_alloc)
+  : id(_alloc),
+    owner(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->name = "";
+      this->id = "";
+      this->owner = "";
     }
   }
 
   // field types and members
-  using _name_type =
+  using _id_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
-  _name_type name;
+  _id_type id;
+  using _owner_type =
+    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
+  _owner_type owner;
 
   // setters for named parameter idiom
-  Type & set__name(
+  Type & set__id(
     const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
   {
-    this->name = _arg;
+    this->id = _arg;
+    return *this;
+  }
+  Type & set__owner(
+    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
+  {
+    this->owner = _arg;
     return *this;
   }
 
@@ -107,7 +119,10 @@ struct Goal_
   // comparison operators
   bool operator==(const Goal_ & other) const
   {
-    if (this->name != other.name) {
+    if (this->id != other.id) {
+      return false;
+    }
+    if (this->owner != other.owner) {
       return false;
     }
     return true;

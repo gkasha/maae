@@ -34,8 +34,8 @@ extern "C"
 {
 #endif
 
-#include "rosidl_runtime_c/string.h"  // id, name
-#include "rosidl_runtime_c/string_functions.h"  // id, name
+#include "rosidl_runtime_c/string.h"  // agent_id, auction_id
+#include "rosidl_runtime_c/string_functions.h"  // agent_id, auction_id
 
 // forward declare type support functions
 
@@ -51,9 +51,9 @@ static bool _Bid__cdr_serialize(
     return false;
   }
   const _Bid__ros_msg_type * ros_message = static_cast<const _Bid__ros_msg_type *>(untyped_ros_message);
-  // Field name: id
+  // Field name: agent_id
   {
-    const rosidl_runtime_c__String * str = &ros_message->id;
+    const rosidl_runtime_c__String * str = &ros_message->agent_id;
     if (str->capacity == 0 || str->capacity <= str->size) {
       fprintf(stderr, "string capacity not greater than size\n");
       return false;
@@ -65,9 +65,9 @@ static bool _Bid__cdr_serialize(
     cdr << str->data;
   }
 
-  // Field name: name
+  // Field name: auction_id
   {
-    const rosidl_runtime_c__String * str = &ros_message->name;
+    const rosidl_runtime_c__String * str = &ros_message->auction_id;
     if (str->capacity == 0 || str->capacity <= str->size) {
       fprintf(stderr, "string capacity not greater than size\n");
       return false;
@@ -106,34 +106,34 @@ static bool _Bid__cdr_deserialize(
     return false;
   }
   _Bid__ros_msg_type * ros_message = static_cast<_Bid__ros_msg_type *>(untyped_ros_message);
-  // Field name: id
+  // Field name: agent_id
   {
     std::string tmp;
     cdr >> tmp;
-    if (!ros_message->id.data) {
-      rosidl_runtime_c__String__init(&ros_message->id);
+    if (!ros_message->agent_id.data) {
+      rosidl_runtime_c__String__init(&ros_message->agent_id);
     }
     bool succeeded = rosidl_runtime_c__String__assign(
-      &ros_message->id,
+      &ros_message->agent_id,
       tmp.c_str());
     if (!succeeded) {
-      fprintf(stderr, "failed to assign string into field 'id'\n");
+      fprintf(stderr, "failed to assign string into field 'agent_id'\n");
       return false;
     }
   }
 
-  // Field name: name
+  // Field name: auction_id
   {
     std::string tmp;
     cdr >> tmp;
-    if (!ros_message->name.data) {
-      rosidl_runtime_c__String__init(&ros_message->name);
+    if (!ros_message->auction_id.data) {
+      rosidl_runtime_c__String__init(&ros_message->auction_id);
     }
     bool succeeded = rosidl_runtime_c__String__assign(
-      &ros_message->name,
+      &ros_message->auction_id,
       tmp.c_str());
     if (!succeeded) {
-      fprintf(stderr, "failed to assign string into field 'name'\n");
+      fprintf(stderr, "failed to assign string into field 'auction_id'\n");
       return false;
     }
   }
@@ -170,14 +170,14 @@ size_t get_serialized_size_ma_interfaces__msg__Bid(
   (void)padding;
   (void)wchar_size;
 
-  // field.name id
+  // field.name agent_id
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->id.size + 1);
-  // field.name name
+    (ros_message->agent_id.size + 1);
+  // field.name auction_id
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->name.size + 1);
+    (ros_message->auction_id.size + 1);
   // field.name st
   {
     size_t item_size = sizeof(ros_message->st);
@@ -223,7 +223,7 @@ size_t max_serialized_size_ma_interfaces__msg__Bid(
   full_bounded = true;
   is_plain = true;
 
-  // member: id
+  // member: agent_id
   {
     size_t array_size = 1;
 
@@ -235,7 +235,7 @@ size_t max_serialized_size_ma_interfaces__msg__Bid(
         1;
     }
   }
-  // member: name
+  // member: auction_id
   {
     size_t array_size = 1;
 
