@@ -345,6 +345,30 @@ src/goal_manager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/goal_manager.dir/build.make CMakeFiles/goal_manager.dir/src/goal_manager.cpp.s
 .PHONY : src/goal_manager.cpp.s
 
+src/stn.o: src/stn.cpp.o
+.PHONY : src/stn.o
+
+# target to build an object file
+src/stn.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/agent.dir/build.make CMakeFiles/agent.dir/src/stn.cpp.o
+.PHONY : src/stn.cpp.o
+
+src/stn.i: src/stn.cpp.i
+.PHONY : src/stn.i
+
+# target to preprocess a source file
+src/stn.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/agent.dir/build.make CMakeFiles/agent.dir/src/stn.cpp.i
+.PHONY : src/stn.cpp.i
+
+src/stn.s: src/stn.cpp.s
+.PHONY : src/stn.s
+
+# target to generate assembly for a file
+src/stn.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/agent.dir/build.make CMakeFiles/agent.dir/src/stn.cpp.s
+.PHONY : src/stn.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -376,6 +400,9 @@ help:
 	@echo "... src/goal_manager.o"
 	@echo "... src/goal_manager.i"
 	@echo "... src/goal_manager.s"
+	@echo "... src/stn.o"
+	@echo "... src/stn.i"
+	@echo "... src/stn.s"
 .PHONY : help
 
 

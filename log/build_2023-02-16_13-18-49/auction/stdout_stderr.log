@@ -1,0 +1,12 @@
+[35m[1mConsolidate compiler generated dependencies of target goal_manager[0m
+[ 12%] [32mBuilding CXX object CMakeFiles/agent.dir/src/agent.cpp.o[0m
+[ 37%] Built target server
+[ 62%] Built target client
+[ 87%] Built target goal_manager
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Kauction/stn.hpp: No such file or directory
+    2 | #include [01;31m[K"auction/stn.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/agent.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,17 @@
+[35m[1mConsolidate compiler generated dependencies of target agent[0m
+[ 25%] Built target client
+[ 50%] Built target goal_manager
+[ 75%] Built target server
+[ 87%] [32mBuilding CXX object CMakeFiles/agent.dir/src/agent.cpp.o[0m
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In constructor ‘[01m[KAgent::Agent(std::string)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:104:27:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[KSTN[m[K’ and ‘[01m[KSTN*[m[K’)
+  104 |             stn = new STN([01;31m[K)[m[K;
+      |                           [01;31m[K^[m[K
+In file included from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:2[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/stn.hpp:72:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KSTN& STN::operator=(const STN&)[m[K’
+   72 | class [01;36m[KSTN[m[K {
+      |       [01;36m[K^~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/stn.hpp:72:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KSTN*[m[K’ to ‘[01m[Kconst STN&[m[K’
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/agent.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

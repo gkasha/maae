@@ -32,8 +32,10 @@ cdr_serialize(
   const ma_interfaces::msg::Task & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: name
-  cdr << ros_message.name;
+  // Member: id
+  cdr << ros_message.id;
+  // Member: owner
+  cdr << ros_message.owner;
   // Member: duration
   cdr << ros_message.duration;
   // Member: value
@@ -47,8 +49,11 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   ma_interfaces::msg::Task & ros_message)
 {
-  // Member: name
-  cdr >> ros_message.name;
+  // Member: id
+  cdr >> ros_message.id;
+
+  // Member: owner
+  cdr >> ros_message.owner;
 
   // Member: duration
   cdr >> ros_message.duration;
@@ -72,10 +77,14 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: name
+  // Member: id
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.name.size() + 1);
+    (ros_message.id.size() + 1);
+  // Member: owner
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.owner.size() + 1);
   // Member: duration
   {
     size_t item_size = sizeof(ros_message.duration);
@@ -110,7 +119,20 @@ max_serialized_size_Task(
   is_plain = true;
 
 
-  // Member: name
+  // Member: id
+  {
+    size_t array_size = 1;
+
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Member: owner
   {
     size_t array_size = 1;
 

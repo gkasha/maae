@@ -10,6 +10,10 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(ma_interfaces REQUIRED)
 
+include_directories(include)
+install(DIRECTORY include/${PROJECT_NAME}/ DESTINATION include/${PROJECT_NAME}/)
+ament_export_include_directories(include)
+
 add_executable(server src/auctioneer.cpp)
 ament_target_dependencies(server
   rclcpp ma_interfaces)
@@ -18,13 +22,14 @@ add_executable(client src/client.cpp)
 ament_target_dependencies(client
   rclcpp ma_interfaces)
 
-add_executable(agent src/agent.cpp)
+add_executable(agent src/agent.cpp src/stn.cpp)
 ament_target_dependencies(agent
   rclcpp ma_interfaces)
 
 add_executable(goal_manager src/goal_manager.cpp)
 ament_target_dependencies(goal_manager
   rclcpp ma_interfaces)
+
 
 install(TARGETS
   server

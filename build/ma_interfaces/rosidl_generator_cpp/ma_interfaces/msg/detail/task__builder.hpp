@@ -53,16 +53,32 @@ private:
   ::ma_interfaces::msg::Task msg_;
 };
 
-class Init_Task_name
+class Init_Task_owner
 {
 public:
-  Init_Task_name()
+  explicit Init_Task_owner(::ma_interfaces::msg::Task & msg)
+  : msg_(msg)
+  {}
+  Init_Task_duration owner(::ma_interfaces::msg::Task::_owner_type arg)
+  {
+    msg_.owner = std::move(arg);
+    return Init_Task_duration(msg_);
+  }
+
+private:
+  ::ma_interfaces::msg::Task msg_;
+};
+
+class Init_Task_id
+{
+public:
+  Init_Task_id()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_Task_duration name(::ma_interfaces::msg::Task::_name_type arg)
+  Init_Task_owner id(::ma_interfaces::msg::Task::_id_type arg)
   {
-    msg_.name = std::move(arg);
-    return Init_Task_duration(msg_);
+    msg_.id = std::move(arg);
+    return Init_Task_owner(msg_);
   }
 
 private:
@@ -80,7 +96,7 @@ template<>
 inline
 auto build<::ma_interfaces::msg::Task>()
 {
-  return ma_interfaces::msg::builder::Init_Task_name();
+  return ma_interfaces::msg::builder::Init_Task_id();
 }
 
 }  // namespace ma_interfaces

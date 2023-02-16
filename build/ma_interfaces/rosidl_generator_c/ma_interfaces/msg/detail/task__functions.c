@@ -12,7 +12,8 @@
 
 
 // Include directives for member types
-// Member `name`
+// Member `id`
+// Member `owner`
 #include "rosidl_runtime_c/string_functions.h"
 
 bool
@@ -21,8 +22,13 @@ ma_interfaces__msg__Task__init(ma_interfaces__msg__Task * msg)
   if (!msg) {
     return false;
   }
-  // name
-  if (!rosidl_runtime_c__String__init(&msg->name)) {
+  // id
+  if (!rosidl_runtime_c__String__init(&msg->id)) {
+    ma_interfaces__msg__Task__fini(msg);
+    return false;
+  }
+  // owner
+  if (!rosidl_runtime_c__String__init(&msg->owner)) {
     ma_interfaces__msg__Task__fini(msg);
     return false;
   }
@@ -37,8 +43,10 @@ ma_interfaces__msg__Task__fini(ma_interfaces__msg__Task * msg)
   if (!msg) {
     return;
   }
-  // name
-  rosidl_runtime_c__String__fini(&msg->name);
+  // id
+  rosidl_runtime_c__String__fini(&msg->id);
+  // owner
+  rosidl_runtime_c__String__fini(&msg->owner);
   // duration
   // value
 }
@@ -49,9 +57,15 @@ ma_interfaces__msg__Task__are_equal(const ma_interfaces__msg__Task * lhs, const 
   if (!lhs || !rhs) {
     return false;
   }
-  // name
+  // id
   if (!rosidl_runtime_c__String__are_equal(
-      &(lhs->name), &(rhs->name)))
+      &(lhs->id), &(rhs->id)))
+  {
+    return false;
+  }
+  // owner
+  if (!rosidl_runtime_c__String__are_equal(
+      &(lhs->owner), &(rhs->owner)))
   {
     return false;
   }
@@ -74,9 +88,15 @@ ma_interfaces__msg__Task__copy(
   if (!input || !output) {
     return false;
   }
-  // name
+  // id
   if (!rosidl_runtime_c__String__copy(
-      &(input->name), &(output->name)))
+      &(input->id), &(output->id)))
+  {
+    return false;
+  }
+  // owner
+  if (!rosidl_runtime_c__String__copy(
+      &(input->owner), &(output->owner)))
   {
     return false;
   }

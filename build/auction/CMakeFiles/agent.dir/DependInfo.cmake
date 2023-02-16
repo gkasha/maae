@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/gkasha/Documents/maae/src/auction/src/agent.cpp" "CMakeFiles/agent.dir/src/agent.cpp.o" "gcc" "CMakeFiles/agent.dir/src/agent.cpp.o.d"
+  "/home/gkasha/Documents/maae/src/auction/src/stn.cpp" "CMakeFiles/agent.dir/src/stn.cpp.o" "gcc" "CMakeFiles/agent.dir/src/stn.cpp.o.d"
   )
 
 # Targets to which this target links.

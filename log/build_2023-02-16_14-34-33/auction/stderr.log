@@ -1,0 +1,7 @@
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In constructor ‘[01m[KAgent::Agent(std::string)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:116:13:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kstn[m[K’
+  116 |             [01;31m[Kstn[m[K.print_graph();
+      |             [01;31m[K^~~[m[K
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/agent.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

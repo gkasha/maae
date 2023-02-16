@@ -26,9 +26,11 @@ int main(int argc, char** argv)
     rclcpp::Publisher<ma_interfaces::msg::Goal>::SharedPtr publisher = 
         node->create_publisher<ma_interfaces::msg::Goal>("add_goals_topic", 10);
 
-    int num_tasks = 1;
+    int num_tasks = 5;
+
 
     for (int i = 0; i < num_tasks; i++) {
+        rclcpp::sleep_for(15s);
         ma_interfaces::msg::Goal g;
 
         g.id = "task" + std::to_string(i);

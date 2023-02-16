@@ -55,14 +55,17 @@ class Goal(metaclass=Metaclass_Goal):
     """Message class 'Goal'."""
 
     __slots__ = [
-        '_name',
+        '_id',
+        '_owner',
     ]
 
     _fields_and_field_types = {
-        'name': 'string',
+        'id': 'string',
+        'owner': 'string',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
     )
 
@@ -70,7 +73,8 @@ class Goal(metaclass=Metaclass_Goal):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.name = kwargs.get('name', str())
+        self.id = kwargs.get('id', str())
+        self.owner = kwargs.get('owner', str())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -101,7 +105,9 @@ class Goal(metaclass=Metaclass_Goal):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.name != other.name:
+        if self.id != other.id:
+            return False
+        if self.owner != other.owner:
             return False
         return True
 
@@ -110,15 +116,28 @@ class Goal(metaclass=Metaclass_Goal):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @builtins.property
-    def name(self):
-        """Message field 'name'."""
-        return self._name
+    @builtins.property  # noqa: A003
+    def id(self):  # noqa: A003
+        """Message field 'id'."""
+        return self._id
 
-    @name.setter
-    def name(self, value):
+    @id.setter  # noqa: A003
+    def id(self, value):  # noqa: A003
         if __debug__:
             assert \
                 isinstance(value, str), \
-                "The 'name' field must be of type 'str'"
-        self._name = value
+                "The 'id' field must be of type 'str'"
+        self._id = value
+
+    @builtins.property
+    def owner(self):
+        """Message field 'owner'."""
+        return self._owner
+
+    @owner.setter
+    def owner(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, str), \
+                "The 'owner' field must be of type 'str'"
+        self._owner = value

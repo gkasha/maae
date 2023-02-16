@@ -1,0 +1,7 @@
+[01m[K/home/gkasha/Documents/maae/src/auction/src/stn.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kstn.hpp: No such file or directory
+    1 | #include [01;31m[K"stn.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:90: CMakeFiles/agent.dir/src/stn.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/agent.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

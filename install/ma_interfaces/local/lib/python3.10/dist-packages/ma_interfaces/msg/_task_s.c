@@ -53,8 +53,8 @@ bool ma_interfaces__msg__task__convert_from_py(PyObject * _pymsg, void * _ros_me
     assert(strncmp("ma_interfaces.msg._task.Task", full_classname_dest, 28) == 0);
   }
   ma_interfaces__msg__Task * ros_message = _ros_message;
-  {  // name
-    PyObject * field = PyObject_GetAttrString(_pymsg, "name");
+  {  // id
+    PyObject * field = PyObject_GetAttrString(_pymsg, "id");
     if (!field) {
       return false;
     }
@@ -64,7 +64,22 @@ bool ma_interfaces__msg__task__convert_from_py(PyObject * _pymsg, void * _ros_me
       Py_DECREF(field);
       return false;
     }
-    rosidl_runtime_c__String__assign(&ros_message->name, PyBytes_AS_STRING(encoded_field));
+    rosidl_runtime_c__String__assign(&ros_message->id, PyBytes_AS_STRING(encoded_field));
+    Py_DECREF(encoded_field);
+    Py_DECREF(field);
+  }
+  {  // owner
+    PyObject * field = PyObject_GetAttrString(_pymsg, "owner");
+    if (!field) {
+      return false;
+    }
+    assert(PyUnicode_Check(field));
+    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
+    if (!encoded_field) {
+      Py_DECREF(field);
+      return false;
+    }
+    rosidl_runtime_c__String__assign(&ros_message->owner, PyBytes_AS_STRING(encoded_field));
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
@@ -108,17 +123,34 @@ PyObject * ma_interfaces__msg__task__convert_to_py(void * raw_ros_message)
     }
   }
   ma_interfaces__msg__Task * ros_message = (ma_interfaces__msg__Task *)raw_ros_message;
-  {  // name
+  {  // id
     PyObject * field = NULL;
     field = PyUnicode_DecodeUTF8(
-      ros_message->name.data,
-      strlen(ros_message->name.data),
+      ros_message->id.data,
+      strlen(ros_message->id.data),
       "replace");
     if (!field) {
       return NULL;
     }
     {
-      int rc = PyObject_SetAttrString(_pymessage, "name", field);
+      int rc = PyObject_SetAttrString(_pymessage, "id", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // owner
+    PyObject * field = NULL;
+    field = PyUnicode_DecodeUTF8(
+      ros_message->owner.data,
+      strlen(ros_message->owner.data),
+      "replace");
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "owner", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

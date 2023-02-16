@@ -53,8 +53,8 @@ bool ma_interfaces__msg__bid__convert_from_py(PyObject * _pymsg, void * _ros_mes
     assert(strncmp("ma_interfaces.msg._bid.Bid", full_classname_dest, 26) == 0);
   }
   ma_interfaces__msg__Bid * ros_message = _ros_message;
-  {  // id
-    PyObject * field = PyObject_GetAttrString(_pymsg, "id");
+  {  // agent_id
+    PyObject * field = PyObject_GetAttrString(_pymsg, "agent_id");
     if (!field) {
       return false;
     }
@@ -64,12 +64,12 @@ bool ma_interfaces__msg__bid__convert_from_py(PyObject * _pymsg, void * _ros_mes
       Py_DECREF(field);
       return false;
     }
-    rosidl_runtime_c__String__assign(&ros_message->id, PyBytes_AS_STRING(encoded_field));
+    rosidl_runtime_c__String__assign(&ros_message->agent_id, PyBytes_AS_STRING(encoded_field));
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
-  {  // name
-    PyObject * field = PyObject_GetAttrString(_pymsg, "name");
+  {  // auction_id
+    PyObject * field = PyObject_GetAttrString(_pymsg, "auction_id");
     if (!field) {
       return false;
     }
@@ -79,7 +79,7 @@ bool ma_interfaces__msg__bid__convert_from_py(PyObject * _pymsg, void * _ros_mes
       Py_DECREF(field);
       return false;
     }
-    rosidl_runtime_c__String__assign(&ros_message->name, PyBytes_AS_STRING(encoded_field));
+    rosidl_runtime_c__String__assign(&ros_message->auction_id, PyBytes_AS_STRING(encoded_field));
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
@@ -132,34 +132,34 @@ PyObject * ma_interfaces__msg__bid__convert_to_py(void * raw_ros_message)
     }
   }
   ma_interfaces__msg__Bid * ros_message = (ma_interfaces__msg__Bid *)raw_ros_message;
-  {  // id
+  {  // agent_id
     PyObject * field = NULL;
     field = PyUnicode_DecodeUTF8(
-      ros_message->id.data,
-      strlen(ros_message->id.data),
+      ros_message->agent_id.data,
+      strlen(ros_message->agent_id.data),
       "replace");
     if (!field) {
       return NULL;
     }
     {
-      int rc = PyObject_SetAttrString(_pymessage, "id", field);
+      int rc = PyObject_SetAttrString(_pymessage, "agent_id", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
       }
     }
   }
-  {  // name
+  {  // auction_id
     PyObject * field = NULL;
     field = PyUnicode_DecodeUTF8(
-      ros_message->name.data,
-      strlen(ros_message->name.data),
+      ros_message->auction_id.data,
+      strlen(ros_message->auction_id.data),
       "replace");
     if (!field) {
       return NULL;
     }
     {
-      int rc = PyObject_SetAttrString(_pymessage, "name", field);
+      int rc = PyObject_SetAttrString(_pymessage, "auction_id", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

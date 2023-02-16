@@ -55,16 +55,16 @@ class Bid(metaclass=Metaclass_Bid):
     """Message class 'Bid'."""
 
     __slots__ = [
-        '_id',
-        '_name',
+        '_agent_id',
+        '_auction_id',
         '_st',
         '_et',
         '_value',
     ]
 
     _fields_and_field_types = {
-        'id': 'string',
-        'name': 'string',
+        'agent_id': 'string',
+        'auction_id': 'string',
         'st': 'int64',
         'et': 'int64',
         'value': 'int64',
@@ -82,8 +82,8 @@ class Bid(metaclass=Metaclass_Bid):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.id = kwargs.get('id', str())
-        self.name = kwargs.get('name', str())
+        self.agent_id = kwargs.get('agent_id', str())
+        self.auction_id = kwargs.get('auction_id', str())
         self.st = kwargs.get('st', int())
         self.et = kwargs.get('et', int())
         self.value = kwargs.get('value', int())
@@ -117,9 +117,9 @@ class Bid(metaclass=Metaclass_Bid):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.id != other.id:
+        if self.agent_id != other.agent_id:
             return False
-        if self.name != other.name:
+        if self.auction_id != other.auction_id:
             return False
         if self.st != other.st:
             return False
@@ -134,31 +134,31 @@ class Bid(metaclass=Metaclass_Bid):
         from copy import copy
         return copy(cls._fields_and_field_types)
 
-    @builtins.property  # noqa: A003
-    def id(self):  # noqa: A003
-        """Message field 'id'."""
-        return self._id
+    @builtins.property
+    def agent_id(self):
+        """Message field 'agent_id'."""
+        return self._agent_id
 
-    @id.setter  # noqa: A003
-    def id(self, value):  # noqa: A003
+    @agent_id.setter
+    def agent_id(self, value):
         if __debug__:
             assert \
                 isinstance(value, str), \
-                "The 'id' field must be of type 'str'"
-        self._id = value
+                "The 'agent_id' field must be of type 'str'"
+        self._agent_id = value
 
     @builtins.property
-    def name(self):
-        """Message field 'name'."""
-        return self._name
+    def auction_id(self):
+        """Message field 'auction_id'."""
+        return self._auction_id
 
-    @name.setter
-    def name(self, value):
+    @auction_id.setter
+    def auction_id(self, value):
         if __debug__:
             assert \
                 isinstance(value, str), \
-                "The 'name' field must be of type 'str'"
-        self._name = value
+                "The 'auction_id' field must be of type 'str'"
+        self._auction_id = value
 
     @builtins.property
     def st(self):

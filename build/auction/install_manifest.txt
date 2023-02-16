@@ -1,3 +1,4 @@
+/home/gkasha/Documents/maae/install/auction/include/auction//stn.hpp
 /home/gkasha/Documents/maae/install/auction/lib/auction/server
 /home/gkasha/Documents/maae/install/auction/lib/auction/client
 /home/gkasha/Documents/maae/install/auction/lib/auction/agent
@@ -12,6 +13,7 @@
 /home/gkasha/Documents/maae/install/auction/share/auction/local_setup.dsv
 /home/gkasha/Documents/maae/install/auction/share/auction/package.dsv
 /home/gkasha/Documents/maae/install/auction/share/ament_index/resource_index/packages/auction
+/home/gkasha/Documents/maae/install/auction/share/auction/cmake/ament_cmake_export_include_directories-extras.cmake
 /home/gkasha/Documents/maae/install/auction/share/auction/cmake/auctionConfig.cmake
 /home/gkasha/Documents/maae/install/auction/share/auction/cmake/auctionConfig-version.cmake
 /home/gkasha/Documents/maae/install/auction/share/auction/package.xml

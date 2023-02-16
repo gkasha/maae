@@ -6,7 +6,9 @@
 module ma_interfaces {
   module msg {
     struct Task {
-      string name;
+      string id;
+
+      string owner;
 
       int64 duration;
 

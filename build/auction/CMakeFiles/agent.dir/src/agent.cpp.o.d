@@ -599,6 +599,12 @@ CMakeFiles/agent.dir/src/agent.cpp.o: \
  /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp \
  /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp \
  /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/wait_set_template.hpp \
+ /home/gkasha/Documents/maae/src/auction/include/auction/stn.hpp \
+ /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
+ /usr/include/c++/11/bits/deque.tcc /usr/include/c++/11/fstream \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+ /usr/include/c++/11/bits/fstream.tcc \
  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/register.hpp \
  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__struct.hpp \
  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__builder.hpp \

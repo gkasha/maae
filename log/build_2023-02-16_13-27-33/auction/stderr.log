@@ -1,0 +1,56 @@
+[01m[K/home/gkasha/Documents/maae/src/auction/src/auctioneer.cpp:[m[K In function ‘[01m[Kvoid start_auction(std::shared_ptr<ma_interfaces::srv::AuctionSrv_Request_<std::allocator<void> > >, std::shared_ptr<ma_interfaces::srv::AuctionSrv_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/auctioneer.cpp:27:72:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kreq[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   27 |         [01;35m[Kconst std::shared_ptr<ma_interfaces::srv::AuctionSrv::Request> req[m[K,
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/auctioneer.cpp:28:67:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krep[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   28 |         [01;35m[Kstd::shared_ptr<ma_interfaces::srv::AuctionSrv::Response> rep[m[K)
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:129:30:[m[K [01;31m[Kerror: [m[K‘[01m[KTnode[m[K’ was not declared in this scope; did you mean ‘[01m[KTNode[m[K’?
+  129 |         std::map<std::string,[01;31m[KTnode[m[K*> task_map;
+      |                              [01;31m[K^~~~~[m[K
+      |                              [32m[KTNode[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:129:36:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+  129 |         std::map<std::string,Tnode*[01;31m[K>[m[K task_map;
+      |                                    [01;31m[K^[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:129:36:[m[K [01;31m[Kerror: [m[Ktemplate argument 4 is invalid
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In constructor ‘[01m[KAgent::Agent(std::string)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:112:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ktail[m[K’ was not declared in this scope; did you mean ‘[01m[Ktanl[m[K’?
+  112 |             [01;31m[Ktail[m[K = new TNode("tail", "end", "end");
+      |             [01;31m[K^~~~[m[K
+      |             [32m[Ktanl[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[KTNode* Agent::find_slot(int)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:182:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass TNode[m[K’ has no member named ‘[01m[Kname[m[K’; did you mean ‘[01m[Kname_[m[K’?
+  182 |             while (curr->next->[01;31m[Kname[m[K != "tail") {
+      |                                [01;31m[K^~~~[m[K
+      |                                [32m[Kname_[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:183:74:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass TNode[m[K’ has no member named ‘[01m[Ketp[m[K’; did you mean ‘[01m[Ketp_[m[K’?
+  183 |                 tuple<double,double> st = stn->get_feasible_values(curr->[01;31m[Ketp[m[K);
+      |                                                                          [01;31m[K^~~[m[K
+      |                                                                          [32m[Ketp_[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:184:80:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass TNode[m[K’ has no member named ‘[01m[Kstp[m[K’; did you mean ‘[01m[Kstp_[m[K’?
+  184 |                 tuple<double,double> et = stn->get_feasible_values(curr->next->[01;31m[Kstp[m[K);
+      |                                                                                [01;31m[K^~~[m[K
+      |                                                                                [32m[Kstp_[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::new_tasks_cb(ma_interfaces::msg::Task)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:202:79:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass TNode[m[K’ has no member named ‘[01m[Ketp[m[K’; did you mean ‘[01m[Ketp_[m[K’?
+  202 |                 int st = (int)std::get<0>(stn->get_feasible_values(slot_head->[01;31m[Ketp[m[K);
+      |                                                                               [01;31m[K^~~[m[K
+      |                                                                               [32m[Ketp_[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:203:25:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[Kint[m[K’ and ‘[01m[Kconst _id_type[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>[m[K’})
+  203 |                 task_map[01;31m[K[[m[Ktask.id] = slot_head;
+      |                         [01;31m[K^[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:216:44:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[Kint[m[K’ and ‘[01m[Kconst _id_type[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>[m[K’})
+  216 |                 TNode* slot_head = task_map[01;31m[K[[m[Ktask.id];
+      |                                            [01;31m[K^[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:221:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass TNode[m[K’ has no member named ‘[01m[Ketp[m[K’; did you mean ‘[01m[Ketp_[m[K’?
+  221 |                 std::string slot_st = slot_head->[01;31m[Ketp[m[K;
+      |                                                  [01;31m[K^~~[m[K
+      |                                                  [32m[Ketp_[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:222:56:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass TNode[m[K’ has no member named ‘[01m[Kstp[m[K’; did you mean ‘[01m[Kstp_[m[K’?
+  222 |                 std::string slot_et = slot_head->next->[01;31m[Kstp[m[K;
+      |                                                        [01;31m[K^~~[m[K
+      |                                                        [32m[Kstp_[m[K
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/agent.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

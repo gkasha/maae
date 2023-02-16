@@ -141,7 +141,7 @@ CMakeFiles/auction_uninstall.dir/clean:
 CMakeFiles/server.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gkasha/Documents/maae/build/auction/CMakeFiles --progress-num=7,8 "Built target server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gkasha/Documents/maae/build/auction/CMakeFiles --progress-num=8,9 "Built target server"
 .PHONY : CMakeFiles/server.dir/all
 
 # Build rule for subdir invocation for target.
@@ -167,7 +167,7 @@ CMakeFiles/server.dir/clean:
 CMakeFiles/client.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gkasha/Documents/maae/build/auction/CMakeFiles --progress-num=3,4 "Built target client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gkasha/Documents/maae/build/auction/CMakeFiles --progress-num=4,5 "Built target client"
 .PHONY : CMakeFiles/client.dir/all
 
 # Build rule for subdir invocation for target.
@@ -193,12 +193,12 @@ CMakeFiles/client.dir/clean:
 CMakeFiles/agent.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/agent.dir/build.make CMakeFiles/agent.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/agent.dir/build.make CMakeFiles/agent.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gkasha/Documents/maae/build/auction/CMakeFiles --progress-num=1,2 "Built target agent"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gkasha/Documents/maae/build/auction/CMakeFiles --progress-num=1,2,3 "Built target agent"
 .PHONY : CMakeFiles/agent.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/agent.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gkasha/Documents/maae/build/auction/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gkasha/Documents/maae/build/auction/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/agent.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gkasha/Documents/maae/build/auction/CMakeFiles 0
 .PHONY : CMakeFiles/agent.dir/rule
@@ -219,7 +219,7 @@ CMakeFiles/agent.dir/clean:
 CMakeFiles/goal_manager.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/goal_manager.dir/build.make CMakeFiles/goal_manager.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/goal_manager.dir/build.make CMakeFiles/goal_manager.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gkasha/Documents/maae/build/auction/CMakeFiles --progress-num=5,6 "Built target goal_manager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gkasha/Documents/maae/build/auction/CMakeFiles --progress-num=6,7 "Built target goal_manager"
 .PHONY : CMakeFiles/goal_manager.dir/all
 
 # Build rule for subdir invocation for target.
