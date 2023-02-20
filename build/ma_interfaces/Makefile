@@ -405,29 +405,53 @@ ma_interfaces__py/fast:
 	$(MAKE) $(MAKESILENT) -f ma_interfaces__py/CMakeFiles/ma_interfaces__py.dir/build.make ma_interfaces__py/CMakeFiles/ma_interfaces__py.dir/build
 .PHONY : ma_interfaces__py/fast
 
-rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__functions.o: rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__functions.c.o
-.PHONY : rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__functions.o
+rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__functions.o: rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__functions.c.o
+.PHONY : rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__functions.o
 
 # target to build an object file
-rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__functions.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__functions.c.o
-.PHONY : rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__functions.c.o
+rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__functions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__functions.c.o
+.PHONY : rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__functions.c.o
 
-rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__functions.i: rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__functions.c.i
-.PHONY : rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__functions.i
+rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__functions.i: rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__functions.c.i
+.PHONY : rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__functions.i
 
 # target to preprocess a source file
-rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__functions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__functions.c.i
-.PHONY : rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__functions.c.i
+rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__functions.c.i
+.PHONY : rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__functions.c.i
 
-rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__functions.s: rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__functions.c.s
-.PHONY : rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__functions.s
+rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__functions.s: rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__functions.c.s
+.PHONY : rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__functions.s
 
 # target to generate assembly for a file
-rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__functions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__functions.c.s
-.PHONY : rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__functions.c.s
+rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__functions.c.s
+.PHONY : rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__functions.c.s
+
+rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__functions.o: rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__functions.c.o
+.PHONY : rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__functions.o
+
+# target to build an object file
+rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__functions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__functions.c.o
+.PHONY : rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__functions.c.o
+
+rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__functions.i: rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__functions.c.i
+.PHONY : rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__functions.i
+
+# target to preprocess a source file
+rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__functions.c.i
+.PHONY : rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__functions.c.i
+
+rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__functions.s: rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__functions.c.s
+.PHONY : rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__functions.s
+
+# target to generate assembly for a file
+rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__functions.c.s
+.PHONY : rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__functions.c.s
 
 rosidl_generator_c/ma_interfaces/msg/detail/bid__functions.o: rosidl_generator_c/ma_interfaces/msg/detail/bid__functions.c.o
 .PHONY : rosidl_generator_c/ma_interfaces/msg/detail/bid__functions.o
@@ -741,29 +765,53 @@ rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introsp
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c__pyext.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c.s
 .PHONY : rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c.s
 
-rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.o: rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.c.o
-.PHONY : rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.o
+rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.o: rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.c.o
+.PHONY : rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.o
 
 # target to build an object file
-rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.c.o
-.PHONY : rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.c.o
+rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.c.o
+.PHONY : rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.c.o
 
-rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.i: rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.c.i
-.PHONY : rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.i
+rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.i: rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.c.i
+.PHONY : rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.i
 
 # target to preprocess a source file
-rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.c.i
-.PHONY : rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.c.i
+rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.c.i
+.PHONY : rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.c.i
 
-rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.s: rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.c.s
-.PHONY : rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.s
+rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.s: rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.c.s
+.PHONY : rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.s
 
 # target to generate assembly for a file
-rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.c.s
-.PHONY : rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.c.s
+rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.c.s
+.PHONY : rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.c.s
+
+rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.o: rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.c.o
+.PHONY : rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.o
+
+# target to build an object file
+rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.c.o
+.PHONY : rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.c.o
+
+rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.i: rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.c.i
+.PHONY : rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.i
+
+# target to preprocess a source file
+rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.c.i
+.PHONY : rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.c.i
+
+rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.s: rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.c.s
+.PHONY : rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.s
+
+# target to generate assembly for a file
+rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.c.s
+.PHONY : rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.c.s
 
 rosidl_generator_py/ma_interfaces/msg/_bid_s.o: rosidl_generator_py/ma_interfaces/msg/_bid_s.c.o
 .PHONY : rosidl_generator_py/ma_interfaces/msg/_bid_s.o
@@ -1005,29 +1053,53 @@ rosidl_generator_py/ma_interfaces/srv/_register_s.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/srv/_register_s.c.s
 .PHONY : rosidl_generator_py/ma_interfaces/srv/_register_s.c.s
 
-rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.o: rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.o
-.PHONY : rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.o
+rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.o: rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.o
 
 # target to build an object file
-rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.o
-.PHONY : rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.o
+rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.o
 
-rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.i: rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.i
-.PHONY : rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.i
+rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.i: rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.i
 
 # target to preprocess a source file
-rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.i
-.PHONY : rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.i
+rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.i
 
-rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.s: rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.s
-.PHONY : rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.s
+rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.s: rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.s
 
 # target to generate assembly for a file
-rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.s
-.PHONY : rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.s
+rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.s
+
+rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.o: rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.o
+
+# target to build an object file
+rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.o
+
+rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.i: rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.i
+
+rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.s: rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.s
 
 rosidl_typesupport_c/ma_interfaces/msg/bid__type_support.o: rosidl_typesupport_c/ma_interfaces/msg/bid__type_support.cpp.o
 .PHONY : rosidl_typesupport_c/ma_interfaces/msg/bid__type_support.o
@@ -1269,29 +1341,53 @@ rosidl_typesupport_c/ma_interfaces/srv/register__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/register__type_support.cpp.s
 .PHONY : rosidl_typesupport_c/ma_interfaces/srv/register__type_support.cpp.s
 
-rosidl_typesupport_cpp/ma_interfaces/msg/auction_msg__type_support.o: rosidl_typesupport_cpp/ma_interfaces/msg/auction_msg__type_support.cpp.o
-.PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/auction_msg__type_support.o
+rosidl_typesupport_cpp/ma_interfaces/msg/action_dispatch__type_support.o: rosidl_typesupport_cpp/ma_interfaces/msg/action_dispatch__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/action_dispatch__type_support.o
 
 # target to build an object file
-rosidl_typesupport_cpp/ma_interfaces/msg/auction_msg__type_support.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/msg/auction_msg__type_support.cpp.o
-.PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/auction_msg__type_support.cpp.o
+rosidl_typesupport_cpp/ma_interfaces/msg/action_dispatch__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/msg/action_dispatch__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/action_dispatch__type_support.cpp.o
 
-rosidl_typesupport_cpp/ma_interfaces/msg/auction_msg__type_support.i: rosidl_typesupport_cpp/ma_interfaces/msg/auction_msg__type_support.cpp.i
-.PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/auction_msg__type_support.i
+rosidl_typesupport_cpp/ma_interfaces/msg/action_dispatch__type_support.i: rosidl_typesupport_cpp/ma_interfaces/msg/action_dispatch__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/action_dispatch__type_support.i
 
 # target to preprocess a source file
-rosidl_typesupport_cpp/ma_interfaces/msg/auction_msg__type_support.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/msg/auction_msg__type_support.cpp.i
-.PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/auction_msg__type_support.cpp.i
+rosidl_typesupport_cpp/ma_interfaces/msg/action_dispatch__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/msg/action_dispatch__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/action_dispatch__type_support.cpp.i
 
-rosidl_typesupport_cpp/ma_interfaces/msg/auction_msg__type_support.s: rosidl_typesupport_cpp/ma_interfaces/msg/auction_msg__type_support.cpp.s
-.PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/auction_msg__type_support.s
+rosidl_typesupport_cpp/ma_interfaces/msg/action_dispatch__type_support.s: rosidl_typesupport_cpp/ma_interfaces/msg/action_dispatch__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/action_dispatch__type_support.s
 
 # target to generate assembly for a file
-rosidl_typesupport_cpp/ma_interfaces/msg/auction_msg__type_support.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/msg/auction_msg__type_support.cpp.s
-.PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/auction_msg__type_support.cpp.s
+rosidl_typesupport_cpp/ma_interfaces/msg/action_dispatch__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/msg/action_dispatch__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/action_dispatch__type_support.cpp.s
+
+rosidl_typesupport_cpp/ma_interfaces/msg/action_feedback__type_support.o: rosidl_typesupport_cpp/ma_interfaces/msg/action_feedback__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/action_feedback__type_support.o
+
+# target to build an object file
+rosidl_typesupport_cpp/ma_interfaces/msg/action_feedback__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/msg/action_feedback__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/action_feedback__type_support.cpp.o
+
+rosidl_typesupport_cpp/ma_interfaces/msg/action_feedback__type_support.i: rosidl_typesupport_cpp/ma_interfaces/msg/action_feedback__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/action_feedback__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_cpp/ma_interfaces/msg/action_feedback__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/msg/action_feedback__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/action_feedback__type_support.cpp.i
+
+rosidl_typesupport_cpp/ma_interfaces/msg/action_feedback__type_support.s: rosidl_typesupport_cpp/ma_interfaces/msg/action_feedback__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/action_feedback__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_cpp/ma_interfaces/msg/action_feedback__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/msg/action_feedback__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/action_feedback__type_support.cpp.s
 
 rosidl_typesupport_cpp/ma_interfaces/msg/bid__type_support.o: rosidl_typesupport_cpp/ma_interfaces/msg/bid__type_support.cpp.o
 .PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/bid__type_support.o
@@ -1533,29 +1629,53 @@ rosidl_typesupport_cpp/ma_interfaces/srv/register__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/srv/register__type_support.cpp.s
 .PHONY : rosidl_typesupport_cpp/ma_interfaces/srv/register__type_support.cpp.s
 
-rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/auction_msg__type_support_c.o: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/auction_msg__type_support_c.cpp.o
-.PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/auction_msg__type_support_c.o
+rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__type_support_c.o: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__type_support_c.o
 
 # target to build an object file
-rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/auction_msg__type_support_c.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/auction_msg__type_support_c.cpp.o
-.PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/auction_msg__type_support_c.cpp.o
+rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__type_support_c.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__type_support_c.cpp.o
 
-rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/auction_msg__type_support_c.i: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/auction_msg__type_support_c.cpp.i
-.PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/auction_msg__type_support_c.i
+rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__type_support_c.i: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__type_support_c.i
 
 # target to preprocess a source file
-rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/auction_msg__type_support_c.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/auction_msg__type_support_c.cpp.i
-.PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/auction_msg__type_support_c.cpp.i
+rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__type_support_c.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__type_support_c.cpp.i
 
-rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/auction_msg__type_support_c.s: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/auction_msg__type_support_c.cpp.s
-.PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/auction_msg__type_support_c.s
+rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__type_support_c.s: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__type_support_c.s
 
 # target to generate assembly for a file
-rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/auction_msg__type_support_c.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/auction_msg__type_support_c.cpp.s
-.PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/auction_msg__type_support_c.cpp.s
+rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__type_support_c.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__type_support_c.cpp.s
+
+rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_feedback__type_support_c.o: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_feedback__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_feedback__type_support_c.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_feedback__type_support_c.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_feedback__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_feedback__type_support_c.cpp.o
+
+rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_feedback__type_support_c.i: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_feedback__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_feedback__type_support_c.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_feedback__type_support_c.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_feedback__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_feedback__type_support_c.cpp.i
+
+rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_feedback__type_support_c.s: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_feedback__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_feedback__type_support_c.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_feedback__type_support_c.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_feedback__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_feedback__type_support_c.cpp.s
 
 rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/bid__type_support_c.o: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/bid__type_support_c.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/bid__type_support_c.o
@@ -1797,29 +1917,53 @@ rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/register__type_support_c.
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/register__type_support_c.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/register__type_support_c.cpp.s
 
-rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/auction_msg__type_support.o: rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/auction_msg__type_support.cpp.o
-.PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/auction_msg__type_support.o
+rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_dispatch__type_support.o: rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_dispatch__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_dispatch__type_support.o
 
 # target to build an object file
-rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/auction_msg__type_support.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/auction_msg__type_support.cpp.o
-.PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/auction_msg__type_support.cpp.o
+rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_dispatch__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_dispatch__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_dispatch__type_support.cpp.o
 
-rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/auction_msg__type_support.i: rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/auction_msg__type_support.cpp.i
-.PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/auction_msg__type_support.i
+rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_dispatch__type_support.i: rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_dispatch__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_dispatch__type_support.i
 
 # target to preprocess a source file
-rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/auction_msg__type_support.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/auction_msg__type_support.cpp.i
-.PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/auction_msg__type_support.cpp.i
+rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_dispatch__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_dispatch__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_dispatch__type_support.cpp.i
 
-rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/auction_msg__type_support.s: rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/auction_msg__type_support.cpp.s
-.PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/auction_msg__type_support.s
+rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_dispatch__type_support.s: rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_dispatch__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_dispatch__type_support.s
 
 # target to generate assembly for a file
-rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/auction_msg__type_support.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/auction_msg__type_support.cpp.s
-.PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/auction_msg__type_support.cpp.s
+rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_dispatch__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_dispatch__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_dispatch__type_support.cpp.s
+
+rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_feedback__type_support.o: rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_feedback__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_feedback__type_support.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_feedback__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_feedback__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_feedback__type_support.cpp.o
+
+rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_feedback__type_support.i: rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_feedback__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_feedback__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_feedback__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_feedback__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_feedback__type_support.cpp.i
+
+rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_feedback__type_support.s: rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_feedback__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_feedback__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_feedback__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_feedback__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_feedback__type_support.cpp.s
 
 rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/bid__type_support.o: rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/bid__type_support.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/bid__type_support.o
@@ -2061,29 +2205,53 @@ rosidl_typesupport_fastrtps_cpp/ma_interfaces/srv/detail/dds_fastrtps/register__
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/srv/detail/dds_fastrtps/register__type_support.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/srv/detail/dds_fastrtps/register__type_support.cpp.s
 
-rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/auction_msg__type_support.o: rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/auction_msg__type_support.c.o
-.PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/auction_msg__type_support.o
+rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_dispatch__type_support.o: rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_dispatch__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_dispatch__type_support.o
 
 # target to build an object file
-rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/auction_msg__type_support.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/auction_msg__type_support.c.o
-.PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/auction_msg__type_support.c.o
+rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_dispatch__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_dispatch__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_dispatch__type_support.c.o
 
-rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/auction_msg__type_support.i: rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/auction_msg__type_support.c.i
-.PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/auction_msg__type_support.i
+rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_dispatch__type_support.i: rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_dispatch__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_dispatch__type_support.i
 
 # target to preprocess a source file
-rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/auction_msg__type_support.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/auction_msg__type_support.c.i
-.PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/auction_msg__type_support.c.i
+rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_dispatch__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_dispatch__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_dispatch__type_support.c.i
 
-rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/auction_msg__type_support.s: rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/auction_msg__type_support.c.s
-.PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/auction_msg__type_support.s
+rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_dispatch__type_support.s: rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_dispatch__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_dispatch__type_support.s
 
 # target to generate assembly for a file
-rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/auction_msg__type_support.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/auction_msg__type_support.c.s
-.PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/auction_msg__type_support.c.s
+rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_dispatch__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_dispatch__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_dispatch__type_support.c.s
+
+rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_feedback__type_support.o: rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_feedback__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_feedback__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_feedback__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_feedback__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_feedback__type_support.c.o
+
+rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_feedback__type_support.i: rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_feedback__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_feedback__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_feedback__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_feedback__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_feedback__type_support.c.i
+
+rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_feedback__type_support.s: rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_feedback__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_feedback__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_feedback__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_feedback__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_feedback__type_support.c.s
 
 rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/bid__type_support.o: rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/bid__type_support.c.o
 .PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/bid__type_support.o
@@ -2325,29 +2493,53 @@ rosidl_typesupport_introspection_c/ma_interfaces/srv/detail/register__type_suppo
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/srv/detail/register__type_support.c.s
 .PHONY : rosidl_typesupport_introspection_c/ma_interfaces/srv/detail/register__type_support.c.s
 
-rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/auction_msg__type_support.o: rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/auction_msg__type_support.cpp.o
-.PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/auction_msg__type_support.o
+rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_dispatch__type_support.o: rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_dispatch__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_dispatch__type_support.o
 
 # target to build an object file
-rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/auction_msg__type_support.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/auction_msg__type_support.cpp.o
-.PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/auction_msg__type_support.cpp.o
+rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_dispatch__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_dispatch__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_dispatch__type_support.cpp.o
 
-rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/auction_msg__type_support.i: rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/auction_msg__type_support.cpp.i
-.PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/auction_msg__type_support.i
+rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_dispatch__type_support.i: rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_dispatch__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_dispatch__type_support.i
 
 # target to preprocess a source file
-rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/auction_msg__type_support.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/auction_msg__type_support.cpp.i
-.PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/auction_msg__type_support.cpp.i
+rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_dispatch__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_dispatch__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_dispatch__type_support.cpp.i
 
-rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/auction_msg__type_support.s: rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/auction_msg__type_support.cpp.s
-.PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/auction_msg__type_support.s
+rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_dispatch__type_support.s: rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_dispatch__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_dispatch__type_support.s
 
 # target to generate assembly for a file
-rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/auction_msg__type_support.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/auction_msg__type_support.cpp.s
-.PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/auction_msg__type_support.cpp.s
+rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_dispatch__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_dispatch__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_dispatch__type_support.cpp.s
+
+rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_feedback__type_support.o: rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_feedback__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_feedback__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_feedback__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_feedback__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_feedback__type_support.cpp.o
+
+rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_feedback__type_support.i: rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_feedback__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_feedback__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_feedback__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_feedback__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_feedback__type_support.cpp.i
+
+rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_feedback__type_support.s: rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_feedback__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_feedback__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_feedback__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_feedback__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_feedback__type_support.cpp.s
 
 rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/bid__type_support.o: rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/bid__type_support.cpp.o
 .PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/bid__type_support.o
@@ -2620,9 +2812,12 @@ help:
 	@echo "... ma_interfaces__rosidl_typesupport_introspection_c"
 	@echo "... ma_interfaces__rosidl_typesupport_introspection_c__pyext"
 	@echo "... ma_interfaces__rosidl_typesupport_introspection_cpp"
-	@echo "... rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__functions.o"
-	@echo "... rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__functions.i"
-	@echo "... rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__functions.s"
+	@echo "... rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__functions.o"
+	@echo "... rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__functions.i"
+	@echo "... rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__functions.s"
+	@echo "... rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__functions.o"
+	@echo "... rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__functions.i"
+	@echo "... rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__functions.s"
 	@echo "... rosidl_generator_c/ma_interfaces/msg/detail/bid__functions.o"
 	@echo "... rosidl_generator_c/ma_interfaces/msg/detail/bid__functions.i"
 	@echo "... rosidl_generator_c/ma_interfaces/msg/detail/bid__functions.s"
@@ -2662,9 +2857,12 @@ help:
 	@echo "... rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.o"
 	@echo "... rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.i"
 	@echo "... rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.s"
-	@echo "... rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.o"
-	@echo "... rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.i"
-	@echo "... rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.s"
+	@echo "... rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.o"
+	@echo "... rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.i"
+	@echo "... rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.s"
+	@echo "... rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.o"
+	@echo "... rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.i"
+	@echo "... rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.s"
 	@echo "... rosidl_generator_py/ma_interfaces/msg/_bid_s.o"
 	@echo "... rosidl_generator_py/ma_interfaces/msg/_bid_s.i"
 	@echo "... rosidl_generator_py/ma_interfaces/msg/_bid_s.s"
@@ -2695,9 +2893,12 @@ help:
 	@echo "... rosidl_generator_py/ma_interfaces/srv/_register_s.o"
 	@echo "... rosidl_generator_py/ma_interfaces/srv/_register_s.i"
 	@echo "... rosidl_generator_py/ma_interfaces/srv/_register_s.s"
-	@echo "... rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.o"
-	@echo "... rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.i"
-	@echo "... rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.s"
+	@echo "... rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.o"
+	@echo "... rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.i"
+	@echo "... rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.s"
+	@echo "... rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.o"
+	@echo "... rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.i"
+	@echo "... rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.s"
 	@echo "... rosidl_typesupport_c/ma_interfaces/msg/bid__type_support.o"
 	@echo "... rosidl_typesupport_c/ma_interfaces/msg/bid__type_support.i"
 	@echo "... rosidl_typesupport_c/ma_interfaces/msg/bid__type_support.s"
@@ -2728,9 +2929,12 @@ help:
 	@echo "... rosidl_typesupport_c/ma_interfaces/srv/register__type_support.o"
 	@echo "... rosidl_typesupport_c/ma_interfaces/srv/register__type_support.i"
 	@echo "... rosidl_typesupport_c/ma_interfaces/srv/register__type_support.s"
-	@echo "... rosidl_typesupport_cpp/ma_interfaces/msg/auction_msg__type_support.o"
-	@echo "... rosidl_typesupport_cpp/ma_interfaces/msg/auction_msg__type_support.i"
-	@echo "... rosidl_typesupport_cpp/ma_interfaces/msg/auction_msg__type_support.s"
+	@echo "... rosidl_typesupport_cpp/ma_interfaces/msg/action_dispatch__type_support.o"
+	@echo "... rosidl_typesupport_cpp/ma_interfaces/msg/action_dispatch__type_support.i"
+	@echo "... rosidl_typesupport_cpp/ma_interfaces/msg/action_dispatch__type_support.s"
+	@echo "... rosidl_typesupport_cpp/ma_interfaces/msg/action_feedback__type_support.o"
+	@echo "... rosidl_typesupport_cpp/ma_interfaces/msg/action_feedback__type_support.i"
+	@echo "... rosidl_typesupport_cpp/ma_interfaces/msg/action_feedback__type_support.s"
 	@echo "... rosidl_typesupport_cpp/ma_interfaces/msg/bid__type_support.o"
 	@echo "... rosidl_typesupport_cpp/ma_interfaces/msg/bid__type_support.i"
 	@echo "... rosidl_typesupport_cpp/ma_interfaces/msg/bid__type_support.s"
@@ -2761,9 +2965,12 @@ help:
 	@echo "... rosidl_typesupport_cpp/ma_interfaces/srv/register__type_support.o"
 	@echo "... rosidl_typesupport_cpp/ma_interfaces/srv/register__type_support.i"
 	@echo "... rosidl_typesupport_cpp/ma_interfaces/srv/register__type_support.s"
-	@echo "... rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/auction_msg__type_support_c.o"
-	@echo "... rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/auction_msg__type_support_c.i"
-	@echo "... rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/auction_msg__type_support_c.s"
+	@echo "... rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__type_support_c.o"
+	@echo "... rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__type_support_c.i"
+	@echo "... rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__type_support_c.s"
+	@echo "... rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_feedback__type_support_c.o"
+	@echo "... rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_feedback__type_support_c.i"
+	@echo "... rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_feedback__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/bid__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/bid__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/bid__type_support_c.s"
@@ -2794,9 +3001,12 @@ help:
 	@echo "... rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/register__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/register__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/register__type_support_c.s"
-	@echo "... rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/auction_msg__type_support.o"
-	@echo "... rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/auction_msg__type_support.i"
-	@echo "... rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/auction_msg__type_support.s"
+	@echo "... rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_dispatch__type_support.o"
+	@echo "... rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_dispatch__type_support.i"
+	@echo "... rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_dispatch__type_support.s"
+	@echo "... rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_feedback__type_support.o"
+	@echo "... rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_feedback__type_support.i"
+	@echo "... rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_feedback__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/bid__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/bid__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/bid__type_support.s"
@@ -2827,9 +3037,12 @@ help:
 	@echo "... rosidl_typesupport_fastrtps_cpp/ma_interfaces/srv/detail/dds_fastrtps/register__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/ma_interfaces/srv/detail/dds_fastrtps/register__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/ma_interfaces/srv/detail/dds_fastrtps/register__type_support.s"
-	@echo "... rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/auction_msg__type_support.o"
-	@echo "... rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/auction_msg__type_support.i"
-	@echo "... rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/auction_msg__type_support.s"
+	@echo "... rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_dispatch__type_support.o"
+	@echo "... rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_dispatch__type_support.i"
+	@echo "... rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_dispatch__type_support.s"
+	@echo "... rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_feedback__type_support.o"
+	@echo "... rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_feedback__type_support.i"
+	@echo "... rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_feedback__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/bid__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/bid__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/bid__type_support.s"
@@ -2860,9 +3073,12 @@ help:
 	@echo "... rosidl_typesupport_introspection_c/ma_interfaces/srv/detail/register__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/ma_interfaces/srv/detail/register__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/ma_interfaces/srv/detail/register__type_support.s"
-	@echo "... rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/auction_msg__type_support.o"
-	@echo "... rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/auction_msg__type_support.i"
-	@echo "... rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/auction_msg__type_support.s"
+	@echo "... rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_dispatch__type_support.o"
+	@echo "... rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_dispatch__type_support.i"
+	@echo "... rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_dispatch__type_support.s"
+	@echo "... rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_feedback__type_support.o"
+	@echo "... rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_feedback__type_support.i"
+	@echo "... rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_feedback__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/bid__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/bid__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/bid__type_support.s"

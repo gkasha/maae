@@ -1,7 +1,8 @@
 {
   "package_name": "ma_interfaces",
   "non_idl_tuples": [
-    "/home/gkasha/Documents/maae/src/ma_interfaces:msg/AuctionMsg.msg",
+    "/home/gkasha/Documents/maae/src/ma_interfaces:msg/ActionDispatch.msg",
+    "/home/gkasha/Documents/maae/src/ma_interfaces:msg/ActionFeedback.msg",
     "/home/gkasha/Documents/maae/src/ma_interfaces:msg/Node.msg",
     "/home/gkasha/Documents/maae/src/ma_interfaces:msg/Bid.msg",
     "/home/gkasha/Documents/maae/src/ma_interfaces:msg/Task.msg",

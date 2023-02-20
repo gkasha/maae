@@ -1,5 +1,7 @@
+/home/gkasha/Documents/maae/install/auction/include/auction//execution_interface.hpp
 /home/gkasha/Documents/maae/install/auction/include/auction//stn.hpp
-/home/gkasha/Documents/maae/install/auction/lib/auction/server
+/home/gkasha/Documents/maae/install/auction/include/auction//agent.hpp
+/home/gkasha/Documents/maae/install/auction/lib/auction/execution_interface
 /home/gkasha/Documents/maae/install/auction/lib/auction/client
 /home/gkasha/Documents/maae/install/auction/lib/auction/agent
 /home/gkasha/Documents/maae/install/auction/lib/auction/goal_manager

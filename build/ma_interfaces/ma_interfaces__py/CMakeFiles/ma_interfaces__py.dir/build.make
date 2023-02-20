@@ -69,7 +69,8 @@ include ma_interfaces__py/CMakeFiles/ma_interfaces__py.dir/progress.make
 ma_interfaces__py/CMakeFiles/ma_interfaces__py: rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 ma_interfaces__py/CMakeFiles/ma_interfaces__py: rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 ma_interfaces__py/CMakeFiles/ma_interfaces__py: rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_c.c
-ma_interfaces__py/CMakeFiles/ma_interfaces__py: rosidl_generator_py/ma_interfaces/msg/_auction_msg.py
+ma_interfaces__py/CMakeFiles/ma_interfaces__py: rosidl_generator_py/ma_interfaces/msg/_action_dispatch.py
+ma_interfaces__py/CMakeFiles/ma_interfaces__py: rosidl_generator_py/ma_interfaces/msg/_action_feedback.py
 ma_interfaces__py/CMakeFiles/ma_interfaces__py: rosidl_generator_py/ma_interfaces/msg/_node.py
 ma_interfaces__py/CMakeFiles/ma_interfaces__py: rosidl_generator_py/ma_interfaces/msg/_bid.py
 ma_interfaces__py/CMakeFiles/ma_interfaces__py: rosidl_generator_py/ma_interfaces/msg/_task.py
@@ -82,7 +83,8 @@ ma_interfaces__py/CMakeFiles/ma_interfaces__py: rosidl_generator_py/ma_interface
 ma_interfaces__py/CMakeFiles/ma_interfaces__py: rosidl_generator_py/ma_interfaces/srv/_add_goal.py
 ma_interfaces__py/CMakeFiles/ma_interfaces__py: rosidl_generator_py/ma_interfaces/msg/__init__.py
 ma_interfaces__py/CMakeFiles/ma_interfaces__py: rosidl_generator_py/ma_interfaces/srv/__init__.py
-ma_interfaces__py/CMakeFiles/ma_interfaces__py: rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.c
+ma_interfaces__py/CMakeFiles/ma_interfaces__py: rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.c
+ma_interfaces__py/CMakeFiles/ma_interfaces__py: rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.c
 ma_interfaces__py/CMakeFiles/ma_interfaces__py: rosidl_generator_py/ma_interfaces/msg/_node_s.c
 ma_interfaces__py/CMakeFiles/ma_interfaces__py: rosidl_generator_py/ma_interfaces/msg/_bid_s.c
 ma_interfaces__py/CMakeFiles/ma_interfaces__py: rosidl_generator_py/ma_interfaces/msg/_task_s.c
@@ -107,7 +109,8 @@ rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introsp
 rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c: /home/gkasha/ros2_humble/install/rosidl_generator_py/share/rosidl_generator_py/resource/_msg.py.em
 rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c: /home/gkasha/ros2_humble/install/rosidl_generator_py/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c: /home/gkasha/ros2_humble/install/rosidl_generator_py/share/rosidl_generator_py/resource/_srv.py.em
-rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c: rosidl_adapter/ma_interfaces/msg/AuctionMsg.idl
+rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c: rosidl_adapter/ma_interfaces/msg/ActionDispatch.idl
+rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c: rosidl_adapter/ma_interfaces/msg/ActionFeedback.idl
 rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c: rosidl_adapter/ma_interfaces/msg/Node.idl
 rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c: rosidl_adapter/ma_interfaces/msg/Bid.idl
 rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c: rosidl_adapter/ma_interfaces/msg/Task.idl
@@ -127,8 +130,11 @@ rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_fastrtp
 rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_c.c: rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_c.c
 
-rosidl_generator_py/ma_interfaces/msg/_auction_msg.py: rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/ma_interfaces/msg/_auction_msg.py
+rosidl_generator_py/ma_interfaces/msg/_action_dispatch.py: rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/ma_interfaces/msg/_action_dispatch.py
+
+rosidl_generator_py/ma_interfaces/msg/_action_feedback.py: rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/ma_interfaces/msg/_action_feedback.py
 
 rosidl_generator_py/ma_interfaces/msg/_node.py: rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/ma_interfaces/msg/_node.py
@@ -166,8 +172,11 @@ rosidl_generator_py/ma_interfaces/msg/__init__.py: rosidl_generator_py/ma_interf
 rosidl_generator_py/ma_interfaces/srv/__init__.py: rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/ma_interfaces/srv/__init__.py
 
-rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.c: rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.c
+rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.c: rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.c
+
+rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.c: rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.c
 
 rosidl_generator_py/ma_interfaces/msg/_node_s.c: rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/ma_interfaces/msg/_node_s.c
@@ -204,8 +213,10 @@ ma_interfaces__py: rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_
 ma_interfaces__py: rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 ma_interfaces__py: rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 ma_interfaces__py: rosidl_generator_py/ma_interfaces/msg/__init__.py
-ma_interfaces__py: rosidl_generator_py/ma_interfaces/msg/_auction_msg.py
-ma_interfaces__py: rosidl_generator_py/ma_interfaces/msg/_auction_msg_s.c
+ma_interfaces__py: rosidl_generator_py/ma_interfaces/msg/_action_dispatch.py
+ma_interfaces__py: rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.c
+ma_interfaces__py: rosidl_generator_py/ma_interfaces/msg/_action_feedback.py
+ma_interfaces__py: rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.c
 ma_interfaces__py: rosidl_generator_py/ma_interfaces/msg/_bid.py
 ma_interfaces__py: rosidl_generator_py/ma_interfaces/msg/_bid_s.c
 ma_interfaces__py: rosidl_generator_py/ma_interfaces/msg/_goal.py

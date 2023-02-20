@@ -73,7 +73,7 @@ static rosidl_typesupport_introspection_c__MessageMember ma_interfaces__msg__Tas
   },
   {
     "duration",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array

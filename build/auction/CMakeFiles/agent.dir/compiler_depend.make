@@ -3,6 +3,7 @@
 
 CMakeFiles/agent.dir/src/agent.cpp.o: /home/gkasha/Documents/maae/src/auction/src/agent.cpp \
   /usr/include/stdc-predef.h \
+  /home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp \
   /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp \
   /usr/include/c++/11/csignal \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -673,38 +674,26 @@ CMakeFiles/agent.dir/src/agent.cpp.o: /home/gkasha/Documents/maae/src/auction/sr
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/c++/11/bits/fstream.tcc \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/register.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__struct.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__builder.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__traits.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/auction_srv.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__struct.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__builder.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__traits.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/auction_result.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_result__struct.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__struct.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__struct.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_result__builder.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_result__traits.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__traits.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__traits.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/get_goal.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__struct.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__struct.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__builder.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__traits.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__traits.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/get_bid.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_bid__struct.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_bid__builder.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_bid__traits.hpp \
+  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/action_dispatch.hpp \
+  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_dispatch__struct.hpp \
+  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_dispatch__builder.hpp \
+  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_dispatch__traits.hpp \
+  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/action_feedback.hpp \
+  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_feedback__struct.hpp \
+  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_feedback__builder.hpp \
+  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_feedback__traits.hpp \
   /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/goal.hpp \
+  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__struct.hpp \
   /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__builder.hpp \
+  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__traits.hpp \
   /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/task.hpp \
+  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__struct.hpp \
   /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__builder.hpp \
+  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__traits.hpp \
   /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/bid.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__builder.hpp
+  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__struct.hpp \
+  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__builder.hpp \
+  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__traits.hpp
 
 CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/stn.cpp \
   /usr/include/stdc-predef.h \
@@ -940,33 +929,17 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 
 /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__builder.hpp:
 
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_bid__traits.hpp:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_bid__struct.hpp:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__traits.hpp:
+/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__struct.hpp:
 
 /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__struct.hpp:
 
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__struct.hpp:
+/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_feedback__struct.hpp:
 
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_result__traits.hpp:
+/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_dispatch__traits.hpp:
 
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_result__builder.hpp:
+/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_dispatch__struct.hpp:
 
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__struct.hpp:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_result__struct.hpp:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__traits.hpp:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__struct.hpp:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/auction_srv.hpp:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__traits.hpp:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/register.hpp:
+/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/action_dispatch.hpp:
 
 /usr/include/c++/11/bits/fstream.tcc:
 
@@ -1062,6 +1035,8 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 
 /home/gkasha/ros2_humble/build/rcl_interfaces/rosidl_generator_cpp/rcl_interfaces/msg/detail/parameter_value__builder.hpp:
 
+/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/action_feedback.hpp:
+
 /home/gkasha/ros2_humble/build/rcl_interfaces/rosidl_generator_cpp/rcl_interfaces/msg/detail/parameter_type__traits.hpp:
 
 /home/gkasha/ros2_humble/build/rcl_interfaces/rosidl_generator_cpp/rcl_interfaces/msg/detail/parameter_type__builder.hpp:
@@ -1136,7 +1111,9 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 
 /home/gkasha/ros2_humble/src/ros-tooling/libstatistics_collector/include/libstatistics_collector/topic_statistics_collector/received_message_period.hpp:
 
-/usr/include/c++/11/bits/vector.tcc:
+/home/gkasha/ros2_humble/build/rclcpp/include/rclcpp/node_interfaces/node_topics_interface_traits.hpp:
+
+/home/gkasha/ros2_humble/src/ros-tooling/libstatistics_collector/include/libstatistics_collector/collector/metric_details_interface.hpp:
 
 /usr/include/c++/11/bits/stl_bvector.h:
 
@@ -1274,8 +1251,6 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 
 /usr/include/c++/11/exception:
 
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__builder.hpp:
-
 /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
@@ -1288,8 +1263,6 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 
 /usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
 
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__builder.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
@@ -1299,8 +1272,6 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/subscription.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__struct.hpp:
 
 /usr/include/c++/11/bits/unordered_map.h:
 
@@ -1314,8 +1285,6 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 
 /home/gkasha/ros2_humble/src/ros2/rosidl/rosidl_runtime_cpp/include/rosidl_typesupport_cpp/message_type_support.hpp:
 
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__builder.hpp:
-
 /home/gkasha/ros2_humble/build/rcl_interfaces/rosidl_generator_cpp/rcl_interfaces/msg/parameter_value.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
@@ -1325,10 +1294,6 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 /usr/include/stdint.h:
 
 /usr/include/c++/11/bits/ptr_traits.h:
-
-/home/gkasha/ros2_humble/build/rclcpp/include/rclcpp/node_interfaces/node_topics_interface_traits.hpp:
-
-/home/gkasha/ros2_humble/src/ros-tooling/libstatistics_collector/include/libstatistics_collector/collector/metric_details_interface.hpp:
 
 /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:
 
@@ -1343,22 +1308,6 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h:
 
 /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/macros.hpp:
-
-/usr/include/c++/11/bits/shared_ptr_base.h:
-
-/usr/include/c++/11/bits/basic_string.h:
-
-/home/gkasha/ros2_humble/build/rcl_interfaces/rosidl_generator_cpp/rcl_interfaces/msg/detail/parameter_event__struct.hpp:
-
-/home/gkasha/ros2_humble/build/rcl_interfaces/rosidl_generator_cpp/rcl_interfaces/msg/detail/parameter_descriptor__struct.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
-
-/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/qos_overriding_options.hpp:
-
-/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
@@ -1388,9 +1337,17 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 
 /usr/include/c++/11/bits/exception_defines.h:
 
+/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/bid.hpp:
+
+/usr/include/c++/11/unordered_set:
+
+/home/gkasha/ros2_humble/build/tracetools/include/tracetools/config.h:
+
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
 
 /home/gkasha/ros2_humble/src/ros-tooling/libstatistics_collector/include/libstatistics_collector/collector/generate_statistics_message.hpp:
+
+/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_dispatch__builder.hpp:
 
 /usr/include/c++/11/bits/hashtable_policy.h:
 
@@ -1401,6 +1358,10 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
 
 /usr/include/c++/11/bits/list.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
 /usr/include/locale.h:
 
@@ -1474,23 +1435,13 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 
 /usr/include/features-time64.h:
 
-/home/gkasha/Documents/maae/src/auction/src/stn.cpp:
-
-/home/gkasha/ros2_humble/build/rcl_interfaces/rosidl_generator_cpp/rcl_interfaces/srv/detail/get_parameters__struct.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
-
-/usr/include/c++/11/bits/shared_ptr.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
-
-/usr/include/c++/11/bits/stl_construct.h:
-
-/usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
-
-/usr/include/c++/11/tr1/special_function_util.h:
+/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_feedback__builder.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
+
+/home/gkasha/ros2_humble/build/builtin_interfaces/rosidl_generator_cpp/builtin_interfaces/msg/time.hpp:
+
+/usr/include/c++/11/bits/ios_base.h:
 
 /home/gkasha/ros2_humble/install/rcl/include/rcl/rcl/types.h:
 
@@ -1514,15 +1465,47 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 
 /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/experimental/intra_process_manager.hpp:
 
+/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/qos_overriding_options.hpp:
+
+/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:
+
+/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/typesupport_helpers.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
 /usr/include/c++/11/atomic:
 
 /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:
+
+/usr/include/strings.h:
+
+/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/detail/resolve_use_intra_process.hpp:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
 /home/gkasha/ros2_humble/src/ros2/rcutils/include/rcutils/testing/fault_injection.h:
 
 /usr/include/c++/11/tr1/gamma.tcc:
+
+/home/gkasha/Documents/maae/src/auction/src/stn.cpp:
+
+/home/gkasha/ros2_humble/build/rcl_interfaces/rosidl_generator_cpp/rcl_interfaces/srv/detail/get_parameters__struct.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
+
+/usr/include/c++/11/tr1/special_function_util.h:
+
+/usr/include/c++/11/bits/shared_ptr.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
+
+/usr/include/c++/11/bits/stl_construct.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
@@ -1562,6 +1545,10 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
 
+/usr/include/c++/11/bits/basic_string.h:
+
+/usr/include/c++/11/bits/shared_ptr_base.h:
+
 /home/gkasha/ros2_humble/install/rcl/include/rcl/rcl/logging_rosout.h:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
@@ -1573,6 +1560,12 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 /home/gkasha/ros2_humble/build/builtin_interfaces/rosidl_generator_cpp/builtin_interfaces/msg/detail/time__traits.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+/home/gkasha/ros2_humble/build/rcl_interfaces/rosidl_generator_cpp/rcl_interfaces/msg/detail/parameter_event__struct.hpp:
+
+/home/gkasha/ros2_humble/build/rcl_interfaces/rosidl_generator_cpp/rcl_interfaces/msg/detail/parameter_descriptor__struct.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
@@ -1625,6 +1618,10 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h:
 
 /usr/include/c++/11/tuple:
+
+/home/gkasha/ros2_humble/build/builtin_interfaces/rosidl_generator_cpp/builtin_interfaces/msg/detail/duration__struct.hpp:
+
+/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/context.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/sigcontext.h:
 
@@ -1702,6 +1699,12 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 
 /usr/include/c++/11/bits/align.h:
 
+/home/gkasha/ros2_humble/build/rcl_interfaces/rosidl_generator_cpp/rcl_interfaces/srv/detail/set_parameters_atomically__struct.hpp:
+
+/usr/include/signal.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+
 /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/create_subscription.hpp:
 
 /home/gkasha/ros2_humble/build/tracetools/include/tracetools/visibility_control.hpp:
@@ -1750,8 +1753,6 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 
 /usr/include/c++/11/algorithm:
 
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_bid__builder.hpp:
-
 /usr/include/c++/11/backward/binders.h:
 
 /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/service.hpp:
@@ -1790,33 +1791,7 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
 
-/home/gkasha/ros2_humble/build/rcl_interfaces/rosidl_generator_cpp/rcl_interfaces/srv/detail/set_parameters_atomically__struct.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
-
-/usr/include/signal.h:
-
-/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/detail/resolve_use_intra_process.hpp:
-
-/usr/include/strings.h:
-
-/home/gkasha/ros2_humble/build/tracetools/include/tracetools/config.h:
-
-/usr/include/c++/11/bits/ios_base.h:
-
-/home/gkasha/ros2_humble/build/builtin_interfaces/rosidl_generator_cpp/builtin_interfaces/msg/time.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/bid.hpp:
-
-/usr/include/c++/11/unordered_set:
-
-/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/context.hpp:
-
-/home/gkasha/ros2_humble/build/builtin_interfaces/rosidl_generator_cpp/builtin_interfaces/msg/detail/duration__struct.hpp:
+/usr/include/c++/11/bits/vector.tcc:
 
 /usr/include/c++/11/cassert:
 
@@ -2020,9 +1995,9 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 
 /usr/include/c++/11/cxxabi.h:
 
-/usr/include/c++/11/bits/stl_iterator.h:
-
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+
+/usr/include/c++/11/bits/stl_iterator.h:
 
 /home/gkasha/ros2_humble/install/rmw/include/rmw/rmw/event_callback_type.h:
 
@@ -2180,10 +2155,6 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 
 /home/gkasha/ros2_humble/install/rmw/include/rmw/rmw/impl/cpp/demangle.hpp:
 
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/get_bid.hpp:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/auction_result.hpp:
-
 /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/create_service.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/cxxabi_tweaks.h:
@@ -2284,6 +2255,8 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 
 /home/gkasha/ros2_humble/build/rcl_interfaces/rosidl_generator_cpp/rcl_interfaces/msg/detail/set_parameters_result__traits.hpp:
 
+/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_feedback__traits.hpp:
+
 /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/topic_statistics_state.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
@@ -2299,10 +2272,6 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 /usr/include/c++/11/typeindex:
 
 /home/gkasha/ros2_humble/build/statistics_msgs/rosidl_generator_cpp/statistics_msgs/msg/detail/metrics_message__traits.hpp:
-
-/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/typesupport_helpers.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
@@ -2323,8 +2292,6 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 /usr/include/c++/11/tr1/poly_hermite.tcc:
 
 /usr/include/c++/11/tr1/riemann_zeta.tcc:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/get_goal.hpp:
 
 /home/gkasha/ros2_humble/install/rmw/include/rmw/rmw/ret_types.h:
 

@@ -88,8 +88,8 @@ bool ma_interfaces__msg__bid__convert_from_py(PyObject * _pymsg, void * _ros_mes
     if (!field) {
       return false;
     }
-    assert(PyLong_Check(field));
-    ros_message->st = PyLong_AsLongLong(field);
+    assert(PyFloat_Check(field));
+    ros_message->st = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // et
@@ -97,8 +97,8 @@ bool ma_interfaces__msg__bid__convert_from_py(PyObject * _pymsg, void * _ros_mes
     if (!field) {
       return false;
     }
-    assert(PyLong_Check(field));
-    ros_message->et = PyLong_AsLongLong(field);
+    assert(PyFloat_Check(field));
+    ros_message->et = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // value
@@ -168,7 +168,7 @@ PyObject * ma_interfaces__msg__bid__convert_to_py(void * raw_ros_message)
   }
   {  // st
     PyObject * field = NULL;
-    field = PyLong_FromLongLong(ros_message->st);
+    field = PyFloat_FromDouble(ros_message->st);
     {
       int rc = PyObject_SetAttrString(_pymessage, "st", field);
       Py_DECREF(field);
@@ -179,7 +179,7 @@ PyObject * ma_interfaces__msg__bid__convert_to_py(void * raw_ros_message)
   }
   {  // et
     PyObject * field = NULL;
-    field = PyLong_FromLongLong(ros_message->et);
+    field = PyFloat_FromDouble(ros_message->et);
     {
       int rc = PyObject_SetAttrString(_pymessage, "et", field);
       Py_DECREF(field);

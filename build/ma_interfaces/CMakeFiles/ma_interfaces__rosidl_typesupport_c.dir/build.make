@@ -69,74 +69,92 @@ include CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/flags.make
 
-rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp: /home/gkasha/ros2_humble/install/rosidl_typesupport_c/lib/rosidl_typesupport_c/rosidl_typesupport_c
-rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp: /home/gkasha/ros2_humble/install/rosidl_typesupport_c/local/lib/python3.10/dist-packages/rosidl_typesupport_c/__init__.py
-rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp: /home/gkasha/ros2_humble/install/rosidl_typesupport_c/share/rosidl_typesupport_c/resource/action__type_support.c.em
-rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp: /home/gkasha/ros2_humble/install/rosidl_typesupport_c/share/rosidl_typesupport_c/resource/idl__type_support.cpp.em
-rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp: /home/gkasha/ros2_humble/install/rosidl_typesupport_c/share/rosidl_typesupport_c/resource/msg__type_support.cpp.em
-rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp: /home/gkasha/ros2_humble/install/rosidl_typesupport_c/share/rosidl_typesupport_c/resource/srv__type_support.cpp.em
-rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp: rosidl_adapter/ma_interfaces/msg/AuctionMsg.idl
-rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp: rosidl_adapter/ma_interfaces/msg/Node.idl
-rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp: rosidl_adapter/ma_interfaces/msg/Bid.idl
-rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp: rosidl_adapter/ma_interfaces/msg/Task.idl
-rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp: rosidl_adapter/ma_interfaces/msg/Goal.idl
-rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp: rosidl_adapter/ma_interfaces/srv/Register.idl
-rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp: rosidl_adapter/ma_interfaces/srv/AuctionSrv.idl
-rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp: rosidl_adapter/ma_interfaces/srv/AuctionResult.idl
-rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp: rosidl_adapter/ma_interfaces/srv/GetGoal.idl
-rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp: rosidl_adapter/ma_interfaces/srv/GetBid.idl
-rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp: rosidl_adapter/ma_interfaces/srv/AddGoal.idl
+rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp: /home/gkasha/ros2_humble/install/rosidl_typesupport_c/lib/rosidl_typesupport_c/rosidl_typesupport_c
+rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp: /home/gkasha/ros2_humble/install/rosidl_typesupport_c/local/lib/python3.10/dist-packages/rosidl_typesupport_c/__init__.py
+rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp: /home/gkasha/ros2_humble/install/rosidl_typesupport_c/share/rosidl_typesupport_c/resource/action__type_support.c.em
+rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp: /home/gkasha/ros2_humble/install/rosidl_typesupport_c/share/rosidl_typesupport_c/resource/idl__type_support.cpp.em
+rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp: /home/gkasha/ros2_humble/install/rosidl_typesupport_c/share/rosidl_typesupport_c/resource/msg__type_support.cpp.em
+rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp: /home/gkasha/ros2_humble/install/rosidl_typesupport_c/share/rosidl_typesupport_c/resource/srv__type_support.cpp.em
+rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp: rosidl_adapter/ma_interfaces/msg/ActionDispatch.idl
+rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp: rosidl_adapter/ma_interfaces/msg/ActionFeedback.idl
+rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp: rosidl_adapter/ma_interfaces/msg/Node.idl
+rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp: rosidl_adapter/ma_interfaces/msg/Bid.idl
+rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp: rosidl_adapter/ma_interfaces/msg/Task.idl
+rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp: rosidl_adapter/ma_interfaces/msg/Goal.idl
+rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp: rosidl_adapter/ma_interfaces/srv/Register.idl
+rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp: rosidl_adapter/ma_interfaces/srv/AuctionSrv.idl
+rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp: rosidl_adapter/ma_interfaces/srv/AuctionResult.idl
+rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp: rosidl_adapter/ma_interfaces/srv/GetGoal.idl
+rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp: rosidl_adapter/ma_interfaces/srv/GetBid.idl
+rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp: rosidl_adapter/ma_interfaces/srv/AddGoal.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C type support dispatch for ROS interfaces"
 	/usr/bin/python3.10 /home/gkasha/ros2_humble/install/rosidl_typesupport_c/lib/rosidl_typesupport_c/rosidl_typesupport_c --generator-arguments-file /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_c__arguments.json --typesupports rosidl_typesupport_introspection_c rosidl_typesupport_fastrtps_c
 
-rosidl_typesupport_c/ma_interfaces/msg/node__type_support.cpp: rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp
+rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp: rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp
+
+rosidl_typesupport_c/ma_interfaces/msg/node__type_support.cpp: rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/ma_interfaces/msg/node__type_support.cpp
 
-rosidl_typesupport_c/ma_interfaces/msg/bid__type_support.cpp: rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp
+rosidl_typesupport_c/ma_interfaces/msg/bid__type_support.cpp: rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/ma_interfaces/msg/bid__type_support.cpp
 
-rosidl_typesupport_c/ma_interfaces/msg/task__type_support.cpp: rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp
+rosidl_typesupport_c/ma_interfaces/msg/task__type_support.cpp: rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/ma_interfaces/msg/task__type_support.cpp
 
-rosidl_typesupport_c/ma_interfaces/msg/goal__type_support.cpp: rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp
+rosidl_typesupport_c/ma_interfaces/msg/goal__type_support.cpp: rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/ma_interfaces/msg/goal__type_support.cpp
 
-rosidl_typesupport_c/ma_interfaces/srv/register__type_support.cpp: rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp
+rosidl_typesupport_c/ma_interfaces/srv/register__type_support.cpp: rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/ma_interfaces/srv/register__type_support.cpp
 
-rosidl_typesupport_c/ma_interfaces/srv/auction_srv__type_support.cpp: rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp
+rosidl_typesupport_c/ma_interfaces/srv/auction_srv__type_support.cpp: rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/ma_interfaces/srv/auction_srv__type_support.cpp
 
-rosidl_typesupport_c/ma_interfaces/srv/auction_result__type_support.cpp: rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp
+rosidl_typesupport_c/ma_interfaces/srv/auction_result__type_support.cpp: rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/ma_interfaces/srv/auction_result__type_support.cpp
 
-rosidl_typesupport_c/ma_interfaces/srv/get_goal__type_support.cpp: rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp
+rosidl_typesupport_c/ma_interfaces/srv/get_goal__type_support.cpp: rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/ma_interfaces/srv/get_goal__type_support.cpp
 
-rosidl_typesupport_c/ma_interfaces/srv/get_bid__type_support.cpp: rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp
+rosidl_typesupport_c/ma_interfaces/srv/get_bid__type_support.cpp: rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/ma_interfaces/srv/get_bid__type_support.cpp
 
-rosidl_typesupport_c/ma_interfaces/srv/add_goal__type_support.cpp: rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp
+rosidl_typesupport_c/ma_interfaces/srv/add_goal__type_support.cpp: rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/ma_interfaces/srv/add_goal__type_support.cpp
 
-CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/flags.make
-CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.o: rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp
-CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.o -MF CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.o.d -o CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp
+CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/flags.make
+CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.o: rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp
+CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.o -MF CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.o.d -o CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp
 
-CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp > CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.i
+CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp > CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.i
 
-CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp -o CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.s
+CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp -o CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.s
+
+CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/flags.make
+CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.o: rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp
+CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.o -MF CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.o.d -o CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp
+
+CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp > CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.i
+
+CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp -o CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.s
 
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/node__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/node__type_support.cpp.o: rosidl_typesupport_c/ma_interfaces/msg/node__type_support.cpp
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/node__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/node__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/node__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/node__type_support.cpp.o -MF CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/node__type_support.cpp.o.d -o CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/node__type_support.cpp.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_c/ma_interfaces/msg/node__type_support.cpp
 
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/node__type_support.cpp.i: cmake_force
@@ -150,7 +168,7 @@ CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_inter
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/bid__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/bid__type_support.cpp.o: rosidl_typesupport_c/ma_interfaces/msg/bid__type_support.cpp
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/bid__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/bid__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/bid__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/bid__type_support.cpp.o -MF CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/bid__type_support.cpp.o.d -o CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/bid__type_support.cpp.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_c/ma_interfaces/msg/bid__type_support.cpp
 
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/bid__type_support.cpp.i: cmake_force
@@ -164,7 +182,7 @@ CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_inter
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/task__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/task__type_support.cpp.o: rosidl_typesupport_c/ma_interfaces/msg/task__type_support.cpp
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/task__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/task__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/task__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/task__type_support.cpp.o -MF CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/task__type_support.cpp.o.d -o CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/task__type_support.cpp.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_c/ma_interfaces/msg/task__type_support.cpp
 
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/task__type_support.cpp.i: cmake_force
@@ -178,7 +196,7 @@ CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_inter
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/goal__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/goal__type_support.cpp.o: rosidl_typesupport_c/ma_interfaces/msg/goal__type_support.cpp
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/goal__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/goal__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/goal__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/goal__type_support.cpp.o -MF CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/goal__type_support.cpp.o.d -o CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/goal__type_support.cpp.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_c/ma_interfaces/msg/goal__type_support.cpp
 
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/goal__type_support.cpp.i: cmake_force
@@ -192,7 +210,7 @@ CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_inter
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/register__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/register__type_support.cpp.o: rosidl_typesupport_c/ma_interfaces/srv/register__type_support.cpp
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/register__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/register__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/register__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/register__type_support.cpp.o -MF CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/register__type_support.cpp.o.d -o CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/register__type_support.cpp.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_c/ma_interfaces/srv/register__type_support.cpp
 
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/register__type_support.cpp.i: cmake_force
@@ -206,7 +224,7 @@ CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_inter
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/auction_srv__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/auction_srv__type_support.cpp.o: rosidl_typesupport_c/ma_interfaces/srv/auction_srv__type_support.cpp
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/auction_srv__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/auction_srv__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/auction_srv__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/auction_srv__type_support.cpp.o -MF CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/auction_srv__type_support.cpp.o.d -o CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/auction_srv__type_support.cpp.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_c/ma_interfaces/srv/auction_srv__type_support.cpp
 
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/auction_srv__type_support.cpp.i: cmake_force
@@ -220,7 +238,7 @@ CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_inter
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/auction_result__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/auction_result__type_support.cpp.o: rosidl_typesupport_c/ma_interfaces/srv/auction_result__type_support.cpp
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/auction_result__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/auction_result__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/auction_result__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/auction_result__type_support.cpp.o -MF CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/auction_result__type_support.cpp.o.d -o CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/auction_result__type_support.cpp.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_c/ma_interfaces/srv/auction_result__type_support.cpp
 
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/auction_result__type_support.cpp.i: cmake_force
@@ -234,7 +252,7 @@ CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_inter
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/get_goal__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/get_goal__type_support.cpp.o: rosidl_typesupport_c/ma_interfaces/srv/get_goal__type_support.cpp
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/get_goal__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/get_goal__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/get_goal__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/get_goal__type_support.cpp.o -MF CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/get_goal__type_support.cpp.o.d -o CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/get_goal__type_support.cpp.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_c/ma_interfaces/srv/get_goal__type_support.cpp
 
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/get_goal__type_support.cpp.i: cmake_force
@@ -248,7 +266,7 @@ CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_inter
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/get_bid__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/get_bid__type_support.cpp.o: rosidl_typesupport_c/ma_interfaces/srv/get_bid__type_support.cpp
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/get_bid__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/get_bid__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/get_bid__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/get_bid__type_support.cpp.o -MF CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/get_bid__type_support.cpp.o.d -o CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/get_bid__type_support.cpp.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_c/ma_interfaces/srv/get_bid__type_support.cpp
 
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/get_bid__type_support.cpp.i: cmake_force
@@ -262,7 +280,7 @@ CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_inter
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/add_goal__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/add_goal__type_support.cpp.o: rosidl_typesupport_c/ma_interfaces/srv/add_goal__type_support.cpp
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/add_goal__type_support.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/add_goal__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/add_goal__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/add_goal__type_support.cpp.o -MF CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/add_goal__type_support.cpp.o.d -o CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/add_goal__type_support.cpp.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_c/ma_interfaces/srv/add_goal__type_support.cpp
 
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/add_goal__type_support.cpp.i: cmake_force
@@ -275,7 +293,8 @@ CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_inter
 
 # Object files for target ma_interfaces__rosidl_typesupport_c
 ma_interfaces__rosidl_typesupport_c_OBJECTS = \
-"CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.o" \
+"CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.o" \
+"CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.o" \
 "CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/node__type_support.cpp.o" \
 "CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/bid__type_support.cpp.o" \
 "CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/task__type_support.cpp.o" \
@@ -290,7 +309,8 @@ ma_interfaces__rosidl_typesupport_c_OBJECTS = \
 # External object files for target ma_interfaces__rosidl_typesupport_c
 ma_interfaces__rosidl_typesupport_c_EXTERNAL_OBJECTS =
 
-libma_interfaces__rosidl_typesupport_c.so: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp.o
+libma_interfaces__rosidl_typesupport_c.so: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.o
+libma_interfaces__rosidl_typesupport_c.so: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.o
 libma_interfaces__rosidl_typesupport_c.so: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/node__type_support.cpp.o
 libma_interfaces__rosidl_typesupport_c.so: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/bid__type_support.cpp.o
 libma_interfaces__rosidl_typesupport_c.so: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/task__type_support.cpp.o
@@ -307,7 +327,7 @@ libma_interfaces__rosidl_typesupport_c.so: /home/gkasha/ros2_humble/install/rosi
 libma_interfaces__rosidl_typesupport_c.so: /home/gkasha/ros2_humble/install/rosidl_runtime_c/lib/librosidl_runtime_c.so
 libma_interfaces__rosidl_typesupport_c.so: /home/gkasha/ros2_humble/install/rcutils/lib/librcutils.so
 libma_interfaces__rosidl_typesupport_c.so: CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX shared library libma_interfaces__rosidl_typesupport_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX shared library libma_interfaces__rosidl_typesupport_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -318,7 +338,8 @@ CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/clean
 
-CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/ma_interfaces/msg/auction_msg__type_support.cpp
+CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp
+CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/ma_interfaces/msg/bid__type_support.cpp
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/ma_interfaces/msg/goal__type_support.cpp
 CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/ma_interfaces/msg/node__type_support.cpp

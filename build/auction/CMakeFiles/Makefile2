@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/gkasha/Documents/maae/build/auction
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/server.dir/all
+all: CMakeFiles/execution_interface.dir/all
 all: CMakeFiles/client.dir/all
 all: CMakeFiles/agent.dir/all
 all: CMakeFiles/goal_manager.dir/all
@@ -76,7 +76,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/auction_uninstall.dir/clean
-clean: CMakeFiles/server.dir/clean
+clean: CMakeFiles/execution_interface.dir/clean
 clean: CMakeFiles/client.dir/clean
 clean: CMakeFiles/agent.dir/clean
 clean: CMakeFiles/goal_manager.dir/clean
@@ -135,30 +135,30 @@ CMakeFiles/auction_uninstall.dir/clean:
 .PHONY : CMakeFiles/auction_uninstall.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/server.dir
+# Target rules for target CMakeFiles/execution_interface.dir
 
 # All Build rule for target.
-CMakeFiles/server.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gkasha/Documents/maae/build/auction/CMakeFiles --progress-num=8,9 "Built target server"
-.PHONY : CMakeFiles/server.dir/all
+CMakeFiles/execution_interface.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/execution_interface.dir/build.make CMakeFiles/execution_interface.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/execution_interface.dir/build.make CMakeFiles/execution_interface.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gkasha/Documents/maae/build/auction/CMakeFiles --progress-num=6,7 "Built target execution_interface"
+.PHONY : CMakeFiles/execution_interface.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/server.dir/rule: cmake_check_build_system
+CMakeFiles/execution_interface.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gkasha/Documents/maae/build/auction/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/server.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/execution_interface.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gkasha/Documents/maae/build/auction/CMakeFiles 0
-.PHONY : CMakeFiles/server.dir/rule
+.PHONY : CMakeFiles/execution_interface.dir/rule
 
 # Convenience name for target.
-server: CMakeFiles/server.dir/rule
-.PHONY : server
+execution_interface: CMakeFiles/execution_interface.dir/rule
+.PHONY : execution_interface
 
 # clean rule for target.
-CMakeFiles/server.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/clean
-.PHONY : CMakeFiles/server.dir/clean
+CMakeFiles/execution_interface.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/execution_interface.dir/build.make CMakeFiles/execution_interface.dir/clean
+.PHONY : CMakeFiles/execution_interface.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/client.dir
@@ -219,7 +219,7 @@ CMakeFiles/agent.dir/clean:
 CMakeFiles/goal_manager.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/goal_manager.dir/build.make CMakeFiles/goal_manager.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/goal_manager.dir/build.make CMakeFiles/goal_manager.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gkasha/Documents/maae/build/auction/CMakeFiles --progress-num=6,7 "Built target goal_manager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gkasha/Documents/maae/build/auction/CMakeFiles --progress-num=8,9 "Built target goal_manager"
 .PHONY : CMakeFiles/goal_manager.dir/all
 
 # Build rule for subdir invocation for target.

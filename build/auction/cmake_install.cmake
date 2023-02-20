@@ -47,21 +47,21 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/auction/server" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/auction/server")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/auction/execution_interface" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/auction/execution_interface")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/auction/server"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/auction/execution_interface"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/auction" TYPE EXECUTABLE FILES "/home/gkasha/Documents/maae/build/auction/server")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/auction/server" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/auction/server")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/auction" TYPE EXECUTABLE FILES "/home/gkasha/Documents/maae/build/auction/execution_interface")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/auction/execution_interface" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/auction/execution_interface")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/auction/server"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/auction/execution_interface"
          OLD_RPATH "/home/gkasha/ros2_humble/install/rclcpp/lib:/home/gkasha/Documents/maae/install/ma_interfaces/lib:/home/gkasha/ros2_humble/install/libstatistics_collector/lib:/home/gkasha/ros2_humble/install/rcl/lib:/home/gkasha/ros2_humble/install/rmw_implementation/lib:/home/gkasha/ros2_humble/install/ament_index_cpp/lib:/home/gkasha/ros2_humble/install/rcl_logging_spdlog/lib:/home/gkasha/ros2_humble/install/rcl_logging_interface/lib:/home/gkasha/ros2_humble/install/rcl_interfaces/lib:/home/gkasha/ros2_humble/install/rcl_yaml_param_parser/lib:/home/gkasha/ros2_humble/install/libyaml_vendor/lib:/home/gkasha/ros2_humble/install/rosgraph_msgs/lib:/home/gkasha/ros2_humble/install/statistics_msgs/lib:/home/gkasha/ros2_humble/install/builtin_interfaces/lib:/home/gkasha/ros2_humble/install/tracetools/lib:/home/gkasha/ros2_humble/install/rosidl_typesupport_fastrtps_c/lib:/home/gkasha/ros2_humble/install/rosidl_typesupport_introspection_cpp/lib:/home/gkasha/ros2_humble/install/rosidl_typesupport_introspection_c/lib:/home/gkasha/ros2_humble/install/rosidl_typesupport_fastrtps_cpp/lib:/home/gkasha/ros2_humble/install/fastcdr/lib:/home/gkasha/ros2_humble/install/rmw/lib:/home/gkasha/ros2_humble/install/rosidl_typesupport_cpp/lib:/home/gkasha/ros2_humble/install/rosidl_typesupport_c/lib:/home/gkasha/ros2_humble/install/rcpputils/lib:/home/gkasha/ros2_humble/install/rosidl_runtime_c/lib:/home/gkasha/ros2_humble/install/rcutils/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/auction/server")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/auction/execution_interface")
     endif()
   endif()
 endif()

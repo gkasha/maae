@@ -88,8 +88,8 @@ bool ma_interfaces__msg__task__convert_from_py(PyObject * _pymsg, void * _ros_me
     if (!field) {
       return false;
     }
-    assert(PyLong_Check(field));
-    ros_message->duration = PyLong_AsLongLong(field);
+    assert(PyFloat_Check(field));
+    ros_message->duration = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // value
@@ -159,7 +159,7 @@ PyObject * ma_interfaces__msg__task__convert_to_py(void * raw_ros_message)
   }
   {  // duration
     PyObject * field = NULL;
-    field = PyLong_FromLongLong(ros_message->duration);
+    field = PyFloat_FromDouble(ros_message->duration);
     {
       int rc = PyObject_SetAttrString(_pymessage, "duration", field);
       Py_DECREF(field);

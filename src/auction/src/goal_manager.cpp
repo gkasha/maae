@@ -1,9 +1,5 @@
 #include "rclcpp/rclcpp.hpp"
 
-#include "ma_interfaces/srv/register.hpp"
-#include "ma_interfaces/srv/add_goal.hpp"
-#include "ma_interfaces/srv/get_goal.hpp"
-
 #include "ma_interfaces/msg/goal.hpp"
 #include "ma_interfaces/msg/task.hpp"
 #include "ma_interfaces/msg/bid.hpp"

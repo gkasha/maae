@@ -1,0 +1,177 @@
+// generated from rosidl_typesupport_introspection_cpp/resource/idl__type_support.cpp.em
+// with input from ma_interfaces:msg/ActionDispatch.idl
+// generated code does not contain a copyright notice
+
+#include "array"
+#include "cstddef"
+#include "string"
+#include "vector"
+#include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_typesupport_cpp/message_type_support.hpp"
+#include "rosidl_typesupport_interface/macros.h"
+#include "ma_interfaces/msg/detail/action_dispatch__struct.hpp"
+#include "rosidl_typesupport_introspection_cpp/field_types.hpp"
+#include "rosidl_typesupport_introspection_cpp/identifier.hpp"
+#include "rosidl_typesupport_introspection_cpp/message_introspection.hpp"
+#include "rosidl_typesupport_introspection_cpp/message_type_support_decl.hpp"
+#include "rosidl_typesupport_introspection_cpp/visibility_control.h"
+
+namespace ma_interfaces
+{
+
+namespace msg
+{
+
+namespace rosidl_typesupport_introspection_cpp
+{
+
+void ActionDispatch_init_function(
+  void * message_memory, rosidl_runtime_cpp::MessageInitialization _init)
+{
+  new (message_memory) ma_interfaces::msg::ActionDispatch(_init);
+}
+
+void ActionDispatch_fini_function(void * message_memory)
+{
+  auto typed_message = static_cast<ma_interfaces::msg::ActionDispatch *>(message_memory);
+  typed_message->~ActionDispatch();
+}
+
+static const ::rosidl_typesupport_introspection_cpp::MessageMember ActionDispatch_message_member_array[5] = {
+  {
+    "action_id",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(ma_interfaces::msg::ActionDispatch, action_id),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "agent_id",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(ma_interfaces::msg::ActionDispatch, agent_id),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "name",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(ma_interfaces::msg::ActionDispatch, name),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "duration",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(ma_interfaces::msg::ActionDispatch, duration),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "start_time",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(ma_interfaces::msg::ActionDispatch, start_time),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  }
+};
+
+static const ::rosidl_typesupport_introspection_cpp::MessageMembers ActionDispatch_message_members = {
+  "ma_interfaces::msg",  // message namespace
+  "ActionDispatch",  // message name
+  5,  // number of fields
+  sizeof(ma_interfaces::msg::ActionDispatch),
+  ActionDispatch_message_member_array,  // message members
+  ActionDispatch_init_function,  // function to initialize message memory (memory has to be allocated)
+  ActionDispatch_fini_function  // function to terminate message instance (will not free memory)
+};
+
+static const rosidl_message_type_support_t ActionDispatch_message_type_support_handle = {
+  ::rosidl_typesupport_introspection_cpp::typesupport_identifier,
+  &ActionDispatch_message_members,
+  get_message_typesupport_handle_function,
+};
+
+}  // namespace rosidl_typesupport_introspection_cpp
+
+}  // namespace msg
+
+}  // namespace ma_interfaces
+
+
+namespace rosidl_typesupport_introspection_cpp
+{
+
+template<>
+ROSIDL_TYPESUPPORT_INTROSPECTION_CPP_PUBLIC
+const rosidl_message_type_support_t *
+get_message_type_support_handle<ma_interfaces::msg::ActionDispatch>()
+{
+  return &::ma_interfaces::msg::rosidl_typesupport_introspection_cpp::ActionDispatch_message_type_support_handle;
+}
+
+}  // namespace rosidl_typesupport_introspection_cpp
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+ROSIDL_TYPESUPPORT_INTROSPECTION_CPP_PUBLIC
+const rosidl_message_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_cpp, ma_interfaces, msg, ActionDispatch)() {
+  return &::ma_interfaces::msg::rosidl_typesupport_introspection_cpp::ActionDispatch_message_type_support_handle;
+}
+
+#ifdef __cplusplus
+}
+#endif

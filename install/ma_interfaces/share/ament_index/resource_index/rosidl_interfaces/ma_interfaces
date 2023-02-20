@@ -1,5 +1,7 @@
-msg/AuctionMsg.idl
-msg/AuctionMsg.msg
+msg/ActionDispatch.idl
+msg/ActionDispatch.msg
+msg/ActionFeedback.idl
+msg/ActionFeedback.msg
 msg/Bid.idl
 msg/Bid.msg
 msg/Goal.idl

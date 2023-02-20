@@ -1,5 +1,4 @@
 #include "rclcpp/rclcpp.hpp"
-#include "ma_interfaces/srv/auction_srv.hpp"
 #include "ma_interfaces/msg/node.hpp"
 #include <chrono>
 #include <cstdlib>

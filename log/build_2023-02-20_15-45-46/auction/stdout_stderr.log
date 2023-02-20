@@ -1,0 +1,12 @@
+[35m[1mConsolidate compiler generated dependencies of target execution_interface[0m
+[ 33%] Built target agent
+[ 55%] Built target goal_manager
+[ 66%] [32mBuilding CXX object CMakeFiles/execution_interface.dir/src/execution_interface.cpp.o[0m
+[ 88%] Built target client
+[100%] [32m[1mLinking CXX executable execution_interface[0m
+/usr/bin/ld: CMakeFiles/execution_interface.dir/src/execution_interface.cpp.o: in function `Executor::Executor()':
+execution_interface.cpp:(.text._ZN8ExecutorC2Ev[_ZN8ExecutorC5Ev]+0x1cc): undefined reference to `Executor::action_dispatch_cb(ma_interfaces::msg::ActionDispatch_<std::allocator<void> >)'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/execution_interface.dir/build.make:159: execution_interface] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:143: CMakeFiles/execution_interface.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

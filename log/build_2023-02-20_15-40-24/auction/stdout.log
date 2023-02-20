@@ -1,0 +1,5 @@
+[35m[1mConsolidate compiler generated dependencies of target execution_interface[0m
+[ 22%] Built target goal_manager
+[ 55%] Built target agent
+[ 77%] Built target client
+[ 88%] [32mBuilding CXX object CMakeFiles/execution_interface.dir/src/execution_interface.cpp.o[0m

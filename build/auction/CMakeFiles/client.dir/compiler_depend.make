@@ -665,10 +665,6 @@ CMakeFiles/client.dir/src/client.cpp.o: /home/gkasha/Documents/maae/src/auction/
   /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp \
   /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp \
   /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/wait_set_template.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/auction_srv.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__struct.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__builder.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__traits.hpp \
   /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/node.hpp \
   /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/node__struct.hpp \
   /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/node__builder.hpp \
@@ -692,12 +688,6 @@ CMakeFiles/client.dir/src/client.cpp.o: /home/gkasha/Documents/maae/src/auction/
 /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/node__traits.hpp:
 
 /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/node__struct.hpp:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__traits.hpp:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__struct.hpp:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/auction_srv.hpp:
 
 /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/wait_result_kind.hpp:
 
@@ -984,8 +974,6 @@ CMakeFiles/client.dir/src/client.cpp.o: /home/gkasha/Documents/maae/src/auction/
 /usr/include/c++/11/bits/nested_exception.h:
 
 /usr/include/c++/11/exception:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__builder.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
 

@@ -1,4 +1,4 @@
 string id
 string owner
-int64 duration
+float32 duration
 int64 value

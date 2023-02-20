@@ -198,17 +198,17 @@ auction_uninstall/fast:
 .PHONY : auction_uninstall/fast
 
 #=============================================================================
-# Target rules for targets named server
+# Target rules for targets named execution_interface
 
 # Build rule for target.
-server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server
-.PHONY : server
+execution_interface: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 execution_interface
+.PHONY : execution_interface
 
 # fast build rule for target.
-server/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
-.PHONY : server/fast
+execution_interface/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/execution_interface.dir/build.make CMakeFiles/execution_interface.dir/build
+.PHONY : execution_interface/fast
 
 #=============================================================================
 # Target rules for targets named client
@@ -273,30 +273,6 @@ src/agent.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/agent.dir/build.make CMakeFiles/agent.dir/src/agent.cpp.s
 .PHONY : src/agent.cpp.s
 
-src/auctioneer.o: src/auctioneer.cpp.o
-.PHONY : src/auctioneer.o
-
-# target to build an object file
-src/auctioneer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/auctioneer.cpp.o
-.PHONY : src/auctioneer.cpp.o
-
-src/auctioneer.i: src/auctioneer.cpp.i
-.PHONY : src/auctioneer.i
-
-# target to preprocess a source file
-src/auctioneer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/auctioneer.cpp.i
-.PHONY : src/auctioneer.cpp.i
-
-src/auctioneer.s: src/auctioneer.cpp.s
-.PHONY : src/auctioneer.s
-
-# target to generate assembly for a file
-src/auctioneer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/auctioneer.cpp.s
-.PHONY : src/auctioneer.cpp.s
-
 src/client.o: src/client.cpp.o
 .PHONY : src/client.o
 
@@ -320,6 +296,30 @@ src/client.s: src/client.cpp.s
 src/client.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client.cpp.s
 .PHONY : src/client.cpp.s
+
+src/execution_interface.o: src/execution_interface.cpp.o
+.PHONY : src/execution_interface.o
+
+# target to build an object file
+src/execution_interface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/execution_interface.dir/build.make CMakeFiles/execution_interface.dir/src/execution_interface.cpp.o
+.PHONY : src/execution_interface.cpp.o
+
+src/execution_interface.i: src/execution_interface.cpp.i
+.PHONY : src/execution_interface.i
+
+# target to preprocess a source file
+src/execution_interface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/execution_interface.dir/build.make CMakeFiles/execution_interface.dir/src/execution_interface.cpp.i
+.PHONY : src/execution_interface.cpp.i
+
+src/execution_interface.s: src/execution_interface.cpp.s
+.PHONY : src/execution_interface.s
+
+# target to generate assembly for a file
+src/execution_interface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/execution_interface.dir/build.make CMakeFiles/execution_interface.dir/src/execution_interface.cpp.s
+.PHONY : src/execution_interface.cpp.s
 
 src/goal_manager.o: src/goal_manager.cpp.o
 .PHONY : src/goal_manager.o
@@ -386,17 +386,17 @@ help:
 	@echo "... uninstall"
 	@echo "... agent"
 	@echo "... client"
+	@echo "... execution_interface"
 	@echo "... goal_manager"
-	@echo "... server"
 	@echo "... src/agent.o"
 	@echo "... src/agent.i"
 	@echo "... src/agent.s"
-	@echo "... src/auctioneer.o"
-	@echo "... src/auctioneer.i"
-	@echo "... src/auctioneer.s"
 	@echo "... src/client.o"
 	@echo "... src/client.i"
 	@echo "... src/client.s"
+	@echo "... src/execution_interface.o"
+	@echo "... src/execution_interface.i"
+	@echo "... src/execution_interface.s"
 	@echo "... src/goal_manager.o"
 	@echo "... src/goal_manager.i"
 	@echo "... src/goal_manager.s"

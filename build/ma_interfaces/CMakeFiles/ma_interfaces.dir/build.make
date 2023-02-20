@@ -66,7 +66,8 @@ include CMakeFiles/ma_interfaces.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/ma_interfaces.dir/progress.make
 
-CMakeFiles/ma_interfaces: /home/gkasha/Documents/maae/src/ma_interfaces/msg/AuctionMsg.msg
+CMakeFiles/ma_interfaces: /home/gkasha/Documents/maae/src/ma_interfaces/msg/ActionDispatch.msg
+CMakeFiles/ma_interfaces: /home/gkasha/Documents/maae/src/ma_interfaces/msg/ActionFeedback.msg
 CMakeFiles/ma_interfaces: /home/gkasha/Documents/maae/src/ma_interfaces/msg/Node.msg
 CMakeFiles/ma_interfaces: /home/gkasha/Documents/maae/src/ma_interfaces/msg/Bid.msg
 CMakeFiles/ma_interfaces: /home/gkasha/Documents/maae/src/ma_interfaces/msg/Task.msg

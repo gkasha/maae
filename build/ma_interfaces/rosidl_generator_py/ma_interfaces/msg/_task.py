@@ -7,6 +7,8 @@
 
 import builtins  # noqa: E402, I100
 
+import math  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -64,14 +66,14 @@ class Task(metaclass=Metaclass_Task):
     _fields_and_field_types = {
         'id': 'string',
         'owner': 'string',
-        'duration': 'int64',
+        'duration': 'float',
         'value': 'int64',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
-        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
     )
 
@@ -81,7 +83,7 @@ class Task(metaclass=Metaclass_Task):
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.id = kwargs.get('id', str())
         self.owner = kwargs.get('owner', str())
-        self.duration = kwargs.get('duration', int())
+        self.duration = kwargs.get('duration', float())
         self.value = kwargs.get('value', int())
 
     def __repr__(self):
@@ -163,10 +165,10 @@ class Task(metaclass=Metaclass_Task):
     def duration(self, value):
         if __debug__:
             assert \
-                isinstance(value, int), \
-                "The 'duration' field must be of type 'int'"
-            assert value >= -9223372036854775808 and value < 9223372036854775808, \
-                "The 'duration' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+                isinstance(value, float), \
+                "The 'duration' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'duration' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._duration = value
 
     @builtins.property

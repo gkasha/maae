@@ -5,6 +5,8 @@ ma_interfaces.egg-info/SOURCES.txt
 ma_interfaces.egg-info/dependency_links.txt
 ma_interfaces.egg-info/top_level.txt
 ma_interfaces/msg/__init__.py
+ma_interfaces/msg/_action_dispatch.py
+ma_interfaces/msg/_action_feedback.py
 ma_interfaces/msg/_auction_msg.py
 ma_interfaces/msg/_bid.py
 ma_interfaces/msg/_goal.py

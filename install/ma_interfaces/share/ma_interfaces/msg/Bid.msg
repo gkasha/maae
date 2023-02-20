@@ -1,5 +1,5 @@
 string agent_id
 string auction_id
-int64 st
-int64 et
+float32 st
+float32 et
 int64 value

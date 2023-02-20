@@ -1,0 +1,125 @@
+[35m[1mConsolidate compiler generated dependencies of target agent[0m
+[ 57%] Built target goal_manager
+[ 57%] Built target client
+[ 71%] [32mBuilding CXX object CMakeFiles/agent.dir/src/agent.cpp.o[0m
+In file included from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:119:47:[m[K [01;31m[Kerror: [m[K‘[01m[KActionDispatch[m[K’ is not a member of ‘[01m[Kma_interfaces::msg[m[K’
+  119 |         rclcpp::Publisher<ma_interfaces::msg::[01;31m[KActionDispatch[m[K>::SharedPtr action_dispatch_publisher_;
+      |                                               [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:119:61:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  119 |         rclcpp::Publisher<ma_interfaces::msg::ActionDispatch[01;31m[K>[m[K::SharedPtr action_dispatch_publisher_;
+      |                                                             [01;31m[K^[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:119:64:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+  119 |         rclcpp::Publisher<ma_interfaces::msg::ActionDispatch>::[01;31m[KSharedPtr[m[K action_dispatch_publisher_;
+      |                                                                [01;31m[K^~~~~~~~~[m[K
+      |                                                                         [32m[K;[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:119:74:[m[K [01;31m[Kerror: [m[K‘[01m[Kaction_dispatch_publisher_[m[K’ does not name a type
+  119 |         rclcpp::Publisher<ma_interfaces::msg::ActionDispatch>::SharedPtr [01;31m[Kaction_dispatch_publisher_[m[K;
+      |                                                                          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:[m[K In constructor ‘[01m[KAgent::Agent(std::string)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:52:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kaction_dispatch_publisher_[m[K’ was not declared in this scope
+   52 |             [01;31m[Kaction_dispatch_publisher_[m[K = this->create_publisher<ma_interfaces::msg::ActionDispatch>("action_dispatch_topic", 10);
+      |             [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:52:85:[m[K [01;31m[Kerror: [m[K‘[01m[KActionDispatch[m[K’ is not a member of ‘[01m[Kma_interfaces::msg[m[K’
+   52 |             action_dispatch_publisher_ = this->create_publisher<ma_interfaces::msg::[01;31m[KActionDispatch[m[K>("action_dispatch_topic", 10);
+      |                                                                                     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:52:100:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KAgent::create_publisher<<expression error> >(const char [22], int)[m[K’
+   52 |             action_dispatch_publisher_ = [01;31m[Kthis->create_publisher<ma_interfaces::msg::ActionDispatch>("action_dispatch_topic", 10)[m[K;
+      |                                          [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/node.hpp:1321[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/node_impl.hpp:73:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+   73 | [01;36m[KNode[m[K::create_publisher(
+      | [01;36m[K^~~~[m[K
+[01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/node_impl.hpp:73:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:52:100:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   52 |             action_dispatch_publisher_ = [01;31m[Kthis->create_publisher<ma_interfaces::msg::ActionDispatch>("action_dispatch_topic", 10)[m[K;
+      |                                          [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::check_dispatch()[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:184:33:[m[K [01;31m[Kerror: [m[K‘[01m[KActionDispatch[m[K’ is not a member of ‘[01m[Kma_interfaces::msg[m[K’
+  184 |             ma_interfaces::msg::[01;31m[KActionDispatch[m[K msg = ma_interfaces::msg::ActionDispatch();
+      |                                 [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:185:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ was not declared in this scope
+  185 |             [01;31m[Kmsg[m[K.action_id = curr->name_;
+      |             [01;31m[K^~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:185:13:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/home/gkasha/ros2_humble/build/builtin_interfaces/rosidl_generator_cpp/builtin_interfaces/msg/duration.hpp:7[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/duration.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:42[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/ros2_humble/build/builtin_interfaces/rosidl_generator_cpp/builtin_interfaces/msg/detail/duration__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kbuiltin_interfaces::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/build/rcl_interfaces/rosidl_generator_cpp/rcl_interfaces/msg/set_parameters_result.hpp:7[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/qos_overriding_options.hpp:28[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/subscription_options.hpp:30[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/subscription.hpp:45[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/ros2_humble/build/rcl_interfaces/rosidl_generator_cpp/rcl_interfaces/msg/detail/set_parameters_result__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Krcl_interfaces::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/build/statistics_msgs/rosidl_generator_cpp/statistics_msgs/msg/detail/metrics_message__struct.hpp:23[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/build/statistics_msgs/rosidl_generator_cpp/statistics_msgs/msg/metrics_message.hpp:7[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/src/ros-tooling/libstatistics_collector/include/libstatistics_collector/collector/generate_statistics_message.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/subscription.hpp:50[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/ros2_humble/build/statistics_msgs/rosidl_generator_cpp/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstatistics_msgs::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+In file included from [01m[K/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/goal.hpp:7[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:8[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kma_interfaces::msg[m[K’
+   27 | namespace [01;36m[Kmsg[m[K
+      |           [01;36m[K^~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:189:54:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass TNode[m[K’ has no member named ‘[01m[Kstp[m[K’; did you mean ‘[01m[Kstp_[m[K’?
+  189 |             auto stp = stn.get_feasible_values(curr->[01;31m[Kstp[m[K);
+      |                                                      [01;31m[K^~~[m[K
+      |                                                      [32m[Kstp_[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:190:54:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass TNode[m[K’ has no member named ‘[01m[Ketp[m[K’; did you mean ‘[01m[Ketp_[m[K’?
+  190 |             auto etp = stn.get_feasible_values(curr->[01;31m[Ketp[m[K);
+      |                                                      [01;31m[K^~~[m[K
+      |                                                      [32m[Ketp_[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:197:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kaction_dispatch_publisher_[m[K’ was not declared in this scope
+  197 |             [01;31m[Kaction_dispatch_publisher_[m[K->publish(msg);
+      |             [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/agent.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

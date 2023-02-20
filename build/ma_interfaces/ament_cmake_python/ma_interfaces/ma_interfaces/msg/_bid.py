@@ -7,6 +7,8 @@
 
 import builtins  # noqa: E402, I100
 
+import math  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -65,16 +67,16 @@ class Bid(metaclass=Metaclass_Bid):
     _fields_and_field_types = {
         'agent_id': 'string',
         'auction_id': 'string',
-        'st': 'int64',
-        'et': 'int64',
+        'st': 'float',
+        'et': 'float',
         'value': 'int64',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
-        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
-        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
     )
 
@@ -84,8 +86,8 @@ class Bid(metaclass=Metaclass_Bid):
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.agent_id = kwargs.get('agent_id', str())
         self.auction_id = kwargs.get('auction_id', str())
-        self.st = kwargs.get('st', int())
-        self.et = kwargs.get('et', int())
+        self.st = kwargs.get('st', float())
+        self.et = kwargs.get('et', float())
         self.value = kwargs.get('value', int())
 
     def __repr__(self):
@@ -169,10 +171,10 @@ class Bid(metaclass=Metaclass_Bid):
     def st(self, value):
         if __debug__:
             assert \
-                isinstance(value, int), \
-                "The 'st' field must be of type 'int'"
-            assert value >= -9223372036854775808 and value < 9223372036854775808, \
-                "The 'st' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+                isinstance(value, float), \
+                "The 'st' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'st' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._st = value
 
     @builtins.property
@@ -184,10 +186,10 @@ class Bid(metaclass=Metaclass_Bid):
     def et(self, value):
         if __debug__:
             assert \
-                isinstance(value, int), \
-                "The 'et' field must be of type 'int'"
-            assert value >= -9223372036854775808 and value < 9223372036854775808, \
-                "The 'et' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+                isinstance(value, float), \
+                "The 'et' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'et' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
         self._et = value
 
     @builtins.property

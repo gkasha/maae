@@ -665,22 +665,10 @@ CMakeFiles/goal_manager.dir/src/goal_manager.cpp.o: /home/gkasha/Documents/maae/
   /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp \
   /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp \
   /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/wait_set_template.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/register.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__struct.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__builder.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__traits.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/add_goal.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/add_goal__struct.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__struct.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/add_goal__builder.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/add_goal__traits.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__traits.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/get_goal.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__struct.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__builder.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__traits.hpp \
   /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/goal.hpp \
+  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__struct.hpp \
   /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__builder.hpp \
+  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__traits.hpp \
   /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/task.hpp \
   /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__struct.hpp \
   /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__builder.hpp \
@@ -708,19 +696,7 @@ CMakeFiles/goal_manager.dir/src/goal_manager.cpp.o: /home/gkasha/Documents/maae/
 
 /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__struct.hpp:
 
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__traits.hpp:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__struct.hpp:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/add_goal__traits.hpp:
-
 /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__struct.hpp:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/add_goal__struct.hpp:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__traits.hpp:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/register.hpp:
 
 /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/wait_result_kind.hpp:
 
@@ -1026,8 +1002,6 @@ CMakeFiles/goal_manager.dir/src/goal_manager.cpp.o: /home/gkasha/Documents/maae/
 
 /usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
 
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__builder.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
@@ -1037,8 +1011,6 @@ CMakeFiles/goal_manager.dir/src/goal_manager.cpp.o: /home/gkasha/Documents/maae/
 /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/subscription.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__struct.hpp:
 
 /usr/include/c++/11/bits/unordered_map.h:
 
@@ -1051,8 +1023,6 @@ CMakeFiles/goal_manager.dir/src/goal_manager.cpp.o: /home/gkasha/Documents/maae/
 /usr/include/c++/11/ext/concurrence.h:
 
 /home/gkasha/ros2_humble/src/ros2/rosidl/rosidl_runtime_cpp/include/rosidl_typesupport_cpp/message_type_support.hpp:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__builder.hpp:
 
 /home/gkasha/ros2_humble/build/rcl_interfaces/rosidl_generator_cpp/rcl_interfaces/msg/parameter_value.hpp:
 
@@ -1143,8 +1113,6 @@ CMakeFiles/goal_manager.dir/src/goal_manager.cpp.o: /home/gkasha/Documents/maae/
 /usr/include/locale.h:
 
 /usr/include/c++/11/bits/deque.tcc:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/add_goal__builder.hpp:
 
 /home/gkasha/ros2_humble/src/ros2/rcl/rcl_yaml_param_parser/include/rcl_yaml_param_parser/visibility_control.h:
 
@@ -1555,8 +1523,6 @@ CMakeFiles/goal_manager.dir/src/goal_manager.cpp.o: /home/gkasha/Documents/maae/
 /home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/context.hpp:
 
 /home/gkasha/ros2_humble/build/builtin_interfaces/rosidl_generator_cpp/builtin_interfaces/msg/detail/duration__struct.hpp:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/add_goal.hpp:
 
 /usr/include/c++/11/cassert:
 
@@ -2059,8 +2025,6 @@ CMakeFiles/goal_manager.dir/src/goal_manager.cpp.o: /home/gkasha/Documents/maae/
 /usr/include/c++/11/tr1/poly_hermite.tcc:
 
 /usr/include/c++/11/tr1/riemann_zeta.tcc:
-
-/home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/get_goal.hpp:
 
 /home/gkasha/ros2_humble/install/rmw/include/rmw/rmw/ret_types.h:
 

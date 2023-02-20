@@ -14,8 +14,8 @@ include_directories(include)
 install(DIRECTORY include/${PROJECT_NAME}/ DESTINATION include/${PROJECT_NAME}/)
 ament_export_include_directories(include)
 
-add_executable(server src/auctioneer.cpp)
-ament_target_dependencies(server
+add_executable(execution_interface src/execution_interface.cpp)
+ament_target_dependencies(execution_interface
   rclcpp ma_interfaces)
 
 add_executable(client src/client.cpp)
@@ -32,7 +32,7 @@ ament_target_dependencies(goal_manager
 
 
 install(TARGETS
-  server
+  execution_interface
   client
   agent
   goal_manager

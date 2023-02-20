@@ -242,14 +242,17 @@ CMakeFiles/ma_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/ma
   /home/gkasha/ros2_humble/src/ros2/rosidl/rosidl_typesupport_interface/include/rosidl_typesupport_interface/macros.h \
   /home/gkasha/ros2_humble/src/ros2/rosidl/rosidl_runtime_c/include/rosidl_runtime_c/service_type_support_struct.h \
   /home/gkasha/ros2_humble/src/ros2/rosidl/rosidl_runtime_c/include/rosidl_runtime_c/action_type_support_struct.h \
-  rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__type_support.h \
+  rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__type_support.h \
   rosidl_generator_c/ma_interfaces/msg/rosidl_generator_c__visibility_control.h \
-  rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__struct.h \
-  rosidl_generator_c/ma_interfaces/msg/detail/node__struct.h \
+  rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__struct.h \
   /home/gkasha/ros2_humble/src/ros2/rosidl/rosidl_runtime_c/include/rosidl_runtime_c/string.h \
   /home/gkasha/ros2_humble/src/ros2/rosidl/rosidl_runtime_c/include/rosidl_runtime_c/primitives_sequence.h \
-  rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__functions.h \
+  rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__functions.h \
+  rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__type_support.h \
+  rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__struct.h \
+  rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__functions.h \
   rosidl_generator_c/ma_interfaces/msg/detail/node__type_support.h \
+  rosidl_generator_c/ma_interfaces/msg/detail/node__struct.h \
   rosidl_generator_c/ma_interfaces/msg/detail/node__functions.h \
   rosidl_generator_c/ma_interfaces/msg/detail/bid__type_support.h \
   rosidl_generator_c/ma_interfaces/msg/detail/bid__struct.h \
@@ -306,6 +309,10 @@ rosidl_generator_c/ma_interfaces/msg/detail/goal__functions.h:
 
 rosidl_generator_c/ma_interfaces/msg/detail/goal__struct.h:
 
+rosidl_generator_c/ma_interfaces/msg/detail/task__functions.h:
+
+rosidl_generator_c/ma_interfaces/msg/detail/task__struct.h:
+
 /usr/include/asm-generic/errno-base.h:
 
 /home/gkasha/ros2_humble/src/ros2/rosidl/rosidl_runtime_c/include/rosidl_runtime_c/service_type_support_struct.h:
@@ -327,6 +334,8 @@ rosidl_generator_c/ma_interfaces/srv/detail/get_bid__type_support.h:
 /usr/include/python3.10/longobject.h:
 
 /usr/include/linux/stat.h:
+
+rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__type_support.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_stat.h:
 
@@ -402,7 +411,13 @@ rosidl_generator_c/ma_interfaces/srv/detail/auction_srv__functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
+/usr/include/python3.10/cpython/objimpl.h:
+
+/usr/include/python3.10/cpython/pythonrun.h:
+
 /usr/include/x86_64-linux-gnu/bits/types.h:
+
+rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__struct.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
@@ -528,8 +543,6 @@ rosidl_generator_c/ma_interfaces/msg/detail/task__type_support.h:
 
 /usr/include/python3.10/patchlevel.h:
 
-rosidl_generator_c/ma_interfaces/msg/detail/task__struct.h:
-
 /usr/include/x86_64-linux-gnu/bits/errno.h:
 
 /usr/include/python3.10/sliceobject.h:
@@ -566,6 +579,8 @@ rosidl_generator_c/ma_interfaces/msg/detail/task__struct.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
 
+rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__functions.h:
+
 /usr/include/x86_64-linux-gnu/asm/posix_types.h:
 
 /usr/include/python3.10/namespaceobject.h:
@@ -574,19 +589,11 @@ rosidl_generator_c/ma_interfaces/msg/detail/task__struct.h:
 
 /usr/include/asm-generic/posix_types.h:
 
-/usr/include/python3.10/cpython/objimpl.h:
-
-/usr/include/python3.10/cpython/pythonrun.h:
-
-rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__functions.h:
-
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
-
-rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__struct.h:
 
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
@@ -610,11 +617,7 @@ rosidl_generator_c/ma_interfaces/msg/detail/bid__type_support.h:
 
 /usr/include/python3.10/bltinmodule.h:
 
-rosidl_generator_c/ma_interfaces/msg/detail/task__functions.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
@@ -712,8 +715,6 @@ rosidl_generator_c/ma_interfaces/srv/detail/auction_srv__type_support.h:
 
 /usr/include/python3.10/pycapsule.h:
 
-rosidl_generator_c/ma_interfaces/msg/detail/auction_msg__type_support.h:
-
 /home/gkasha/ros2_humble/src/ros2/rosidl/rosidl_runtime_c/include/rosidl_runtime_c/action_type_support_struct.h:
 
 /usr/include/python3.10/code.h:
@@ -786,6 +787,10 @@ rosidl_generator_c/ma_interfaces/msg/rosidl_generator_c__visibility_control.h:
 
 /usr/include/python3.10/compile.h:
 
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__functions.h:
+
 /usr/include/python3.10/sysmodule.h:
 
 /usr/include/python3.10/cpython/sysmodule.h:
@@ -808,6 +813,14 @@ rosidl_generator_c/ma_interfaces/msg/rosidl_generator_c__visibility_control.h:
 
 /usr/include/python3.10/pystrcmp.h:
 
+rosidl_generator_c/ma_interfaces/msg/detail/goal__type_support.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
+
+/usr/include/python3.10/abstract.h:
+
+/usr/include/python3.10/fileutils.h:
+
 /home/gkasha/ros2_humble/src/ros2/rosidl/rosidl_runtime_c/include/rosidl_runtime_c/message_type_support_struct.h:
 
 /usr/include/features.h:
@@ -815,6 +828,10 @@ rosidl_generator_c/ma_interfaces/msg/rosidl_generator_c__visibility_control.h:
 rosidl_generator_c/ma_interfaces/msg/detail/node__struct.h:
 
 /home/gkasha/ros2_humble/src/ros2/rosidl/rosidl_typesupport_interface/include/rosidl_typesupport_interface/macros.h:
+
+rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__type_support.h:
+
+rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__struct.h:
 
 rosidl_generator_c/ma_interfaces/srv/detail/get_goal__type_support.h:
 
@@ -825,11 +842,3 @@ rosidl_generator_c/ma_interfaces/msg/detail/node__type_support.h:
 rosidl_generator_c/ma_interfaces/msg/detail/node__functions.h:
 
 rosidl_generator_c/ma_interfaces/msg/detail/bid__struct.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
-
-/usr/include/python3.10/abstract.h:
-
-/usr/include/python3.10/fileutils.h:
-
-rosidl_generator_c/ma_interfaces/msg/detail/goal__type_support.h:

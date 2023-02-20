@@ -66,10 +66,14 @@ include CMakeFiles/ma_interfaces__cpp.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/ma_interfaces__cpp.dir/progress.make
 
-CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
-CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/auction_msg__builder.hpp
-CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/auction_msg__struct.hpp
-CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/auction_msg__traits.hpp
+CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
+CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/action_dispatch__builder.hpp
+CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/action_dispatch__struct.hpp
+CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/action_dispatch__traits.hpp
+CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/action_feedback.hpp
+CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/action_feedback__builder.hpp
+CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/action_feedback__struct.hpp
+CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/action_feedback__traits.hpp
 CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/node.hpp
 CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/node__builder.hpp
 CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/node__struct.hpp
@@ -111,170 +115,187 @@ CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/srv/detail/add
 CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/srv/detail/add_goal__struct.hpp
 CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/srv/detail/add_goal__traits.hpp
 
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/lib/rosidl_generator_cpp/rosidl_generator_cpp
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/local/lib/python3.10/dist-packages/rosidl_generator_cpp/__init__.py
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/action__builder.hpp.em
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/action__struct.hpp.em
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/action__traits.hpp.em
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/idl.hpp.em
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/idl__builder.hpp.em
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/idl__struct.hpp.em
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/idl__traits.hpp.em
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/msg__builder.hpp.em
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/msg__struct.hpp.em
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/msg__traits.hpp.em
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/srv__builder.hpp.em
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: rosidl_adapter/ma_interfaces/msg/AuctionMsg.idl
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: rosidl_adapter/ma_interfaces/msg/Node.idl
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: rosidl_adapter/ma_interfaces/msg/Bid.idl
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: rosidl_adapter/ma_interfaces/msg/Task.idl
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: rosidl_adapter/ma_interfaces/msg/Goal.idl
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: rosidl_adapter/ma_interfaces/srv/Register.idl
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: rosidl_adapter/ma_interfaces/srv/AuctionSrv.idl
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: rosidl_adapter/ma_interfaces/srv/AuctionResult.idl
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: rosidl_adapter/ma_interfaces/srv/GetGoal.idl
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: rosidl_adapter/ma_interfaces/srv/GetBid.idl
-rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp: rosidl_adapter/ma_interfaces/srv/AddGoal.idl
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/lib/rosidl_generator_cpp/rosidl_generator_cpp
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/local/lib/python3.10/dist-packages/rosidl_generator_cpp/__init__.py
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/action__builder.hpp.em
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/action__struct.hpp.em
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/action__traits.hpp.em
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/idl.hpp.em
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/idl__builder.hpp.em
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/idl__struct.hpp.em
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/idl__traits.hpp.em
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/msg__builder.hpp.em
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/msg__struct.hpp.em
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/msg__traits.hpp.em
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/srv__builder.hpp.em
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: rosidl_adapter/ma_interfaces/msg/ActionDispatch.idl
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: rosidl_adapter/ma_interfaces/msg/ActionFeedback.idl
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: rosidl_adapter/ma_interfaces/msg/Node.idl
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: rosidl_adapter/ma_interfaces/msg/Bid.idl
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: rosidl_adapter/ma_interfaces/msg/Task.idl
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: rosidl_adapter/ma_interfaces/msg/Goal.idl
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: rosidl_adapter/ma_interfaces/srv/Register.idl
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: rosidl_adapter/ma_interfaces/srv/AuctionSrv.idl
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: rosidl_adapter/ma_interfaces/srv/AuctionResult.idl
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: rosidl_adapter/ma_interfaces/srv/GetGoal.idl
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: rosidl_adapter/ma_interfaces/srv/GetBid.idl
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: rosidl_adapter/ma_interfaces/srv/AddGoal.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
 	/usr/bin/python3.10 /home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_generator_cpp__arguments.json
 
-rosidl_generator_cpp/ma_interfaces/msg/detail/auction_msg__builder.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/auction_msg__builder.hpp
+rosidl_generator_cpp/ma_interfaces/msg/detail/action_dispatch__builder.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/action_dispatch__builder.hpp
 
-rosidl_generator_cpp/ma_interfaces/msg/detail/auction_msg__struct.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/auction_msg__struct.hpp
+rosidl_generator_cpp/ma_interfaces/msg/detail/action_dispatch__struct.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/action_dispatch__struct.hpp
 
-rosidl_generator_cpp/ma_interfaces/msg/detail/auction_msg__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/auction_msg__traits.hpp
+rosidl_generator_cpp/ma_interfaces/msg/detail/action_dispatch__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/action_dispatch__traits.hpp
 
-rosidl_generator_cpp/ma_interfaces/msg/node.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/msg/action_feedback.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/action_feedback.hpp
+
+rosidl_generator_cpp/ma_interfaces/msg/detail/action_feedback__builder.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/action_feedback__builder.hpp
+
+rosidl_generator_cpp/ma_interfaces/msg/detail/action_feedback__struct.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/action_feedback__struct.hpp
+
+rosidl_generator_cpp/ma_interfaces/msg/detail/action_feedback__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/action_feedback__traits.hpp
+
+rosidl_generator_cpp/ma_interfaces/msg/node.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/node.hpp
 
-rosidl_generator_cpp/ma_interfaces/msg/detail/node__builder.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/msg/detail/node__builder.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/node__builder.hpp
 
-rosidl_generator_cpp/ma_interfaces/msg/detail/node__struct.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/msg/detail/node__struct.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/node__struct.hpp
 
-rosidl_generator_cpp/ma_interfaces/msg/detail/node__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/msg/detail/node__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/node__traits.hpp
 
-rosidl_generator_cpp/ma_interfaces/msg/bid.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/msg/bid.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/bid.hpp
 
-rosidl_generator_cpp/ma_interfaces/msg/detail/bid__builder.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/msg/detail/bid__builder.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/bid__builder.hpp
 
-rosidl_generator_cpp/ma_interfaces/msg/detail/bid__struct.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/msg/detail/bid__struct.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/bid__struct.hpp
 
-rosidl_generator_cpp/ma_interfaces/msg/detail/bid__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/msg/detail/bid__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/bid__traits.hpp
 
-rosidl_generator_cpp/ma_interfaces/msg/task.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/msg/task.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/task.hpp
 
-rosidl_generator_cpp/ma_interfaces/msg/detail/task__builder.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/msg/detail/task__builder.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/task__builder.hpp
 
-rosidl_generator_cpp/ma_interfaces/msg/detail/task__struct.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/msg/detail/task__struct.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/task__struct.hpp
 
-rosidl_generator_cpp/ma_interfaces/msg/detail/task__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/msg/detail/task__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/task__traits.hpp
 
-rosidl_generator_cpp/ma_interfaces/msg/goal.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/msg/goal.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/goal.hpp
 
-rosidl_generator_cpp/ma_interfaces/msg/detail/goal__builder.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/msg/detail/goal__builder.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/goal__builder.hpp
 
-rosidl_generator_cpp/ma_interfaces/msg/detail/goal__struct.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/msg/detail/goal__struct.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/goal__struct.hpp
 
-rosidl_generator_cpp/ma_interfaces/msg/detail/goal__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/msg/detail/goal__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/goal__traits.hpp
 
-rosidl_generator_cpp/ma_interfaces/srv/register.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/srv/register.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/register.hpp
 
-rosidl_generator_cpp/ma_interfaces/srv/detail/register__builder.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/srv/detail/register__builder.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/detail/register__builder.hpp
 
-rosidl_generator_cpp/ma_interfaces/srv/detail/register__struct.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/srv/detail/register__struct.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/detail/register__struct.hpp
 
-rosidl_generator_cpp/ma_interfaces/srv/detail/register__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/srv/detail/register__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/detail/register__traits.hpp
 
-rosidl_generator_cpp/ma_interfaces/srv/auction_srv.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/srv/auction_srv.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/auction_srv.hpp
 
-rosidl_generator_cpp/ma_interfaces/srv/detail/auction_srv__builder.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/srv/detail/auction_srv__builder.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/detail/auction_srv__builder.hpp
 
-rosidl_generator_cpp/ma_interfaces/srv/detail/auction_srv__struct.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/srv/detail/auction_srv__struct.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/detail/auction_srv__struct.hpp
 
-rosidl_generator_cpp/ma_interfaces/srv/detail/auction_srv__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/srv/detail/auction_srv__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/detail/auction_srv__traits.hpp
 
-rosidl_generator_cpp/ma_interfaces/srv/auction_result.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/srv/auction_result.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/auction_result.hpp
 
-rosidl_generator_cpp/ma_interfaces/srv/detail/auction_result__builder.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/srv/detail/auction_result__builder.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/detail/auction_result__builder.hpp
 
-rosidl_generator_cpp/ma_interfaces/srv/detail/auction_result__struct.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/srv/detail/auction_result__struct.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/detail/auction_result__struct.hpp
 
-rosidl_generator_cpp/ma_interfaces/srv/detail/auction_result__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/srv/detail/auction_result__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/detail/auction_result__traits.hpp
 
-rosidl_generator_cpp/ma_interfaces/srv/get_goal.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/srv/get_goal.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/get_goal.hpp
 
-rosidl_generator_cpp/ma_interfaces/srv/detail/get_goal__builder.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/srv/detail/get_goal__builder.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/detail/get_goal__builder.hpp
 
-rosidl_generator_cpp/ma_interfaces/srv/detail/get_goal__struct.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/srv/detail/get_goal__struct.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/detail/get_goal__struct.hpp
 
-rosidl_generator_cpp/ma_interfaces/srv/detail/get_goal__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/srv/detail/get_goal__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/detail/get_goal__traits.hpp
 
-rosidl_generator_cpp/ma_interfaces/srv/get_bid.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/srv/get_bid.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/get_bid.hpp
 
-rosidl_generator_cpp/ma_interfaces/srv/detail/get_bid__builder.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/srv/detail/get_bid__builder.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/detail/get_bid__builder.hpp
 
-rosidl_generator_cpp/ma_interfaces/srv/detail/get_bid__struct.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/srv/detail/get_bid__struct.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/detail/get_bid__struct.hpp
 
-rosidl_generator_cpp/ma_interfaces/srv/detail/get_bid__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/srv/detail/get_bid__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/detail/get_bid__traits.hpp
 
-rosidl_generator_cpp/ma_interfaces/srv/add_goal.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/srv/add_goal.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/add_goal.hpp
 
-rosidl_generator_cpp/ma_interfaces/srv/detail/add_goal__builder.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/srv/detail/add_goal__builder.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/detail/add_goal__builder.hpp
 
-rosidl_generator_cpp/ma_interfaces/srv/detail/add_goal__struct.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/srv/detail/add_goal__struct.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/detail/add_goal__struct.hpp
 
-rosidl_generator_cpp/ma_interfaces/srv/detail/add_goal__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+rosidl_generator_cpp/ma_interfaces/srv/detail/add_goal__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/detail/add_goal__traits.hpp
 
 ma_interfaces__cpp: CMakeFiles/ma_interfaces__cpp
-ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/auction_msg.hpp
+ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
+ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/action_feedback.hpp
 ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/bid.hpp
-ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/auction_msg__builder.hpp
-ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/auction_msg__struct.hpp
-ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/auction_msg__traits.hpp
+ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/action_dispatch__builder.hpp
+ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/action_dispatch__struct.hpp
+ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/action_dispatch__traits.hpp
+ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/action_feedback__builder.hpp
+ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/action_feedback__struct.hpp
+ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/action_feedback__traits.hpp
 ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/bid__builder.hpp
 ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/bid__struct.hpp
 ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/bid__traits.hpp

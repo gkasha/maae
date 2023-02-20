@@ -10,7 +10,7 @@ module ma_interfaces {
 
       string owner;
 
-      int64 duration;
+      float duration;
 
       int64 value;
     };

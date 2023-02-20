@@ -356,7 +356,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ma_interfaces/msg" TYPE FILE FILES "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces/msg/AuctionMsg.idl")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ma_interfaces/msg" TYPE FILE FILES "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces/msg/ActionDispatch.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ma_interfaces/msg" TYPE FILE FILES "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces/msg/ActionFeedback.idl")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -400,7 +404,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ma_interfaces/msg" TYPE FILE FILES "/home/gkasha/Documents/maae/src/ma_interfaces/msg/AuctionMsg.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ma_interfaces/msg" TYPE FILE FILES "/home/gkasha/Documents/maae/src/ma_interfaces/msg/ActionDispatch.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ma_interfaces/msg" TYPE FILE FILES "/home/gkasha/Documents/maae/src/ma_interfaces/msg/ActionFeedback.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

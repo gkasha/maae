@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from ma_interfaces/msg/ActionFeedback.msg
+// generated code does not contain a copyright notice
+
+
+module ma_interfaces {
+  module msg {
+    struct ActionFeedback {
+      string action_id;
+
+      string agent_id;
+
+      string name;
+
+      float st;
+
+      int32 action_started;
+
+      int32 action_completed;
+
+      int32 action_failed;
+    };
+  };
+};

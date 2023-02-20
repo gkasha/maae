@@ -1,4 +1,5 @@
-/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:msg/AuctionMsg.idl
+/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:msg/ActionDispatch.idl
+/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:msg/ActionFeedback.idl
 /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:msg/Node.idl
 /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:msg/Bid.idl
 /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces:msg/Task.idl
