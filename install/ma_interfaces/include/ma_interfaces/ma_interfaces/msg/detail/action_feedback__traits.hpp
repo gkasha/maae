@@ -46,10 +46,10 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: st
+  // member: time
   {
-    out << "st: ";
-    rosidl_generator_traits::value_to_yaml(msg.st, out);
+    out << "time: ";
+    rosidl_generator_traits::value_to_yaml(msg.time, out);
     out << ", ";
   }
 
@@ -109,13 +109,13 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
-  // member: st
+  // member: time
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "st: ";
-    rosidl_generator_traits::value_to_yaml(msg.st, out);
+    out << "time: ";
+    rosidl_generator_traits::value_to_yaml(msg.time, out);
     out << "\n";
   }
 

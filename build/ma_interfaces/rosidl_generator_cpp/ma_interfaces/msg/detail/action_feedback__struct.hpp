@@ -41,7 +41,7 @@ struct ActionFeedback_
       this->action_id = "";
       this->agent_id = "";
       this->name = "";
-      this->st = 0.0f;
+      this->time = 0.0;
       this->action_started = 0l;
       this->action_completed = 0l;
       this->action_failed = 0l;
@@ -59,7 +59,7 @@ struct ActionFeedback_
       this->action_id = "";
       this->agent_id = "";
       this->name = "";
-      this->st = 0.0f;
+      this->time = 0.0;
       this->action_started = 0l;
       this->action_completed = 0l;
       this->action_failed = 0l;
@@ -76,9 +76,9 @@ struct ActionFeedback_
   using _name_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _name_type name;
-  using _st_type =
-    float;
-  _st_type st;
+  using _time_type =
+    double;
+  _time_type time;
   using _action_started_type =
     int32_t;
   _action_started_type action_started;
@@ -108,10 +108,10 @@ struct ActionFeedback_
     this->name = _arg;
     return *this;
   }
-  Type & set__st(
-    const float & _arg)
+  Type & set__time(
+    const double & _arg)
   {
-    this->st = _arg;
+    this->time = _arg;
     return *this;
   }
   Type & set__action_started(
@@ -184,7 +184,7 @@ struct ActionFeedback_
     if (this->name != other.name) {
       return false;
     }
-    if (this->st != other.st) {
+    if (this->time != other.time) {
       return false;
     }
     if (this->action_started != other.action_started) {

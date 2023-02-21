@@ -73,7 +73,7 @@ static rosidl_typesupport_introspection_c__MessageMember ma_interfaces__msg__Bid
   },
   {
     "st",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
@@ -90,7 +90,7 @@ static rosidl_typesupport_introspection_c__MessageMember ma_interfaces__msg__Bid
   },
   {
     "et",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array

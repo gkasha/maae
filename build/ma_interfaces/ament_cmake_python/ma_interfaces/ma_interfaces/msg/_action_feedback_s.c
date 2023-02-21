@@ -98,6 +98,15 @@ bool ma_interfaces__msg__action_feedback__convert_from_py(PyObject * _pymsg, voi
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
+  {  // st
+    PyObject * field = PyObject_GetAttrString(_pymsg, "st");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->st = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
   {  // action_started
     PyObject * field = PyObject_GetAttrString(_pymsg, "action_started");
     if (!field) {
@@ -192,6 +201,17 @@ PyObject * ma_interfaces__msg__action_feedback__convert_to_py(void * raw_ros_mes
     }
     {
       int rc = PyObject_SetAttrString(_pymessage, "name", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // st
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->st);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "st", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

@@ -21,7 +21,8 @@ class ActionNode
         enum ActionStatus {
             WAITING = 0,
             EXECUTING = 1,
-            COMPLETE = 2
+            COMPLETE = 2,
+            FAILED = 3
         };
 
         ActionNode(ma_interfaces::msg::ActionDispatch action)
@@ -54,6 +55,10 @@ class ActionNode
             return st_;
         }
 
+        void set_duration(float x) {
+            duration_ = x;
+        }
+
         float get_duration(){
             return duration_;
         }
@@ -63,7 +68,7 @@ class ActionNode
             msg.action_id = action_id_;
             msg.agent_id = agent_id_;
             msg.name = name_;
-            msg.st = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::time_point_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now()).time_since_epoch()).count();
+            msg.time = std::chrono::duration_cast<std::chrono::duration<double>>(std::chrono::time_point_cast<std::chrono::seconds>(std::chrono::steady_clock::now()).time_since_epoch()).count();
 
             if (status_ == ActionStatus::EXECUTING) {
                 msg.action_started = 1;
@@ -117,6 +122,10 @@ class Monitor : public rclcpp::Node
 
                             publisher_->publish(action->to_feedback_msg());
                             RCLCPP_INFO(this->get_logger(), "Action started: %s", action->to_string().c_str());
+                        } else if (action->get_status() == ActionNode::FAILED) {
+                            publisher_->publish(action->to_feedback_msg());
+                            RCLCPP_INFO(this->get_logger(), "Action %s failed", action->to_string().c_str());
+                            completed_actions.push_back(action->to_string());
                         }
                     }
                     for (auto s : completed_actions) {
@@ -139,9 +148,13 @@ class Executor : public rclcpp::Node
         {
             cbgs_action_dispatch_ = this->create_callback_group(
                     rclcpp::CallbackGroupType::MutuallyExclusive);
+            cbgs_action_modification_ = this->create_callback_group(
+                    rclcpp::CallbackGroupType::MutuallyExclusive);
 
             auto action_dispatch_opt = rclcpp::SubscriptionOptions();
             action_dispatch_opt.callback_group = cbgs_action_dispatch_;
+            auto action_modification_opt = rclcpp::SubscriptionOptions();
+            action_modification_opt.callback_group = cbgs_action_modification_;
 
             action_dispatch_ = this->create_subscription<ma_interfaces::msg::ActionDispatch>(
                     "action_dispatch_topic",
@@ -151,14 +164,26 @@ class Executor : public rclcpp::Node
                         this,
                         std::placeholders::_1),
                     action_dispatch_opt);
+            action_modification_ = this->create_subscription<ma_interfaces::msg::ActionFeedback>(
+                    "action_modification_topic",
+                    rclcpp::QoS(10),
+                    std::bind(
+                        &Executor::action_modification_cb,
+                        this,
+                        std::placeholders::_1),
+                    action_modification_opt);
 
         }
 
     private:
         rclcpp::Subscription<ma_interfaces::msg::ActionDispatch>::SharedPtr action_dispatch_;
+        rclcpp::Subscription<ma_interfaces::msg::ActionFeedback>::SharedPtr action_modification_;
+
         rclcpp::CallbackGroup::SharedPtr cbgs_action_dispatch_;
+        rclcpp::CallbackGroup::SharedPtr cbgs_action_modification_;
         
         void action_dispatch_cb(const ma_interfaces::msg::ActionDispatch action);
+        void action_modification_cb(const ma_interfaces::msg::ActionFeedback action);
 };
 
 #endif

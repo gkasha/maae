@@ -1,0 +1,7 @@
+[01m[K/home/gkasha/Documents/maae/src/auction/src/execution_interface.cpp:[m[K In member function ‘[01m[Kvoid Executor::action_modification_cb(ma_interfaces::msg::ActionFeedback)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/execution_interface.cpp:19:60:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Kfloat ActionNode::get_duration()[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+   19 |             action_map[key]->set_duration(action_map[key]->get_duration + action.st);
+      |                                                                        [32m[K()[m[K
+gmake[2]: *** [CMakeFiles/execution_interface.dir/build.make:76: CMakeFiles/execution_interface.dir/src/execution_interface.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:143: CMakeFiles/execution_interface.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,91 @@
+[35m[1mConsolidate compiler generated dependencies of target execution_interface[0m
+[ 22%] Built target client
+[ 55%] Built target agent
+[ 77%] Built target goal_manager
+[ 88%] [32mBuilding CXX object CMakeFiles/execution_interface.dir/src/execution_interface.cpp.o[0m
+In file included from [01m[K/home/gkasha/Documents/maae/src/auction/src/execution_interface.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/execution_interface.hpp:[m[K In lambda function:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/execution_interface.hpp:128:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kcomplete_actions[m[K’ was not declared in this scope; did you mean ‘[01m[Kcompleted_actions[m[K’?
+  128 |                             [01;31m[Kcomplete_actions[m[K.push_back(action->to_string());
+      |                             [01;31m[K^~~~~~~~~~~~~~~~[m[K
+      |                             [32m[Kcompleted_actions[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/execution_interface.hpp:[m[K In constructor ‘[01m[KExecutor::Executor()[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/execution_interface.hpp:151:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kcbgs_action_modification_[m[K’ was not declared in this scope; did you mean ‘[01m[Kcbgs_action_modfication_[m[K’?
+  151 |             [01;31m[Kcbgs_action_modification_[m[K = this->create_callback_group(
+      |             [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |             [32m[Kcbgs_action_modfication_[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/execution_interface.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/execution_interface.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/execution_interface.cpp:[m[K In member function ‘[01m[Kvoid Executor::action_modification_cb(ma_interfaces::msg::ActionFeedback)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/execution_interface.cpp:17:13:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: First argument to logging macros must be an rclcpp::Logger
+   17 |             [01;31m[KRCLCPP_INFO[m[K("Failing action %s", action_map[key]->to_string().c_str());
+      |             [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/build/rclcpp/include/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/execution_interface.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/execution_interface.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/execution_interface.cpp:17:13:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kget_name[m[K’ in ‘[01m[K("Failing action %s")[m[K’, which is of non-class type ‘[01m[Kconst char [18][m[K’
+   17 |             [01;31m[KRCLCPP_INFO[m[K("Failing action %s", action_map[key]->to_string().c_str());
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/execution_interface.cpp:17:13:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kget_name[m[K’ in ‘[01m[K("Failing action %s")[m[K’, which is of non-class type ‘[01m[Kconst char [18][m[K’
+   17 |             [01;31m[KRCLCPP_INFO[m[K("Failing action %s", action_map[key]->to_string().c_str());
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/execution_interface.cpp:19:60:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Kfloat ActionNode::get_duration()[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+   19 |             action_map[key]->set_duration(action_map[key]->get_duration + action.st);
+      |                                                                        [32m[K()[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/execution_interface.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/execution_interface.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/execution_interface.cpp:20:13:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: First argument to logging macros must be an rclcpp::Logger
+   20 |             [01;31m[KRCLCPP_INFO[m[K("Delaying action %s by %f", action_map[key]->to_string().c_str(), action.st);
+      |             [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/build/rclcpp/include/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/execution_interface.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/execution_interface.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/execution_interface.cpp:20:13:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kget_name[m[K’ in ‘[01m[K("Delaying action %s by %f")[m[K’, which is of non-class type ‘[01m[Kconst char [25][m[K’
+   20 |             [01;31m[KRCLCPP_INFO[m[K("Delaying action %s by %f", action_map[key]->to_string().c_str(), action.st);
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/execution_interface.cpp:20:13:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kget_name[m[K’ in ‘[01m[K("Delaying action %s by %f")[m[K’, which is of non-class type ‘[01m[Kconst char [25][m[K’
+   20 |             [01;31m[KRCLCPP_INFO[m[K("Delaying action %s by %f", action_map[key]->to_string().c_str(), action.st);
+      |             [01;31m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/execution_interface.dir/build.make:76: CMakeFiles/execution_interface.dir/src/execution_interface.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:143: CMakeFiles/execution_interface.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

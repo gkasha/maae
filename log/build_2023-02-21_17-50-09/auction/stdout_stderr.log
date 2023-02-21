@@ -1,0 +1,16 @@
+[35m[1mConsolidate compiler generated dependencies of target execution_interface[0m
+[35m[1mConsolidate compiler generated dependencies of target agent[0m
+[ 22%] Built target client
+[ 44%] [32mBuilding CXX object CMakeFiles/agent.dir/src/agent.cpp.o[0m
+[ 55%] Built target goal_manager
+[ 77%] Built target execution_interface
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[KTNode* Agent::find_slot(int)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:82:17:[m[K [01;31m[Kerror: [m[Koverloaded function with no contextual type information
+   82 |         if (next[01;31m[K->[m[Kstatus_ == TaskNode::WAITING && std::get<1>(et) + std::get<0>(st) >= dur) {
+      |                 [01;31m[K^~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:82:30:[m[K [01;31m[Kerror: [m[K‘[01m[KTaskNode[m[K’ has not been declared
+   82 |         if (next->status_ == [01;31m[KTaskNode[m[K::WAITING && std::get<1>(et) + std::get<0>(st) >= dur) {
+      |                              [01;31m[K^~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/agent.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

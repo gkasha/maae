@@ -89,7 +89,7 @@ bool ma_interfaces__msg__bid__convert_from_py(PyObject * _pymsg, void * _ros_mes
       return false;
     }
     assert(PyFloat_Check(field));
-    ros_message->st = (float)PyFloat_AS_DOUBLE(field);
+    ros_message->st = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // et
@@ -98,7 +98,7 @@ bool ma_interfaces__msg__bid__convert_from_py(PyObject * _pymsg, void * _ros_mes
       return false;
     }
     assert(PyFloat_Check(field));
-    ros_message->et = (float)PyFloat_AS_DOUBLE(field);
+    ros_message->et = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // value

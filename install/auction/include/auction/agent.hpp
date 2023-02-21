@@ -43,10 +43,14 @@ class TNode
 class Agent : public rclcpp::Node
 {
     public:
-        Agent(std::string id) : Node("agent_"+id)
+        Agent(std::string id, double deadline, double execution_threshold) : Node("agent_"+id)
         {
             std::string topic = "agent_topic_" + id;
             id_ = id;
+            start_time_ = std::chrono::duration_cast<std::chrono::duration<double>>(std::chrono::time_point_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now()).time_since_epoch()).count();
+            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Start time: %f", start_time_);
+            deadline_ = start_time_ + deadline;
+            execution_threshold_ = execution_threshold;
 
             goal_bid_publisher_ = this->create_publisher<ma_interfaces::msg::Bid>("goal_bids_topic", 10);
             task_auction_publisher_ = this->create_publisher<ma_interfaces::msg::Task>("new_tasks_topic", 10);
@@ -59,6 +63,8 @@ class Agent : public rclcpp::Node
                     rclcpp::CallbackGroupType::MutuallyExclusive);
             cbgs_new_bids_ = this->create_callback_group(
                     rclcpp::CallbackGroupType::MutuallyExclusive);
+            cbgs_action_feedback_ = this->create_callback_group(
+                    rclcpp::CallbackGroupType::MutuallyExclusive);
 
             auto new_goals_opt = rclcpp::SubscriptionOptions();
             new_goals_opt.callback_group = cbgs_new_goals_;
@@ -66,6 +72,8 @@ class Agent : public rclcpp::Node
             new_tasks_opt.callback_group = cbgs_new_tasks_;
             auto new_bids_opt = rclcpp::SubscriptionOptions();
             new_bids_opt.callback_group = cbgs_new_bids_;
+            auto action_feedback_opt = rclcpp::SubscriptionOptions();
+            action_feedback_opt.callback_group = cbgs_action_feedback_;
 
             new_goals_ = this->create_subscription<ma_interfaces::msg::Goal>(
                     "new_goals_topic",
@@ -91,14 +99,23 @@ class Agent : public rclcpp::Node
                         this,
                         std::placeholders::_1),
                     new_bids_opt);
+            action_feedback_ = this->create_subscription<ma_interfaces::msg::ActionFeedback>(
+                    "action_feedback_topic",
+                    rclcpp::QoS(10),
+                    std::bind(
+                        &Agent::action_feedback_cb,
+                        this,
+                        std::placeholders::_1),
+                    action_feedback_opt);
 
             // STN and Timeline info
+            
             stn = STN();
             stn.init();
             stn.add_timepoint("start");
             stn.add_timepoint("end");
-            constraint start_c = std::make_tuple("cz", "start", 0, inf);
-            constraint end_c = std::make_tuple("cz", "end", 0, 15);
+            constraint start_c = std::make_tuple("cz", "start", start_time_, inf);
+            constraint end_c = std::make_tuple("cz", "end", start_time_, deadline);
             constraint seq_c = std::make_tuple("start", "end", 0, inf);
 
             stn.add_constraint("cz_start_seq", start_c);
@@ -123,14 +140,20 @@ class Agent : public rclcpp::Node
         rclcpp::CallbackGroup::SharedPtr cbgs_new_goals_;
         rclcpp::CallbackGroup::SharedPtr cbgs_new_tasks_;
         rclcpp::CallbackGroup::SharedPtr cbgs_new_bids_;
+        rclcpp::CallbackGroup::SharedPtr cbgs_action_feedback_;
+
         rclcpp::Subscription<ma_interfaces::msg::Goal>::SharedPtr new_goals_;
         rclcpp::Subscription<ma_interfaces::msg::Task>::SharedPtr new_tasks_;
         rclcpp::Subscription<ma_interfaces::msg::Bid>::SharedPtr new_bids_;
+        rclcpp::Subscription<ma_interfaces::msg::ActionFeedback>::SharedPtr action_feedback_;
 
         std::string id_;
         std::map<std::string,TNode*> task_map;
         std::map<std::string,std::vector<ma_interfaces::msg::Bid>> bid_map;
         
+        double execution_threshold_;
+        double start_time_;
+        double deadline_;
         STN stn;
         TNode *timeline;
 
@@ -140,6 +163,7 @@ class Agent : public rclcpp::Node
         void new_goals_cb(const ma_interfaces::msg::Goal goal);
         void new_tasks_cb(const ma_interfaces::msg::Task task);
         void new_bids_cb(const ma_interfaces::msg::Bid bid);
+        void action_feedback_cb(const ma_interfaces::msg::ActionFeedback action);
 
         void check_dispatch();
 

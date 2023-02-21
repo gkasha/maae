@@ -90,14 +90,14 @@ static rosidl_typesupport_introspection_c__MessageMember ma_interfaces__msg__Act
     NULL  // resize(index) function pointer
   },
   {
-    "st",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    "time",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(ma_interfaces__msg__ActionFeedback, st),  // bytes offset in struct
+    offsetof(ma_interfaces__msg__ActionFeedback, time),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer

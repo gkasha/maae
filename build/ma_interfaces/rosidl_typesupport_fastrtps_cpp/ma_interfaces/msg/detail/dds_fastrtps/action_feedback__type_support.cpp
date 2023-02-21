@@ -38,8 +38,8 @@ cdr_serialize(
   cdr << ros_message.agent_id;
   // Member: name
   cdr << ros_message.name;
-  // Member: st
-  cdr << ros_message.st;
+  // Member: time
+  cdr << ros_message.time;
   // Member: action_started
   cdr << ros_message.action_started;
   // Member: action_completed
@@ -64,8 +64,8 @@ cdr_deserialize(
   // Member: name
   cdr >> ros_message.name;
 
-  // Member: st
-  cdr >> ros_message.st;
+  // Member: time
+  cdr >> ros_message.time;
 
   // Member: action_started
   cdr >> ros_message.action_started;
@@ -104,9 +104,9 @@ get_serialized_size(
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message.name.size() + 1);
-  // Member: st
+  // Member: time
   {
-    size_t item_size = sizeof(ros_message.st);
+    size_t item_size = sizeof(ros_message.time);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -189,12 +189,12 @@ max_serialized_size_ActionFeedback(
     }
   }
 
-  // Member: st
+  // Member: time
   {
     size_t array_size = 1;
 
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
   // Member: action_started

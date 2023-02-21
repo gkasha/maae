@@ -2,7 +2,7 @@ string action_id
 string agent_id
 string name
 
-float32 st
+float64 time
 
 int32 action_started
 int32 action_completed

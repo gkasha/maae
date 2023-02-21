@@ -79,8 +79,9 @@ TNode* Agent::find_slot(int dur) {
         tuple<double,double> et = stn.get_feasible_values(curr->next->stp_);
         RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "ST:(%f,%f), ET: (%f,%f)", std::get<0>(st), std::get<1>(st), std::get<0>(et), std::get<1>(et));
 
-        if (std::get<1>(et) + std::get<0>(st) >= dur) {
+        if (curr->next->status == TNode::WAITING && std::get<1>(et) + std::get<0>(st) >= dur) {
             // std::get<0>(tp) is negative, so adding it is correct
+            // Check that next node on timeline isn't already in execution
             return curr;
         }
 
@@ -111,7 +112,7 @@ void Agent::new_tasks_cb(const ma_interfaces::msg::Task task) {
         } else {
             RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Found slot: %s=(%s,%s)", slot_head->name_.c_str(),slot_head->stp_.c_str(),slot_head->etp_.c_str());
 
-            int st = (int)std::get<0>(stn.get_feasible_values(slot_head->etp_));
+            double st = -1*std::get<0>(stn.get_feasible_values(slot_head->etp_));
             task_map[task.id] = slot_head;
 
             ma_interfaces::msg::Bid bid = ma_interfaces::msg::Bid();
@@ -140,7 +141,7 @@ void Agent::new_tasks_cb(const ma_interfaces::msg::Task task) {
         std::string new_stp = task.id + "_st";
         std::string new_etp = task.id + "_et";
 
-        constraint task_dur = std::make_tuple(new_stp, new_etp, task.duration, task.duration);
+        constraint task_dur = std::make_tuple(new_stp, new_etp, std::max(0.0,task.duration-execution_threshold_), task.duration+execution_threshold_);
         constraint head_seq = std::make_tuple(slot_st, new_stp, 0, inf);
         constraint tail_seq = std::make_tuple(new_etp, slot_et, 0, inf);
 
@@ -158,9 +159,10 @@ void Agent::new_tasks_cb(const ma_interfaces::msg::Task task) {
             TNode* tmp = slot_head->next;
             slot_head->next = new_task;
             new_task->next = tmp;
+
+            task_map[task.id] = new_task;
             
             // Check to see if there are any tasks to dispatch
-            stn.print_graph();
             print_timeline();
 
             check_dispatch();
@@ -208,13 +210,46 @@ void Agent::new_bids_cb(const ma_interfaces::msg::Bid bid) {
     }
 }
 
+void Agent::action_feedback_cb(const ma_interfaces::msg::ActionFeedback action) {
+    if (action.agent_id == id_) {
+        if (task_map.find(action.action_id) != task_map.end()) {
+            TNode* curr = task_map[action.action_id];
+            auto end_fv = stn.get_feasible_values(curr->etp_);
+
+            if (action.action_started) {
+                constraint c = std::make_tuple("cz", curr->stp_, action.time, action.time);
+                bool status = stn.add_constraint(curr->stp_ + "_actual", c);
+
+                if (status) {
+                    curr->status = TNode::EXECUTING;
+                    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Action executing: %s", action.action_id.c_str());
+                } else {
+                    RCLCPP_INFO(rclcpp::get_logger("rclcpp"),"Unable to add start constraint to timeline for action %s", action.action_id.c_str());
+                }
+            } else if (action.action_completed) {
+                constraint c = std::make_tuple("cz", curr->etp_, action.time, action.time);
+                bool status = stn.add_constraint(curr->etp_ + "_actual", c);
+                if (status) {
+                    curr->status = TNode::COMPLETE;
+                    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Action complete: %s", action.action_id.c_str());
+                } else {
+                    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Unable to add end constraint to timeline for action %s, expected: (%f, %f),  actual: %f", 
+                            action.action_id.c_str(), std::get<0>(end_fv), std::get<1>(end_fv), action.time);
+                }
+            } else if (action.action_failed) {
+                RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Action failed: %s", action.action_id.c_str());
+                // Do something
+            }
+        }
+    }
+}
 
 int main(int argc, char* argv[])
 {
     rclcpp::init(argc, argv);
 
     rclcpp::executors::MultiThreadedExecutor executor;
-    auto agent_node = std::make_shared<Agent>(argv[1]);
+    auto agent_node = std::make_shared<Agent>(argv[1], std::stod(argv[2]), std::stod(argv[3]));
 
     executor.add_node(agent_node);
     executor.spin();

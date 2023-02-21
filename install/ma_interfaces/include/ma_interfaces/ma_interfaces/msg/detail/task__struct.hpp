@@ -40,7 +40,7 @@ struct Task_
     {
       this->id = "";
       this->owner = "";
-      this->duration = 0.0f;
+      this->duration = 0.0;
       this->value = 0ll;
     }
   }
@@ -54,7 +54,7 @@ struct Task_
     {
       this->id = "";
       this->owner = "";
-      this->duration = 0.0f;
+      this->duration = 0.0;
       this->value = 0ll;
     }
   }
@@ -67,7 +67,7 @@ struct Task_
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _owner_type owner;
   using _duration_type =
-    float;
+    double;
   _duration_type duration;
   using _value_type =
     int64_t;
@@ -87,7 +87,7 @@ struct Task_
     return *this;
   }
   Type & set__duration(
-    const float & _arg)
+    const double & _arg)
   {
     this->duration = _arg;
     return *this;

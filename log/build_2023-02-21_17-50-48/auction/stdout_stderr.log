@@ -1,0 +1,16 @@
+[35m[1mConsolidate compiler generated dependencies of target agent[0m
+[ 22%] Built target client
+[ 33%] [32mBuilding CXX object CMakeFiles/agent.dir/src/agent.cpp.o[0m
+[ 55%] Built target goal_manager
+[ 77%] Built target execution_interface
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[KTNode* Agent::find_slot(int)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:82:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass TNode[m[K’ has no member named ‘[01m[Kstatus_[m[K’; did you mean ‘[01m[Kstatus[m[K’?
+   82 |         if (curr->next->[01;31m[Kstatus_[m[K == TaskNode::WAITING && std::get<1>(et) + std::get<0>(st) >= dur) {
+      |                         [01;31m[K^~~~~~~[m[K
+      |                         [32m[Kstatus[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:82:36:[m[K [01;31m[Kerror: [m[K‘[01m[KTaskNode[m[K’ has not been declared
+   82 |         if (curr->next->status_ == [01;31m[KTaskNode[m[K::WAITING && std::get<1>(et) + std::get<0>(st) >= dur) {
+      |                                    [01;31m[K^~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/agent.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

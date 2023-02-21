@@ -7,6 +7,8 @@
 
 import builtins  # noqa: E402, I100
 
+import math  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -58,6 +60,7 @@ class ActionFeedback(metaclass=Metaclass_ActionFeedback):
         '_action_id',
         '_agent_id',
         '_name',
+        '_st',
         '_action_started',
         '_action_completed',
         '_action_failed',
@@ -67,6 +70,7 @@ class ActionFeedback(metaclass=Metaclass_ActionFeedback):
         'action_id': 'string',
         'agent_id': 'string',
         'name': 'string',
+        'st': 'float',
         'action_started': 'int32',
         'action_completed': 'int32',
         'action_failed': 'int32',
@@ -76,6 +80,7 @@ class ActionFeedback(metaclass=Metaclass_ActionFeedback):
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
@@ -88,6 +93,7 @@ class ActionFeedback(metaclass=Metaclass_ActionFeedback):
         self.action_id = kwargs.get('action_id', str())
         self.agent_id = kwargs.get('agent_id', str())
         self.name = kwargs.get('name', str())
+        self.st = kwargs.get('st', float())
         self.action_started = kwargs.get('action_started', int())
         self.action_completed = kwargs.get('action_completed', int())
         self.action_failed = kwargs.get('action_failed', int())
@@ -126,6 +132,8 @@ class ActionFeedback(metaclass=Metaclass_ActionFeedback):
         if self.agent_id != other.agent_id:
             return False
         if self.name != other.name:
+            return False
+        if self.st != other.st:
             return False
         if self.action_started != other.action_started:
             return False
@@ -178,6 +186,21 @@ class ActionFeedback(metaclass=Metaclass_ActionFeedback):
                 isinstance(value, str), \
                 "The 'name' field must be of type 'str'"
         self._name = value
+
+    @builtins.property
+    def st(self):
+        """Message field 'st'."""
+        return self._st
+
+    @st.setter
+    def st(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'st' field must be of type 'float'"
+            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
+                "The 'st' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+        self._st = value
 
     @builtins.property
     def action_started(self):

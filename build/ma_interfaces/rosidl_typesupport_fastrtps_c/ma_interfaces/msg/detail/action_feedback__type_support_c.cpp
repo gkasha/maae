@@ -93,9 +93,9 @@ static bool _ActionFeedback__cdr_serialize(
     cdr << str->data;
   }
 
-  // Field name: st
+  // Field name: time
   {
-    cdr << ros_message->st;
+    cdr << ros_message->time;
   }
 
   // Field name: action_started
@@ -173,9 +173,9 @@ static bool _ActionFeedback__cdr_deserialize(
     }
   }
 
-  // Field name: st
+  // Field name: time
   {
-    cdr >> ros_message->st;
+    cdr >> ros_message->time;
   }
 
   // Field name: action_started
@@ -222,9 +222,9 @@ size_t get_serialized_size_ma_interfaces__msg__ActionFeedback(
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message->name.size + 1);
-  // field.name st
+  // field.name time
   {
-    size_t item_size = sizeof(ros_message->st);
+    size_t item_size = sizeof(ros_message->time);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -309,12 +309,12 @@ size_t max_serialized_size_ma_interfaces__msg__ActionFeedback(
         1;
     }
   }
-  // member: st
+  // member: time
   {
     size_t array_size = 1;
 
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
   // member: action_started
   {

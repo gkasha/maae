@@ -66,14 +66,14 @@ class Task(metaclass=Metaclass_Task):
     _fields_and_field_types = {
         'id': 'string',
         'owner': 'string',
-        'duration': 'float',
+        'duration': 'double',
         'value': 'int64',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
     )
 
@@ -167,8 +167,8 @@ class Task(metaclass=Metaclass_Task):
             assert \
                 isinstance(value, float), \
                 "The 'duration' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'duration' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'duration' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._duration = value
 
     @builtins.property

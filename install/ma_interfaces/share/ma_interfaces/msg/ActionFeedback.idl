@@ -12,7 +12,7 @@ module ma_interfaces {
 
       string name;
 
-      float st;
+      double time;
 
       int32 action_started;
 

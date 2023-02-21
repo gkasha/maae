@@ -38,7 +38,7 @@ ma_interfaces__msg__ActionFeedback__init(ma_interfaces__msg__ActionFeedback * ms
     ma_interfaces__msg__ActionFeedback__fini(msg);
     return false;
   }
-  // st
+  // time
   // action_started
   // action_completed
   // action_failed
@@ -57,7 +57,7 @@ ma_interfaces__msg__ActionFeedback__fini(ma_interfaces__msg__ActionFeedback * ms
   rosidl_runtime_c__String__fini(&msg->agent_id);
   // name
   rosidl_runtime_c__String__fini(&msg->name);
-  // st
+  // time
   // action_started
   // action_completed
   // action_failed
@@ -87,8 +87,8 @@ ma_interfaces__msg__ActionFeedback__are_equal(const ma_interfaces__msg__ActionFe
   {
     return false;
   }
-  // st
-  if (lhs->st != rhs->st) {
+  // time
+  if (lhs->time != rhs->time) {
     return false;
   }
   // action_started
@@ -132,8 +132,8 @@ ma_interfaces__msg__ActionFeedback__copy(
   {
     return false;
   }
-  // st
-  output->st = input->st;
+  // time
+  output->time = input->time;
   // action_started
   output->action_started = input->action_started;
   // action_completed

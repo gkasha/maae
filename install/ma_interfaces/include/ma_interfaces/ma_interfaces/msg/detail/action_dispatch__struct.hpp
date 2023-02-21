@@ -41,8 +41,8 @@ struct ActionDispatch_
       this->action_id = "";
       this->agent_id = "";
       this->name = "";
-      this->duration = 0.0f;
-      this->start_time = 0.0f;
+      this->duration = 0.0;
+      this->start_time = 0.0;
     }
   }
 
@@ -57,8 +57,8 @@ struct ActionDispatch_
       this->action_id = "";
       this->agent_id = "";
       this->name = "";
-      this->duration = 0.0f;
-      this->start_time = 0.0f;
+      this->duration = 0.0;
+      this->start_time = 0.0;
     }
   }
 
@@ -73,10 +73,10 @@ struct ActionDispatch_
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _name_type name;
   using _duration_type =
-    float;
+    double;
   _duration_type duration;
   using _start_time_type =
-    float;
+    double;
   _start_time_type start_time;
 
   // setters for named parameter idiom
@@ -99,13 +99,13 @@ struct ActionDispatch_
     return *this;
   }
   Type & set__duration(
-    const float & _arg)
+    const double & _arg)
   {
     this->duration = _arg;
     return *this;
   }
   Type & set__start_time(
-    const float & _arg)
+    const double & _arg)
   {
     this->start_time = _arg;
     return *this;

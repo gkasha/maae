@@ -40,8 +40,8 @@ struct Bid_
     {
       this->agent_id = "";
       this->auction_id = "";
-      this->st = 0.0f;
-      this->et = 0.0f;
+      this->st = 0.0;
+      this->et = 0.0;
       this->value = 0ll;
     }
   }
@@ -55,8 +55,8 @@ struct Bid_
     {
       this->agent_id = "";
       this->auction_id = "";
-      this->st = 0.0f;
-      this->et = 0.0f;
+      this->st = 0.0;
+      this->et = 0.0;
       this->value = 0ll;
     }
   }
@@ -69,10 +69,10 @@ struct Bid_
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _auction_id_type auction_id;
   using _st_type =
-    float;
+    double;
   _st_type st;
   using _et_type =
-    float;
+    double;
   _et_type et;
   using _value_type =
     int64_t;
@@ -92,13 +92,13 @@ struct Bid_
     return *this;
   }
   Type & set__st(
-    const float & _arg)
+    const double & _arg)
   {
     this->st = _arg;
     return *this;
   }
   Type & set__et(
-    const float & _arg)
+    const double & _arg)
   {
     this->et = _arg;
     return *this;

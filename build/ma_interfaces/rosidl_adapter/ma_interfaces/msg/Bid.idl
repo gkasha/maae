@@ -10,9 +10,9 @@ module ma_interfaces {
 
       string auction_id;
 
-      float st;
+      double st;
 
-      float et;
+      double et;
 
       int64 value;
     };

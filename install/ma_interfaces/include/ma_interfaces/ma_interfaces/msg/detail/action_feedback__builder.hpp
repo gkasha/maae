@@ -69,15 +69,15 @@ private:
   ::ma_interfaces::msg::ActionFeedback msg_;
 };
 
-class Init_ActionFeedback_st
+class Init_ActionFeedback_time
 {
 public:
-  explicit Init_ActionFeedback_st(::ma_interfaces::msg::ActionFeedback & msg)
+  explicit Init_ActionFeedback_time(::ma_interfaces::msg::ActionFeedback & msg)
   : msg_(msg)
   {}
-  Init_ActionFeedback_action_started st(::ma_interfaces::msg::ActionFeedback::_st_type arg)
+  Init_ActionFeedback_action_started time(::ma_interfaces::msg::ActionFeedback::_time_type arg)
   {
-    msg_.st = std::move(arg);
+    msg_.time = std::move(arg);
     return Init_ActionFeedback_action_started(msg_);
   }
 
@@ -91,10 +91,10 @@ public:
   explicit Init_ActionFeedback_name(::ma_interfaces::msg::ActionFeedback & msg)
   : msg_(msg)
   {}
-  Init_ActionFeedback_st name(::ma_interfaces::msg::ActionFeedback::_name_type arg)
+  Init_ActionFeedback_time name(::ma_interfaces::msg::ActionFeedback::_name_type arg)
   {
     msg_.name = std::move(arg);
-    return Init_ActionFeedback_st(msg_);
+    return Init_ActionFeedback_time(msg_);
   }
 
 private:

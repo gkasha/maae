@@ -12,9 +12,9 @@ module ma_interfaces {
 
       string name;
 
-      float duration;
+      double duration;
 
-      float start_time;
+      double start_time;
     };
   };
 };

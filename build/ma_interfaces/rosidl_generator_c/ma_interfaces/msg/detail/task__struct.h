@@ -27,7 +27,7 @@ typedef struct ma_interfaces__msg__Task
 {
   rosidl_runtime_c__String id;
   rosidl_runtime_c__String owner;
-  float duration;
+  double duration;
   int64_t value;
 } ma_interfaces__msg__Task;
 

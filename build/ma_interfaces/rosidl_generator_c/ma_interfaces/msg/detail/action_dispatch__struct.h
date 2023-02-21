@@ -29,8 +29,8 @@ typedef struct ma_interfaces__msg__ActionDispatch
   rosidl_runtime_c__String action_id;
   rosidl_runtime_c__String agent_id;
   rosidl_runtime_c__String name;
-  float duration;
-  float start_time;
+  double duration;
+  double start_time;
 } ma_interfaces__msg__ActionDispatch;
 
 // Struct for a sequence of ma_interfaces__msg__ActionDispatch.

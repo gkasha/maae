@@ -29,7 +29,7 @@ typedef struct ma_interfaces__msg__ActionFeedback
   rosidl_runtime_c__String action_id;
   rosidl_runtime_c__String agent_id;
   rosidl_runtime_c__String name;
-  float st;
+  double time;
   int32_t action_started;
   int32_t action_completed;
   int32_t action_failed;
