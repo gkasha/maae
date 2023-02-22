@@ -59,6 +59,7 @@ class Bid(metaclass=Metaclass_Bid):
     __slots__ = [
         '_agent_id',
         '_auction_id',
+        '_status',
         '_st',
         '_et',
         '_value',
@@ -67,6 +68,7 @@ class Bid(metaclass=Metaclass_Bid):
     _fields_and_field_types = {
         'agent_id': 'string',
         'auction_id': 'string',
+        'status': 'int32',
         'st': 'double',
         'et': 'double',
         'value': 'int64',
@@ -75,6 +77,7 @@ class Bid(metaclass=Metaclass_Bid):
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
@@ -86,6 +89,7 @@ class Bid(metaclass=Metaclass_Bid):
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.agent_id = kwargs.get('agent_id', str())
         self.auction_id = kwargs.get('auction_id', str())
+        self.status = kwargs.get('status', int())
         self.st = kwargs.get('st', float())
         self.et = kwargs.get('et', float())
         self.value = kwargs.get('value', int())
@@ -122,6 +126,8 @@ class Bid(metaclass=Metaclass_Bid):
         if self.agent_id != other.agent_id:
             return False
         if self.auction_id != other.auction_id:
+            return False
+        if self.status != other.status:
             return False
         if self.st != other.st:
             return False
@@ -161,6 +167,21 @@ class Bid(metaclass=Metaclass_Bid):
                 isinstance(value, str), \
                 "The 'auction_id' field must be of type 'str'"
         self._auction_id = value
+
+    @builtins.property
+    def status(self):
+        """Message field 'status'."""
+        return self._status
+
+    @status.setter
+    def status(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'status' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'status' field must be an integer in [-2147483648, 2147483647]"
+        self._status = value
 
     @builtins.property
     def st(self):

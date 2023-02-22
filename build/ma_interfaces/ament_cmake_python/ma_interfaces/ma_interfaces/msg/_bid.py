@@ -67,16 +67,16 @@ class Bid(metaclass=Metaclass_Bid):
     _fields_and_field_types = {
         'agent_id': 'string',
         'auction_id': 'string',
-        'st': 'float',
-        'et': 'float',
+        'st': 'double',
+        'et': 'double',
         'value': 'int64',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
     )
 
@@ -173,8 +173,8 @@ class Bid(metaclass=Metaclass_Bid):
             assert \
                 isinstance(value, float), \
                 "The 'st' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'st' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'st' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._st = value
 
     @builtins.property
@@ -188,8 +188,8 @@ class Bid(metaclass=Metaclass_Bid):
             assert \
                 isinstance(value, float), \
                 "The 'et' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'et' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'et' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._et = value
 
     @builtins.property

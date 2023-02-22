@@ -40,6 +40,7 @@ struct Bid_
     {
       this->agent_id = "";
       this->auction_id = "";
+      this->status = 0l;
       this->st = 0.0;
       this->et = 0.0;
       this->value = 0ll;
@@ -55,6 +56,7 @@ struct Bid_
     {
       this->agent_id = "";
       this->auction_id = "";
+      this->status = 0l;
       this->st = 0.0;
       this->et = 0.0;
       this->value = 0ll;
@@ -68,6 +70,9 @@ struct Bid_
   using _auction_id_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _auction_id_type auction_id;
+  using _status_type =
+    int32_t;
+  _status_type status;
   using _st_type =
     double;
   _st_type st;
@@ -89,6 +94,12 @@ struct Bid_
     const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
   {
     this->auction_id = _arg;
+    return *this;
+  }
+  Type & set__status(
+    const int32_t & _arg)
+  {
+    this->status = _arg;
     return *this;
   }
   Type & set__st(
@@ -156,6 +167,9 @@ struct Bid_
       return false;
     }
     if (this->auction_id != other.auction_id) {
+      return false;
+    }
+    if (this->status != other.status) {
       return false;
     }
     if (this->st != other.st) {

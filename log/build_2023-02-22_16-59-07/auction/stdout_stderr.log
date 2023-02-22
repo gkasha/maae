@@ -1,0 +1,17 @@
+[35m[1mConsolidate compiler generated dependencies of target agent[0m
+[ 22%] Built target execution_interface
+[ 44%] Built target goal_manager
+[ 66%] Built target client
+[ 77%] [32mBuilding CXX object CMakeFiles/agent.dir/src/agent.cpp.o[0m
+In file included from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:[m[K In constructor ‘[01m[KAgent::Agent(std::string, double, double)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:129:13:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[KTNode[m[K’
+  129 |             [01;31m[KTNode[m[K* tail = new TNode("tail", "end", "end");
+      |             [01;31m[K^~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:131:30:[m[K [01;31m[Kerror: [m[K‘[01m[Ktail[m[K’ was not declared in this scope; did you mean ‘[01m[Ktanl[m[K’?
+  131 |             timeline->next = [01;31m[Ktail[m[K;
+      |                              [01;31m[K^~~~[m[K
+      |                              [32m[Ktanl[m[K
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/agent.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

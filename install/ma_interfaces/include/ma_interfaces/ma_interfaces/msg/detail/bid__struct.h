@@ -27,6 +27,7 @@ typedef struct ma_interfaces__msg__Bid
 {
   rosidl_runtime_c__String agent_id;
   rosidl_runtime_c__String auction_id;
+  int32_t status;
   double st;
   double et;
   int64_t value;

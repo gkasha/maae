@@ -68,16 +68,16 @@ class ActionDispatch(metaclass=Metaclass_ActionDispatch):
         'action_id': 'string',
         'agent_id': 'string',
         'name': 'string',
-        'duration': 'float',
-        'start_time': 'float',
+        'duration': 'double',
+        'start_time': 'double',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -186,8 +186,8 @@ class ActionDispatch(metaclass=Metaclass_ActionDispatch):
             assert \
                 isinstance(value, float), \
                 "The 'duration' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'duration' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'duration' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._duration = value
 
     @builtins.property
@@ -201,6 +201,6 @@ class ActionDispatch(metaclass=Metaclass_ActionDispatch):
             assert \
                 isinstance(value, float), \
                 "The 'start_time' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'start_time' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'start_time' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._start_time = value

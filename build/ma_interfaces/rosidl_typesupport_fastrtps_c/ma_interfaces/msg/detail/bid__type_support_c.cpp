@@ -79,6 +79,11 @@ static bool _Bid__cdr_serialize(
     cdr << str->data;
   }
 
+  // Field name: status
+  {
+    cdr << ros_message->status;
+  }
+
   // Field name: st
   {
     cdr << ros_message->st;
@@ -138,6 +143,11 @@ static bool _Bid__cdr_deserialize(
     }
   }
 
+  // Field name: status
+  {
+    cdr >> ros_message->status;
+  }
+
   // Field name: st
   {
     cdr >> ros_message->st;
@@ -178,6 +188,12 @@ size_t get_serialized_size_ma_interfaces__msg__Bid(
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message->auction_id.size + 1);
+  // field.name status
+  {
+    size_t item_size = sizeof(ros_message->status);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
   // field.name st
   {
     size_t item_size = sizeof(ros_message->st);
@@ -246,6 +262,13 @@ size_t max_serialized_size_ma_interfaces__msg__Bid(
         eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
         1;
     }
+  }
+  // member: status
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
   // member: st
   {

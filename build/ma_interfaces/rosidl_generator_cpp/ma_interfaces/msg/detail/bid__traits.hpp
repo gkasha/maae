@@ -39,6 +39,13 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
+  // member: status
+  {
+    out << "status: ";
+    rosidl_generator_traits::value_to_yaml(msg.status, out);
+    out << ", ";
+  }
+
   // member: st
   {
     out << "st: ";
@@ -82,6 +89,16 @@ inline void to_block_style_yaml(
     }
     out << "auction_id: ";
     rosidl_generator_traits::value_to_yaml(msg.auction_id, out);
+    out << "\n";
+  }
+
+  // member: status
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "status: ";
+    rosidl_generator_traits::value_to_yaml(msg.status, out);
     out << "\n";
   }
 

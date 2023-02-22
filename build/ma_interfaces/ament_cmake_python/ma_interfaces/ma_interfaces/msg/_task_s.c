@@ -89,7 +89,7 @@ bool ma_interfaces__msg__task__convert_from_py(PyObject * _pymsg, void * _ros_me
       return false;
     }
     assert(PyFloat_Check(field));
-    ros_message->duration = (float)PyFloat_AS_DOUBLE(field);
+    ros_message->duration = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // value

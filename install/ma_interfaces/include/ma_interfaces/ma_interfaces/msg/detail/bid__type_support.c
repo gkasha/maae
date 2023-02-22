@@ -36,7 +36,7 @@ void ma_interfaces__msg__Bid__rosidl_typesupport_introspection_c__Bid_fini_funct
   ma_interfaces__msg__Bid__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember ma_interfaces__msg__Bid__rosidl_typesupport_introspection_c__Bid_message_member_array[5] = {
+static rosidl_typesupport_introspection_c__MessageMember ma_interfaces__msg__Bid__rosidl_typesupport_introspection_c__Bid_message_member_array[6] = {
   {
     "agent_id",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
@@ -63,6 +63,23 @@ static rosidl_typesupport_introspection_c__MessageMember ma_interfaces__msg__Bid
     0,  // array size
     false,  // is upper bound
     offsetof(ma_interfaces__msg__Bid, auction_id),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "status",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(ma_interfaces__msg__Bid, status),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -127,7 +144,7 @@ static rosidl_typesupport_introspection_c__MessageMember ma_interfaces__msg__Bid
 static const rosidl_typesupport_introspection_c__MessageMembers ma_interfaces__msg__Bid__rosidl_typesupport_introspection_c__Bid_message_members = {
   "ma_interfaces__msg",  // message namespace
   "Bid",  // message name
-  5,  // number of fields
+  6,  // number of fields
   sizeof(ma_interfaces__msg__Bid),
   ma_interfaces__msg__Bid__rosidl_typesupport_introspection_c__Bid_message_member_array,  // message members
   ma_interfaces__msg__Bid__rosidl_typesupport_introspection_c__Bid_init_function,  // function to initialize message memory (memory has to be allocated)

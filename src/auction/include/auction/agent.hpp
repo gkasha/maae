@@ -125,6 +125,7 @@ class Agent : public rclcpp::Node
             stn.print_graph();
 
             timeline = new TNode("head", "start", "start");
+            timeline->status = TNode::COMPLETE;
             TNode* tail = new TNode("tail", "end", "end");
 
             timeline->next = tail;

@@ -10,6 +10,8 @@ module ma_interfaces {
 
       string auction_id;
 
+      int32 status;
+
       double st;
 
       double et;

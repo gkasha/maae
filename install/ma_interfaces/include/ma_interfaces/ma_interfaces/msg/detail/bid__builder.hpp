@@ -69,16 +69,32 @@ private:
   ::ma_interfaces::msg::Bid msg_;
 };
 
+class Init_Bid_status
+{
+public:
+  explicit Init_Bid_status(::ma_interfaces::msg::Bid & msg)
+  : msg_(msg)
+  {}
+  Init_Bid_st status(::ma_interfaces::msg::Bid::_status_type arg)
+  {
+    msg_.status = std::move(arg);
+    return Init_Bid_st(msg_);
+  }
+
+private:
+  ::ma_interfaces::msg::Bid msg_;
+};
+
 class Init_Bid_auction_id
 {
 public:
   explicit Init_Bid_auction_id(::ma_interfaces::msg::Bid & msg)
   : msg_(msg)
   {}
-  Init_Bid_st auction_id(::ma_interfaces::msg::Bid::_auction_id_type arg)
+  Init_Bid_status auction_id(::ma_interfaces::msg::Bid::_auction_id_type arg)
   {
     msg_.auction_id = std::move(arg);
-    return Init_Bid_st(msg_);
+    return Init_Bid_status(msg_);
   }
 
 private:

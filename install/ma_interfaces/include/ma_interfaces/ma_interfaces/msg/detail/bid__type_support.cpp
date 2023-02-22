@@ -37,7 +37,7 @@ void Bid_fini_function(void * message_memory)
   typed_message->~Bid();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember Bid_message_member_array[5] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember Bid_message_member_array[6] = {
   {
     "agent_id",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
@@ -64,6 +64,23 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Bid_message_m
     0,  // array size
     false,  // is upper bound
     offsetof(ma_interfaces::msg::Bid, auction_id),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "status",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(ma_interfaces::msg::Bid, status),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -128,7 +145,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Bid_message_m
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers Bid_message_members = {
   "ma_interfaces::msg",  // message namespace
   "Bid",  // message name
-  5,  // number of fields
+  6,  // number of fields
   sizeof(ma_interfaces::msg::Bid),
   Bid_message_member_array,  // message members
   Bid_init_function,  // function to initialize message memory (memory has to be allocated)

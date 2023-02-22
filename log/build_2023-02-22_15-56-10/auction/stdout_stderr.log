@@ -1,0 +1,45 @@
+[35m[1mConsolidate compiler generated dependencies of target agent[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/agent.dir/src/agent.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/goal_manager.dir/src/goal_manager.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/execution_interface.dir/src/execution_interface.cpp.o[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/client.dir/src/client.cpp.o[0m
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::new_goals_cb(ma_interfaces::msg::Goal)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:53:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kwinning_idx[m[K’ was not declared in this scope
+   53 |         [01;31m[Kwinning_idx[m[K = -1;
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::new_bids_cb(ma_interfaces::msg::Bid)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:255:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kwinning_idx[m[K’ was not declared in this scope
+  255 |             [01;31m[Kwinning_idx[m[K = -1;
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:257:36:[m[K [01;31m[Kerror: [m[Kuse of ‘[01m[Kbid[m[K’ before deduction of ‘[01m[Kauto[m[K’
+  257 |                 auto bid = bid_map[[01;31m[Kbid[m[K.auction_id][i];
+      |                                    [01;31m[K^~~[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/build/rclcpp/include/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:275:105:[m[K [01;31m[Kerror: [m[K‘[01m[Ktask[m[K’ was not declared in this scope
+  275 |                 RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing winner for auction %s: agent %s", [01;31m[Ktask[m[K.id.c_str(), winning_bid.agent_id.c_str());
+      |                                                                                                         [01;31m[K^~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:279:90:[m[K [01;31m[Kerror: [m[K‘[01m[Ktask[m[K’ was not declared in this scope
+  279 |                 RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "No bids, closing auction %s", [01;31m[Ktask[m[K.id.c_str());
+      |                                                                                          [01;31m[K^~~~[m[K
+[ 55%] [32m[1mLinking CXX executable client[0m
+[ 55%] Built target client
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/agent.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[ 66%] [32m[1mLinking CXX executable goal_manager[0m
+[ 77%] [32m[1mLinking CXX executable execution_interface[0m
+[ 77%] Built target execution_interface
+[ 77%] Built target goal_manager
+gmake: *** [Makefile:146: all] Error 2

@@ -32,6 +32,7 @@ ma_interfaces__msg__Bid__init(ma_interfaces__msg__Bid * msg)
     ma_interfaces__msg__Bid__fini(msg);
     return false;
   }
+  // status
   // st
   // et
   // value
@@ -48,6 +49,7 @@ ma_interfaces__msg__Bid__fini(ma_interfaces__msg__Bid * msg)
   rosidl_runtime_c__String__fini(&msg->agent_id);
   // auction_id
   rosidl_runtime_c__String__fini(&msg->auction_id);
+  // status
   // st
   // et
   // value
@@ -69,6 +71,10 @@ ma_interfaces__msg__Bid__are_equal(const ma_interfaces__msg__Bid * lhs, const ma
   if (!rosidl_runtime_c__String__are_equal(
       &(lhs->auction_id), &(rhs->auction_id)))
   {
+    return false;
+  }
+  // status
+  if (lhs->status != rhs->status) {
     return false;
   }
   // st
@@ -106,6 +112,8 @@ ma_interfaces__msg__Bid__copy(
   {
     return false;
   }
+  // status
+  output->status = input->status;
   // st
   output->st = input->st;
   // et

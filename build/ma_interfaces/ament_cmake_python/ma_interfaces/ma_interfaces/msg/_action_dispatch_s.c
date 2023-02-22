@@ -104,7 +104,7 @@ bool ma_interfaces__msg__action_dispatch__convert_from_py(PyObject * _pymsg, voi
       return false;
     }
     assert(PyFloat_Check(field));
-    ros_message->duration = (float)PyFloat_AS_DOUBLE(field);
+    ros_message->duration = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // start_time
@@ -113,7 +113,7 @@ bool ma_interfaces__msg__action_dispatch__convert_from_py(PyObject * _pymsg, voi
       return false;
     }
     assert(PyFloat_Check(field));
-    ros_message->start_time = (float)PyFloat_AS_DOUBLE(field);
+    ros_message->start_time = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
 

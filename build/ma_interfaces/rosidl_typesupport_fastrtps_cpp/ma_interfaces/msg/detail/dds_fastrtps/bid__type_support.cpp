@@ -36,6 +36,8 @@ cdr_serialize(
   cdr << ros_message.agent_id;
   // Member: auction_id
   cdr << ros_message.auction_id;
+  // Member: status
+  cdr << ros_message.status;
   // Member: st
   cdr << ros_message.st;
   // Member: et
@@ -56,6 +58,9 @@ cdr_deserialize(
 
   // Member: auction_id
   cdr >> ros_message.auction_id;
+
+  // Member: status
+  cdr >> ros_message.status;
 
   // Member: st
   cdr >> ros_message.st;
@@ -90,6 +95,12 @@ get_serialized_size(
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message.auction_id.size() + 1);
+  // Member: status
+  {
+    size_t item_size = sizeof(ros_message.status);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
   // Member: st
   {
     size_t item_size = sizeof(ros_message.st);
@@ -154,6 +165,14 @@ max_serialized_size_Bid(
         eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
         1;
     }
+  }
+
+  // Member: status
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
   // Member: st
