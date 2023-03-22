@@ -83,6 +83,15 @@ bool ma_interfaces__msg__bid__convert_from_py(PyObject * _pymsg, void * _ros_mes
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
+  {  // status
+    PyObject * field = PyObject_GetAttrString(_pymsg, "status");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->status = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
   {  // st
     PyObject * field = PyObject_GetAttrString(_pymsg, "st");
     if (!field) {
@@ -160,6 +169,17 @@ PyObject * ma_interfaces__msg__bid__convert_to_py(void * raw_ros_message)
     }
     {
       int rc = PyObject_SetAttrString(_pymessage, "auction_id", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // status
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->status);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "status", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

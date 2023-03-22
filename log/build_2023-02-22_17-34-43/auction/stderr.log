@@ -1,0 +1,28 @@
+In file included from [01m[K/home/gkasha/ros2_humble/build/rclcpp/include/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::check_dispatch()[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:246:70:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 5 has type ‘[01m[Kma_interfaces::msg::ActionDispatch_<std::allocator<void> >::_action_id_type[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  246 |             if (verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), [01;35m[K"Dispatching action: %s"[m[K, msg.action_id);
+      |                                                                      [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:246:92:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  246 |             if (verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Dispatching action: [01;36m[K%s[m[K", msg.action_id);
+      |                                                                                           [01;36m[K~^[m[K
+      |                                                                                            [01;36m[K|[m[K
+      |                                                                                            [01;36m[Kchar*[m[K
+/usr/bin/ld: CMakeFiles/agent.dir/src/stn.cpp.o:(.bss+0x0): multiple definition of `verbose_1'; CMakeFiles/agent.dir/src/agent.cpp.o:(.data+0x0): first defined here
+/usr/bin/ld: CMakeFiles/agent.dir/src/stn.cpp.o:(.bss+0x1): multiple definition of `verbose_2'; CMakeFiles/agent.dir/src/agent.cpp.o:(.bss+0x0): first defined here
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:175: agent] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/agent.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

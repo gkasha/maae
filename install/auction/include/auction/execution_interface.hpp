@@ -113,7 +113,7 @@ class Monitor : public rclcpp::Node
                                 action->set_status(ActionNode::COMPLETE);
                                 publisher_->publish(action->to_feedback_msg());
 
-                                RCLCPP_INFO(this->get_logger(), "Action %s completed", action->to_string().c_str());
+                                RCLCPP_INFO(this->get_logger(), "Action completed: %s", action->to_string().c_str());
                                 completed_actions.push_back(action->to_string());
                             }
                         } else if (action->get_status() == ActionNode::WAITING) {
@@ -124,7 +124,7 @@ class Monitor : public rclcpp::Node
                             RCLCPP_INFO(this->get_logger(), "Action started: %s", action->to_string().c_str());
                         } else if (action->get_status() == ActionNode::FAILED) {
                             publisher_->publish(action->to_feedback_msg());
-                            RCLCPP_INFO(this->get_logger(), "Action %s failed", action->to_string().c_str());
+                            RCLCPP_INFO(this->get_logger(), "Action failed: %s", action->to_string().c_str());
                             completed_actions.push_back(action->to_string());
                         }
                     }

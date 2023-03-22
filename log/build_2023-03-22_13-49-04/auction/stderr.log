@@ -1,0 +1,11 @@
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:111:21:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kstd::vector<TNode*> Agent::find_slots(int)[m[K’
+  111 | std::vector<TNode*> [01;31m[KAgent[m[K::find_slots(int dur) {
+      |                     [01;31m[K^~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:111:21:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kstd::vector<TNode*> Agent::find_slots(int)[m[K’
+In file included from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:43:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass Agent[m[K’ defined here
+   43 | class [01;36m[KAgent[m[K : public rclcpp::Node
+      |       [01;36m[K^~~~~[m[K
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/agent.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

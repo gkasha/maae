@@ -48,7 +48,6 @@ class Agent : public rclcpp::Node
             std::string topic = "agent_topic_" + id;
             id_ = id;
             start_time_ = std::chrono::duration_cast<std::chrono::duration<double>>(std::chrono::time_point_cast<std::chrono::milliseconds>(std::chrono::steady_clock::now()).time_since_epoch()).count();
-            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Start time: %f", start_time_);
             deadline_ = start_time_ + deadline;
             execution_threshold_ = execution_threshold;
 
@@ -122,12 +121,10 @@ class Agent : public rclcpp::Node
             stn.add_constraint("deadline", end_c);
             stn.add_constraint("start_end_seq", seq_c);
 
-            stn.print_graph();
-
             timeline = new TNode("head", "start", "start");
             timeline->status = TNode::COMPLETE;
             TNode* tail = new TNode("tail", "end", "end");
-
+    
             timeline->next = tail;
 
         }
@@ -156,7 +153,8 @@ class Agent : public rclcpp::Node
         double start_time_;
         double deadline_;
         STN stn;
-        TNode *timeline;
+        TNode* timeline;
+        std::vector<TNode*> plans;
 
         TNode* find_slot(int dur);
         void print_timeline();
