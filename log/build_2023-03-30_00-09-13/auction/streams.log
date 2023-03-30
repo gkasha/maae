@@ -1,0 +1,600 @@
+[0.069s] Invoking command in '/home/gkasha/Documents/maae/build/auction': AMENT_PREFIX_PATH=/home/gkasha/Documents/maae/install/ma_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gkasha/Documents/maae/install/ma_interfaces:/home/gkasha/ros2_humble/install/rosbag2_storage_mcap:/home/gkasha/ros2_humble/install/rosbag2:/home/gkasha/ros2_humble/install/rosbag2_compression_zstd:/home/gkasha/ros2_humble/install/mcap_vendor:/home/gkasha/ros2_humble/install/zstd_vendor:/home/gkasha/ros2_humble/install/rviz_visual_testing_framework:/home/gkasha/ros2_humble/install/rviz2:/home/gkasha/ros2_humble/install/rviz_default_plugins:/home/gkasha/ros2_humble/install/rviz_common:/home/gkasha/ros2_humble/install/rosbag2_py:/home/gkasha/ros2_humble/install/rosbag2_transport:/home/gkasha/ros2_humble/install/rosbag2_performance_benchmarking:/home/gkasha/ros2_humble/install/rosbag2_compression:/home/gkasha/ros2_humble/install/rosbag2_cpp:/home/gkasha/ros2_humble/install/rosbag2_storage_default_plugins:/home/gkasha/ros2_humble/install/rosbag2_storage:/home/gkasha/ros2_humble/install/image_common:/home/gkasha/ros2_humble/install/camera_info_manager:/home/gkasha/ros2_humble/install/camera_calibration_parsers:/home/gkasha/ros2_humble/install/yaml_cpp_vendor:/home/gkasha/ros2_humble/install/interactive_markers:/home/gkasha/ros2_humble/install/common_interfaces:/home/gkasha/ros2_humble/install/visualization_msgs:/home/gkasha/ros2_humble/install/dummy_robot_bringup:/home/gkasha/ros2_humble/install/robot_state_publisher:/home/gkasha/ros2_humble/install/kdl_parser:/home/gkasha/ros2_humble/install/urdf:/home/gkasha/ros2_humble/install/urdfdom:/home/gkasha/ros2_humble/install/urdf_parser_plugin:/home/gkasha/ros2_humble/install/urdfdom_headers:/home/gkasha/ros2_humble/install/turtlesim:/home/gkasha/ros2_humble/install/geometry2:/home/gkasha/ros2_humble/install/tf2_sensor_msgs:/home/gkasha/ros2_humble/install/test_tf2:/home/gkasha/ros2_humble/install/tf2_kdl:/home/gkasha/ros2_humble/install/tf2_geometry_msgs:/home/gkasha/ros2_humble/install/tf2_eigen:/home/gkasha/ros2_humble/install/tf2_bullet:/home/gkasha/ros2_humble/install/tf2_ros:/home/gkasha/ros2_humble/install/tf2_py:/home/gkasha/ros2_humble/install/tf2_msgs:/home/gkasha/ros2_humble/install/test_msgs:/home/gkasha/ros2_humble/install/sros2_cmake:/home/gkasha/ros2_humble/install/ros2cli_common_extensions:/home/gkasha/ros2_humble/install/rqt_py_common:/home/gkasha/ros2_humble/install/ros_testing:/home/gkasha/ros2_humble/install/ros2cli_test_interfaces:/home/gkasha/ros2_humble/install/quality_of_service_demo_cpp:/home/gkasha/ros2_humble/install/image_transport:/home/gkasha/ros2_humble/install/message_filters:/home/gkasha/ros2_humble/install/demo_nodes_cpp:/home/gkasha/ros2_humble/install/composition:/home/gkasha/ros2_humble/install/laser_geometry:/home/gkasha/ros2_humble/install/rclpy:/home/gkasha/ros2_humble/install/examples_rclcpp_minimal_action_server:/home/gkasha/ros2_humble/install/examples_rclcpp_minimal_action_client:/home/gkasha/ros2_humble/install/action_tutorials_cpp:/home/gkasha/ros2_humble/install/rclcpp_action:/home/gkasha/ros2_humble/install/rcl_action:/home/gkasha/ros2_humble/install/examples_rclcpp_wait_set:/home/gkasha/ros2_humble/install/examples_rclcpp_minimal_service:/home/gkasha/ros2_humble/install/examples_rclcpp_minimal_client:/home/gkasha/ros2_humble/install/examples_rclcpp_async_client:/home/gkasha/ros2_humble/install/example_interfaces:/home/gkasha/ros2_humble/install/action_tutorials_interfaces:/home/gkasha/ros2_humble/install/action_msgs:/home/gkasha/ros2_humble/install/unique_identifier_msgs:/home/gkasha/ros2_humble/install/ament_lint_common:/home/gkasha/ros2_humble/install/ament_cmake_uncrustify:/home/gkasha/ros2_humble/install/uncrustify_vendor:/home/gkasha/ros2_humble/install/trajectory_msgs:/home/gkasha/ros2_humble/install/topic_statistics_demo:/home/gkasha/ros2_humble/install/pendulum_control:/home/gkasha/ros2_humble/install/tlsf_cpp:/home/gkasha/ros2_humble/install/test_tracetools:/home/gkasha/ros2_humble/install/rqt_gui_cpp:/home/gkasha/ros2_humble/install/rosbag2_test_common:/home/gkasha/ros2_humble/install/ros2lifecycle_test_fixtures:/home/gkasha/ros2_humble/install/lifecycle:/home/gkasha/ros2_humble/install/rclcpp_lifecycle:/home/gkasha/ros2_humble/install/logging_demo:/home/gkasha/ros2_humble/install/image_tools:/home/gkasha/ros2_humble/install/examples_rclcpp_minimal_subscriber:/home/gkasha/ros2_humble/install/examples_rclcpp_minimal_composition:/home/gkasha/ros2_humble/install/demo_nodes_cpp_native:/home/gkasha/ros2_humble/install/rclcpp_components:/home/gkasha/ros2_humble/install/intra_process_demo:/home/gkasha/ros2_humble/install/examples_rclcpp_multithreaded_executor:/home/gkasha/ros2_humble/install/examples_rclcpp_minimal_timer:/home/gkasha/ros2_humble/install/examples_rclcpp_minimal_publisher:/home/gkasha/ros2_humble/install/examples_rclcpp_cbg_executor:/home/gkasha/ros2_humble/install/dummy_sensors:/home/gkasha/ros2_humble/install/dummy_map_server:/home/gkasha/ros2_humble/install/rclcpp:/home/gkasha/ros2_humble/install/rcl_lifecycle:/home/gkasha/ros2_humble/install/libstatistics_collector:/home/gkasha/ros2_humble/install/rcl:/home/gkasha/ros2_humble/install/rmw_implementation:/home/gkasha/ros2_humble/install/rmw_fastrtps_dynamic_cpp:/home/gkasha/ros2_humble/install/rmw_fastrtps_cpp:/home/gkasha/ros2_humble/install/rmw_fastrtps_shared_cpp:/home/gkasha/ros2_humble/install/rmw_cyclonedds_cpp:/home/gkasha/ros2_humble/install/tracetools:/home/gkasha/ros2_humble/install/tlsf:/home/gkasha/ros2_humble/install/tinyxml_vendor:/home/gkasha/ros2_humble/install/qt_gui_core:/home/gkasha/ros2_humble/install/qt_gui_cpp:/home/gkasha/ros2_humble/install/pluginlib:/home/gkasha/ros2_humble/install/tinyxml2_vendor:/home/gkasha/ros2_humble/install/tf2_eigen_kdl:/home/gkasha/ros2_humble/install/tf2:/home/gkasha/ros2_humble/install/test_security:/home/gkasha/ros2_humble/install/test_rmw_implementation:/home/gkasha/ros2_humble/install/test_rclcpp:/home/gkasha/ros2_humble/install/test_quality_of_service:/home/gkasha/ros2_humble/install/test_launch_testing:/home/gkasha/ros2_humble/install/test_interface_files:/home/gkasha/ros2_humble/install/test_communication:/home/gkasha/ros2_humble/install/test_cli_remapping:/home/gkasha/ros2_humble/install/test_cli:/home/gkasha/ros2_humble/install/qt_gui_app:/home/gkasha/ros2_humble/install/qt_gui:/home/gkasha/ros2_humble/install/tango_icons_vendor:/home/gkasha/ros2_humble/install/stereo_msgs:/home/gkasha/ros2_humble/install/std_srvs:/home/gkasha/ros2_humble/install/shape_msgs:/home/gkasha/ros2_humble/install/map_msgs:/home/gkasha/ros2_humble/install/sensor_msgs:/home/gkasha/ros2_humble/install/nav_msgs:/home/gkasha/ros2_humble/install/diagnostic_msgs:/home/gkasha/ros2_humble/install/geometry_msgs:/home/gkasha/ros2_humble/install/actionlib_msgs:/home/gkasha/ros2_humble/install/std_msgs:/home/gkasha/ros2_humble/install/statistics_msgs:/home/gkasha/ros2_humble/install/sqlite3_vendor:/home/gkasha/ros2_humble/install/rcl_logging_spdlog:/home/gkasha/ros2_humble/install/spdlog_vendor:/home/gkasha/ros2_humble/install/shared_queues_vendor:/home/gkasha/ros2_humble/install/rviz_rendering_tests:/home/gkasha/ros2_humble/install/rviz_rendering:/home/gkasha/ros2_humble/install/rviz_ogre_vendor:/home/gkasha/ros2_humble/install/rviz_assimp_vendor:/home/gkasha/ros2_humble/install/rttest:/home/gkasha/ros2_humble/install/rmw_connextddsmicro:/home/gkasha/ros2_humble/install/rmw_connextdds:/home/gkasha/ros2_humble/install/rmw_connextdds_common:/home/gkasha/ros2_humble/install/rti_connext_dds_cmake_module:/home/gkasha/ros2_humble/install/rosgraph_msgs:/home/gkasha/ros2_humble/install/rosbag2_interfaces:/home/gkasha/ros2_humble/install/rmw_dds_common:/home/gkasha/ros2_humble/install/composition_interfaces:/home/gkasha/ros2_humble/install/rcl_interfaces:/home/gkasha/ros2_humble/install/pendulum_msgs:/home/gkasha/ros2_humble/install/lifecycle_msgs:/home/gkasha/ros2_humble/install/builtin_interfaces:/home/gkasha/ros2_humble/install/rosidl_default_runtime:/home/gkasha/ros2_humble/install/rosidl_default_generators:/home/gkasha/ros2_humble/install/rosidl_generator_py:/home/gkasha/ros2_humble/install/rosidl_typesupport_introspection_tests:/home/gkasha/ros2_humble/install/rosidl_typesupport_cpp:/home/gkasha/ros2_humble/install/rosidl_typesupport_introspection_cpp:/home/gkasha/ros2_humble/install/rosidl_typesupport_c:/home/gkasha/ros2_humble/install/rosidl_typesupport_introspection_c:/home/gkasha/ros2_humble/install/rosidl_typesupport_fastrtps_c:/home/gkasha/ros2_humble/install/rosidl_typesupport_fastrtps_cpp:/home/gkasha/ros2_humble/install/rosidl_generator_cpp:/home/gkasha/ros2_humble/install/rosidl_runtime_cpp:/home/gkasha/ros2_humble/install/rcl_yaml_param_parser:/home/gkasha/ros2_humble/install/rmw:/home/gkasha/ros2_humble/install/rosidl_runtime_c:/home/gkasha/ros2_humble/install/rosidl_generator_c:/home/gkasha/ros2_humble/install/rosidl_typesupport_interface:/home/gkasha/ros2_humble/install/rosidl_generator_dds_idl:/home/gkasha/ros2_humble/install/rosidl_cmake:/home/gkasha/ros2_humble/install/rosidl_parser:/home/gkasha/ros2_humble/install/rosidl_adapter:/home/gkasha/ros2_humble/install/rosbag2_tests:/home/gkasha/ros2_humble/install/rosbag2_storage_mcap_testdata:/home/gkasha/ros2_humble/install/ros_environment:/home/gkasha/ros2_humble/install/rmw_implementation_cmake:/home/gkasha/ros2_humble/install/resource_retriever:/home/gkasha/ros2_humble/install/class_loader:/home/gkasha/ros2_humble/install/rcpputils:/home/gkasha/ros2_humble/install/rcl_logging_noop:/home/gkasha/ros2_humble/install/rcl_logging_interface:/home/gkasha/ros2_humble/install/rcutils:/home/gkasha/ros2_humble/install/qt_gui_py_common:/home/gkasha/ros2_humble/install/qt_dotgraph:/home/gkasha/ros2_humble/install/python_qt_binding:/home/gkasha/ros2_humble/install/python_orocos_kdl_vendor:/home/gkasha/ros2_humble/install/launch_testing_ament_cmake:/home/gkasha/ros2_humble/install/python_cmake_module:/home/gkasha/ros2_humble/install/pybind11_vendor:/home/gkasha/ros2_humble/install/performance_test_fixture:/home/gkasha/ros2_humble/install/osrf_testing_tools_cpp:/home/gkasha/ros2_humble/install/orocos_kdl_vendor:/home/gkasha/ros2_humble/install/mimick_vendor:/home/gkasha/ros2_humble/install/libyaml_vendor:/home/gkasha/ros2_humble/install/libcurl_vendor:/home/gkasha/ros2_humble/install/keyboard_handler:/home/gkasha/ros2_humble/install/cyclonedds:/home/gkasha/ros2_humble/install/iceoryx_posh:/home/gkasha/ros2_humble/install/iceoryx_hoofs:/home/gkasha/ros2_humble/install/iceoryx_binding_c:/home/gkasha/ros2_humble/install/ament_cmake_ros:/home/gkasha/ros2_humble/install/ament_cmake_gmock:/home/gkasha/ros2_humble/install/gmock_vendor:/home/gkasha/ros2_humble/install/ament_cmake_auto:/home/gkasha/ros2_humble/install/ament_cmake_gtest:/home/gkasha/ros2_humble/install/gtest_vendor:/home/gkasha/ros2_humble/install/ament_cmake_google_benchmark:/home/gkasha/ros2_humble/install/google_benchmark_vendor:/home/gkasha/ros2_humble/install/fastrtps:/home/gkasha/ros2_humble/install/foonathan_memory_vendor:/home/gkasha/ros2_humble/install/fastrtps_cmake_module:/home/gkasha/ros2_humble/install/fastcdr:/home/gkasha/ros2_humble/install/eigen3_cmake_module:/home/gkasha/ros2_humble/install/console_bridge_vendor:/home/gkasha/ros2_humble/install/ament_cmake_xmllint:/home/gkasha/ros2_humble/install/ament_cmake_pyflakes:/home/gkasha/ros2_humble/install/ament_cmake_pycodestyle:/home/gkasha/ros2_humble/install/ament_cmake_pep257:/home/gkasha/ros2_humble/install/ament_cmake_pclint:/home/gkasha/ros2_humble/install/ament_lint_auto:/home/gkasha/ros2_humble/install/ament_cmake:/home/gkasha/ros2_humble/install/ament_cmake_version:/home/gkasha/ros2_humble/install/ament_cmake_pytest:/home/gkasha/ros2_humble/install/ament_cmake_nose:/home/gkasha/ros2_humble/install/ament_cmake_mypy:/home/gkasha/ros2_humble/install/ament_cmake_lint_cmake:/home/gkasha/ros2_humble/install/ament_cmake_flake8:/home/gkasha/ros2_humble/install/ament_cmake_cpplint:/home/gkasha/ros2_humble/install/ament_cmake_cppcheck:/home/gkasha/ros2_humble/install/ament_cmake_copyright:/home/gkasha/ros2_humble/install/ament_cmake_clang_tidy:/home/gkasha/ros2_humble/install/ament_cmake_clang_format:/home/gkasha/ros2_humble/install/ament_cmake_test:/home/gkasha/ros2_humble/install/ament_cmake_target_dependencies:/home/gkasha/ros2_humble/install/ament_cmake_python:/home/gkasha/ros2_humble/install/ament_cmake_export_dependencies:/home/gkasha/ros2_humble/install/ament_cmake_libraries:/home/gkasha/ros2_humble/install/ament_cmake_include_directories:/home/gkasha/ros2_humble/install/ament_cmake_gen_version_h:/home/gkasha/ros2_humble/install/ament_cmake_export_targets:/home/gkasha/ros2_humble/install/ament_cmake_export_link_flags:/home/gkasha/ros2_humble/install/ament_cmake_export_interfaces:/home/gkasha/ros2_humble/install/ament_cmake_export_libraries:/home/gkasha/ros2_humble/install/ament_cmake_export_include_directories:/home/gkasha/ros2_humble/install/ament_cmake_export_definitions:/home/gkasha/ros2_humble/install/ament_cmake_core:/home/gkasha/ros2_humble/install/ament_index_cpp:/home/gkasha/ros2_humble/install/rqt_bag_plugins:/home/gkasha/ros2_humble/install/rqt_bag:/home/gkasha/ros2_humble/install/ros2bag:/home/gkasha/ros2_humble/install/tracetools_test:/home/gkasha/ros2_humble/install/tracetools_launch:/home/gkasha/ros2_humble/install/topic_monitor:/home/gkasha/ros2_humble/install/tf2_tools:/home/gkasha/ros2_humble/install/examples_tf2_py:/home/gkasha/ros2_humble/install/tf2_ros_py:/home/gkasha/ros2_humble/install/sros2:/home/gkasha/ros2_humble/install/rqt_topic:/home/gkasha/ros2_humble/install/rqt_srv:/home/gkasha/ros2_humble/install/rqt_shell:/home/gkasha/ros2_humble/install/rqt_service_caller:/home/gkasha/ros2_humble/install/rqt_reconfigure:/home/gkasha/ros2_humble/install/rqt_py_console:/home/gkasha/ros2_humble/install/rqt_publisher:/home/gkasha/ros2_humble/install/rqt_plot:/home/gkasha/ros2_humble/install/rqt_action:/home/gkasha/ros2_humble/install/rqt_msg:/home/gkasha/ros2_humble/install/rqt_console:/home/gkasha/ros2_humble/install/rqt:/home/gkasha/ros2_humble/install/rqt_graph:/home/gkasha/ros2_humble/install/rqt_gui_py:/home/gkasha/ros2_humble/install/rqt_gui:/home/gkasha/ros2_humble/install/ros2trace:/home/gkasha/ros2_humble/install/ros2topic:/home/gkasha/ros2_humble/install/ros2test:/home/gkasha/ros2_humble/install/ros2component:/home/gkasha/ros2_humble/install/ros2param:/home/gkasha/ros2_humble/install/ros2lifecycle:/home/gkasha/ros2_humble/install/ros2service:/home/gkasha/ros2_humble/install/ros2run:/home/gkasha/ros2_humble/install/ros2launch:/home/gkasha/ros2_humble/install/ros2pkg:/home/gkasha/ros2_humble/install/ros2node:/home/gkasha/ros2_humble/install/ros2multicast:/home/gkasha/ros2_humble/install/ros2interface:/home/gkasha/ros2_humble/install/ros2doctor:/home/gkasha/ros2_humble/install/ros2action:/home/gkasha/ros2_humble/install/ros2cli:/home/gkasha/ros2_humble/install/quality_of_service_demo_py:/home/gkasha/ros2_humble/install/lifecycle_py:/home/gkasha/ros2_humble/install/launch_testing_ros:/home/gkasha/ros2_humble/install/launch_ros:/home/gkasha/ros2_humble/install/examples_rclpy_pointcloud_publisher:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_subscriber:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_service:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_publisher:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_client:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_action_server:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_action_client:/home/gkasha/ros2_humble/install/examples_rclpy_guard_conditions:/home/gkasha/ros2_humble/install/examples_rclpy_executors:/home/gkasha/ros2_humble/install/demo_nodes_py:/home/gkasha/ros2_humble/install/action_tutorials_py:/home/gkasha/ros2_humble/install/ament_uncrustify:/home/gkasha/ros2_humble/install/tracetools_trace:/home/gkasha/ros2_humble/install/tracetools_read:/home/gkasha/ros2_humble/install/test_tracetools_launch:/home/gkasha/ros2_humble/install/test_launch_ros:/home/gkasha/ros2_humble/install/sensor_msgs_py:/home/gkasha/ros2_humble/install/rpyutils:/home/gkasha/ros2_humble/install/rosidl_runtime_py:/home/gkasha/ros2_humble/install/rosidl_cli:/home/gkasha/ros2_humble/install/launch_pytest:/home/gkasha/ros2_humble/install/launch_testing:/home/gkasha/ros2_humble/install/launch_yaml:/home/gkasha/ros2_humble/install/launch_xml:/home/gkasha/ros2_humble/install/launch:/home/gkasha/ros2_humble/install/osrf_pycommon:/home/gkasha/ros2_humble/install/launch_testing_examples:/home/gkasha/ros2_humble/install/domain_coordinator:/home/gkasha/ros2_humble/install/ament_xmllint:/home/gkasha/ros2_humble/install/ament_pyflakes:/home/gkasha/ros2_humble/install/ament_pycodestyle:/home/gkasha/ros2_humble/install/ament_pep257:/home/gkasha/ros2_humble/install/ament_pclint:/home/gkasha/ros2_humble/install/ament_package:/home/gkasha/ros2_humble/install/ament_mypy:/home/gkasha/ros2_humble/install/ament_lint_cmake:/home/gkasha/ros2_humble/install/ament_flake8:/home/gkasha/ros2_humble/install/ament_copyright:/home/gkasha/ros2_humble/install/ament_lint:/home/gkasha/ros2_humble/install/ament_index_python:/home/gkasha/ros2_humble/install/ament_cpplint:/home/gkasha/ros2_humble/install/ament_cppcheck:/home/gkasha/ros2_humble/install/ament_clang_tidy:/home/gkasha/ros2_humble/install/ament_clang_format LD_LIBRARY_PATH=/home/gkasha/Documents/maae/install/ma_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gkasha/Documents/maae/build/auction -- -j4 -l4
+[0.246s] [35m[1mConsolidate compiler generated dependencies of target client[0m
+[0.301s] [ 18%] Built target goal_manager
+[0.304s] [ 27%] [32mBuilding CXX object CMakeFiles/agent.dir/src/agent.cpp.o[0m
+[0.306s] [ 45%] Built target client
+[0.312s] [ 63%] Built target execution_interface
+[0.388s] [ 81%] Built target clock
+[4.930s] In file included from [01m[K/home/gkasha/ros2_humble/build/rclcpp/include/rclcpp/logging.hpp:24[m[K,
+[4.930s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[4.930s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[4.930s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[4.930s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[4.930s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[4.930s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[4.930s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[4.930s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.930s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.930s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.930s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.930s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.930s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::new_bids_cb(ma_interfaces::msg::Bid)[m[K’:
+[4.930s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:355:142:[m[K [01;31m[Kerror: [m[K‘[01m[Ktask[m[K’ was not declared in this scope
+[4.930s]   355 |                     if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing new winner for auction %s: agent %s (%f,%f)", [01;31m[Ktask[m[K.id.c_str(), task.owner.c_str(), bid.st, bid.et);
+[4.930s]       |                                                                                                                                              [01;31m[K^~~~[m[K
+[4.934s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:356:21:[m[K [01;31m[Kerror: [m[K‘[01m[Ktask[m[K’ was not declared in this scope
+[4.935s]   356 |                     [01;31m[Ktask[m[K.owner = bid.agent_id;
+[4.935s]       |                     [01;31m[K^~~~[m[K
+[4.937s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:34:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator<[m[K’ (operand types are ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > >, std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > >::value_type[m[K’ {aka ‘[01m[Kstd::vector<ma_interfaces::msg::Bid_<std::allocator<void> > >[m[K’})
+[4.937s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0]; i++){
+[4.938s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+[4.938s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[4.938s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[4.938s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.938s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.938s] [01m[K/usr/include/c++/11/bits/stl_pair.h:489:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _T1, class _T2> constexpr bool std::operator<(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)[m[K’
+[4.938s]   489 |     [01;36m[Koperator[m[K<(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+[4.938s]       |     [01;36m[K^~~~~~~~[m[K
+[4.939s] [01m[K/usr/include/c++/11/bits/stl_pair.h:489:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.939s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::pair<_T1, _T2>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.939s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.939s]       |                                                                [01;36m[K^[m[K
+[4.939s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:67[m[K,
+[4.939s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[4.939s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[4.939s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.939s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.939s] [01m[K/usr/include/c++/11/bits/stl_iterator.h:425:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Iterator> constexpr bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)[m[K’
+[4.939s]   425 |     [01;36m[Koperator[m[K<(const reverse_iterator<_Iterator>& __x,
+[4.939s]       |     [01;36m[K^~~~~~~~[m[K
+[4.940s] [01m[K/usr/include/c++/11/bits/stl_iterator.h:425:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.940s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.940s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.940s]       |                                                                [01;36m[K^[m[K
+[4.941s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:67[m[K,
+[4.941s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[4.941s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[4.941s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.941s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.941s] [01m[K/usr/include/c++/11/bits/stl_iterator.h:464:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> constexpr bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)[m[K’
+[4.941s]   464 |     [01;36m[Koperator[m[K<(const reverse_iterator<_IteratorL>& __x,
+[4.941s]       |     [01;36m[K^~~~~~~~[m[K
+[4.941s] [01m[K/usr/include/c++/11/bits/stl_iterator.h:464:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.941s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::reverse_iterator<_Iterator>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.942s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.942s]       |                                                                [01;36m[K^[m[K
+[4.942s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:67[m[K,
+[4.942s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[4.942s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[4.942s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.942s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.942s] [01m[K/usr/include/c++/11/bits/stl_iterator.h:1557:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR> constexpr bool std::operator<(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)[m[K’
+[4.942s]  1557 |     [01;36m[Koperator[m[K<(const move_iterator<_IteratorL>& __x,
+[4.942s]       |     [01;36m[K^~~~~~~~[m[K
+[4.942s] [01m[K/usr/include/c++/11/bits/stl_iterator.h:1557:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.942s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.942s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.942s]       |                                                                [01;36m[K^[m[K
+[4.943s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:67[m[K,
+[4.943s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[4.943s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[4.943s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.943s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.943s] [01m[K/usr/include/c++/11/bits/stl_iterator.h:1613:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Iterator> constexpr bool std::operator<(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)[m[K’
+[4.943s]  1613 |     [01;36m[Koperator[m[K<(const move_iterator<_Iterator>& __x,
+[4.943s]       |     [01;36m[K^~~~~~~~[m[K
+[4.943s] [01m[K/usr/include/c++/11/bits/stl_iterator.h:1613:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.943s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::move_iterator<_IteratorL>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.943s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.943s]       |                                                                [01;36m[K^[m[K
+[4.943s] In file included from [01m[K/usr/include/c++/11/tuple:39[m[K,
+[4.944s]                  from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+[4.944s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[4.944s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[4.944s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.944s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.944s] [01m[K/usr/include/c++/11/array:311:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, long unsigned int _Nm> bool std::operator<(const std::array<_Tp, _Nm>&, const std::array<_Tp, _Nm>&)[m[K’
+[4.944s]   311 |     [01;36m[Koperator[m[K<(const array<_Tp, _Nm>& __a, const array<_Tp, _Nm>& __b)
+[4.944s]       |     [01;36m[K^~~~~~~~[m[K
+[4.944s] [01m[K/usr/include/c++/11/array:311:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.944s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::array<_Tp, _Nm>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.944s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.944s]       |                                                                [01;36m[K^[m[K
+[4.944s] In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+[4.944s]                  from [01m[K/usr/include/c++/11/memory:76[m[K,
+[4.944s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[4.944s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.944s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.945s] [01m[K/usr/include/c++/11/tuple:1570:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _TElements, class ... _UElements> constexpr bool std::operator<(const std::tuple<_Tps ...>&, const std::tuple<_UTypes ...>&)[m[K’
+[4.945s]  1570 |     [01;36m[Koperator[m[K<(const tuple<_TElements...>& __t,
+[4.945s]       |     [01;36m[K^~~~~~~~[m[K
+[4.945s] [01m[K/usr/include/c++/11/tuple:1570:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.945s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::tuple<_Tps ...>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.945s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.945s]       |                                                                [01;36m[K^[m[K
+[4.945s] In file included from [01m[K/usr/include/c++/11/memory:76[m[K,
+[4.945s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[4.945s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.945s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.945s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:795:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator<(const std::unique_ptr<_Tp, _Dp>&, const std::unique_ptr<_Up, _Ep>&)[m[K’
+[4.945s]   795 |     [01;36m[Koperator[m[K<(const unique_ptr<_Tp, _Dp>& __x,
+[4.945s]       |     [01;36m[K^~~~~~~~[m[K
+[4.945s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:795:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.945s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.945s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.945s]       |                                                                [01;36m[K^[m[K
+[4.945s] In file included from [01m[K/usr/include/c++/11/memory:76[m[K,
+[4.946s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[4.946s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.946s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.946s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:807:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Dp> bool std::operator<(const std::unique_ptr<_Tp, _Dp>&, std::nullptr_t)[m[K’
+[4.946s]   807 |     [01;36m[Koperator[m[K<(const unique_ptr<_Tp, _Dp>& __x, nullptr_t)
+[4.946s]       |     [01;36m[K^~~~~~~~[m[K
+[4.946s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:807:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.946s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.946s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.946s]       |                                                                [01;36m[K^[m[K
+[4.946s] In file included from [01m[K/usr/include/c++/11/memory:76[m[K,
+[4.946s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[4.946s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.946s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.946s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:816:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Dp> bool std::operator<(std::nullptr_t, const std::unique_ptr<_Tp, _Dp>&)[m[K’
+[4.946s]   816 |     [01;36m[Koperator[m[K<(nullptr_t, const unique_ptr<_Tp, _Dp>& __x)
+[4.946s]       |     [01;36m[K^~~~~~~~[m[K
+[4.947s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:816:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.947s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  ‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > >, std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > >::value_type[m[K’ {aka ‘[01m[Kstd::vector<ma_interfaces::msg::Bid_<std::allocator<void> > >[m[K’} is not derived from ‘[01m[Kconst std::unique_ptr<_Tp, _Dp>[m[K’
+[4.947s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.947s]       |                                                                [01;36m[K^[m[K
+[4.947s] In file included from [01m[K/usr/include/c++/11/bits/shared_ptr.h:53[m[K,
+[4.947s]                  from [01m[K/usr/include/c++/11/memory:77[m[K,
+[4.947s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[4.947s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.947s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.947s] [01m[K/usr/include/c++/11/bits/shared_ptr_base.h:1457:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up, __gnu_cxx::_Lock_policy _Lp> bool std::operator<(const std::__shared_ptr<_Tp1, _Lp>&, const std::__shared_ptr<_Tp2, _Lp>&)[m[K’
+[4.947s]  1457 |     [01;36m[Koperator[m[K<(const __shared_ptr<_Tp, _Lp>& __a,
+[4.947s]       |     [01;36m[K^~~~~~~~[m[K
+[4.947s] [01m[K/usr/include/c++/11/bits/shared_ptr_base.h:1457:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.947s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__shared_ptr<_Tp1, _Lp>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.947s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.947s]       |                                                                [01;36m[K^[m[K
+[4.947s] In file included from [01m[K/usr/include/c++/11/bits/shared_ptr.h:53[m[K,
+[4.947s]                  from [01m[K/usr/include/c++/11/memory:77[m[K,
+[4.947s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[4.947s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.948s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.948s] [01m[K/usr/include/c++/11/bits/shared_ptr_base.h:1468:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator<(const std::__shared_ptr<_Tp, _Lp>&, std::nullptr_t)[m[K’
+[4.948s]  1468 |     [01;36m[Koperator[m[K<(const __shared_ptr<_Tp, _Lp>& __a, nullptr_t) noexcept
+[4.948s]       |     [01;36m[K^~~~~~~~[m[K
+[4.948s] [01m[K/usr/include/c++/11/bits/shared_ptr_base.h:1468:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.948s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__shared_ptr<_Tp, _Lp>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.948s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.948s]       |                                                                [01;36m[K^[m[K
+[4.948s] In file included from [01m[K/usr/include/c++/11/bits/shared_ptr.h:53[m[K,
+[4.948s]                  from [01m[K/usr/include/c++/11/memory:77[m[K,
+[4.948s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[4.948s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.948s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.948s] [01m[K/usr/include/c++/11/bits/shared_ptr_base.h:1476:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator<(std::nullptr_t, const std::__shared_ptr<_Tp, _Lp>&)[m[K’
+[4.948s]  1476 |     [01;36m[Koperator[m[K<(nullptr_t, const __shared_ptr<_Tp, _Lp>& __a) noexcept
+[4.948s]       |     [01;36m[K^~~~~~~~[m[K
+[4.948s] [01m[K/usr/include/c++/11/bits/shared_ptr_base.h:1476:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.948s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  ‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > >, std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > >::value_type[m[K’ {aka ‘[01m[Kstd::vector<ma_interfaces::msg::Bid_<std::allocator<void> > >[m[K’} is not derived from ‘[01m[Kconst std::__shared_ptr<_Tp, _Lp>[m[K’
+[4.948s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.948s]       |                                                                [01;36m[K^[m[K
+[4.948s] In file included from [01m[K/usr/include/c++/11/memory:77[m[K,
+[4.949s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[4.949s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.949s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.949s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:488:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> bool std::operator<(const std::shared_ptr<_Tp>&, const std::shared_ptr<_Tp>&)[m[K’
+[4.949s]   488 |     [01;36m[Koperator[m[K<(const shared_ptr<_Tp>& __a, const shared_ptr<_Up>& __b) noexcept
+[4.949s]       |     [01;36m[K^~~~~~~~[m[K
+[4.949s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:488:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.949s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::shared_ptr<_Tp>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.949s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.949s]       |                                                                [01;36m[K^[m[K
+[4.949s] In file included from [01m[K/usr/include/c++/11/memory:77[m[K,
+[4.949s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[4.949s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.949s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.949s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:499:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> bool std::operator<(const std::shared_ptr<_Tp>&, std::nullptr_t)[m[K’
+[4.949s]   499 |     [01;36m[Koperator[m[K<(const shared_ptr<_Tp>& __a, nullptr_t) noexcept
+[4.949s]       |     [01;36m[K^~~~~~~~[m[K
+[4.949s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:499:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.949s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::shared_ptr<_Tp>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.949s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.949s]       |                                                                [01;36m[K^[m[K
+[4.949s] In file included from [01m[K/usr/include/c++/11/memory:77[m[K,
+[4.950s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[4.950s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.950s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.950s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:508:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> bool std::operator<(std::nullptr_t, const std::shared_ptr<_Tp>&)[m[K’
+[4.950s]   508 |     [01;36m[Koperator[m[K<(nullptr_t, const shared_ptr<_Tp>& __a) noexcept
+[4.950s]       |     [01;36m[K^~~~~~~~[m[K
+[4.950s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:508:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.950s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  ‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > >, std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > >::value_type[m[K’ {aka ‘[01m[Kstd::vector<ma_interfaces::msg::Bid_<std::allocator<void> > >[m[K’} is not derived from ‘[01m[Kconst std::shared_ptr<_Tp>[m[K’
+[4.950s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.950s]       |                                                                [01;36m[K^[m[K
+[4.950s] In file included from [01m[K/usr/include/c++/11/bits/basic_string.h:48[m[K,
+[4.950s]                  from [01m[K/usr/include/c++/11/string:55[m[K,
+[4.950s]                  from [01m[K/usr/include/c++/11/stdexcept:39[m[K,
+[4.950s]                  from [01m[K/usr/include/c++/11/system_error:41[m[K,
+[4.950s]                  from [01m[K/usr/include/c++/11/mutex:42[m[K,
+[4.950s]                  from [01m[K/usr/include/c++/11/future:38[m[K,
+[4.950s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+[4.950s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.951s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.951s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.951s] [01m[K/usr/include/c++/11/string_view:589:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> constexpr bool std::operator<(std::basic_string_view<_CharT, _Traits>, std::basic_string_view<_CharT, _Traits>)[m[K’
+[4.951s]   589 |     [01;36m[Koperator[m[K< (basic_string_view<_CharT, _Traits> __x,
+[4.951s]       |     [01;36m[K^~~~~~~~[m[K
+[4.951s] [01m[K/usr/include/c++/11/string_view:589:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.952s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::basic_string_view<_CharT, _Traits>[m[K’ and ‘[01m[Klong unsigned int[m[K’
+[4.952s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.952s]       |                                                                [01;36m[K^[m[K
+[4.952s] In file included from [01m[K/usr/include/c++/11/bits/basic_string.h:48[m[K,
+[4.952s]                  from [01m[K/usr/include/c++/11/string:55[m[K,
+[4.953s]                  from [01m[K/usr/include/c++/11/stdexcept:39[m[K,
+[4.953s]                  from [01m[K/usr/include/c++/11/system_error:41[m[K,
+[4.953s]                  from [01m[K/usr/include/c++/11/mutex:42[m[K,
+[4.953s]                  from [01m[K/usr/include/c++/11/future:38[m[K,
+[4.953s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+[4.953s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.953s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.953s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.953s] [01m[K/usr/include/c++/11/string_view:595:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> constexpr bool std::operator<(std::basic_string_view<_CharT, _Traits>, std::__type_identity_t<std::basic_string_view<_CharT, _Traits> >)[m[K’
+[4.954s]   595 |     [01;36m[Koperator[m[K< (basic_string_view<_CharT, _Traits> __x,
+[4.954s]       |     [01;36m[K^~~~~~~~[m[K
+[4.954s] [01m[K/usr/include/c++/11/string_view:595:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.954s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::basic_string_view<_CharT, _Traits>[m[K’ and ‘[01m[Klong unsigned int[m[K’
+[4.954s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.954s]       |                                                                [01;36m[K^[m[K
+[4.954s] In file included from [01m[K/usr/include/c++/11/bits/basic_string.h:48[m[K,
+[4.954s]                  from [01m[K/usr/include/c++/11/string:55[m[K,
+[4.954s]                  from [01m[K/usr/include/c++/11/stdexcept:39[m[K,
+[4.954s]                  from [01m[K/usr/include/c++/11/system_error:41[m[K,
+[4.954s]                  from [01m[K/usr/include/c++/11/mutex:42[m[K,
+[4.954s]                  from [01m[K/usr/include/c++/11/future:38[m[K,
+[4.954s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+[4.954s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.954s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.954s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.954s] [01m[K/usr/include/c++/11/string_view:602:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> constexpr bool std::operator<(std::__type_identity_t<std::basic_string_view<_CharT, _Traits> >, std::basic_string_view<_CharT, _Traits>)[m[K’
+[4.954s]   602 |     [01;36m[Koperator[m[K< (__type_identity_t<basic_string_view<_CharT, _Traits>> __x,
+[4.955s]       |     [01;36m[K^~~~~~~~[m[K
+[4.955s] [01m[K/usr/include/c++/11/string_view:602:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.955s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<ma_interfaces::msg::Bid_<std::allocator<void> > >[m[K’ is not derived from ‘[01m[Kstd::basic_string_view<_CharT, _Traits>[m[K’
+[4.955s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.955s]       |                                                                [01;36m[K^[m[K
+[4.955s] In file included from [01m[K/usr/include/c++/11/string:55[m[K,
+[4.955s]                  from [01m[K/usr/include/c++/11/stdexcept:39[m[K,
+[4.955s]                  from [01m[K/usr/include/c++/11/system_error:41[m[K,
+[4.955s]                  from [01m[K/usr/include/c++/11/mutex:42[m[K,
+[4.955s]                  from [01m[K/usr/include/c++/11/future:38[m[K,
+[4.955s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+[4.955s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.955s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.955s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.955s] [01m[K/usr/include/c++/11/bits/basic_string.h:6340:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)[m[K’
+[4.955s]  6340 |     [01;36m[Koperator[m[K<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+[4.955s]       |     [01;36m[K^~~~~~~~[m[K
+[4.955s] [01m[K/usr/include/c++/11/bits/basic_string.h:6340:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.955s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Allocator>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.956s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.956s]       |                                                                [01;36m[K^[m[K
+[4.956s] In file included from [01m[K/usr/include/c++/11/string:55[m[K,
+[4.956s]                  from [01m[K/usr/include/c++/11/stdexcept:39[m[K,
+[4.956s]                  from [01m[K/usr/include/c++/11/system_error:41[m[K,
+[4.956s]                  from [01m[K/usr/include/c++/11/mutex:42[m[K,
+[4.956s]                  from [01m[K/usr/include/c++/11/future:38[m[K,
+[4.956s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+[4.956s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.956s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.956s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.956s] [01m[K/usr/include/c++/11/bits/basic_string.h:6353:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const _CharT*)[m[K’
+[4.956s]  6353 |     [01;36m[Koperator[m[K<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+[4.956s]       |     [01;36m[K^~~~~~~~[m[K
+[4.956s] [01m[K/usr/include/c++/11/bits/basic_string.h:6353:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.956s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Allocator>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.956s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.956s]       |                                                                [01;36m[K^[m[K
+[4.956s] In file included from [01m[K/usr/include/c++/11/string:55[m[K,
+[4.956s]                  from [01m[K/usr/include/c++/11/stdexcept:39[m[K,
+[4.956s]                  from [01m[K/usr/include/c++/11/system_error:41[m[K,
+[4.957s]                  from [01m[K/usr/include/c++/11/mutex:42[m[K,
+[4.957s]                  from [01m[K/usr/include/c++/11/future:38[m[K,
+[4.957s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+[4.957s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.957s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.957s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.957s] [01m[K/usr/include/c++/11/bits/basic_string.h:6365:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> bool std::operator<(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)[m[K’
+[4.957s]  6365 |     [01;36m[Koperator[m[K<(const _CharT* __lhs,
+[4.957s]       |     [01;36m[K^~~~~~~~[m[K
+[4.957s] [01m[K/usr/include/c++/11/bits/basic_string.h:6365:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.957s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst _CharT*[m[K’ and ‘[01m[Klong unsigned int[m[K’
+[4.957s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.957s]       |                                                                [01;36m[K^[m[K
+[4.957s] In file included from [01m[K/usr/include/c++/11/set:61[m[K,
+[4.957s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:21[m[K,
+[4.957s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.957s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.957s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.957s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.957s] [01m[K/usr/include/c++/11/bits/stl_set.h:1023:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Compare, class _Alloc> bool std::operator<(const std::set<_Key, _Compare, _Allocator>&, const std::set<_Key, _Compare, _Allocator>&)[m[K’
+[4.957s]  1023 |     [01;36m[Koperator[m[K<(const set<_Key, _Compare, _Alloc>& __x,
+[4.958s]       |     [01;36m[K^~~~~~~~[m[K
+[4.958s] [01m[K/usr/include/c++/11/bits/stl_set.h:1023:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.958s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::set<_Key, _Compare, _Allocator>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.958s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.958s]       |                                                                [01;36m[K^[m[K
+[4.958s] In file included from [01m[K/usr/include/c++/11/set:62[m[K,
+[4.958s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:21[m[K,
+[4.958s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.958s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.958s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.958s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.958s] [01m[K/usr/include/c++/11/bits/stl_multiset.h:1009:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Compare, class _Alloc> bool std::operator<(const std::multiset<_Key, _Compare, _Allocator>&, const std::multiset<_Key, _Compare, _Allocator>&)[m[K’
+[4.958s]  1009 |     [01;36m[Koperator[m[K<(const multiset<_Key, _Compare, _Alloc>& __x,
+[4.958s]       |     [01;36m[K^~~~~~~~[m[K
+[4.958s] [01m[K/usr/include/c++/11/bits/stl_multiset.h:1009:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.958s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::multiset<_Key, _Compare, _Allocator>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.958s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.958s]       |                                                                [01;36m[K^[m[K
+[4.958s] In file included from [01m[K/usr/include/c++/11/vector:67[m[K,
+[4.958s]                  from [01m[K/usr/include/c++/11/functional:62[m[K,
+[4.959s]                  from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+[4.959s]                  from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+[4.959s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+[4.959s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.959s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.959s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.959s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.959s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.959s] [01m[K/usr/include/c++/11/bits/stl_vector.h:1930:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Alloc> bool std::operator<(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)[m[K’
+[4.959s]  1930 |     [01;36m[Koperator[m[K<(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+[4.959s]       |     [01;36m[K^~~~~~~~[m[K
+[4.959s] [01m[K/usr/include/c++/11/bits/stl_vector.h:1930:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.959s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::vector<_Tp, _Alloc>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.959s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.959s]       |                                                                [01;36m[K^[m[K
+[4.960s] In file included from [01m[K/usr/include/c++/11/list:63[m[K,
+[4.960s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:23[m[K,
+[4.960s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.960s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.960s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.960s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.960s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.960s] [01m[K/usr/include/c++/11/bits/stl_list.h:2050:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Alloc> bool std::operator<(const std::__cxx11::list<_Tp, _Alloc>&, const std::__cxx11::list<_Tp, _Alloc>&)[m[K’
+[4.960s]  2050 |     [01;36m[Koperator[m[K<(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+[4.960s]       |     [01;36m[K^~~~~~~~[m[K
+[4.960s] [01m[K/usr/include/c++/11/bits/stl_list.h:2050:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.960s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::__cxx11::list<_Tp, _Alloc>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.960s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.960s]       |                                                                [01;36m[K^[m[K
+[4.961s] In file included from [01m[K/usr/include/c++/11/map:61[m[K,
+[4.961s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:24[m[K,
+[4.961s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.961s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.961s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.961s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.961s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.961s] [01m[K/usr/include/c++/11/bits/stl_map.h:1501:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator<(const std::map<_Key, _Tp, _Compare, _Allocator>&, const std::map<_Key, _Tp, _Compare, _Allocator>&)[m[K’
+[4.961s]  1501 |     [01;36m[Koperator[m[K<(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+[4.961s]       |     [01;36m[K^~~~~~~~[m[K
+[4.961s] [01m[K/usr/include/c++/11/bits/stl_map.h:1501:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.961s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::map<_Key, _Tp, _Compare, _Allocator>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.961s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.961s]       |                                                                [01;36m[K^[m[K
+[4.961s] In file included from [01m[K/usr/include/c++/11/map:62[m[K,
+[4.961s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:24[m[K,
+[4.961s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.961s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.961s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.961s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.962s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.962s] [01m[K/usr/include/c++/11/bits/stl_multimap.h:1166:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator<(const std::multimap<_Key, _Tp, _Compare, _Allocator>&, const std::multimap<_Key, _Tp, _Compare, _Allocator>&)[m[K’
+[4.962s]  1166 |     [01;36m[Koperator[m[K<(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+[4.962s]       |     [01;36m[K^~~~~~~~[m[K
+[4.962s] [01m[K/usr/include/c++/11/bits/stl_multimap.h:1166:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.962s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::multimap<_Key, _Tp, _Compare, _Allocator>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.962s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.962s]       |                                                                [01;36m[K^[m[K
+[4.962s] In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:23[m[K,
+[4.962s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[4.962s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[4.962s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[4.962s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[4.962s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[4.962s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[4.962s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.962s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.962s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.963s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.963s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.963s] [01m[K/usr/include/c++/11/optional:1063:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr std::__optional_lt_t<_Tp, _Up> std::operator<(const std::optional<_Tp>&, const std::optional<_Up>&)[m[K’
+[4.963s]  1063 |     [01;36m[Koperator[m[K<(const optional<_Tp>& __lhs, const optional<_Up>& __rhs)
+[4.963s]       |     [01;36m[K^~~~~~~~[m[K
+[4.963s] [01m[K/usr/include/c++/11/optional:1063:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.963s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::optional<_Tp>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.963s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.963s]       |                                                                [01;36m[K^[m[K
+[4.963s] In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:23[m[K,
+[4.963s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[4.963s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[4.963s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[4.963s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[4.963s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[4.963s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[4.963s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.963s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.963s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.963s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.964s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.964s] [01m[K/usr/include/c++/11/optional:1131:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> constexpr bool std::operator<(const std::optional<_Tp>&, std::nullopt_t)[m[K’
+[4.964s]  1131 |     [01;36m[Koperator[m[K<(const optional<_Tp>& /* __lhs */, nullopt_t) noexcept
+[4.964s]       |     [01;36m[K^~~~~~~~[m[K
+[4.964s] [01m[K/usr/include/c++/11/optional:1131:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.964s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::optional<_Tp>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.964s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.964s]       |                                                                [01;36m[K^[m[K
+[4.964s] In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:23[m[K,
+[4.964s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[4.964s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[4.964s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[4.964s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[4.964s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[4.964s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[4.964s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.964s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.964s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.964s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.964s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.964s] [01m[K/usr/include/c++/11/optional:1136:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> constexpr bool std::operator<(std::nullopt_t, const std::optional<_Tp>&)[m[K’
+[4.964s]  1136 |     [01;36m[Koperator[m[K<(nullopt_t, const optional<_Tp>& __rhs) noexcept
+[4.965s]       |     [01;36m[K^~~~~~~~[m[K
+[4.965s] [01m[K/usr/include/c++/11/optional:1136:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.965s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  ‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > >, std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > >::value_type[m[K’ {aka ‘[01m[Kstd::vector<ma_interfaces::msg::Bid_<std::allocator<void> > >[m[K’} is not derived from ‘[01m[Kconst std::optional<_Tp>[m[K’
+[4.965s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.965s]       |                                                                [01;36m[K^[m[K
+[4.965s] In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:23[m[K,
+[4.965s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[4.965s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[4.965s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[4.965s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[4.965s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[4.965s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[4.965s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.965s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.965s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.965s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.965s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.965s] [01m[K/usr/include/c++/11/optional:1197:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr std::__optional_lt_t<_Tp, _Up> std::operator<(const std::optional<_Tp>&, const _Up&)[m[K’
+[4.965s]  1197 |     [01;36m[Koperator[m[K<(const optional<_Tp>& __lhs, const _Up& __rhs)
+[4.965s]       |     [01;36m[K^~~~~~~~[m[K
+[4.965s] [01m[K/usr/include/c++/11/optional:1197:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.965s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::optional<_Tp>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.966s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.966s]       |                                                                [01;36m[K^[m[K
+[4.966s] In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:23[m[K,
+[4.966s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[4.966s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[4.966s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[4.966s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[4.966s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[4.966s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[4.966s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.966s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.966s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.966s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.966s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.966s] [01m[K/usr/include/c++/11/optional:1203:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr std::__optional_lt_t<_Up, _Tp> std::operator<(const _Up&, const std::optional<_Tp>&)[m[K’
+[4.966s]  1203 |     [01;36m[Koperator[m[K<(const _Up& __lhs, const optional<_Tp>& __rhs)
+[4.966s]       |     [01;36m[K^~~~~~~~[m[K
+[4.966s] [01m[K/usr/include/c++/11/optional:1203:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.966s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  ‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > >, std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > >::value_type[m[K’ {aka ‘[01m[Kstd::vector<ma_interfaces::msg::Bid_<std::allocator<void> > >[m[K’} is not derived from ‘[01m[Kconst std::optional<_Tp>[m[K’
+[4.966s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.966s]       |                                                                [01;36m[K^[m[K
+[4.966s] In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:28[m[K,
+[4.966s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[4.967s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[4.967s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[4.967s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[4.967s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[4.967s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[4.967s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.967s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.967s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.967s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.967s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.967s] [01m[K/usr/include/c++/11/variant:1247:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ... _Types> constexpr bool std::operator<(const std::variant<_Types ...>&, const std::variant<_Types ...>&)[m[K’
+[4.967s]  1247 |   [01;36m[K_VARIANT_RELATION_FUNCTION_TEMPLATE[m[K(<, less)
+[4.967s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.967s] [01m[K/usr/include/c++/11/variant:1247:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.967s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::variant<_Types ...>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.967s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.967s]       |                                                                [01;36m[K^[m[K
+[4.967s] In file included from [01m[K/usr/include/c++/11/deque:67[m[K,
+[4.967s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/stn.hpp:8[m[K,
+[4.968s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:6[m[K,
+[4.968s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.968s] [01m[K/usr/include/c++/11/bits/stl_deque.h:2284:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Alloc> bool std::operator<(const std::deque<_Tp, _Alloc>&, const std::deque<_Tp, _Alloc>&)[m[K’
+[4.968s]  2284 |     [01;36m[Koperator[m[K<(const deque<_Tp, _Alloc>& __x, const deque<_Tp, _Alloc>& __y)
+[4.968s]       |     [01;36m[K^~~~~~~~[m[K
+[4.968s] [01m[K/usr/include/c++/11/bits/stl_deque.h:2284:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.968s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::deque<_Tp, _Alloc>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.968s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.968s]       |                                                                [01;36m[K^[m[K
+[4.968s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:67[m[K,
+[4.969s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[4.969s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[4.969s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.969s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.969s] [01m[K/usr/include/c++/11/bits/stl_iterator.h:1153:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator<(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)[m[K’
+[4.969s]  1153 |     [01;36m[Koperator[m[K<(const __normal_iterator<_IteratorL, _Container>& __lhs,
+[4.969s]       |     [01;36m[K^~~~~~~~[m[K
+[4.969s] [01m[K/usr/include/c++/11/bits/stl_iterator.h:1153:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.969s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst __gnu_cxx::__normal_iterator<_IteratorL, _Container>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.969s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.969s]       |                                                                [01;36m[K^[m[K
+[4.969s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:67[m[K,
+[4.969s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[4.970s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[4.970s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.970s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.970s] [01m[K/usr/include/c++/11/bits/stl_iterator.h:1161:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Iterator, class _Container> bool __gnu_cxx::operator<(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)[m[K’
+[4.970s]  1161 |     [01;36m[Koperator[m[K<(const __normal_iterator<_Iterator, _Container>& __lhs,
+[4.970s]       |     [01;36m[K^~~~~~~~[m[K
+[4.970s] [01m[K/usr/include/c++/11/bits/stl_iterator.h:1161:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.970s] [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:64:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst __gnu_cxx::__normal_iterator<_Iterator, _Container>[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+[4.970s]   367 |             for (size_t i = 0; i < winner_map[bid.auction_id][0[01;36m[K][m[K; i++){
+[4.970s]       |                                                                [01;36m[K^[m[K
+[4.970s] In file included from [01m[K/usr/include/c++/11/mutex:42[m[K,
+[4.970s]                  from [01m[K/usr/include/c++/11/future:38[m[K,
+[4.970s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+[4.970s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.970s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.970s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.970s] [01m[K/usr/include/c++/11/system_error:269:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool std::operator<(const std::error_code&, const std::error_code&)[m[K’
+[4.970s]   269 |   [01;36m[Koperator[m[K<(const error_code& __lhs, const error_code& __rhs) noexcept
+[4.970s]       |   [01;36m[K^~~~~~~~[m[K
+[4.971s] [01m[K/usr/include/c++/11/system_error:269:31:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} to ‘[01m[Kconst std::error_code&[m[K’
+[4.971s]   269 |   operator<([01;36m[Kconst error_code& __lhs[m[K, const error_code& __rhs) noexcept
+[4.971s]       |             [01;36m[K~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[4.971s] [01m[K/usr/include/c++/11/system_error:398:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool std::operator<(const std::error_condition&, const std::error_condition&)[m[K’
+[4.971s]   398 |   [01;36m[Koperator[m[K<(const error_condition& __lhs,
+[4.971s]       |   [01;36m[K^~~~~~~~[m[K
+[4.971s] [01m[K/usr/include/c++/11/system_error:398:36:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} to ‘[01m[Kconst std::error_condition&[m[K’
+[4.971s]   398 |   operator<([01;36m[Kconst error_condition& __lhs[m[K,
+[4.971s]       |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[4.971s] In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:22[m[K,
+[4.971s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.971s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.971s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.971s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.971s] [01m[K/usr/include/c++/11/thread:70:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbool std::operator<(std::thread::id, std::thread::id)[m[K’
+[4.971s]    70 |   [01;36m[Koperator[m[K<(thread::id __x, thread::id __y) noexcept
+[4.971s]       |   [01;36m[K^~~~~~~~[m[K
+[4.971s] [01m[K/usr/include/c++/11/thread:70:24:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} to ‘[01m[Kstd::thread::id[m[K’
+[4.971s]    70 |   operator<([01;36m[Kthread::id __x[m[K, thread::id __y) noexcept
+[4.972s]       |             [01;36m[K~~~~~~~~~~~^~~[m[K
+[4.972s] In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:28[m[K,
+[4.972s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[4.972s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[4.972s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[4.972s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[4.972s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[4.972s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[4.972s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.972s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.972s]                  from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.972s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+[4.972s]                  from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[4.972s] [01m[K/usr/include/c++/11/variant:1289:18:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr bool std::operator<(std::monostate, std::monostate)[m[K’
+[4.972s]  1289 |   constexpr bool [01;36m[Koperator[m[K<(monostate, monostate) noexcept { return false; }
+[4.972s]       |                  [01;36m[K^~~~~~~~[m[K
+[4.972s] [01m[K/usr/include/c++/11/variant:1289:28:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} to ‘[01m[Kstd::monostate[m[K’
+[4.972s]  1289 |   constexpr bool operator<([01;36m[Kmonostate[m[K, monostate) noexcept { return false; }
+[4.972s]       |                            [01;36m[K^~~~~~~~~[m[K
+[14.671s] gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+[14.671s] gmake[1]: *** [CMakeFiles/Makefile2:197: CMakeFiles/agent.dir/all] Error 2
+[14.671s] gmake: *** [Makefile:146: all] Error 2
+[14.676s] Invoked command in '/home/gkasha/Documents/maae/build/auction' returned '2': AMENT_PREFIX_PATH=/home/gkasha/Documents/maae/install/ma_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gkasha/Documents/maae/install/ma_interfaces:/home/gkasha/ros2_humble/install/rosbag2_storage_mcap:/home/gkasha/ros2_humble/install/rosbag2:/home/gkasha/ros2_humble/install/rosbag2_compression_zstd:/home/gkasha/ros2_humble/install/mcap_vendor:/home/gkasha/ros2_humble/install/zstd_vendor:/home/gkasha/ros2_humble/install/rviz_visual_testing_framework:/home/gkasha/ros2_humble/install/rviz2:/home/gkasha/ros2_humble/install/rviz_default_plugins:/home/gkasha/ros2_humble/install/rviz_common:/home/gkasha/ros2_humble/install/rosbag2_py:/home/gkasha/ros2_humble/install/rosbag2_transport:/home/gkasha/ros2_humble/install/rosbag2_performance_benchmarking:/home/gkasha/ros2_humble/install/rosbag2_compression:/home/gkasha/ros2_humble/install/rosbag2_cpp:/home/gkasha/ros2_humble/install/rosbag2_storage_default_plugins:/home/gkasha/ros2_humble/install/rosbag2_storage:/home/gkasha/ros2_humble/install/image_common:/home/gkasha/ros2_humble/install/camera_info_manager:/home/gkasha/ros2_humble/install/camera_calibration_parsers:/home/gkasha/ros2_humble/install/yaml_cpp_vendor:/home/gkasha/ros2_humble/install/interactive_markers:/home/gkasha/ros2_humble/install/common_interfaces:/home/gkasha/ros2_humble/install/visualization_msgs:/home/gkasha/ros2_humble/install/dummy_robot_bringup:/home/gkasha/ros2_humble/install/robot_state_publisher:/home/gkasha/ros2_humble/install/kdl_parser:/home/gkasha/ros2_humble/install/urdf:/home/gkasha/ros2_humble/install/urdfdom:/home/gkasha/ros2_humble/install/urdf_parser_plugin:/home/gkasha/ros2_humble/install/urdfdom_headers:/home/gkasha/ros2_humble/install/turtlesim:/home/gkasha/ros2_humble/install/geometry2:/home/gkasha/ros2_humble/install/tf2_sensor_msgs:/home/gkasha/ros2_humble/install/test_tf2:/home/gkasha/ros2_humble/install/tf2_kdl:/home/gkasha/ros2_humble/install/tf2_geometry_msgs:/home/gkasha/ros2_humble/install/tf2_eigen:/home/gkasha/ros2_humble/install/tf2_bullet:/home/gkasha/ros2_humble/install/tf2_ros:/home/gkasha/ros2_humble/install/tf2_py:/home/gkasha/ros2_humble/install/tf2_msgs:/home/gkasha/ros2_humble/install/test_msgs:/home/gkasha/ros2_humble/install/sros2_cmake:/home/gkasha/ros2_humble/install/ros2cli_common_extensions:/home/gkasha/ros2_humble/install/rqt_py_common:/home/gkasha/ros2_humble/install/ros_testing:/home/gkasha/ros2_humble/install/ros2cli_test_interfaces:/home/gkasha/ros2_humble/install/quality_of_service_demo_cpp:/home/gkasha/ros2_humble/install/image_transport:/home/gkasha/ros2_humble/install/message_filters:/home/gkasha/ros2_humble/install/demo_nodes_cpp:/home/gkasha/ros2_humble/install/composition:/home/gkasha/ros2_humble/install/laser_geometry:/home/gkasha/ros2_humble/install/rclpy:/home/gkasha/ros2_humble/install/examples_rclcpp_minimal_action_server:/home/gkasha/ros2_humble/install/examples_rclcpp_minimal_action_client:/home/gkasha/ros2_humble/install/action_tutorials_cpp:/home/gkasha/ros2_humble/install/rclcpp_action:/home/gkasha/ros2_humble/install/rcl_action:/home/gkasha/ros2_humble/install/examples_rclcpp_wait_set:/home/gkasha/ros2_humble/install/examples_rclcpp_minimal_service:/home/gkasha/ros2_humble/install/examples_rclcpp_minimal_client:/home/gkasha/ros2_humble/install/examples_rclcpp_async_client:/home/gkasha/ros2_humble/install/example_interfaces:/home/gkasha/ros2_humble/install/action_tutorials_interfaces:/home/gkasha/ros2_humble/install/action_msgs:/home/gkasha/ros2_humble/install/unique_identifier_msgs:/home/gkasha/ros2_humble/install/ament_lint_common:/home/gkasha/ros2_humble/install/ament_cmake_uncrustify:/home/gkasha/ros2_humble/install/uncrustify_vendor:/home/gkasha/ros2_humble/install/trajectory_msgs:/home/gkasha/ros2_humble/install/topic_statistics_demo:/home/gkasha/ros2_humble/install/pendulum_control:/home/gkasha/ros2_humble/install/tlsf_cpp:/home/gkasha/ros2_humble/install/test_tracetools:/home/gkasha/ros2_humble/install/rqt_gui_cpp:/home/gkasha/ros2_humble/install/rosbag2_test_common:/home/gkasha/ros2_humble/install/ros2lifecycle_test_fixtures:/home/gkasha/ros2_humble/install/lifecycle:/home/gkasha/ros2_humble/install/rclcpp_lifecycle:/home/gkasha/ros2_humble/install/logging_demo:/home/gkasha/ros2_humble/install/image_tools:/home/gkasha/ros2_humble/install/examples_rclcpp_minimal_subscriber:/home/gkasha/ros2_humble/install/examples_rclcpp_minimal_composition:/home/gkasha/ros2_humble/install/demo_nodes_cpp_native:/home/gkasha/ros2_humble/install/rclcpp_components:/home/gkasha/ros2_humble/install/intra_process_demo:/home/gkasha/ros2_humble/install/examples_rclcpp_multithreaded_executor:/home/gkasha/ros2_humble/install/examples_rclcpp_minimal_timer:/home/gkasha/ros2_humble/install/examples_rclcpp_minimal_publisher:/home/gkasha/ros2_humble/install/examples_rclcpp_cbg_executor:/home/gkasha/ros2_humble/install/dummy_sensors:/home/gkasha/ros2_humble/install/dummy_map_server:/home/gkasha/ros2_humble/install/rclcpp:/home/gkasha/ros2_humble/install/rcl_lifecycle:/home/gkasha/ros2_humble/install/libstatistics_collector:/home/gkasha/ros2_humble/install/rcl:/home/gkasha/ros2_humble/install/rmw_implementation:/home/gkasha/ros2_humble/install/rmw_fastrtps_dynamic_cpp:/home/gkasha/ros2_humble/install/rmw_fastrtps_cpp:/home/gkasha/ros2_humble/install/rmw_fastrtps_shared_cpp:/home/gkasha/ros2_humble/install/rmw_cyclonedds_cpp:/home/gkasha/ros2_humble/install/tracetools:/home/gkasha/ros2_humble/install/tlsf:/home/gkasha/ros2_humble/install/tinyxml_vendor:/home/gkasha/ros2_humble/install/qt_gui_core:/home/gkasha/ros2_humble/install/qt_gui_cpp:/home/gkasha/ros2_humble/install/pluginlib:/home/gkasha/ros2_humble/install/tinyxml2_vendor:/home/gkasha/ros2_humble/install/tf2_eigen_kdl:/home/gkasha/ros2_humble/install/tf2:/home/gkasha/ros2_humble/install/test_security:/home/gkasha/ros2_humble/install/test_rmw_implementation:/home/gkasha/ros2_humble/install/test_rclcpp:/home/gkasha/ros2_humble/install/test_quality_of_service:/home/gkasha/ros2_humble/install/test_launch_testing:/home/gkasha/ros2_humble/install/test_interface_files:/home/gkasha/ros2_humble/install/test_communication:/home/gkasha/ros2_humble/install/test_cli_remapping:/home/gkasha/ros2_humble/install/test_cli:/home/gkasha/ros2_humble/install/qt_gui_app:/home/gkasha/ros2_humble/install/qt_gui:/home/gkasha/ros2_humble/install/tango_icons_vendor:/home/gkasha/ros2_humble/install/stereo_msgs:/home/gkasha/ros2_humble/install/std_srvs:/home/gkasha/ros2_humble/install/shape_msgs:/home/gkasha/ros2_humble/install/map_msgs:/home/gkasha/ros2_humble/install/sensor_msgs:/home/gkasha/ros2_humble/install/nav_msgs:/home/gkasha/ros2_humble/install/diagnostic_msgs:/home/gkasha/ros2_humble/install/geometry_msgs:/home/gkasha/ros2_humble/install/actionlib_msgs:/home/gkasha/ros2_humble/install/std_msgs:/home/gkasha/ros2_humble/install/statistics_msgs:/home/gkasha/ros2_humble/install/sqlite3_vendor:/home/gkasha/ros2_humble/install/rcl_logging_spdlog:/home/gkasha/ros2_humble/install/spdlog_vendor:/home/gkasha/ros2_humble/install/shared_queues_vendor:/home/gkasha/ros2_humble/install/rviz_rendering_tests:/home/gkasha/ros2_humble/install/rviz_rendering:/home/gkasha/ros2_humble/install/rviz_ogre_vendor:/home/gkasha/ros2_humble/install/rviz_assimp_vendor:/home/gkasha/ros2_humble/install/rttest:/home/gkasha/ros2_humble/install/rmw_connextddsmicro:/home/gkasha/ros2_humble/install/rmw_connextdds:/home/gkasha/ros2_humble/install/rmw_connextdds_common:/home/gkasha/ros2_humble/install/rti_connext_dds_cmake_module:/home/gkasha/ros2_humble/install/rosgraph_msgs:/home/gkasha/ros2_humble/install/rosbag2_interfaces:/home/gkasha/ros2_humble/install/rmw_dds_common:/home/gkasha/ros2_humble/install/composition_interfaces:/home/gkasha/ros2_humble/install/rcl_interfaces:/home/gkasha/ros2_humble/install/pendulum_msgs:/home/gkasha/ros2_humble/install/lifecycle_msgs:/home/gkasha/ros2_humble/install/builtin_interfaces:/home/gkasha/ros2_humble/install/rosidl_default_runtime:/home/gkasha/ros2_humble/install/rosidl_default_generators:/home/gkasha/ros2_humble/install/rosidl_generator_py:/home/gkasha/ros2_humble/install/rosidl_typesupport_introspection_tests:/home/gkasha/ros2_humble/install/rosidl_typesupport_cpp:/home/gkasha/ros2_humble/install/rosidl_typesupport_introspection_cpp:/home/gkasha/ros2_humble/install/rosidl_typesupport_c:/home/gkasha/ros2_humble/install/rosidl_typesupport_introspection_c:/home/gkasha/ros2_humble/install/rosidl_typesupport_fastrtps_c:/home/gkasha/ros2_humble/install/rosidl_typesupport_fastrtps_cpp:/home/gkasha/ros2_humble/install/rosidl_generator_cpp:/home/gkasha/ros2_humble/install/rosidl_runtime_cpp:/home/gkasha/ros2_humble/install/rcl_yaml_param_parser:/home/gkasha/ros2_humble/install/rmw:/home/gkasha/ros2_humble/install/rosidl_runtime_c:/home/gkasha/ros2_humble/install/rosidl_generator_c:/home/gkasha/ros2_humble/install/rosidl_typesupport_interface:/home/gkasha/ros2_humble/install/rosidl_generator_dds_idl:/home/gkasha/ros2_humble/install/rosidl_cmake:/home/gkasha/ros2_humble/install/rosidl_parser:/home/gkasha/ros2_humble/install/rosidl_adapter:/home/gkasha/ros2_humble/install/rosbag2_tests:/home/gkasha/ros2_humble/install/rosbag2_storage_mcap_testdata:/home/gkasha/ros2_humble/install/ros_environment:/home/gkasha/ros2_humble/install/rmw_implementation_cmake:/home/gkasha/ros2_humble/install/resource_retriever:/home/gkasha/ros2_humble/install/class_loader:/home/gkasha/ros2_humble/install/rcpputils:/home/gkasha/ros2_humble/install/rcl_logging_noop:/home/gkasha/ros2_humble/install/rcl_logging_interface:/home/gkasha/ros2_humble/install/rcutils:/home/gkasha/ros2_humble/install/qt_gui_py_common:/home/gkasha/ros2_humble/install/qt_dotgraph:/home/gkasha/ros2_humble/install/python_qt_binding:/home/gkasha/ros2_humble/install/python_orocos_kdl_vendor:/home/gkasha/ros2_humble/install/launch_testing_ament_cmake:/home/gkasha/ros2_humble/install/python_cmake_module:/home/gkasha/ros2_humble/install/pybind11_vendor:/home/gkasha/ros2_humble/install/performance_test_fixture:/home/gkasha/ros2_humble/install/osrf_testing_tools_cpp:/home/gkasha/ros2_humble/install/orocos_kdl_vendor:/home/gkasha/ros2_humble/install/mimick_vendor:/home/gkasha/ros2_humble/install/libyaml_vendor:/home/gkasha/ros2_humble/install/libcurl_vendor:/home/gkasha/ros2_humble/install/keyboard_handler:/home/gkasha/ros2_humble/install/cyclonedds:/home/gkasha/ros2_humble/install/iceoryx_posh:/home/gkasha/ros2_humble/install/iceoryx_hoofs:/home/gkasha/ros2_humble/install/iceoryx_binding_c:/home/gkasha/ros2_humble/install/ament_cmake_ros:/home/gkasha/ros2_humble/install/ament_cmake_gmock:/home/gkasha/ros2_humble/install/gmock_vendor:/home/gkasha/ros2_humble/install/ament_cmake_auto:/home/gkasha/ros2_humble/install/ament_cmake_gtest:/home/gkasha/ros2_humble/install/gtest_vendor:/home/gkasha/ros2_humble/install/ament_cmake_google_benchmark:/home/gkasha/ros2_humble/install/google_benchmark_vendor:/home/gkasha/ros2_humble/install/fastrtps:/home/gkasha/ros2_humble/install/foonathan_memory_vendor:/home/gkasha/ros2_humble/install/fastrtps_cmake_module:/home/gkasha/ros2_humble/install/fastcdr:/home/gkasha/ros2_humble/install/eigen3_cmake_module:/home/gkasha/ros2_humble/install/console_bridge_vendor:/home/gkasha/ros2_humble/install/ament_cmake_xmllint:/home/gkasha/ros2_humble/install/ament_cmake_pyflakes:/home/gkasha/ros2_humble/install/ament_cmake_pycodestyle:/home/gkasha/ros2_humble/install/ament_cmake_pep257:/home/gkasha/ros2_humble/install/ament_cmake_pclint:/home/gkasha/ros2_humble/install/ament_lint_auto:/home/gkasha/ros2_humble/install/ament_cmake:/home/gkasha/ros2_humble/install/ament_cmake_version:/home/gkasha/ros2_humble/install/ament_cmake_pytest:/home/gkasha/ros2_humble/install/ament_cmake_nose:/home/gkasha/ros2_humble/install/ament_cmake_mypy:/home/gkasha/ros2_humble/install/ament_cmake_lint_cmake:/home/gkasha/ros2_humble/install/ament_cmake_flake8:/home/gkasha/ros2_humble/install/ament_cmake_cpplint:/home/gkasha/ros2_humble/install/ament_cmake_cppcheck:/home/gkasha/ros2_humble/install/ament_cmake_copyright:/home/gkasha/ros2_humble/install/ament_cmake_clang_tidy:/home/gkasha/ros2_humble/install/ament_cmake_clang_format:/home/gkasha/ros2_humble/install/ament_cmake_test:/home/gkasha/ros2_humble/install/ament_cmake_target_dependencies:/home/gkasha/ros2_humble/install/ament_cmake_python:/home/gkasha/ros2_humble/install/ament_cmake_export_dependencies:/home/gkasha/ros2_humble/install/ament_cmake_libraries:/home/gkasha/ros2_humble/install/ament_cmake_include_directories:/home/gkasha/ros2_humble/install/ament_cmake_gen_version_h:/home/gkasha/ros2_humble/install/ament_cmake_export_targets:/home/gkasha/ros2_humble/install/ament_cmake_export_link_flags:/home/gkasha/ros2_humble/install/ament_cmake_export_interfaces:/home/gkasha/ros2_humble/install/ament_cmake_export_libraries:/home/gkasha/ros2_humble/install/ament_cmake_export_include_directories:/home/gkasha/ros2_humble/install/ament_cmake_export_definitions:/home/gkasha/ros2_humble/install/ament_cmake_core:/home/gkasha/ros2_humble/install/ament_index_cpp:/home/gkasha/ros2_humble/install/rqt_bag_plugins:/home/gkasha/ros2_humble/install/rqt_bag:/home/gkasha/ros2_humble/install/ros2bag:/home/gkasha/ros2_humble/install/tracetools_test:/home/gkasha/ros2_humble/install/tracetools_launch:/home/gkasha/ros2_humble/install/topic_monitor:/home/gkasha/ros2_humble/install/tf2_tools:/home/gkasha/ros2_humble/install/examples_tf2_py:/home/gkasha/ros2_humble/install/tf2_ros_py:/home/gkasha/ros2_humble/install/sros2:/home/gkasha/ros2_humble/install/rqt_topic:/home/gkasha/ros2_humble/install/rqt_srv:/home/gkasha/ros2_humble/install/rqt_shell:/home/gkasha/ros2_humble/install/rqt_service_caller:/home/gkasha/ros2_humble/install/rqt_reconfigure:/home/gkasha/ros2_humble/install/rqt_py_console:/home/gkasha/ros2_humble/install/rqt_publisher:/home/gkasha/ros2_humble/install/rqt_plot:/home/gkasha/ros2_humble/install/rqt_action:/home/gkasha/ros2_humble/install/rqt_msg:/home/gkasha/ros2_humble/install/rqt_console:/home/gkasha/ros2_humble/install/rqt:/home/gkasha/ros2_humble/install/rqt_graph:/home/gkasha/ros2_humble/install/rqt_gui_py:/home/gkasha/ros2_humble/install/rqt_gui:/home/gkasha/ros2_humble/install/ros2trace:/home/gkasha/ros2_humble/install/ros2topic:/home/gkasha/ros2_humble/install/ros2test:/home/gkasha/ros2_humble/install/ros2component:/home/gkasha/ros2_humble/install/ros2param:/home/gkasha/ros2_humble/install/ros2lifecycle:/home/gkasha/ros2_humble/install/ros2service:/home/gkasha/ros2_humble/install/ros2run:/home/gkasha/ros2_humble/install/ros2launch:/home/gkasha/ros2_humble/install/ros2pkg:/home/gkasha/ros2_humble/install/ros2node:/home/gkasha/ros2_humble/install/ros2multicast:/home/gkasha/ros2_humble/install/ros2interface:/home/gkasha/ros2_humble/install/ros2doctor:/home/gkasha/ros2_humble/install/ros2action:/home/gkasha/ros2_humble/install/ros2cli:/home/gkasha/ros2_humble/install/quality_of_service_demo_py:/home/gkasha/ros2_humble/install/lifecycle_py:/home/gkasha/ros2_humble/install/launch_testing_ros:/home/gkasha/ros2_humble/install/launch_ros:/home/gkasha/ros2_humble/install/examples_rclpy_pointcloud_publisher:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_subscriber:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_service:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_publisher:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_client:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_action_server:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_action_client:/home/gkasha/ros2_humble/install/examples_rclpy_guard_conditions:/home/gkasha/ros2_humble/install/examples_rclpy_executors:/home/gkasha/ros2_humble/install/demo_nodes_py:/home/gkasha/ros2_humble/install/action_tutorials_py:/home/gkasha/ros2_humble/install/ament_uncrustify:/home/gkasha/ros2_humble/install/tracetools_trace:/home/gkasha/ros2_humble/install/tracetools_read:/home/gkasha/ros2_humble/install/test_tracetools_launch:/home/gkasha/ros2_humble/install/test_launch_ros:/home/gkasha/ros2_humble/install/sensor_msgs_py:/home/gkasha/ros2_humble/install/rpyutils:/home/gkasha/ros2_humble/install/rosidl_runtime_py:/home/gkasha/ros2_humble/install/rosidl_cli:/home/gkasha/ros2_humble/install/launch_pytest:/home/gkasha/ros2_humble/install/launch_testing:/home/gkasha/ros2_humble/install/launch_yaml:/home/gkasha/ros2_humble/install/launch_xml:/home/gkasha/ros2_humble/install/launch:/home/gkasha/ros2_humble/install/osrf_pycommon:/home/gkasha/ros2_humble/install/launch_testing_examples:/home/gkasha/ros2_humble/install/domain_coordinator:/home/gkasha/ros2_humble/install/ament_xmllint:/home/gkasha/ros2_humble/install/ament_pyflakes:/home/gkasha/ros2_humble/install/ament_pycodestyle:/home/gkasha/ros2_humble/install/ament_pep257:/home/gkasha/ros2_humble/install/ament_pclint:/home/gkasha/ros2_humble/install/ament_package:/home/gkasha/ros2_humble/install/ament_mypy:/home/gkasha/ros2_humble/install/ament_lint_cmake:/home/gkasha/ros2_humble/install/ament_flake8:/home/gkasha/ros2_humble/install/ament_copyright:/home/gkasha/ros2_humble/install/ament_lint:/home/gkasha/ros2_humble/install/ament_index_python:/home/gkasha/ros2_humble/install/ament_cpplint:/home/gkasha/ros2_humble/install/ament_cppcheck:/home/gkasha/ros2_humble/install/ament_clang_tidy:/home/gkasha/ros2_humble/install/ament_clang_format LD_LIBRARY_PATH=/home/gkasha/Documents/maae/install/ma_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gkasha/Documents/maae/build/auction -- -j4 -l4
