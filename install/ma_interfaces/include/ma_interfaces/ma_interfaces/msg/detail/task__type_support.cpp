@@ -37,7 +37,7 @@ void Task_fini_function(void * message_memory)
   typed_message->~Task();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember Task_message_member_array[4] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember Task_message_member_array[7] = {
   {
     "id",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
@@ -73,6 +73,40 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Task_message_
     nullptr  // resize(index) function pointer
   },
   {
+    "num_agents",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT64,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(ma_interfaces::msg::Task, num_agents),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "value",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(ma_interfaces::msg::Task, value),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
     "duration",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
@@ -90,14 +124,31 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Task_message_
     nullptr  // resize(index) function pointer
   },
   {
-    "value",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT64,  // type
+    "st",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(ma_interfaces::msg::Task, value),  // bytes offset in struct
+    offsetof(ma_interfaces::msg::Task, st),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "et",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(ma_interfaces::msg::Task, et),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -111,7 +162,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Task_message_
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers Task_message_members = {
   "ma_interfaces::msg",  // message namespace
   "Task",  // message name
-  4,  // number of fields
+  7,  // number of fields
   sizeof(ma_interfaces::msg::Task),
   Task_message_member_array,  // message members
   Task_init_function,  // function to initialize message memory (memory has to be allocated)

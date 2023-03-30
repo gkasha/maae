@@ -40,8 +40,11 @@ struct Task_
     {
       this->id = "";
       this->owner = "";
+      this->num_agents = 0ll;
+      this->value = 0.0;
       this->duration = 0.0;
-      this->value = 0ll;
+      this->st = 0.0;
+      this->et = 0.0;
     }
   }
 
@@ -54,8 +57,11 @@ struct Task_
     {
       this->id = "";
       this->owner = "";
+      this->num_agents = 0ll;
+      this->value = 0.0;
       this->duration = 0.0;
-      this->value = 0ll;
+      this->st = 0.0;
+      this->et = 0.0;
     }
   }
 
@@ -66,12 +72,21 @@ struct Task_
   using _owner_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _owner_type owner;
+  using _num_agents_type =
+    int64_t;
+  _num_agents_type num_agents;
+  using _value_type =
+    double;
+  _value_type value;
   using _duration_type =
     double;
   _duration_type duration;
-  using _value_type =
-    int64_t;
-  _value_type value;
+  using _st_type =
+    double;
+  _st_type st;
+  using _et_type =
+    double;
+  _et_type et;
 
   // setters for named parameter idiom
   Type & set__id(
@@ -86,16 +101,34 @@ struct Task_
     this->owner = _arg;
     return *this;
   }
+  Type & set__num_agents(
+    const int64_t & _arg)
+  {
+    this->num_agents = _arg;
+    return *this;
+  }
+  Type & set__value(
+    const double & _arg)
+  {
+    this->value = _arg;
+    return *this;
+  }
   Type & set__duration(
     const double & _arg)
   {
     this->duration = _arg;
     return *this;
   }
-  Type & set__value(
-    const int64_t & _arg)
+  Type & set__st(
+    const double & _arg)
   {
-    this->value = _arg;
+    this->st = _arg;
+    return *this;
+  }
+  Type & set__et(
+    const double & _arg)
+  {
+    this->et = _arg;
     return *this;
   }
 
@@ -147,10 +180,19 @@ struct Task_
     if (this->owner != other.owner) {
       return false;
     }
-    if (this->duration != other.duration) {
+    if (this->num_agents != other.num_agents) {
       return false;
     }
     if (this->value != other.value) {
+      return false;
+    }
+    if (this->duration != other.duration) {
+      return false;
+    }
+    if (this->st != other.st) {
+      return false;
+    }
+    if (this->et != other.et) {
       return false;
     }
     return true;

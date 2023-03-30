@@ -59,22 +59,31 @@ class Task(metaclass=Metaclass_Task):
     __slots__ = [
         '_id',
         '_owner',
-        '_duration',
+        '_num_agents',
         '_value',
+        '_duration',
+        '_st',
+        '_et',
     ]
 
     _fields_and_field_types = {
         'id': 'string',
         'owner': 'string',
+        'num_agents': 'int64',
+        'value': 'double',
         'duration': 'double',
-        'value': 'int64',
+        'st': 'double',
+        'et': 'double',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
-        rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -83,8 +92,11 @@ class Task(metaclass=Metaclass_Task):
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.id = kwargs.get('id', str())
         self.owner = kwargs.get('owner', str())
+        self.num_agents = kwargs.get('num_agents', int())
+        self.value = kwargs.get('value', float())
         self.duration = kwargs.get('duration', float())
-        self.value = kwargs.get('value', int())
+        self.st = kwargs.get('st', float())
+        self.et = kwargs.get('et', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -119,9 +131,15 @@ class Task(metaclass=Metaclass_Task):
             return False
         if self.owner != other.owner:
             return False
-        if self.duration != other.duration:
+        if self.num_agents != other.num_agents:
             return False
         if self.value != other.value:
+            return False
+        if self.duration != other.duration:
+            return False
+        if self.st != other.st:
+            return False
+        if self.et != other.et:
             return False
         return True
 
@@ -157,6 +175,36 @@ class Task(metaclass=Metaclass_Task):
         self._owner = value
 
     @builtins.property
+    def num_agents(self):
+        """Message field 'num_agents'."""
+        return self._num_agents
+
+    @num_agents.setter
+    def num_agents(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'num_agents' field must be of type 'int'"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'num_agents' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._num_agents = value
+
+    @builtins.property
+    def value(self):
+        """Message field 'value'."""
+        return self._value
+
+    @value.setter
+    def value(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'value' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'value' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._value = value
+
+    @builtins.property
     def duration(self):
         """Message field 'duration'."""
         return self._duration
@@ -172,16 +220,31 @@ class Task(metaclass=Metaclass_Task):
         self._duration = value
 
     @builtins.property
-    def value(self):
-        """Message field 'value'."""
-        return self._value
+    def st(self):
+        """Message field 'st'."""
+        return self._st
 
-    @value.setter
-    def value(self, value):
+    @st.setter
+    def st(self, value):
         if __debug__:
             assert \
-                isinstance(value, int), \
-                "The 'value' field must be of type 'int'"
-            assert value >= -9223372036854775808 and value < 9223372036854775808, \
-                "The 'value' field must be an integer in [-9223372036854775808, 9223372036854775807]"
-        self._value = value
+                isinstance(value, float), \
+                "The 'st' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'st' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._st = value
+
+    @builtins.property
+    def et(self):
+        """Message field 'et'."""
+        return self._et
+
+    @et.setter
+    def et(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'et' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'et' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._et = value

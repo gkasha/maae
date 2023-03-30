@@ -21,16 +21,48 @@ namespace msg
 namespace builder
 {
 
+class Init_Goal_deadline
+{
+public:
+  explicit Init_Goal_deadline(::ma_interfaces::msg::Goal & msg)
+  : msg_(msg)
+  {}
+  ::ma_interfaces::msg::Goal deadline(::ma_interfaces::msg::Goal::_deadline_type arg)
+  {
+    msg_.deadline = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::ma_interfaces::msg::Goal msg_;
+};
+
+class Init_Goal_num_agents
+{
+public:
+  explicit Init_Goal_num_agents(::ma_interfaces::msg::Goal & msg)
+  : msg_(msg)
+  {}
+  Init_Goal_deadline num_agents(::ma_interfaces::msg::Goal::_num_agents_type arg)
+  {
+    msg_.num_agents = std::move(arg);
+    return Init_Goal_deadline(msg_);
+  }
+
+private:
+  ::ma_interfaces::msg::Goal msg_;
+};
+
 class Init_Goal_owner
 {
 public:
   explicit Init_Goal_owner(::ma_interfaces::msg::Goal & msg)
   : msg_(msg)
   {}
-  ::ma_interfaces::msg::Goal owner(::ma_interfaces::msg::Goal::_owner_type arg)
+  Init_Goal_num_agents owner(::ma_interfaces::msg::Goal::_owner_type arg)
   {
     msg_.owner = std::move(arg);
-    return std::move(msg_);
+    return Init_Goal_num_agents(msg_);
   }
 
 private:

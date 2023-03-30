@@ -1,0 +1,568 @@
+[0.055s] Invoking command in '/home/gkasha/Documents/maae/build/ma_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gkasha/ros2_humble/install/rqt_bag_plugins:/home/gkasha/ros2_humble/install/rqt_bag:/home/gkasha/ros2_humble/install/ros2bag:/home/gkasha/ros2_humble/install/tracetools_test:/home/gkasha/ros2_humble/install/tracetools_launch:/home/gkasha/ros2_humble/install/topic_monitor:/home/gkasha/ros2_humble/install/tf2_tools:/home/gkasha/ros2_humble/install/examples_tf2_py:/home/gkasha/ros2_humble/install/tf2_ros_py:/home/gkasha/ros2_humble/install/sros2:/home/gkasha/ros2_humble/install/rqt_topic:/home/gkasha/ros2_humble/install/rqt_srv:/home/gkasha/ros2_humble/install/rqt_shell:/home/gkasha/ros2_humble/install/rqt_service_caller:/home/gkasha/ros2_humble/install/rqt_reconfigure:/home/gkasha/ros2_humble/install/rqt_py_console:/home/gkasha/ros2_humble/install/rqt_publisher:/home/gkasha/ros2_humble/install/rqt_plot:/home/gkasha/ros2_humble/install/rqt_action:/home/gkasha/ros2_humble/install/rqt_msg:/home/gkasha/ros2_humble/install/rqt_console:/home/gkasha/ros2_humble/install/rqt:/home/gkasha/ros2_humble/install/rqt_graph:/home/gkasha/ros2_humble/install/rqt_gui_py:/home/gkasha/ros2_humble/install/rqt_gui:/home/gkasha/ros2_humble/install/ros2trace:/home/gkasha/ros2_humble/install/ros2topic:/home/gkasha/ros2_humble/install/ros2test:/home/gkasha/ros2_humble/install/ros2component:/home/gkasha/ros2_humble/install/ros2param:/home/gkasha/ros2_humble/install/ros2lifecycle:/home/gkasha/ros2_humble/install/ros2service:/home/gkasha/ros2_humble/install/ros2run:/home/gkasha/ros2_humble/install/ros2launch:/home/gkasha/ros2_humble/install/ros2pkg:/home/gkasha/ros2_humble/install/ros2node:/home/gkasha/ros2_humble/install/ros2multicast:/home/gkasha/ros2_humble/install/ros2interface:/home/gkasha/ros2_humble/install/ros2doctor:/home/gkasha/ros2_humble/install/ros2action:/home/gkasha/ros2_humble/install/ros2cli:/home/gkasha/ros2_humble/install/quality_of_service_demo_py:/home/gkasha/ros2_humble/install/lifecycle_py:/home/gkasha/ros2_humble/install/launch_testing_ros:/home/gkasha/ros2_humble/install/launch_ros:/home/gkasha/ros2_humble/install/examples_rclpy_pointcloud_publisher:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_subscriber:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_service:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_publisher:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_client:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_action_server:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_action_client:/home/gkasha/ros2_humble/install/examples_rclpy_guard_conditions:/home/gkasha/ros2_humble/install/examples_rclpy_executors:/home/gkasha/ros2_humble/install/demo_nodes_py:/home/gkasha/ros2_humble/install/action_tutorials_py:/home/gkasha/ros2_humble/install/ament_uncrustify:/home/gkasha/ros2_humble/install/tracetools_trace:/home/gkasha/ros2_humble/install/tracetools_read:/home/gkasha/ros2_humble/install/test_tracetools_launch:/home/gkasha/ros2_humble/install/test_launch_ros:/home/gkasha/ros2_humble/install/sensor_msgs_py:/home/gkasha/ros2_humble/install/rpyutils:/home/gkasha/ros2_humble/install/rosidl_runtime_py:/home/gkasha/ros2_humble/install/rosidl_cli:/home/gkasha/ros2_humble/install/launch_pytest:/home/gkasha/ros2_humble/install/launch_testing:/home/gkasha/ros2_humble/install/launch_yaml:/home/gkasha/ros2_humble/install/launch_xml:/home/gkasha/ros2_humble/install/launch:/home/gkasha/ros2_humble/install/osrf_pycommon:/home/gkasha/ros2_humble/install/launch_testing_examples:/home/gkasha/ros2_humble/install/domain_coordinator:/home/gkasha/ros2_humble/install/ament_xmllint:/home/gkasha/ros2_humble/install/ament_pyflakes:/home/gkasha/ros2_humble/install/ament_pycodestyle:/home/gkasha/ros2_humble/install/ament_pep257:/home/gkasha/ros2_humble/install/ament_pclint:/home/gkasha/ros2_humble/install/ament_package:/home/gkasha/ros2_humble/install/ament_mypy:/home/gkasha/ros2_humble/install/ament_lint_cmake:/home/gkasha/ros2_humble/install/ament_flake8:/home/gkasha/ros2_humble/install/ament_copyright:/home/gkasha/ros2_humble/install/ament_lint:/home/gkasha/ros2_humble/install/ament_index_python:/home/gkasha/ros2_humble/install/ament_cpplint:/home/gkasha/ros2_humble/install/ament_cppcheck:/home/gkasha/ros2_humble/install/ament_clang_tidy:/home/gkasha/ros2_humble/install/ament_clang_format /usr/bin/cmake --build /home/gkasha/Documents/maae/build/ma_interfaces -- -j4 -l4
+[0.210s] -- Found ament_cmake: 1.3.3 (/home/gkasha/ros2_humble/install/ament_cmake/share/ament_cmake/cmake)
+[0.769s] -- Found rosidl_default_generators: 1.2.0 (/home/gkasha/ros2_humble/install/rosidl_default_generators/share/rosidl_default_generators/cmake)
+[0.894s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_introspection_c;rosidl_typesupport_fastrtps_c
+[0.909s] -- Found rosidl_adapter: 3.1.4 (/home/gkasha/ros2_humble/install/rosidl_adapter/share/rosidl_adapter/cmake)
+[1.060s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp;rosidl_typesupport_fastrtps_cpp
+[2.313s] -- Found ament_cmake_ros: 0.10.0 (/home/gkasha/ros2_humble/install/ament_cmake_ros/share/ament_cmake_ros/cmake)
+[2.768s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_introspection_c;rosidl_typesupport_fastrtps_c
+[3.608s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp;rosidl_typesupport_fastrtps_cpp
+[3.694s] -- Found python_cmake_module: 0.10.0 (/home/gkasha/ros2_humble/install/python_cmake_module/share/python_cmake_module/cmake)
+[3.783s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.783s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[3.783s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[4.053s] -- Found ament_lint_auto: 0.12.5 (/home/gkasha/ros2_humble/install/ament_lint_auto/share/ament_lint_auto/cmake)
+[4.098s] -- Added test 'lint_cmake' to check CMake code style
+[4.101s] -- Added test 'xmllint' to check XML markup files
+[4.103s] -- Configuring done
+[4.207s] -- Generating done
+[4.211s] -- Build files have been written to: /home/gkasha/Documents/maae/build/ma_interfaces
+[4.279s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[4.316s] [  1%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[4.381s] [  1%] Built target ament_cmake_python_copy_ma_interfaces
+[5.297s] running egg_info
+[5.298s] writing ma_interfaces.egg-info/PKG-INFO
+[5.301s] writing dependency_links to ma_interfaces.egg-info/dependency_links.txt
+[5.301s] writing top-level names to ma_interfaces.egg-info/top_level.txt
+[5.310s] reading manifest file 'ma_interfaces.egg-info/SOURCES.txt'
+[5.311s] writing manifest file 'ma_interfaces.egg-info/SOURCES.txt'
+[5.399s] [  1%] Built target ament_cmake_python_build_ma_interfaces_egg
+[6.789s] [35m[1mConsolidate compiler generated dependencies of target ma_interfaces__rosidl_generator_c[0m
+[6.852s] [  2%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/action_dispatch__functions.c.o[0m
+[6.857s] [  3%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/action_feedback__functions.c.o[0m
+[6.862s] [  4%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/node__functions.c.o[0m
+[6.874s] [  4%] Built target ma_interfaces__cpp
+[6.931s] [  5%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[7.055s] [  6%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/task__functions.c.o[0m
+[7.055s] [  6%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/bid__functions.c.o[0m
+[7.074s] [  7%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/goal__functions.c.o[0m
+[7.191s] [  8%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/register__functions.c.o[0m
+[7.209s] [  9%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/auction_srv__functions.c.o[0m
+[7.223s] [ 10%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/auction_result__functions.c.o[0m
+[7.345s] [ 11%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/get_bid__functions.c.o[0m
+[7.356s] [ 11%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/get_goal__functions.c.o[0m
+[7.417s] [ 12%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/add_goal__functions.c.o[0m
+[7.500s] [ 13%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[7.533s] [ 13%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[7.550s] [ 14%] [32m[1mLinking C shared library libma_interfaces__rosidl_generator_c.so[0m
+[7.764s] [ 14%] Built target ma_interfaces__rosidl_generator_c
+[7.831s] [ 15%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[8.243s] [35m[1mConsolidate compiler generated dependencies of target ma_interfaces__rosidl_typesupport_cpp[0m
+[8.339s] [ 16%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/msg/action_dispatch__type_support.cpp.o[0m
+[8.682s] [ 17%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/msg/action_feedback__type_support.cpp.o[0m
+[8.994s] [ 18%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/msg/node__type_support.cpp.o[0m
+[9.140s] [35m[1mConsolidate compiler generated dependencies of target ma_interfaces__rosidl_typesupport_introspection_cpp[0m
+[9.197s] [ 18%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_dispatch__type_support.cpp.o[0m
+[9.321s] [ 19%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/msg/bid__type_support.cpp.o[0m
+[9.335s] [35m[1mConsolidate compiler generated dependencies of target ma_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[9.405s] [ 20%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_dispatch__type_support.cpp.o[0m
+[9.652s] [35m[1mConsolidate compiler generated dependencies of target ma_interfaces__rosidl_typesupport_introspection_c[0m
+[9.690s] [ 20%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/msg/task__type_support.cpp.o[0m
+[9.714s] [ 21%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_dispatch__type_support.c.o[0m
+[9.732s] [ 22%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/action_feedback__type_support.cpp.o[0m
+[9.796s] [ 23%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/action_feedback__type_support.c.o[0m
+[9.878s] [ 24%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/node__type_support.c.o[0m
+[9.941s] [ 25%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/action_feedback__type_support.cpp.o[0m
+[9.956s] [ 25%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/bid__type_support.c.o[0m
+[10.021s] [ 26%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/msg/goal__type_support.cpp.o[0m
+[10.036s] [ 27%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/task__type_support.c.o[0m
+[10.117s] [ 28%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/goal__type_support.c.o[0m
+[10.175s] [ 29%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/node__type_support.cpp.o[0m
+[10.193s] [ 30%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/srv/detail/register__type_support.c.o[0m
+[10.276s] [ 31%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/srv/detail/auction_srv__type_support.c.o[0m
+[10.339s] [ 32%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/srv/register__type_support.cpp.o[0m
+[10.359s] [ 33%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/srv/detail/auction_result__type_support.c.o[0m
+[10.375s] [ 34%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/node__type_support.cpp.o[0m
+[10.451s] [ 35%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/srv/detail/get_goal__type_support.c.o[0m
+[10.537s] [ 35%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/srv/detail/get_bid__type_support.c.o[0m
+[10.623s] [ 36%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/srv/detail/add_goal__type_support.c.o[0m
+[10.653s] [ 37%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/bid__type_support.cpp.o[0m
+[10.681s] [ 38%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/srv/auction_srv__type_support.cpp.o[0m
+[10.702s] [ 39%] [32m[1mLinking C shared library libma_interfaces__rosidl_typesupport_introspection_c.so[0m
+[10.811s] [ 39%] Built target ma_interfaces__rosidl_typesupport_introspection_c
+[10.850s] [ 40%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[10.924s] [ 41%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/bid__type_support.cpp.o[0m
+[11.020s] [ 42%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/srv/auction_result__type_support.cpp.o[0m
+[11.114s] [ 43%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/task__type_support.cpp.o[0m
+[11.403s] [ 44%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/srv/get_goal__type_support.cpp.o[0m
+[11.446s] [ 45%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/task__type_support.cpp.o[0m
+[12.232s] [ 46%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/goal__type_support.cpp.o[0m
+[12.384s] [ 46%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/srv/get_bid__type_support.cpp.o[0m
+[12.550s] [ 46%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/goal__type_support.cpp.o[0m
+[12.689s] [ 46%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/srv/detail/register__type_support.cpp.o[0m
+[12.732s] [ 47%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/srv/add_goal__type_support.cpp.o[0m
+[13.034s] [ 48%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/srv/detail/dds_fastrtps/register__type_support.cpp.o[0m
+[13.050s] [ 49%] [32m[1mLinking CXX shared library libma_interfaces__rosidl_typesupport_cpp.so[0m
+[13.118s] [ 50%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/srv/detail/auction_srv__type_support.cpp.o[0m
+[13.138s] [35m[1mConsolidate compiler generated dependencies of target ma_interfaces__rosidl_typesupport_fastrtps_c[0m
+[13.167s] [ 50%] Built target ma_interfaces__rosidl_typesupport_cpp
+[13.190s] [ 51%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__type_support_c.cpp.o[0m
+[13.221s] [ 52%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[13.484s] [ 53%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/srv/detail/dds_fastrtps/auction_srv__type_support.cpp.o[0m
+[13.611s] [ 54%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_feedback__type_support_c.cpp.o[0m
+[13.712s] [ 55%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/srv/detail/auction_result__type_support.cpp.o[0m
+[14.092s] [ 56%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/srv/detail/dds_fastrtps/auction_result__type_support.cpp.o[0m
+[14.338s] [ 56%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/node__type_support_c.cpp.o[0m
+[14.441s] [ 57%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/srv/detail/get_goal__type_support.cpp.o[0m
+[14.907s] [ 58%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/srv/detail/dds_fastrtps/get_goal__type_support.cpp.o[0m
+[15.023s] [ 59%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/bid__type_support_c.cpp.o[0m
+[15.058s] [35m[1mConsolidate compiler generated dependencies of target ma_interfaces__rosidl_typesupport_c[0m
+[15.090s] [ 60%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/srv/detail/get_bid__type_support.cpp.o[0m
+[15.127s] [ 61%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_dispatch__type_support.cpp.o[0m
+[15.301s] [ 61%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/action_feedback__type_support.cpp.o[0m
+[15.470s] [ 62%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/node__type_support.cpp.o[0m
+[15.500s] [ 63%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/srv/detail/dds_fastrtps/get_bid__type_support.cpp.o[0m
+[15.520s] [ 64%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/task__type_support_c.cpp.o[0m
+[15.575s] [ 65%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/bid__type_support.cpp.o[0m
+[15.655s] [ 66%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/srv/detail/add_goal__type_support.cpp.o[0m
+[15.709s] [ 67%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/task__type_support.cpp.o[0m
+[15.827s] [ 68%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/goal__type_support.cpp.o[0m
+[15.955s] [ 69%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/register__type_support.cpp.o[0m
+[16.010s] [ 70%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/goal__type_support_c.cpp.o[0m
+[16.111s] [ 70%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/srv/detail/dds_fastrtps/add_goal__type_support.cpp.o[0m
+[16.129s] [ 70%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/auction_srv__type_support.cpp.o[0m
+[16.273s] [ 71%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/auction_result__type_support.cpp.o[0m
+[16.296s] [ 72%] [32m[1mLinking CXX shared library libma_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[16.428s] [ 73%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/get_goal__type_support.cpp.o[0m
+[16.496s] [ 73%] Built target ma_interfaces__rosidl_typesupport_introspection_cpp
+[16.531s] [ 74%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_srv__type_support_c.cpp.o[0m
+[16.540s] [ 75%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/register__type_support_c.cpp.o[0m
+[16.574s] [ 76%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/get_bid__type_support.cpp.o[0m
+[16.663s] [ 77%] [32m[1mLinking CXX shared library libma_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[16.755s] [ 78%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/srv/add_goal__type_support.cpp.o[0m
+[16.838s] [ 79%] [32m[1mLinking CXX shared library libma_interfaces__rosidl_typesupport_c.so[0m
+[16.947s] [ 79%] Built target ma_interfaces__rosidl_typesupport_fastrtps_cpp
+[16.965s] [ 79%] Built target ma_interfaces__rosidl_typesupport_c
+[16.997s] [ 79%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_result__type_support_c.cpp.o[0m
+[17.007s] [ 80%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/get_goal__type_support_c.cpp.o[0m
+[17.101s] [ 81%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/get_bid__type_support_c.cpp.o[0m
+[17.110s] [ 82%] [32mBuilding CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/add_goal__type_support_c.cpp.o[0m
+[17.700s] [ 83%] [32m[1mLinking CXX shared library libma_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[17.838s] [ 83%] Built target ma_interfaces__rosidl_typesupport_fastrtps_c
+[17.909s] [ 83%] Built target ma_interfaces
+[17.983s] [ 84%] [34m[1mGenerating Python code for ROS interfaces[0m
+[19.905s] [ 84%] Built target ma_interfaces__py
+[19.942s] [35m[1mConsolidate compiler generated dependencies of target ma_interfaces__rosidl_generator_py[0m
+[20.008s] [ 85%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_action_dispatch_s.c.o[0m
+[20.008s] [ 85%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_node_s.c.o[0m
+[20.018s] [ 86%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_action_feedback_s.c.o[0m
+[20.024s] [ 87%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_bid_s.c.o[0m
+[20.315s] [ 88%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_goal_s.c.o[0m
+[20.322s] [ 89%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_task_s.c.o[0m
+[20.347s] [ 90%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/srv/_auction_srv_s.c.o[0m
+[20.349s] [ 91%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/srv/_register_s.c.o[0m
+[20.523s] [ 92%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/srv/_auction_result_s.c.o[0m
+[20.540s] [ 92%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/srv/_get_goal_s.c.o[0m
+[20.567s] [ 93%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/srv/_get_bid_s.c.o[0m
+[20.605s] [ 94%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/srv/_add_goal_s.c.o[0m
+[20.777s] [ 95%] [32m[1mLinking C shared library rosidl_generator_py/ma_interfaces/libma_interfaces__rosidl_generator_py.so[0m
+[20.870s] [ 95%] Built target ma_interfaces__rosidl_generator_py
+[20.905s] [35m[1mConsolidate compiler generated dependencies of target ma_interfaces__rosidl_typesupport_fastrtps_c__pyext[0m
+[20.907s] [35m[1mConsolidate compiler generated dependencies of target ma_interfaces__rosidl_typesupport_introspection_c__pyext[0m
+[20.910s] [35m[1mConsolidate compiler generated dependencies of target ma_interfaces__rosidl_typesupport_c__pyext[0m
+[20.955s] [ 96%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[20.962s] [ 97%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[20.967s] [ 97%] [32mBuilding C object CMakeFiles/ma_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[21.197s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/ma_interfaces/ma_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[21.207s] [ 99%] [32m[1mLinking C shared library rosidl_generator_py/ma_interfaces/ma_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[21.228s] [100%] [32m[1mLinking C shared library rosidl_generator_py/ma_interfaces/ma_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[21.298s] [100%] Built target ma_interfaces__rosidl_typesupport_introspection_c__pyext
+[21.309s] [100%] Built target ma_interfaces__rosidl_typesupport_c__pyext
+[21.337s] [100%] Built target ma_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[21.365s] Invoked command in '/home/gkasha/Documents/maae/build/ma_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gkasha/ros2_humble/install/rqt_bag_plugins:/home/gkasha/ros2_humble/install/rqt_bag:/home/gkasha/ros2_humble/install/ros2bag:/home/gkasha/ros2_humble/install/tracetools_test:/home/gkasha/ros2_humble/install/tracetools_launch:/home/gkasha/ros2_humble/install/topic_monitor:/home/gkasha/ros2_humble/install/tf2_tools:/home/gkasha/ros2_humble/install/examples_tf2_py:/home/gkasha/ros2_humble/install/tf2_ros_py:/home/gkasha/ros2_humble/install/sros2:/home/gkasha/ros2_humble/install/rqt_topic:/home/gkasha/ros2_humble/install/rqt_srv:/home/gkasha/ros2_humble/install/rqt_shell:/home/gkasha/ros2_humble/install/rqt_service_caller:/home/gkasha/ros2_humble/install/rqt_reconfigure:/home/gkasha/ros2_humble/install/rqt_py_console:/home/gkasha/ros2_humble/install/rqt_publisher:/home/gkasha/ros2_humble/install/rqt_plot:/home/gkasha/ros2_humble/install/rqt_action:/home/gkasha/ros2_humble/install/rqt_msg:/home/gkasha/ros2_humble/install/rqt_console:/home/gkasha/ros2_humble/install/rqt:/home/gkasha/ros2_humble/install/rqt_graph:/home/gkasha/ros2_humble/install/rqt_gui_py:/home/gkasha/ros2_humble/install/rqt_gui:/home/gkasha/ros2_humble/install/ros2trace:/home/gkasha/ros2_humble/install/ros2topic:/home/gkasha/ros2_humble/install/ros2test:/home/gkasha/ros2_humble/install/ros2component:/home/gkasha/ros2_humble/install/ros2param:/home/gkasha/ros2_humble/install/ros2lifecycle:/home/gkasha/ros2_humble/install/ros2service:/home/gkasha/ros2_humble/install/ros2run:/home/gkasha/ros2_humble/install/ros2launch:/home/gkasha/ros2_humble/install/ros2pkg:/home/gkasha/ros2_humble/install/ros2node:/home/gkasha/ros2_humble/install/ros2multicast:/home/gkasha/ros2_humble/install/ros2interface:/home/gkasha/ros2_humble/install/ros2doctor:/home/gkasha/ros2_humble/install/ros2action:/home/gkasha/ros2_humble/install/ros2cli:/home/gkasha/ros2_humble/install/quality_of_service_demo_py:/home/gkasha/ros2_humble/install/lifecycle_py:/home/gkasha/ros2_humble/install/launch_testing_ros:/home/gkasha/ros2_humble/install/launch_ros:/home/gkasha/ros2_humble/install/examples_rclpy_pointcloud_publisher:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_subscriber:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_service:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_publisher:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_client:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_action_server:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_action_client:/home/gkasha/ros2_humble/install/examples_rclpy_guard_conditions:/home/gkasha/ros2_humble/install/examples_rclpy_executors:/home/gkasha/ros2_humble/install/demo_nodes_py:/home/gkasha/ros2_humble/install/action_tutorials_py:/home/gkasha/ros2_humble/install/ament_uncrustify:/home/gkasha/ros2_humble/install/tracetools_trace:/home/gkasha/ros2_humble/install/tracetools_read:/home/gkasha/ros2_humble/install/test_tracetools_launch:/home/gkasha/ros2_humble/install/test_launch_ros:/home/gkasha/ros2_humble/install/sensor_msgs_py:/home/gkasha/ros2_humble/install/rpyutils:/home/gkasha/ros2_humble/install/rosidl_runtime_py:/home/gkasha/ros2_humble/install/rosidl_cli:/home/gkasha/ros2_humble/install/launch_pytest:/home/gkasha/ros2_humble/install/launch_testing:/home/gkasha/ros2_humble/install/launch_yaml:/home/gkasha/ros2_humble/install/launch_xml:/home/gkasha/ros2_humble/install/launch:/home/gkasha/ros2_humble/install/osrf_pycommon:/home/gkasha/ros2_humble/install/launch_testing_examples:/home/gkasha/ros2_humble/install/domain_coordinator:/home/gkasha/ros2_humble/install/ament_xmllint:/home/gkasha/ros2_humble/install/ament_pyflakes:/home/gkasha/ros2_humble/install/ament_pycodestyle:/home/gkasha/ros2_humble/install/ament_pep257:/home/gkasha/ros2_humble/install/ament_pclint:/home/gkasha/ros2_humble/install/ament_package:/home/gkasha/ros2_humble/install/ament_mypy:/home/gkasha/ros2_humble/install/ament_lint_cmake:/home/gkasha/ros2_humble/install/ament_flake8:/home/gkasha/ros2_humble/install/ament_copyright:/home/gkasha/ros2_humble/install/ament_lint:/home/gkasha/ros2_humble/install/ament_index_python:/home/gkasha/ros2_humble/install/ament_cpplint:/home/gkasha/ros2_humble/install/ament_cppcheck:/home/gkasha/ros2_humble/install/ament_clang_tidy:/home/gkasha/ros2_humble/install/ament_clang_format /usr/bin/cmake --build /home/gkasha/Documents/maae/build/ma_interfaces -- -j4 -l4
+[23.647s] Invoking command in '/home/gkasha/Documents/maae/build/ma_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gkasha/ros2_humble/install/rqt_bag_plugins:/home/gkasha/ros2_humble/install/rqt_bag:/home/gkasha/ros2_humble/install/ros2bag:/home/gkasha/ros2_humble/install/tracetools_test:/home/gkasha/ros2_humble/install/tracetools_launch:/home/gkasha/ros2_humble/install/topic_monitor:/home/gkasha/ros2_humble/install/tf2_tools:/home/gkasha/ros2_humble/install/examples_tf2_py:/home/gkasha/ros2_humble/install/tf2_ros_py:/home/gkasha/ros2_humble/install/sros2:/home/gkasha/ros2_humble/install/rqt_topic:/home/gkasha/ros2_humble/install/rqt_srv:/home/gkasha/ros2_humble/install/rqt_shell:/home/gkasha/ros2_humble/install/rqt_service_caller:/home/gkasha/ros2_humble/install/rqt_reconfigure:/home/gkasha/ros2_humble/install/rqt_py_console:/home/gkasha/ros2_humble/install/rqt_publisher:/home/gkasha/ros2_humble/install/rqt_plot:/home/gkasha/ros2_humble/install/rqt_action:/home/gkasha/ros2_humble/install/rqt_msg:/home/gkasha/ros2_humble/install/rqt_console:/home/gkasha/ros2_humble/install/rqt:/home/gkasha/ros2_humble/install/rqt_graph:/home/gkasha/ros2_humble/install/rqt_gui_py:/home/gkasha/ros2_humble/install/rqt_gui:/home/gkasha/ros2_humble/install/ros2trace:/home/gkasha/ros2_humble/install/ros2topic:/home/gkasha/ros2_humble/install/ros2test:/home/gkasha/ros2_humble/install/ros2component:/home/gkasha/ros2_humble/install/ros2param:/home/gkasha/ros2_humble/install/ros2lifecycle:/home/gkasha/ros2_humble/install/ros2service:/home/gkasha/ros2_humble/install/ros2run:/home/gkasha/ros2_humble/install/ros2launch:/home/gkasha/ros2_humble/install/ros2pkg:/home/gkasha/ros2_humble/install/ros2node:/home/gkasha/ros2_humble/install/ros2multicast:/home/gkasha/ros2_humble/install/ros2interface:/home/gkasha/ros2_humble/install/ros2doctor:/home/gkasha/ros2_humble/install/ros2action:/home/gkasha/ros2_humble/install/ros2cli:/home/gkasha/ros2_humble/install/quality_of_service_demo_py:/home/gkasha/ros2_humble/install/lifecycle_py:/home/gkasha/ros2_humble/install/launch_testing_ros:/home/gkasha/ros2_humble/install/launch_ros:/home/gkasha/ros2_humble/install/examples_rclpy_pointcloud_publisher:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_subscriber:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_service:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_publisher:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_client:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_action_server:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_action_client:/home/gkasha/ros2_humble/install/examples_rclpy_guard_conditions:/home/gkasha/ros2_humble/install/examples_rclpy_executors:/home/gkasha/ros2_humble/install/demo_nodes_py:/home/gkasha/ros2_humble/install/action_tutorials_py:/home/gkasha/ros2_humble/install/ament_uncrustify:/home/gkasha/ros2_humble/install/tracetools_trace:/home/gkasha/ros2_humble/install/tracetools_read:/home/gkasha/ros2_humble/install/test_tracetools_launch:/home/gkasha/ros2_humble/install/test_launch_ros:/home/gkasha/ros2_humble/install/sensor_msgs_py:/home/gkasha/ros2_humble/install/rpyutils:/home/gkasha/ros2_humble/install/rosidl_runtime_py:/home/gkasha/ros2_humble/install/rosidl_cli:/home/gkasha/ros2_humble/install/launch_pytest:/home/gkasha/ros2_humble/install/launch_testing:/home/gkasha/ros2_humble/install/launch_yaml:/home/gkasha/ros2_humble/install/launch_xml:/home/gkasha/ros2_humble/install/launch:/home/gkasha/ros2_humble/install/osrf_pycommon:/home/gkasha/ros2_humble/install/launch_testing_examples:/home/gkasha/ros2_humble/install/domain_coordinator:/home/gkasha/ros2_humble/install/ament_xmllint:/home/gkasha/ros2_humble/install/ament_pyflakes:/home/gkasha/ros2_humble/install/ament_pycodestyle:/home/gkasha/ros2_humble/install/ament_pep257:/home/gkasha/ros2_humble/install/ament_pclint:/home/gkasha/ros2_humble/install/ament_package:/home/gkasha/ros2_humble/install/ament_mypy:/home/gkasha/ros2_humble/install/ament_lint_cmake:/home/gkasha/ros2_humble/install/ament_flake8:/home/gkasha/ros2_humble/install/ament_copyright:/home/gkasha/ros2_humble/install/ament_lint:/home/gkasha/ros2_humble/install/ament_index_python:/home/gkasha/ros2_humble/install/ament_cpplint:/home/gkasha/ros2_humble/install/ament_cppcheck:/home/gkasha/ros2_humble/install/ament_clang_tidy:/home/gkasha/ros2_humble/install/ament_clang_format /usr/bin/cmake --install /home/gkasha/Documents/maae/build/ma_interfaces
+[23.668s] -- Install configuration: ""
+[23.668s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ament_index/resource_index/rosidl_interfaces/ma_interfaces
+[23.668s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces
+[23.668s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv
+[23.668s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail
+[23.668s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/add_goal__functions.c
+[23.668s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__type_support.h
+[23.668s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_result__type_support.h
+[23.669s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__functions.c
+[23.669s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/add_goal__struct.h
+[23.669s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/add_goal__type_support.h
+[23.669s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_bid__functions.h
+[23.669s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__struct.h
+[23.669s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_bid__struct.h
+[23.669s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__struct.h
+[23.670s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_bid__type_support.h
+[23.670s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_result__functions.c
+[23.670s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_result__struct.h
+[23.670s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__type_support.h
+[23.670s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__functions.c
+[23.670s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/add_goal__functions.h
+[23.671s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__struct.h
+[23.671s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__functions.h
+[23.671s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__functions.h
+[23.671s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__type_support.h
+[23.671s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_bid__functions.c
+[23.671s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_result__functions.h
+[23.672s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__functions.h
+[23.672s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__functions.c
+[23.672s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/auction_result.h
+[23.672s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/register.h
+[23.672s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/add_goal.h
+[23.672s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/auction_srv.h
+[23.672s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/get_bid.h
+[23.673s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/get_goal.h
+[23.673s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg
+[23.673s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/goal.h
+[23.673s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/rosidl_generator_c__visibility_control.h
+[23.673s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail
+[23.673s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__functions.h
+[23.673s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_feedback__struct.h
+[23.673s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/node__type_support.h
+[23.673s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__struct.h
+[23.674s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_feedback__functions.h
+[23.674s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__type_support.h
+[23.674s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__struct.h
+[23.674s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/node__functions.h
+[23.674s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__functions.c
+[23.675s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/auction_msg__functions.c
+[23.675s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__type_support.h
+[23.675s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__functions.h
+[23.675s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/node__functions.c
+[23.675s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_dispatch__functions.h
+[23.675s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_dispatch__functions.c
+[23.675s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__functions.c
+[23.675s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__functions.h
+[23.676s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_dispatch__struct.h
+[23.676s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_feedback__type_support.h
+[23.676s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_feedback__functions.c
+[23.676s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__type_support.h
+[23.676s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__functions.c
+[23.676s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__struct.h
+[23.676s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/auction_msg__type_support.h
+[23.676s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/node__struct.h
+[23.677s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_dispatch__type_support.h
+[23.677s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/auction_msg__functions.h
+[23.677s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/auction_msg__struct.h
+[23.677s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/task.h
+[23.677s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/bid.h
+[23.677s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/action_feedback.h
+[23.677s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/action_dispatch.h
+[23.678s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/auction_msg.h
+[23.678s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/node.h
+[23.678s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/environment/library_path.sh
+[23.678s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/environment/library_path.dsv
+[23.678s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/lib/libma_interfaces__rosidl_generator_c.so
+[23.679s] -- Set runtime path of "/home/gkasha/Documents/maae/install/ma_interfaces/lib/libma_interfaces__rosidl_generator_c.so" to ""
+[23.679s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces
+[23.679s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv
+[23.680s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail
+[23.680s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__type_support.c
+[23.680s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__rosidl_typesupport_introspection_c.h
+[23.680s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__type_support.c
+[23.680s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_result__rosidl_typesupport_introspection_c.h
+[23.680s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/add_goal__rosidl_typesupport_introspection_c.h
+[23.681s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__rosidl_typesupport_introspection_c.h
+[23.681s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_bid__type_support.c
+[23.681s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_result__type_support.c
+[23.681s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__type_support.c
+[23.681s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__rosidl_typesupport_introspection_c.h
+[23.681s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_bid__rosidl_typesupport_introspection_c.h
+[23.681s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/add_goal__type_support.c
+[23.682s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg
+[23.682s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail
+[23.682s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/node__rosidl_typesupport_introspection_c.h
+[23.682s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/node__type_support.c
+[23.682s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_feedback__rosidl_typesupport_introspection_c.h
+[23.682s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_dispatch__type_support.c
+[23.682s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_feedback__type_support.c
+[23.683s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_dispatch__rosidl_typesupport_introspection_c.h
+[23.683s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__rosidl_typesupport_introspection_c.h
+[23.683s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__rosidl_typesupport_introspection_c.h
+[23.683s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__type_support.c
+[23.683s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__type_support.c
+[23.683s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__type_support.c
+[23.683s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__rosidl_typesupport_introspection_c.h
+[23.683s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/auction_msg__rosidl_typesupport_introspection_c.h
+[23.684s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/auction_msg__type_support.c
+[23.684s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[23.684s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/lib/libma_interfaces__rosidl_typesupport_introspection_c.so
+[23.684s] -- Set runtime path of "/home/gkasha/Documents/maae/install/ma_interfaces/lib/libma_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[23.685s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces
+[23.685s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv
+[23.685s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail
+[23.685s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__rosidl_typesupport_fastrtps_c.h
+[23.685s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_bid__rosidl_typesupport_fastrtps_c.h
+[23.685s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/add_goal__rosidl_typesupport_fastrtps_c.h
+[23.685s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_result__rosidl_typesupport_fastrtps_c.h
+[23.685s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__rosidl_typesupport_fastrtps_c.h
+[23.685s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__rosidl_typesupport_fastrtps_c.h
+[23.685s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg
+[23.686s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail
+[23.686s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__rosidl_typesupport_fastrtps_c.h
+[23.686s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__rosidl_typesupport_fastrtps_c.h
+[23.686s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__rosidl_typesupport_fastrtps_c.h
+[23.686s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/node__rosidl_typesupport_fastrtps_c.h
+[23.686s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_dispatch__rosidl_typesupport_fastrtps_c.h
+[23.686s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/auction_msg__rosidl_typesupport_fastrtps_c.h
+[23.686s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_feedback__rosidl_typesupport_fastrtps_c.h
+[23.686s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[23.686s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/lib/libma_interfaces__rosidl_typesupport_fastrtps_c.so
+[23.687s] -- Set runtime path of "/home/gkasha/Documents/maae/install/ma_interfaces/lib/libma_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[23.688s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/lib/libma_interfaces__rosidl_typesupport_c.so
+[23.688s] -- Set runtime path of "/home/gkasha/Documents/maae/install/ma_interfaces/lib/libma_interfaces__rosidl_typesupport_c.so" to ""
+[23.688s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces
+[23.688s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv
+[23.688s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail
+[23.688s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_result__traits.hpp
+[23.688s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/add_goal__builder.hpp
+[23.688s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__builder.hpp
+[23.688s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__traits.hpp
+[23.688s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_result__builder.hpp
+[23.689s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_result__struct.hpp
+[23.689s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__traits.hpp
+[23.689s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_bid__struct.hpp
+[23.689s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__traits.hpp
+[23.689s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__builder.hpp
+[23.689s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__builder.hpp
+[23.689s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_bid__builder.hpp
+[23.689s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_bid__traits.hpp
+[23.690s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__struct.hpp
+[23.690s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__struct.hpp
+[23.690s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/add_goal__traits.hpp
+[23.690s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/add_goal__struct.hpp
+[23.690s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__struct.hpp
+[23.690s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/register.hpp
+[23.690s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/get_goal.hpp
+[23.691s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/get_bid.hpp
+[23.691s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/auction_result.hpp
+[23.691s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/add_goal.hpp
+[23.691s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/auction_srv.hpp
+[23.691s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg
+[23.692s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/auction_msg.hpp
+[23.692s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail
+[23.692s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/node__builder.hpp
+[23.692s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__struct.hpp
+[23.692s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_feedback__builder.hpp
+[23.692s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__traits.hpp
+[23.693s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_dispatch__traits.hpp
+[23.693s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/auction_msg__builder.hpp
+[23.693s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/auction_msg__traits.hpp
+[23.693s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/auction_msg__struct.hpp
+[23.693s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__traits.hpp
+[23.693s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__builder.hpp
+[23.693s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__builder.hpp
+[23.693s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_feedback__traits.hpp
+[23.693s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__traits.hpp
+[23.693s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/node__struct.hpp
+[23.693s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__builder.hpp
+[23.694s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_dispatch__struct.hpp
+[23.694s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_dispatch__builder.hpp
+[23.694s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__struct.hpp
+[23.694s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__struct.hpp
+[23.694s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_feedback__struct.hpp
+[23.694s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/node__traits.hpp
+[23.694s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/action_feedback.hpp
+[23.694s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/bid.hpp
+[23.694s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/goal.hpp
+[23.694s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/task.hpp
+[23.694s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/node.hpp
+[23.695s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/action_dispatch.hpp
+[23.695s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces
+[23.695s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv
+[23.695s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail
+[23.695s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_bid__rosidl_typesupport_introspection_cpp.hpp
+[23.695s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__rosidl_typesupport_introspection_cpp.hpp
+[23.695s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__type_support.cpp
+[23.696s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/add_goal__type_support.cpp
+[23.696s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__type_support.cpp
+[23.696s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_result__rosidl_typesupport_introspection_cpp.hpp
+[23.696s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__rosidl_typesupport_introspection_cpp.hpp
+[23.697s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_bid__type_support.cpp
+[23.697s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__type_support.cpp
+[23.697s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/add_goal__rosidl_typesupport_introspection_cpp.hpp
+[23.697s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__rosidl_typesupport_introspection_cpp.hpp
+[23.697s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_result__type_support.cpp
+[23.697s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg
+[23.697s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail
+[23.698s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__type_support.cpp
+[23.698s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__rosidl_typesupport_introspection_cpp.hpp
+[23.698s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__type_support.cpp
+[23.698s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_dispatch__rosidl_typesupport_introspection_cpp.hpp
+[23.698s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_feedback__rosidl_typesupport_introspection_cpp.hpp
+[23.698s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_dispatch__type_support.cpp
+[23.698s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__rosidl_typesupport_introspection_cpp.hpp
+[23.698s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/auction_msg__rosidl_typesupport_introspection_cpp.hpp
+[23.699s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/node__rosidl_typesupport_introspection_cpp.hpp
+[23.699s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_feedback__type_support.cpp
+[23.699s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/node__type_support.cpp
+[23.699s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__type_support.cpp
+[23.699s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__rosidl_typesupport_introspection_cpp.hpp
+[23.699s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/auction_msg__type_support.cpp
+[23.699s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/lib/libma_interfaces__rosidl_typesupport_introspection_cpp.so
+[23.700s] -- Set runtime path of "/home/gkasha/Documents/maae/install/ma_interfaces/lib/libma_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[23.701s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces
+[23.701s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv
+[23.701s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail
+[23.701s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/dds_fastrtps
+[23.701s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_srv__rosidl_typesupport_fastrtps_cpp.hpp
+[23.701s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/register__rosidl_typesupport_fastrtps_cpp.hpp
+[23.701s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_goal__rosidl_typesupport_fastrtps_cpp.hpp
+[23.702s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/auction_result__rosidl_typesupport_fastrtps_cpp.hpp
+[23.702s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/get_bid__rosidl_typesupport_fastrtps_cpp.hpp
+[23.702s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/srv/detail/add_goal__rosidl_typesupport_fastrtps_cpp.hpp
+[23.702s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg
+[23.702s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail
+[23.702s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/goal__rosidl_typesupport_fastrtps_cpp.hpp
+[23.702s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_dispatch__rosidl_typesupport_fastrtps_cpp.hpp
+[23.702s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/dds_fastrtps
+[23.704s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__rosidl_typesupport_fastrtps_cpp.hpp
+[23.704s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/node__rosidl_typesupport_fastrtps_cpp.hpp
+[23.704s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/task__rosidl_typesupport_fastrtps_cpp.hpp
+[23.704s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/auction_msg__rosidl_typesupport_fastrtps_cpp.hpp
+[23.704s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/action_feedback__rosidl_typesupport_fastrtps_cpp.hpp
+[23.704s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[23.704s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/lib/libma_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[23.704s] -- Set runtime path of "/home/gkasha/Documents/maae/install/ma_interfaces/lib/libma_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[23.704s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/lib/libma_interfaces__rosidl_typesupport_cpp.so
+[23.704s] -- Set runtime path of "/home/gkasha/Documents/maae/install/ma_interfaces/lib/libma_interfaces__rosidl_typesupport_cpp.so" to ""
+[23.705s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/environment/pythonpath.sh
+[23.705s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/environment/pythonpath.dsv
+[23.705s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces-0.0.0-py3.10.egg-info
+[23.705s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[23.705s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[23.705s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[23.705s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[23.705s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces
+[23.705s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/libma_interfaces__rosidl_generator_py.so
+[23.705s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/srv
+[23.706s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/srv/_auction_srv.py
+[23.706s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/srv/_register.py
+[23.706s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/srv/_auction_srv_s.c
+[23.706s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/srv/_add_goal.py
+[23.706s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/srv/_get_goal.py
+[23.706s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/srv/_auction_result.py
+[23.706s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/srv/_auction_result_s.c
+[23.708s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/srv/_get_bid_s.c
+[23.709s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/srv/__init__.py
+[23.709s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/srv/_add_goal_s.c
+[23.709s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/srv/_register_s.c
+[23.710s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/srv/_get_bid.py
+[23.710s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/srv/_get_goal_s.c
+[23.710s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[23.711s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/msg
+[23.711s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/msg/_task.py
+[23.711s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/msg/_bid.py
+[23.711s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/msg/_goal_s.c
+[23.711s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/msg/_action_feedback_s.c
+[23.711s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/msg/_action_dispatch_s.c
+[23.711s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/msg/_task_s.c
+[23.711s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/msg/_action_dispatch.py
+[23.711s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/msg/_bid_s.c
+[23.711s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/msg/__init__.py
+[23.711s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/msg/_node.py
+[23.712s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/msg/_action_feedback.py
+[23.712s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/msg/_auction_msg.py
+[23.712s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/msg/_node_s.c
+[23.712s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/msg/_auction_msg_s.c
+[23.712s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/msg/_goal.py
+[23.712s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/__init__.py
+[23.712s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_c.c
+[23.712s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/ma_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[23.712s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/ma_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[23.712s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/ma_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[23.712s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/_ma_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[23.883s] Listing '/home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces'...
+[23.884s] Compiling '/home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/__init__.py'...
+[23.884s] Listing '/home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/msg'...
+[23.884s] Compiling '/home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/msg/__init__.py'...
+[23.884s] Compiling '/home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/msg/_action_dispatch.py'...
+[23.884s] Compiling '/home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/msg/_action_feedback.py'...
+[23.884s] Compiling '/home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/msg/_bid.py'...
+[23.884s] Compiling '/home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/msg/_goal.py'...
+[23.884s] Compiling '/home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/msg/_node.py'...
+[23.884s] Compiling '/home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/msg/_task.py'...
+[23.884s] Listing '/home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/srv'...
+[23.884s] Compiling '/home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/srv/__init__.py'...
+[23.884s] Compiling '/home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/srv/_add_goal.py'...
+[23.884s] Compiling '/home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/srv/_auction_result.py'...
+[23.884s] Compiling '/home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/srv/_auction_srv.py'...
+[23.884s] Compiling '/home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/srv/_get_bid.py'...
+[23.884s] Compiling '/home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/srv/_get_goal.py'...
+[23.884s] Compiling '/home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/srv/_register.py'...
+[23.890s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/ma_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[23.890s] -- Set runtime path of "/home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/ma_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[23.890s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/ma_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[23.890s] -- Set runtime path of "/home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/ma_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[23.891s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/ma_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[23.891s] -- Set runtime path of "/home/gkasha/Documents/maae/install/ma_interfaces/local/lib/python3.10/dist-packages/ma_interfaces/ma_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[23.893s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/lib/libma_interfaces__rosidl_generator_py.so
+[23.893s] -- Set runtime path of "/home/gkasha/Documents/maae/install/ma_interfaces/lib/libma_interfaces__rosidl_generator_py.so" to ""
+[23.893s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/msg/ActionDispatch.idl
+[23.893s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/msg/ActionFeedback.idl
+[23.893s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/msg/Node.idl
+[23.894s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/msg/Bid.idl
+[23.894s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/msg/Task.idl
+[23.894s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/msg/Goal.idl
+[23.894s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/srv/Register.idl
+[23.894s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/srv/AuctionSrv.idl
+[23.894s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/srv/AuctionResult.idl
+[23.894s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/srv/GetGoal.idl
+[23.894s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/srv/GetBid.idl
+[23.894s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/srv/AddGoal.idl
+[23.894s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/msg/ActionDispatch.msg
+[23.894s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/msg/ActionFeedback.msg
+[23.894s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/msg/Node.msg
+[23.894s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/msg/Bid.msg
+[23.894s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/msg/Task.msg
+[23.894s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/msg/Goal.msg
+[23.894s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/srv/Register.srv
+[23.895s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/srv/Register_Request.msg
+[23.895s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/srv/Register_Response.msg
+[23.895s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/srv/AuctionSrv.srv
+[23.895s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/srv/AuctionSrv_Request.msg
+[23.895s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/srv/AuctionSrv_Response.msg
+[23.895s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/srv/AuctionResult.srv
+[23.895s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/srv/AuctionResult_Request.msg
+[23.895s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/srv/AuctionResult_Response.msg
+[23.895s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/srv/GetGoal.srv
+[23.895s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/srv/GetGoal_Request.msg
+[23.896s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/srv/GetGoal_Response.msg
+[23.896s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/srv/GetBid.srv
+[23.896s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/srv/GetBid_Request.msg
+[23.896s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/srv/GetBid_Response.msg
+[23.896s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/srv/AddGoal.srv
+[23.896s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/srv/AddGoal_Request.msg
+[23.896s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/srv/AddGoal_Response.msg
+[23.896s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ament_index/resource_index/package_run_dependencies/ma_interfaces
+[23.897s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ament_index/resource_index/parent_prefix_path/ma_interfaces
+[23.897s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/environment/ament_prefix_path.dsv
+[23.897s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/environment/path.dsv
+[23.897s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/local_setup.bash
+[23.897s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/local_setup.sh
+[23.897s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/local_setup.zsh
+[23.897s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/local_setup.dsv
+[23.897s] -- Installing: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/package.dsv
+[23.897s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ament_index/resource_index/packages/ma_interfaces
+[23.897s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/export_ma_interfaces__rosidl_generator_cExport.cmake
+[23.897s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/export_ma_interfaces__rosidl_generator_cExport-noconfig.cmake
+[23.897s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/ma_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[23.898s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/ma_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[23.898s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/export_ma_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[23.898s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/export_ma_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[23.898s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/ma_interfaces__rosidl_typesupport_cExport.cmake
+[23.898s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/ma_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[23.898s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/export_ma_interfaces__rosidl_generator_cppExport.cmake
+[23.898s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/ma_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[23.898s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/ma_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[23.898s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/export_ma_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[23.898s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/export_ma_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[23.899s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/ma_interfaces__rosidl_typesupport_cppExport.cmake
+[23.899s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/ma_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[23.899s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/export_ma_interfaces__rosidl_generator_pyExport.cmake
+[23.899s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/export_ma_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[23.899s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/rosidl_cmake-extras.cmake
+[23.899s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[23.899s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[23.899s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[23.900s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[23.900s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[23.900s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[23.900s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/ma_interfacesConfig.cmake
+[23.900s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake/ma_interfacesConfig-version.cmake
+[23.900s] -- Up-to-date: /home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/package.xml
+[23.911s] Invoked command in '/home/gkasha/Documents/maae/build/ma_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gkasha/ros2_humble/install/rqt_bag_plugins:/home/gkasha/ros2_humble/install/rqt_bag:/home/gkasha/ros2_humble/install/ros2bag:/home/gkasha/ros2_humble/install/tracetools_test:/home/gkasha/ros2_humble/install/tracetools_launch:/home/gkasha/ros2_humble/install/topic_monitor:/home/gkasha/ros2_humble/install/tf2_tools:/home/gkasha/ros2_humble/install/examples_tf2_py:/home/gkasha/ros2_humble/install/tf2_ros_py:/home/gkasha/ros2_humble/install/sros2:/home/gkasha/ros2_humble/install/rqt_topic:/home/gkasha/ros2_humble/install/rqt_srv:/home/gkasha/ros2_humble/install/rqt_shell:/home/gkasha/ros2_humble/install/rqt_service_caller:/home/gkasha/ros2_humble/install/rqt_reconfigure:/home/gkasha/ros2_humble/install/rqt_py_console:/home/gkasha/ros2_humble/install/rqt_publisher:/home/gkasha/ros2_humble/install/rqt_plot:/home/gkasha/ros2_humble/install/rqt_action:/home/gkasha/ros2_humble/install/rqt_msg:/home/gkasha/ros2_humble/install/rqt_console:/home/gkasha/ros2_humble/install/rqt:/home/gkasha/ros2_humble/install/rqt_graph:/home/gkasha/ros2_humble/install/rqt_gui_py:/home/gkasha/ros2_humble/install/rqt_gui:/home/gkasha/ros2_humble/install/ros2trace:/home/gkasha/ros2_humble/install/ros2topic:/home/gkasha/ros2_humble/install/ros2test:/home/gkasha/ros2_humble/install/ros2component:/home/gkasha/ros2_humble/install/ros2param:/home/gkasha/ros2_humble/install/ros2lifecycle:/home/gkasha/ros2_humble/install/ros2service:/home/gkasha/ros2_humble/install/ros2run:/home/gkasha/ros2_humble/install/ros2launch:/home/gkasha/ros2_humble/install/ros2pkg:/home/gkasha/ros2_humble/install/ros2node:/home/gkasha/ros2_humble/install/ros2multicast:/home/gkasha/ros2_humble/install/ros2interface:/home/gkasha/ros2_humble/install/ros2doctor:/home/gkasha/ros2_humble/install/ros2action:/home/gkasha/ros2_humble/install/ros2cli:/home/gkasha/ros2_humble/install/quality_of_service_demo_py:/home/gkasha/ros2_humble/install/lifecycle_py:/home/gkasha/ros2_humble/install/launch_testing_ros:/home/gkasha/ros2_humble/install/launch_ros:/home/gkasha/ros2_humble/install/examples_rclpy_pointcloud_publisher:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_subscriber:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_service:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_publisher:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_client:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_action_server:/home/gkasha/ros2_humble/install/examples_rclpy_minimal_action_client:/home/gkasha/ros2_humble/install/examples_rclpy_guard_conditions:/home/gkasha/ros2_humble/install/examples_rclpy_executors:/home/gkasha/ros2_humble/install/demo_nodes_py:/home/gkasha/ros2_humble/install/action_tutorials_py:/home/gkasha/ros2_humble/install/ament_uncrustify:/home/gkasha/ros2_humble/install/tracetools_trace:/home/gkasha/ros2_humble/install/tracetools_read:/home/gkasha/ros2_humble/install/test_tracetools_launch:/home/gkasha/ros2_humble/install/test_launch_ros:/home/gkasha/ros2_humble/install/sensor_msgs_py:/home/gkasha/ros2_humble/install/rpyutils:/home/gkasha/ros2_humble/install/rosidl_runtime_py:/home/gkasha/ros2_humble/install/rosidl_cli:/home/gkasha/ros2_humble/install/launch_pytest:/home/gkasha/ros2_humble/install/launch_testing:/home/gkasha/ros2_humble/install/launch_yaml:/home/gkasha/ros2_humble/install/launch_xml:/home/gkasha/ros2_humble/install/launch:/home/gkasha/ros2_humble/install/osrf_pycommon:/home/gkasha/ros2_humble/install/launch_testing_examples:/home/gkasha/ros2_humble/install/domain_coordinator:/home/gkasha/ros2_humble/install/ament_xmllint:/home/gkasha/ros2_humble/install/ament_pyflakes:/home/gkasha/ros2_humble/install/ament_pycodestyle:/home/gkasha/ros2_humble/install/ament_pep257:/home/gkasha/ros2_humble/install/ament_pclint:/home/gkasha/ros2_humble/install/ament_package:/home/gkasha/ros2_humble/install/ament_mypy:/home/gkasha/ros2_humble/install/ament_lint_cmake:/home/gkasha/ros2_humble/install/ament_flake8:/home/gkasha/ros2_humble/install/ament_copyright:/home/gkasha/ros2_humble/install/ament_lint:/home/gkasha/ros2_humble/install/ament_index_python:/home/gkasha/ros2_humble/install/ament_cpplint:/home/gkasha/ros2_humble/install/ament_cppcheck:/home/gkasha/ros2_humble/install/ament_clang_tidy:/home/gkasha/ros2_humble/install/ament_clang_format /usr/bin/cmake --install /home/gkasha/Documents/maae/build/ma_interfaces

@@ -32,8 +32,11 @@ ma_interfaces__msg__Task__init(ma_interfaces__msg__Task * msg)
     ma_interfaces__msg__Task__fini(msg);
     return false;
   }
-  // duration
+  // num_agents
   // value
+  // duration
+  // st
+  // et
   return true;
 }
 
@@ -47,8 +50,11 @@ ma_interfaces__msg__Task__fini(ma_interfaces__msg__Task * msg)
   rosidl_runtime_c__String__fini(&msg->id);
   // owner
   rosidl_runtime_c__String__fini(&msg->owner);
-  // duration
+  // num_agents
   // value
+  // duration
+  // st
+  // et
 }
 
 bool
@@ -69,12 +75,24 @@ ma_interfaces__msg__Task__are_equal(const ma_interfaces__msg__Task * lhs, const 
   {
     return false;
   }
-  // duration
-  if (lhs->duration != rhs->duration) {
+  // num_agents
+  if (lhs->num_agents != rhs->num_agents) {
     return false;
   }
   // value
   if (lhs->value != rhs->value) {
+    return false;
+  }
+  // duration
+  if (lhs->duration != rhs->duration) {
+    return false;
+  }
+  // st
+  if (lhs->st != rhs->st) {
+    return false;
+  }
+  // et
+  if (lhs->et != rhs->et) {
     return false;
   }
   return true;
@@ -100,10 +118,16 @@ ma_interfaces__msg__Task__copy(
   {
     return false;
   }
-  // duration
-  output->duration = input->duration;
+  // num_agents
+  output->num_agents = input->num_agents;
   // value
   output->value = input->value;
+  // duration
+  output->duration = input->duration;
+  // st
+  output->st = input->st;
+  // et
+  output->et = input->et;
   return true;
 }
 

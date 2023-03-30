@@ -693,7 +693,11 @@ CMakeFiles/agent.dir/src/agent.cpp.o: /home/gkasha/Documents/maae/src/auction/sr
   /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/bid.hpp \
   /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__struct.hpp \
   /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__builder.hpp \
-  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__traits.hpp
+  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__traits.hpp \
+  /home/gkasha/ros2_humble/install/std_msgs/include/std_msgs/std_msgs/msg/int64.hpp \
+  /home/gkasha/ros2_humble/install/std_msgs/include/std_msgs/std_msgs/msg/detail/int64__struct.hpp \
+  /home/gkasha/ros2_humble/install/std_msgs/include/std_msgs/std_msgs/msg/detail/int64__builder.hpp \
+  /home/gkasha/ros2_humble/install/std_msgs/include/std_msgs/std_msgs/msg/detail/int64__traits.hpp
 
 CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/stn.cpp \
   /usr/include/stdc-predef.h \
@@ -924,6 +928,10 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
   /usr/include/c++/11/bits/fstream.tcc \
   /usr/include/c++/11/iostream
 
+
+/home/gkasha/ros2_humble/install/std_msgs/include/std_msgs/std_msgs/msg/detail/int64__builder.hpp:
+
+/home/gkasha/ros2_humble/install/std_msgs/include/std_msgs/std_msgs/msg/int64.hpp:
 
 /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__builder.hpp:
 
@@ -1178,6 +1186,8 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
 /home/gkasha/ros2_humble/src/ros2/rcutils/include/rcutils/qsort.h:
+
+/home/gkasha/ros2_humble/install/std_msgs/include/std_msgs/std_msgs/msg/detail/int64__struct.hpp:
 
 /usr/include/ctype.h:
 
@@ -2272,6 +2282,8 @@ CMakeFiles/agent.dir/src/stn.cpp.o: /home/gkasha/Documents/maae/src/auction/src/
 /usr/include/c++/11/typeindex:
 
 /home/gkasha/ros2_humble/build/statistics_msgs/rosidl_generator_cpp/statistics_msgs/msg/detail/metrics_message__traits.hpp:
+
+/home/gkasha/ros2_humble/install/std_msgs/include/std_msgs/std_msgs/msg/detail/int64__traits.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 

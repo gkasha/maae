@@ -1,0 +1,87 @@
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:61:38:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kstd::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > Agent::choose_winners(ma_interfaces::msg::Task, int)[m[K’
+   61 | std::vector<ma_interfaces::msg::Bid> [01;31m[KAgent[m[K::choose_winners(ma_interfaces::msg::Task task, int n) {
+      |                                      [01;31m[K^~~~~[m[K
+In file included from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:179:46:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kstd::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > Agent::choose_winners(ma_interfaces::msg::Task)[m[K’
+  179 |         std::vector<ma_interfaces::msg::Bid> [01;36m[Kchoose_winners[m[K(ma_interfaces::msg::Task task);
+      |                                              [01;36m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:43:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass Agent[m[K’ defined here
+   43 | class [01;36m[KAgent[m[K : public rclcpp::Node
+      |       [01;36m[K^~~~~[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/build/rclcpp/include/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::new_goals_cb(ma_interfaces::msg::Goal)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:143:139:[m[K [01;31m[Kerror: [m[K‘[01m[Kwinning_bid[m[K’ was not declared in this scope; did you mean ‘[01m[Kwinning_bids[m[K’?
+  143 |             if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing winner for auction %s: agent %s", task.id.c_str(), [01;31m[Kwinning_bid[m[K.agent_id.c_str());
+      |                                                                                                                                           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kstd::vector<TNode*> Agent::find_slots(int)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:155:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kverbose_1[m[K’ was not declared in this scope
+  155 |     if ([01;31m[Kverbose_1[m[K) print_timeline();
+      |         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K At global scope:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:190:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kbool Agent::schedule_task(ma_interfaces::msg::Task)[m[K’
+  190 | bool [01;31m[KAgent[m[K::schedule_task(ma_interfaces::msg::Task task) {
+      |      [01;31m[K^~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:190:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kbool Agent::schedule_task(ma_interfaces::msg::Task)[m[K’
+In file included from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:43:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass Agent[m[K’ defined here
+   43 | class [01;36m[KAgent[m[K : public rclcpp::Node
+      |       [01;36m[K^~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::new_tasks_cb(ma_interfaces::msg::Task)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:255:64:[m[K [01;31m[Kerror: [m[K‘[01m[Kslot_head[m[K’ was not declared in this scope
+  255 |             double st = -1*std::get<0>(stn.get_feasible_values([01;31m[Kslot_head[m[K->etp_));
+      |                                                                [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:254:21:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kslot[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  254 |         for (TNode* [01;35m[Kslot[m[K : slots) {
+      |                     [01;35m[K^~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:268:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kschedule_task[m[K’ was not declared in this scope
+  268 |         if ([01;31m[Kschedule_task[m[K(task)) {
+      |             [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::new_bids_cb(ma_interfaces::msg::Bid)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:346:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd::map<std::__cxx11::basic_string<char>, std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > >::mapped_type[m[K’ {aka ‘[01m[Kclass std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kfind[m[K’
+  346 |             if (bid_map[bid.auction_id].[01;31m[Kfind[m[K(bid.agent_id) == bid_map.end()) {
+      |                                         [01;31m[K^~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:347:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst Bid[m[K’ {aka ‘[01m[Kconst struct ma_interfaces::msg::Bid_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kactuion_id[m[K’; did you mean ‘[01m[Kauction_id[m[K’?
+  347 |                 bid_map[bid.[01;31m[Kactuion_id[m[K][bid.agent_id] = std::vector<ma_interfaces::msg::Bid>();
+      |                             [01;31m[K^~~~~~~~~~[m[K
+      |                             [32m[Kauction_id[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:349:36:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[Kstd::map<std::__cxx11::basic_string<char>, std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > >::mapped_type[m[K’ {aka ‘[01m[Kstd::vector<ma_interfaces::msg::Bid_<std::allocator<void> > >[m[K’} and ‘[01m[Kconst _agent_id_type[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>[m[K’})
+  349 |             bid_map[bid.auction_id][01;31m[K[[m[Kbid.agent_id].push_back(bid);
+      |                                    [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/11/vector:67[m[K,
+                 from [01m[K/usr/include/c++/11/functional:62[m[K,
+                 from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1043:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>::reference std::vector<_Tp, _Alloc>::operator[](std::vector<_Tp, _Alloc>::size_type) [with _Tp = ma_interfaces::msg::Bid_<std::allocator<void> >; _Alloc = std::allocator<ma_interfaces::msg::Bid_<std::allocator<void> > >; std::vector<_Tp, _Alloc>::reference = ma_interfaces::msg::Bid_<std::allocator<void> >&; std::vector<_Tp, _Alloc>::size_type = long unsigned int][m[K’
+ 1043 |       [01;36m[Koperator[m[K[](size_type __n) _GLIBCXX_NOEXCEPT
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1043:28:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst _agent_id_type[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kstd::vector<ma_interfaces::msg::Bid_<std::allocator<void> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+ 1043 |       operator[]([01;36m[Ksize_type __n[m[K) _GLIBCXX_NOEXCEPT
+      |                  [01;36m[K~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1061:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>::const_reference std::vector<_Tp, _Alloc>::operator[](std::vector<_Tp, _Alloc>::size_type) const [with _Tp = ma_interfaces::msg::Bid_<std::allocator<void> >; _Alloc = std::allocator<ma_interfaces::msg::Bid_<std::allocator<void> > >; std::vector<_Tp, _Alloc>::const_reference = const ma_interfaces::msg::Bid_<std::allocator<void> >&; std::vector<_Tp, _Alloc>::size_type = long unsigned int][m[K’
+ 1061 |       [01;36m[Koperator[m[K[](size_type __n) const _GLIBCXX_NOEXCEPT
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1061:28:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst _agent_id_type[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kstd::vector<ma_interfaces::msg::Bid_<std::allocator<void> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+ 1061 |       operator[]([01;36m[Ksize_type __n[m[K) const _GLIBCXX_NOEXCEPT
+      |                  [01;36m[K~~~~~~~~~~^~~[m[K
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/agent.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

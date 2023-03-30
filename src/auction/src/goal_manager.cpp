@@ -81,7 +81,9 @@ class ListenerNode : public rclcpp::Node
 
             ma_interfaces::msg::Goal new_goal = ma_interfaces::msg::Goal();
             new_goal.id = goal.id;
+            new_goal.num_agents = goal.num_agents;
             new_goal.owner = winning_bid.agent_id;
+            // new_goal.deadline = 
             publisher_->publish(new_goal);
         }
 };

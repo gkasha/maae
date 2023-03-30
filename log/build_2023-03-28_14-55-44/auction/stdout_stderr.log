@@ -1,0 +1,1098 @@
+-- Found ament_cmake: 1.3.3 (/home/gkasha/ros2_humble/install/ament_cmake/share/ament_cmake/cmake)
+-- Found rclcpp: 16.0.3 (/home/gkasha/ros2_humble/install/rclcpp/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.4 (/home/gkasha/ros2_humble/install/rosidl_generator_c/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.4 (/home/gkasha/ros2_humble/install/rosidl_adapter/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.4 (/home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_introspection_c;rosidl_typesupport_fastrtps_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp;rosidl_typesupport_fastrtps_cpp
+-- Found rmw_implementation_cmake: 6.1.1 (/home/gkasha/ros2_humble/install/rmw_implementation_cmake/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.2 (/home/gkasha/ros2_humble/install/rmw_fastrtps_cpp/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found ma_interfaces: 0.0.0 (/home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake)
+-- Found ament_lint_auto: 0.12.5 (/home/gkasha/ros2_humble/install/ament_lint_auto/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/gkasha/Documents/maae/src/auction/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/gkasha/Documents/maae/build/auction
+[35m[1mConsolidate compiler generated dependencies of target client[0m
+[35m[1mConsolidate compiler generated dependencies of target execution_interface[0m
+[35m[1mConsolidate compiler generated dependencies of target goal_manager[0m
+[35m[1mConsolidate compiler generated dependencies of target agent[0m
+[ 11%] [32mBuilding CXX object CMakeFiles/goal_manager.dir/src/goal_manager.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/agent.dir/src/agent.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/execution_interface.dir/src/execution_interface.cpp.o[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/client.dir/src/client.cpp.o[0m
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In function ‘[01m[Kstd::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > choose_winners(ma_interfaces::msg::Task, int)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:68:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kbid_map[m[K’ was not declared in this scope
+   68 |     for (auto const& elt : [01;31m[Kbid_map[m[K[task.id]) {
+      |                            [01;31m[K^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:74:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kbid_map[m[K’ was not declared in this scope
+   74 |         for (ma_interfaces::msg::Bid bid : [01;31m[Kbid_map[m[K[task.id][agent]) {
+      |                                            [01;31m[K^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:86:43:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kstd::vector<std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > >::push_back(std::tuple<double, double, std::vector<ma_interfaces::msg::Bid_<std::allocator<void> >, std::allocator<ma_interfaces::msg::Bid_<std::allocator<void> > > > >)[m[K’
+   86 |                         [01;31m[Koverlaps.push_back(std::make_tuple(st,et,overlap))[m[K;
+      |                         [01;31m[K~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/vector:67[m[K,
+                 from [01m[K/usr/include/c++/11/functional:62[m[K,
+                 from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1187:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > >; _Alloc = std::allocator<std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > >; std::vector<_Tp, _Alloc>::value_type = std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > >][m[K’
+ 1187 |       [01;36m[Kpush_back[m[K(const value_type& __x)
+      |       [01;36m[K^~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1187:35:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::tuple<double, double, std::vector<ma_interfaces::msg::Bid_<std::allocator<void> >, std::allocator<ma_interfaces::msg::Bid_<std::allocator<void> > > > >[m[K’ to ‘[01m[Kconst value_type&[m[K’ {aka ‘[01m[Kconst std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > >&[m[K’}
+ 1187 |       push_back([01;36m[Kconst value_type& __x[m[K)
+      |                 [01;36m[K~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1203:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid std::vector<_Tp, _Alloc>::push_back(std::vector<_Tp, _Alloc>::value_type&&) [with _Tp = std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > >; _Alloc = std::allocator<std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > >; std::vector<_Tp, _Alloc>::value_type = std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > >][m[K’
+ 1203 |       [01;36m[Kpush_back[m[K(value_type&& __x)
+      |       [01;36m[K^~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1203:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::tuple<double, double, std::vector<ma_interfaces::msg::Bid_<std::allocator<void> >, std::allocator<ma_interfaces::msg::Bid_<std::allocator<void> > > > >[m[K’ to ‘[01m[Kstd::vector<std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > >::value_type&&[m[K’ {aka ‘[01m[Kstd::vector<ma_interfaces::msg::Bid_<std::allocator<void> > >&&[m[K’}
+ 1203 |       push_back([01;36m[Kvalue_type&& __x[m[K)
+      |                 [01;36m[K~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:95:9:[m[K [01;31m[Kerror: [m[Kclass template placeholder ‘[01m[Kstd::tuple[m[K’ not permitted in this context
+   95 |         [01;31m[Kstd[m[K::tuple(double,double,std::vector<ma_interfaces::msg::Bid>) left,
+      |         [01;31m[K^~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:95:72:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[Kleft[m[K’
+   95 |         std::tuple(double,double,std::vector<ma_interfaces::msg::Bid>) [01;31m[Kleft[m[K,
+      |                                                                        [01;31m[K^~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In lambda function:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kget<0>(std::ios_base& (&)(std::ios_base&))[m[K’
+   97 |         {return [01;31m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;31m[K~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/utility:223:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int _Int, class _Tp1, class _Tp2> constexpr typename std::tuple_element<_Int, std::pair<_Tp1, _Tp2> >::type& std::get(std::pair<_Tp1, _Tp2>&)[m[K’
+  223 |     [01;36m[Kget[m[K(pair<_Tp1, _Tp2>& __in) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/utility:223:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::pair<_Tp1, _Tp2>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return [01;36m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;36m[K~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/utility:228:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int _Int, class _Tp1, class _Tp2> constexpr typename std::tuple_element<_Int, std::pair<_Tp1, _Tp2> >::type&& std::get(std::pair<_Tp1, _Tp2>&&)[m[K’
+  228 |     [01;36m[Kget[m[K(pair<_Tp1, _Tp2>&& __in) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/utility:228:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::pair<_Tp1, _Tp2>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return [01;36m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;36m[K~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/utility:233:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int _Int, class _Tp1, class _Tp2> constexpr const typename std::tuple_element<_Int, std::pair<_Tp1, _Tp2> >::type& std::get(const std::pair<_Tp1, _Tp2>&)[m[K’
+  233 |     [01;36m[Kget[m[K(const pair<_Tp1, _Tp2>& __in) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/utility:233:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::pair<_Tp1, _Tp2>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return [01;36m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;36m[K~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/utility:238:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int _Int, class _Tp1, class _Tp2> constexpr const typename std::tuple_element<_Int, std::pair<_Tp1, _Tp2> >::type&& std::get(const std::pair<_Tp1, _Tp2>&&)[m[K’
+  238 |     [01;36m[Kget[m[K(const pair<_Tp1, _Tp2>&& __in) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/utility:238:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::pair<_Tp1, _Tp2>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return [01;36m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;36m[K~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/utility:247:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr _Tp& std::get(std::pair<_T1, _T2>&)[m[K’
+  247 |     [01;36m[Kget[m[K(pair<_Tp, _Up>& __p) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/utility:247:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Up> constexpr _Tp& std::get(std::pair<_T1, _T2>&)[m[K’
+   97 |         {return [01;31m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;31m[K~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/utility:252:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr const _Tp& std::get(const std::pair<_T1, _T2>&)[m[K’
+  252 |     [01;36m[Kget[m[K(const pair<_Tp, _Up>& __p) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/utility:252:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Up> constexpr const _Tp& std::get(const std::pair<_T1, _T2>&)[m[K’
+   97 |         {return [01;31m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;31m[K~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/utility:257:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr _Tp&& std::get(std::pair<_T1, _T2>&&)[m[K’
+  257 |     [01;36m[Kget[m[K(pair<_Tp, _Up>&& __p) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/utility:257:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Up> constexpr _Tp&& std::get(std::pair<_T1, _T2>&&)[m[K’
+   97 |         {return [01;31m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;31m[K~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/utility:262:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr const _Tp&& std::get(const std::pair<_T1, _T2>&&)[m[K’
+  262 |     [01;36m[Kget[m[K(const pair<_Tp, _Up>&& __p) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/utility:262:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Up> constexpr const _Tp&& std::get(const std::pair<_T1, _T2>&&)[m[K’
+   97 |         {return [01;31m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;31m[K~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/utility:267:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr _Tp& std::get(std::pair<_Up, _Tp>&)[m[K’
+  267 |     [01;36m[Kget[m[K(pair<_Up, _Tp>& __p) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/utility:267:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Up> constexpr _Tp& std::get(std::pair<_Up, _Tp>&)[m[K’
+   97 |         {return [01;31m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;31m[K~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/utility:272:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr const _Tp& std::get(const std::pair<_Up, _Tp>&)[m[K’
+  272 |     [01;36m[Kget[m[K(const pair<_Up, _Tp>& __p) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/utility:272:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Up> constexpr const _Tp& std::get(const std::pair<_Up, _Tp>&)[m[K’
+   97 |         {return [01;31m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;31m[K~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/utility:277:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr _Tp&& std::get(std::pair<_Up, _Tp>&&)[m[K’
+  277 |     [01;36m[Kget[m[K(pair<_Up, _Tp>&& __p) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/utility:277:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Up> constexpr _Tp&& std::get(std::pair<_Up, _Tp>&&)[m[K’
+   97 |         {return [01;31m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;31m[K~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/utility:282:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr const _Tp&& std::get(const std::pair<_Up, _Tp>&&)[m[K’
+  282 |     [01;36m[Kget[m[K(const pair<_Up, _Tp>&& __p) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/utility:282:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Up> constexpr const _Tp&& std::get(const std::pair<_Up, _Tp>&&)[m[K’
+   97 |         {return [01;31m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;31m[K~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/usr/include/c++/11/tuple:39[m[K,
+                 from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/array:361:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int _Int, class _Tp, long unsigned int _Nm> constexpr _Tp& std::get(std::array<_Tp, _Nm>&)[m[K’
+  361 |     [01;36m[Kget[m[K(array<_Tp, _Nm>& __arr) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/array:361:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::array<_Tp, _Nm>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return [01;36m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;36m[K~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/tuple:39[m[K,
+                 from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/array:369:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int _Int, class _Tp, long unsigned int _Nm> constexpr _Tp&& std::get(std::array<_Tp, _Nm>&&)[m[K’
+  369 |     [01;36m[Kget[m[K(array<_Tp, _Nm>&& __arr) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/array:369:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::array<_Tp, _Nm>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return [01;36m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;36m[K~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/tuple:39[m[K,
+                 from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/array:377:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int _Int, class _Tp, long unsigned int _Nm> constexpr const _Tp& std::get(const std::array<_Tp, _Nm>&)[m[K’
+  377 |     [01;36m[Kget[m[K(const array<_Tp, _Nm>& __arr) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/array:377:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::array<_Tp, _Nm>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return [01;36m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;36m[K~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/tuple:39[m[K,
+                 from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/array:385:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int _Int, class _Tp, long unsigned int _Nm> constexpr const _Tp&& std::get(const std::array<_Tp, _Nm>&&)[m[K’
+  385 |     [01;36m[Kget[m[K(const array<_Tp, _Nm>&& __arr) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/array:385:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::array<_Tp, _Nm>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return [01;36m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;36m[K~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/tuple:1397:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int __i, class ... _Elements> constexpr std::__tuple_element_t<__i, std::tuple<_UTypes ...> >& std::get(std::tuple<_UTypes ...>&)[m[K’
+ 1397 |     [01;36m[Kget[m[K(tuple<_Elements...>& __t) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/tuple:1397:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::tuple<_UTypes ...>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return [01;36m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;36m[K~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/tuple:1403:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int __i, class ... _Elements> constexpr std::__tuple_element_t<__i, std::tuple<_UTypes ...> >& std::get(const std::tuple<_UTypes ...>&)[m[K’
+ 1403 |     [01;36m[Kget[m[K(const tuple<_Elements...>& __t) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/tuple:1403:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::tuple<_UTypes ...>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return [01;36m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;36m[K~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/tuple:1409:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int __i, class ... _Elements> constexpr std::__tuple_element_t<__i, std::tuple<_UTypes ...> >&& std::get(std::tuple<_UTypes ...>&&)[m[K’
+ 1409 |     [01;36m[Kget[m[K(tuple<_Elements...>&& __t) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/tuple:1409:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::tuple<_UTypes ...>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return [01;36m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;36m[K~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/tuple:1418:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int __i, class ... _Elements> constexpr std::__tuple_element_t<__i, std::tuple<_UTypes ...> >&& std::get(const std::tuple<_UTypes ...>&&)[m[K’
+ 1418 |     [01;36m[Kget[m[K(const tuple<_Elements...>&& __t) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/tuple:1418:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::tuple<_UTypes ...>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return [01;36m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;36m[K~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/tuple:1453:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr _Tp& std::get(std::tuple<_UTypes ...>&)[m[K’
+ 1453 |     [01;36m[Kget[m[K(tuple<_Types...>& __t) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/tuple:1453:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr _Tp& std::get(std::tuple<_UTypes ...>&)[m[K’
+   97 |         {return [01;31m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;31m[K~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/tuple:1464:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr _Tp&& std::get(std::tuple<_UTypes ...>&&)[m[K’
+ 1464 |     [01;36m[Kget[m[K(tuple<_Types...>&& __t) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/tuple:1464:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr _Tp&& std::get(std::tuple<_UTypes ...>&&)[m[K’
+   97 |         {return [01;31m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;31m[K~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/tuple:1475:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr const _Tp& std::get(const std::tuple<_UTypes ...>&)[m[K’
+ 1475 |     [01;36m[Kget[m[K(const tuple<_Types...>& __t) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/tuple:1475:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr const _Tp& std::get(const std::tuple<_UTypes ...>&)[m[K’
+   97 |         {return [01;31m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;31m[K~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/tuple:1487:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr const _Tp&& std::get(const std::tuple<_UTypes ...>&&)[m[K’
+ 1487 |     [01;36m[Kget[m[K(const tuple<_Types...>&& __t) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/tuple:1487:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr const _Tp&& std::get(const std::tuple<_UTypes ...>&&)[m[K’
+   97 |         {return [01;31m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;31m[K~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:28[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/variant:1710:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int _Np, class ... _Types> constexpr std::variant_alternative_t<_Np, std::variant<_Types ...> >& std::get(std::variant<_Types ...>&)[m[K’
+ 1710 |     [01;36m[Kget[m[K(variant<_Types...>& __v)
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/variant:1710:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::variant<_Types ...>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return [01;36m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;36m[K~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:28[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/variant:1721:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int _Np, class ... _Types> constexpr std::variant_alternative_t<_Np, std::variant<_Types ...> >&& std::get(std::variant<_Types ...>&&)[m[K’
+ 1721 |     [01;36m[Kget[m[K(variant<_Types...>&& __v)
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/variant:1721:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::variant<_Types ...>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return [01;36m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;36m[K~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:28[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/variant:1732:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int _Np, class ... _Types> constexpr std::variant_alternative_t<_Np, std::variant<_Types ...> >& std::get(const std::variant<_Types ...>&)[m[K’
+ 1732 |     [01;36m[Kget[m[K(const variant<_Types...>& __v)
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/variant:1732:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::variant<_Types ...>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return [01;36m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;36m[K~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:28[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/variant:1743:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int _Np, class ... _Types> constexpr std::variant_alternative_t<_Np, std::variant<_Types ...> >&& std::get(const std::variant<_Types ...>&&)[m[K’
+ 1743 |     [01;36m[Kget[m[K(const variant<_Types...>&& __v)
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/variant:1743:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::variant<_Types ...>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return [01;36m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;36m[K~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:28[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/variant:1134:20:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr _Tp& std::get(std::variant<_Types ...>&)[m[K’
+ 1134 |     constexpr _Tp& [01;36m[Kget[m[K(variant<_Types...>& __v)
+      |                    [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/variant:1134:20:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr _Tp& std::get(std::variant<_Types ...>&)[m[K’
+   97 |         {return [01;31m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;31m[K~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:28[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/variant:1143:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr _Tp&& std::get(std::variant<_Types ...>&&)[m[K’
+ 1143 |     constexpr _Tp&& [01;36m[Kget[m[K(variant<_Types...>&& __v)
+      |                     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/variant:1143:21:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr _Tp&& std::get(std::variant<_Types ...>&&)[m[K’
+   97 |         {return [01;31m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;31m[K~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:28[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/variant:1153:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr const _Tp& std::get(const std::variant<_Types ...>&)[m[K’
+ 1153 |     constexpr const _Tp& [01;36m[Kget[m[K(const variant<_Types...>& __v)
+      |                          [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/variant:1153:26:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr const _Tp& std::get(const std::variant<_Types ...>&)[m[K’
+   97 |         {return [01;31m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;31m[K~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:28[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/variant:1162:27:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr const _Tp&& std::get(const std::variant<_Types ...>&&)[m[K’
+ 1162 |     constexpr const _Tp&& [01;36m[Kget[m[K(const variant<_Types...>&& __v)
+      |                           [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/variant:1162:27:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr const _Tp&& std::get(const std::variant<_Types ...>&&)[m[K’
+   97 |         {return [01;31m[Kstd::get<0>(left)[m[K < std::get<0>(right);};
+      |                 [01;31m[K~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:28:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kget<0>(std::ios_base& (&)(std::ios_base&))[m[K’
+   97 |         {return std::get<0>(left) < [01;31m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;31m[K~~~~~~~~~~~^~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/utility:223:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int _Int, class _Tp1, class _Tp2> constexpr typename std::tuple_element<_Int, std::pair<_Tp1, _Tp2> >::type& std::get(std::pair<_Tp1, _Tp2>&)[m[K’
+  223 |     [01;36m[Kget[m[K(pair<_Tp1, _Tp2>& __in) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/utility:223:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::pair<_Tp1, _Tp2>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return std::get<0>(left) < [01;36m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;36m[K~~~~~~~~~~~^~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/utility:228:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int _Int, class _Tp1, class _Tp2> constexpr typename std::tuple_element<_Int, std::pair<_Tp1, _Tp2> >::type&& std::get(std::pair<_Tp1, _Tp2>&&)[m[K’
+  228 |     [01;36m[Kget[m[K(pair<_Tp1, _Tp2>&& __in) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/utility:228:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::pair<_Tp1, _Tp2>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return std::get<0>(left) < [01;36m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;36m[K~~~~~~~~~~~^~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/utility:233:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int _Int, class _Tp1, class _Tp2> constexpr const typename std::tuple_element<_Int, std::pair<_Tp1, _Tp2> >::type& std::get(const std::pair<_Tp1, _Tp2>&)[m[K’
+  233 |     [01;36m[Kget[m[K(const pair<_Tp1, _Tp2>& __in) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/utility:233:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::pair<_Tp1, _Tp2>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return std::get<0>(left) < [01;36m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;36m[K~~~~~~~~~~~^~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/utility:238:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int _Int, class _Tp1, class _Tp2> constexpr const typename std::tuple_element<_Int, std::pair<_Tp1, _Tp2> >::type&& std::get(const std::pair<_Tp1, _Tp2>&&)[m[K’
+  238 |     [01;36m[Kget[m[K(const pair<_Tp1, _Tp2>&& __in) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/utility:238:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::pair<_Tp1, _Tp2>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return std::get<0>(left) < [01;36m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;36m[K~~~~~~~~~~~^~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/utility:247:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr _Tp& std::get(std::pair<_T1, _T2>&)[m[K’
+  247 |     [01;36m[Kget[m[K(pair<_Tp, _Up>& __p) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/utility:247:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Up> constexpr _Tp& std::get(std::pair<_T1, _T2>&)[m[K’
+   97 |         {return std::get<0>(left) < [01;31m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;31m[K~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/utility:252:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr const _Tp& std::get(const std::pair<_T1, _T2>&)[m[K’
+  252 |     [01;36m[Kget[m[K(const pair<_Tp, _Up>& __p) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/utility:252:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Up> constexpr const _Tp& std::get(const std::pair<_T1, _T2>&)[m[K’
+   97 |         {return std::get<0>(left) < [01;31m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;31m[K~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/utility:257:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr _Tp&& std::get(std::pair<_T1, _T2>&&)[m[K’
+  257 |     [01;36m[Kget[m[K(pair<_Tp, _Up>&& __p) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/utility:257:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Up> constexpr _Tp&& std::get(std::pair<_T1, _T2>&&)[m[K’
+   97 |         {return std::get<0>(left) < [01;31m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;31m[K~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/utility:262:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr const _Tp&& std::get(const std::pair<_T1, _T2>&&)[m[K’
+  262 |     [01;36m[Kget[m[K(const pair<_Tp, _Up>&& __p) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/utility:262:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Up> constexpr const _Tp&& std::get(const std::pair<_T1, _T2>&&)[m[K’
+   97 |         {return std::get<0>(left) < [01;31m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;31m[K~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/utility:267:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr _Tp& std::get(std::pair<_Up, _Tp>&)[m[K’
+  267 |     [01;36m[Kget[m[K(pair<_Up, _Tp>& __p) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/utility:267:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Up> constexpr _Tp& std::get(std::pair<_Up, _Tp>&)[m[K’
+   97 |         {return std::get<0>(left) < [01;31m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;31m[K~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/utility:272:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr const _Tp& std::get(const std::pair<_Up, _Tp>&)[m[K’
+  272 |     [01;36m[Kget[m[K(const pair<_Up, _Tp>& __p) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/utility:272:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Up> constexpr const _Tp& std::get(const std::pair<_Up, _Tp>&)[m[K’
+   97 |         {return std::get<0>(left) < [01;31m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;31m[K~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/utility:277:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr _Tp&& std::get(std::pair<_Up, _Tp>&&)[m[K’
+  277 |     [01;36m[Kget[m[K(pair<_Up, _Tp>&& __p) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/utility:277:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Up> constexpr _Tp&& std::get(std::pair<_Up, _Tp>&&)[m[K’
+   97 |         {return std::get<0>(left) < [01;31m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;31m[K~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:36[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/utility:282:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _Up> constexpr const _Tp&& std::get(const std::pair<_Up, _Tp>&&)[m[K’
+  282 |     [01;36m[Kget[m[K(const pair<_Up, _Tp>&& __p) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/utility:282:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Up> constexpr const _Tp&& std::get(const std::pair<_Up, _Tp>&&)[m[K’
+   97 |         {return std::get<0>(left) < [01;31m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;31m[K~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/usr/include/c++/11/tuple:39[m[K,
+                 from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/array:361:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int _Int, class _Tp, long unsigned int _Nm> constexpr _Tp& std::get(std::array<_Tp, _Nm>&)[m[K’
+  361 |     [01;36m[Kget[m[K(array<_Tp, _Nm>& __arr) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/array:361:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::array<_Tp, _Nm>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return std::get<0>(left) < [01;36m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;36m[K~~~~~~~~~~~^~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/tuple:39[m[K,
+                 from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/array:369:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int _Int, class _Tp, long unsigned int _Nm> constexpr _Tp&& std::get(std::array<_Tp, _Nm>&&)[m[K’
+  369 |     [01;36m[Kget[m[K(array<_Tp, _Nm>&& __arr) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/array:369:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::array<_Tp, _Nm>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return std::get<0>(left) < [01;36m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;36m[K~~~~~~~~~~~^~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/tuple:39[m[K,
+                 from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/array:377:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int _Int, class _Tp, long unsigned int _Nm> constexpr const _Tp& std::get(const std::array<_Tp, _Nm>&)[m[K’
+  377 |     [01;36m[Kget[m[K(const array<_Tp, _Nm>& __arr) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/array:377:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::array<_Tp, _Nm>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return std::get<0>(left) < [01;36m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;36m[K~~~~~~~~~~~^~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/tuple:39[m[K,
+                 from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/array:385:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int _Int, class _Tp, long unsigned int _Nm> constexpr const _Tp&& std::get(const std::array<_Tp, _Nm>&&)[m[K’
+  385 |     [01;36m[Kget[m[K(const array<_Tp, _Nm>&& __arr) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/array:385:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::array<_Tp, _Nm>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return std::get<0>(left) < [01;36m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;36m[K~~~~~~~~~~~^~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/tuple:1397:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int __i, class ... _Elements> constexpr std::__tuple_element_t<__i, std::tuple<_UTypes ...> >& std::get(std::tuple<_UTypes ...>&)[m[K’
+ 1397 |     [01;36m[Kget[m[K(tuple<_Elements...>& __t) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/tuple:1397:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::tuple<_UTypes ...>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return std::get<0>(left) < [01;36m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;36m[K~~~~~~~~~~~^~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/tuple:1403:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int __i, class ... _Elements> constexpr std::__tuple_element_t<__i, std::tuple<_UTypes ...> >& std::get(const std::tuple<_UTypes ...>&)[m[K’
+ 1403 |     [01;36m[Kget[m[K(const tuple<_Elements...>& __t) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/tuple:1403:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::tuple<_UTypes ...>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return std::get<0>(left) < [01;36m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;36m[K~~~~~~~~~~~^~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/tuple:1409:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int __i, class ... _Elements> constexpr std::__tuple_element_t<__i, std::tuple<_UTypes ...> >&& std::get(std::tuple<_UTypes ...>&&)[m[K’
+ 1409 |     [01;36m[Kget[m[K(tuple<_Elements...>&& __t) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/tuple:1409:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::tuple<_UTypes ...>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return std::get<0>(left) < [01;36m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;36m[K~~~~~~~~~~~^~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/tuple:1418:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int __i, class ... _Elements> constexpr std::__tuple_element_t<__i, std::tuple<_UTypes ...> >&& std::get(const std::tuple<_UTypes ...>&&)[m[K’
+ 1418 |     [01;36m[Kget[m[K(const tuple<_Elements...>&& __t) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/tuple:1418:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::tuple<_UTypes ...>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return std::get<0>(left) < [01;36m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;36m[K~~~~~~~~~~~^~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/tuple:1453:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr _Tp& std::get(std::tuple<_UTypes ...>&)[m[K’
+ 1453 |     [01;36m[Kget[m[K(tuple<_Types...>& __t) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/tuple:1453:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr _Tp& std::get(std::tuple<_UTypes ...>&)[m[K’
+   97 |         {return std::get<0>(left) < [01;31m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;31m[K~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/tuple:1464:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr _Tp&& std::get(std::tuple<_UTypes ...>&&)[m[K’
+ 1464 |     [01;36m[Kget[m[K(tuple<_Types...>&& __t) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/tuple:1464:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr _Tp&& std::get(std::tuple<_UTypes ...>&&)[m[K’
+   97 |         {return std::get<0>(left) < [01;31m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;31m[K~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/tuple:1475:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr const _Tp& std::get(const std::tuple<_UTypes ...>&)[m[K’
+ 1475 |     [01;36m[Kget[m[K(const tuple<_Types...>& __t) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/tuple:1475:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr const _Tp& std::get(const std::tuple<_UTypes ...>&)[m[K’
+   97 |         {return std::get<0>(left) < [01;31m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;31m[K~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/usr/include/c++/11/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/memory:76[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/tuple:1487:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr const _Tp&& std::get(const std::tuple<_UTypes ...>&&)[m[K’
+ 1487 |     [01;36m[Kget[m[K(const tuple<_Types...>&& __t) noexcept
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/tuple:1487:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr const _Tp&& std::get(const std::tuple<_UTypes ...>&&)[m[K’
+   97 |         {return std::get<0>(left) < [01;31m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;31m[K~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:28[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/variant:1710:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int _Np, class ... _Types> constexpr std::variant_alternative_t<_Np, std::variant<_Types ...> >& std::get(std::variant<_Types ...>&)[m[K’
+ 1710 |     [01;36m[Kget[m[K(variant<_Types...>& __v)
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/variant:1710:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::variant<_Types ...>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return std::get<0>(left) < [01;36m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;36m[K~~~~~~~~~~~^~~~~~~[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:28[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/variant:1721:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int _Np, class ... _Types> constexpr std::variant_alternative_t<_Np, std::variant<_Types ...> >&& std::get(std::variant<_Types ...>&&)[m[K’
+ 1721 |     [01;36m[Kget[m[K(variant<_Types...>&& __v)
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/variant:1721:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::variant<_Types ...>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return std::get<0>(left) < [01;36m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;36m[K~~~~~~~~~~~^~~~~~~[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:28[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/variant:1732:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int _Np, class ... _Types> constexpr std::variant_alternative_t<_Np, std::variant<_Types ...> >& std::get(const std::variant<_Types ...>&)[m[K’
+ 1732 |     [01;36m[Kget[m[K(const variant<_Types...>& __v)
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/variant:1732:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::variant<_Types ...>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return std::get<0>(left) < [01;36m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;36m[K~~~~~~~~~~~^~~~~~~[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:28[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/variant:1743:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<long unsigned int _Np, class ... _Types> constexpr std::variant_alternative_t<_Np, std::variant<_Types ...> >&& std::get(const std::variant<_Types ...>&&)[m[K’
+ 1743 |     [01;36m[Kget[m[K(const variant<_Types...>&& __v)
+      |     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/variant:1743:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst std::variant<_Types ...>[m[K’ and ‘[01m[Kstd::ios_base&(std::ios_base&)[m[K’
+   97 |         {return std::get<0>(left) < [01;36m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;36m[K~~~~~~~~~~~^~~~~~~[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:28[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/variant:1134:20:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr _Tp& std::get(std::variant<_Types ...>&)[m[K’
+ 1134 |     constexpr _Tp& [01;36m[Kget[m[K(variant<_Types...>& __v)
+      |                    [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/variant:1134:20:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr _Tp& std::get(std::variant<_Types ...>&)[m[K’
+   97 |         {return std::get<0>(left) < [01;31m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;31m[K~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:28[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/variant:1143:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr _Tp&& std::get(std::variant<_Types ...>&&)[m[K’
+ 1143 |     constexpr _Tp&& [01;36m[Kget[m[K(variant<_Types...>&& __v)
+      |                     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/variant:1143:21:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr _Tp&& std::get(std::variant<_Types ...>&&)[m[K’
+   97 |         {return std::get<0>(left) < [01;31m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;31m[K~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:28[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/variant:1153:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr const _Tp& std::get(const std::variant<_Types ...>&)[m[K’
+ 1153 |     constexpr const _Tp& [01;36m[Kget[m[K(const variant<_Types...>& __v)
+      |                          [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/variant:1153:26:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr const _Tp& std::get(const std::variant<_Types ...>&)[m[K’
+   97 |         {return std::get<0>(left) < [01;31m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;31m[K~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+In file included from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:28[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/variant:1162:27:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr const _Tp&& std::get(const std::variant<_Types ...>&&)[m[K’
+ 1162 |     constexpr const _Tp&& [01;36m[Kget[m[K(const variant<_Types...>&& __v)
+      |                           [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/11/variant:1162:27:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class ... _Types> constexpr const _Tp&& std::get(const std::variant<_Types ...>&&)[m[K’
+   97 |         {return std::get<0>(left) < [01;31m[Kstd::get<0>(right)[m[K;};
+      |                                     [01;31m[K~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:97:48:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[K0[m[K’
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In function ‘[01m[Kstd::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > choose_winners(ma_interfaces::msg::Task, int)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:102:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kwinner_map[m[K’ was not declared in this scope
+  102 |     [01;31m[Kwinner_map[m[K[task.id] = overlaps;
+      |     [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:103:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kbid_map[m[K’ was not declared in this scope
+  103 |     [01;31m[Kbid_map[m[K.erase(task_id);
+      |     [01;31m[K^~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:103:19:[m[K [01;31m[Kerror: [m[K‘[01m[Ktask_id[m[K’ was not declared in this scope; did you mean ‘[01m[Ktask[m[K’?
+  103 |     bid_map.erase([01;31m[Ktask_id[m[K);
+      |                   [01;31m[K^~~~~~~[m[K
+      |                   [32m[Ktask[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:61:88:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kn[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   61 | std::vector<ma_interfaces::msg::Bid> choose_winners(ma_interfaces::msg::Task task, [01;35m[Kint n[m[K) {
+      |                                                                                    [01;35m[K~~~~^[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::new_goals_cb(ma_interfaces::msg::Goal)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:135:75:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kstd::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > choose_winners(ma_interfaces::msg::Task, int)[m[K’
+  135 |         std::vector<ma_interfaces::msg::Bid> winning_bids = [01;31m[Kchoose_winners(task)[m[K;
+      |                                                             [01;31m[K~~~~~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:61:38:[m[K [01;36m[Knote: [m[Kdeclared here
+   61 | std::vector<ma_interfaces::msg::Bid> [01;36m[Kchoose_winners[m[K(ma_interfaces::msg::Task task, int n) {
+      |                                      [01;36m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/build/rclcpp/include/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:143:139:[m[K [01;31m[Kerror: [m[K‘[01m[Kwinning_bid[m[K’ was not declared in this scope; did you mean ‘[01m[Kwinning_bids[m[K’?
+  143 |             if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing winner for auction %s: agent %s", task.id.c_str(), [01;31m[Kwinning_bid[m[K.agent_id.c_str());
+      |                                                                                                                                           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kstd::vector<TNode*> Agent::find_slots(int)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:155:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kverbose_1[m[K’ was not declared in this scope
+  155 |     if ([01;31m[Kverbose_1[m[K) print_timeline();
+      |         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K At global scope:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:190:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kbool Agent::schedule_task(ma_interfaces::msg::Task)[m[K’
+  190 | bool [01;31m[KAgent[m[K::schedule_task(ma_interfaces::msg::Task task) {
+      |      [01;31m[K^~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:190:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kbool Agent::schedule_task(ma_interfaces::msg::Task)[m[K’
+In file included from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:43:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass Agent[m[K’ defined here
+   43 | class [01;36m[KAgent[m[K : public rclcpp::Node
+      |       [01;36m[K^~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::new_tasks_cb(ma_interfaces::msg::Task)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:255:64:[m[K [01;31m[Kerror: [m[K‘[01m[Kslot_head[m[K’ was not declared in this scope
+  255 |             double st = -1*std::get<0>(stn.get_feasible_values([01;31m[Kslot_head[m[K->etp_));
+      |                                                                [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:254:21:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kslot[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  254 |         for (TNode* [01;35m[Kslot[m[K : slots) {
+      |                     [01;35m[K^~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:268:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kschedule_task[m[K’ was not declared in this scope
+  268 |         if ([01;31m[Kschedule_task[m[K(task)) {
+      |             [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::new_bids_cb(ma_interfaces::msg::Bid)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:346:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd::map<std::__cxx11::basic_string<char>, std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > >::mapped_type[m[K’ {aka ‘[01m[Kclass std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kfind[m[K’
+  346 |             if (bid_map[bid.auction_id].[01;31m[Kfind[m[K(bid.agent_id) == bid_map.end()) {
+      |                                         [01;31m[K^~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:347:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst Bid[m[K’ {aka ‘[01m[Kconst struct ma_interfaces::msg::Bid_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kactuion_id[m[K’; did you mean ‘[01m[Kauction_id[m[K’?
+  347 |                 bid_map[bid.[01;31m[Kactuion_id[m[K][bid.agent_id] = std::vector<ma_interfaces::msg::Bid>();
+      |                             [01;31m[K^~~~~~~~~~[m[K
+      |                             [32m[Kauction_id[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:349:36:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[Kstd::map<std::__cxx11::basic_string<char>, std::vector<ma_interfaces::msg::Bid_<std::allocator<void> > > >::mapped_type[m[K’ {aka ‘[01m[Kstd::vector<ma_interfaces::msg::Bid_<std::allocator<void> > >[m[K’} and ‘[01m[Kconst _agent_id_type[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>[m[K’})
+  349 |             bid_map[bid.auction_id][01;31m[K[[m[Kbid.agent_id].push_back(bid);
+      |                                    [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/11/vector:67[m[K,
+                 from [01m[K/usr/include/c++/11/functional:62[m[K,
+                 from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1043:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>::reference std::vector<_Tp, _Alloc>::operator[](std::vector<_Tp, _Alloc>::size_type) [with _Tp = ma_interfaces::msg::Bid_<std::allocator<void> >; _Alloc = std::allocator<ma_interfaces::msg::Bid_<std::allocator<void> > >; std::vector<_Tp, _Alloc>::reference = ma_interfaces::msg::Bid_<std::allocator<void> >&; std::vector<_Tp, _Alloc>::size_type = long unsigned int][m[K’
+ 1043 |       [01;36m[Koperator[m[K[](size_type __n) _GLIBCXX_NOEXCEPT
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1043:28:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst _agent_id_type[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kstd::vector<ma_interfaces::msg::Bid_<std::allocator<void> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+ 1043 |       operator[]([01;36m[Ksize_type __n[m[K) _GLIBCXX_NOEXCEPT
+      |                  [01;36m[K~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1061:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>::const_reference std::vector<_Tp, _Alloc>::operator[](std::vector<_Tp, _Alloc>::size_type) const [with _Tp = ma_interfaces::msg::Bid_<std::allocator<void> >; _Alloc = std::allocator<ma_interfaces::msg::Bid_<std::allocator<void> > >; std::vector<_Tp, _Alloc>::const_reference = const ma_interfaces::msg::Bid_<std::allocator<void> >&; std::vector<_Tp, _Alloc>::size_type = long unsigned int][m[K’
+ 1061 |       [01;36m[Koperator[m[K[](size_type __n) const _GLIBCXX_NOEXCEPT
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1061:28:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst _agent_id_type[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kstd::vector<ma_interfaces::msg::Bid_<std::allocator<void> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+ 1061 |       operator[]([01;36m[Ksize_type __n[m[K) const _GLIBCXX_NOEXCEPT
+      |                  [01;36m[K~~~~~~~~~~^~~[m[K
+[ 55%] [32m[1mLinking CXX executable client[0m
+[ 55%] Built target client
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/agent.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[ 66%] [32m[1mLinking CXX executable execution_interface[0m
+[ 77%] [32m[1mLinking CXX executable goal_manager[0m
+[ 77%] Built target execution_interface
+[ 77%] Built target goal_manager
+gmake: *** [Makefile:146: all] Error 2

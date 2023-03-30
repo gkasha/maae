@@ -67,6 +67,7 @@ all: CMakeFiles/execution_interface.dir/all
 all: CMakeFiles/client.dir/all
 all: CMakeFiles/agent.dir/all
 all: CMakeFiles/goal_manager.dir/all
+all: CMakeFiles/clock.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -80,6 +81,7 @@ clean: CMakeFiles/execution_interface.dir/clean
 clean: CMakeFiles/client.dir/clean
 clean: CMakeFiles/agent.dir/clean
 clean: CMakeFiles/goal_manager.dir/clean
+clean: CMakeFiles/clock.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -141,7 +143,7 @@ CMakeFiles/auction_uninstall.dir/clean:
 CMakeFiles/execution_interface.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/execution_interface.dir/build.make CMakeFiles/execution_interface.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/execution_interface.dir/build.make CMakeFiles/execution_interface.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gkasha/Documents/maae/build/auction/CMakeFiles --progress-num=6,7 "Built target execution_interface"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gkasha/Documents/maae/build/auction/CMakeFiles --progress-num=8,9 "Built target execution_interface"
 .PHONY : CMakeFiles/execution_interface.dir/all
 
 # Build rule for subdir invocation for target.
@@ -219,7 +221,7 @@ CMakeFiles/agent.dir/clean:
 CMakeFiles/goal_manager.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/goal_manager.dir/build.make CMakeFiles/goal_manager.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/goal_manager.dir/build.make CMakeFiles/goal_manager.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gkasha/Documents/maae/build/auction/CMakeFiles --progress-num=8,9 "Built target goal_manager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gkasha/Documents/maae/build/auction/CMakeFiles --progress-num=10,11 "Built target goal_manager"
 .PHONY : CMakeFiles/goal_manager.dir/all
 
 # Build rule for subdir invocation for target.
@@ -237,6 +239,32 @@ goal_manager: CMakeFiles/goal_manager.dir/rule
 CMakeFiles/goal_manager.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/goal_manager.dir/build.make CMakeFiles/goal_manager.dir/clean
 .PHONY : CMakeFiles/goal_manager.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/clock.dir
+
+# All Build rule for target.
+CMakeFiles/clock.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clock.dir/build.make CMakeFiles/clock.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clock.dir/build.make CMakeFiles/clock.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gkasha/Documents/maae/build/auction/CMakeFiles --progress-num=6,7 "Built target clock"
+.PHONY : CMakeFiles/clock.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/clock.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gkasha/Documents/maae/build/auction/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/clock.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gkasha/Documents/maae/build/auction/CMakeFiles 0
+.PHONY : CMakeFiles/clock.dir/rule
+
+# Convenience name for target.
+clock: CMakeFiles/clock.dir/rule
+.PHONY : clock
+
+# clean rule for target.
+CMakeFiles/clock.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clock.dir/build.make CMakeFiles/clock.dir/clean
+.PHONY : CMakeFiles/clock.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -249,6 +249,19 @@ goal_manager/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/goal_manager.dir/build.make CMakeFiles/goal_manager.dir/build
 .PHONY : goal_manager/fast
 
+#=============================================================================
+# Target rules for targets named clock
+
+# Build rule for target.
+clock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clock
+.PHONY : clock
+
+# fast build rule for target.
+clock/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clock.dir/build.make CMakeFiles/clock.dir/build
+.PHONY : clock/fast
+
 src/agent.o: src/agent.cpp.o
 .PHONY : src/agent.o
 
@@ -296,6 +309,30 @@ src/client.s: src/client.cpp.s
 src/client.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client.cpp.s
 .PHONY : src/client.cpp.s
+
+src/clock.o: src/clock.cpp.o
+.PHONY : src/clock.o
+
+# target to build an object file
+src/clock.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clock.dir/build.make CMakeFiles/clock.dir/src/clock.cpp.o
+.PHONY : src/clock.cpp.o
+
+src/clock.i: src/clock.cpp.i
+.PHONY : src/clock.i
+
+# target to preprocess a source file
+src/clock.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clock.dir/build.make CMakeFiles/clock.dir/src/clock.cpp.i
+.PHONY : src/clock.cpp.i
+
+src/clock.s: src/clock.cpp.s
+.PHONY : src/clock.s
+
+# target to generate assembly for a file
+src/clock.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clock.dir/build.make CMakeFiles/clock.dir/src/clock.cpp.s
+.PHONY : src/clock.cpp.s
 
 src/execution_interface.o: src/execution_interface.cpp.o
 .PHONY : src/execution_interface.o
@@ -386,6 +423,7 @@ help:
 	@echo "... uninstall"
 	@echo "... agent"
 	@echo "... client"
+	@echo "... clock"
 	@echo "... execution_interface"
 	@echo "... goal_manager"
 	@echo "... src/agent.o"
@@ -394,6 +432,9 @@ help:
 	@echo "... src/client.o"
 	@echo "... src/client.i"
 	@echo "... src/client.s"
+	@echo "... src/clock.o"
+	@echo "... src/clock.i"
+	@echo "... src/clock.s"
 	@echo "... src/execution_interface.o"
 	@echo "... src/execution_interface.i"
 	@echo "... src/execution_interface.s"

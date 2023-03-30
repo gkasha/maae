@@ -1,0 +1,103 @@
+[35m[1mConsolidate compiler generated dependencies of target agent[0m
+[ 11%] [32mBuilding CXX object CMakeFiles/agent.dir/src/agent.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/execution_interface.dir/src/execution_interface.cpp.o[0m
+[ 44%] Built target client
+[ 66%] Built target goal_manager
+In file included from [01m[K/home/gkasha/Documents/maae/src/auction/src/execution_interface.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/execution_interface.hpp:9:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/Int64.msg: No such file or directory
+    9 | #include [01;31m[K"std_msgs/msg/Int64.msg"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/execution_interface.dir/build.make:76: CMakeFiles/execution_interface.dir/src/execution_interface.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:143: CMakeFiles/execution_interface.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+In file included from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:179:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msgs[m[K’ was not declared in this scope
+  179 |         rclcpp::Subscription<[01;31m[Kstd_msgs[m[K::msg::int64>::SharedPtr clock_subscription_;
+      |                              [01;31m[K^~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:179:50:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  179 |         rclcpp::Subscription<std_msgs::msg::int64[01;31m[K>[m[K::SharedPtr clock_subscription_;
+      |                                                  [01;31m[K^[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:179:50:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:179:50:[m[K [01;31m[Kerror: [m[Ktemplate argument 4 is invalid
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:179:50:[m[K [01;31m[Kerror: [m[Ktemplate argument 5 is invalid
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:179:53:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+  179 |         rclcpp::Subscription<std_msgs::msg::int64>::[01;31m[KSharedPtr[m[K clock_subscription_;
+      |                                                     [01;31m[K^~~~~~~~~[m[K
+      |                                                              [32m[K;[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:179:63:[m[K [01;31m[Kerror: [m[K‘[01m[Kclock_subscription_[m[K’ does not name a type; did you mean ‘[01m[Krcl_subscription_t[m[K’?
+  179 |         rclcpp::Subscription<std_msgs::msg::int64>::SharedPtr [01;31m[Kclock_subscription_[m[K;
+      |                                                               [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+      |                                                               [32m[Krcl_subscription_t[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:193:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msgs[m[K’ has not been declared
+  193 |         void clock_feedback([01;31m[Kstd_msgs[m[K::msg::int64);
+      |                             [01;31m[K^~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:[m[K In constructor ‘[01m[KAgent::Agent(std::string, double, double)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:67:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kcbgs_clock_feedback_[m[K’ was not declared in this scope; did you mean ‘[01m[Kcbgs_action_feedback_[m[K’?
+   67 |             [01;31m[Kcbgs_clock_feedback_[m[K = this->create_callback_group(
+      |             [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+      |             [32m[Kcbgs_action_feedback_[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:79:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kclock_opt[m[K’ was not declared in this scope; did you mean ‘[01m[Kclock_t[m[K’?
+   79 |             [01;31m[Kclock_opt[m[K.callback_group = cbgs_clock_feedback_;
+      |             [01;31m[K^~~~~~~~~[m[K
+      |             [32m[Kclock_t[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:113:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kclock_subscription_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_subscription_t[m[K’?
+  113 |             [01;31m[Kclock_subscription_[m[K = this->create_subscription<std_msgs::msg::int64>(
+      |             [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+      |             [32m[Krcl_subscription_t[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:113:61:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msgs[m[K’ was not declared in this scope
+  113 |             clock_subscription_ = this->create_subscription<[01;31m[Kstd_msgs[m[K::msg::int64>(
+      |                                                             [01;31m[K^~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:113:41:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+  113 |             clock_subscription_ = this->[01;31m[Kcreate_subscription<std_msgs::msg::int64>[m[K(
+      |                                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:117:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kclock_feedback_cb[m[K’ is not a member of ‘[01m[KAgent[m[K’
+  117 |                     &Agent::[01;31m[Kclock_feedback_cb[m[K,
+      |                             [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K At global scope:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:60:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msgs[m[K’ does not name a type
+   60 | void Agent::clock_feedback(const [01;31m[Kstd_msgs[m[K::msg::int64::SharedPtr msg) {
+      |                                  [01;31m[K^~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:60:47:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K::[m[K’ token
+   60 | void Agent::clock_feedback(const std_msgs::msg[01;31m[K::[m[Kint64::SharedPtr msg) {
+      |                                               [01;31m[K^~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:60:47:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K::[m[K’ token
+   60 | void Agent::clock_feedback[34m[K([m[Kconst std_msgs::msg[01;31m[K:[m[K[32m[K:[m[Kint64::SharedPtr msg) {
+      |                           [34m[K~[m[K                   [01;31m[K^[m[K[32m[K~[m[K
+      |                                               [32m[K)[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:60:47:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[K::[m[K’ token
+   60 | void Agent::clock_feedback(const std_msgs::msg[01;31m[K::[m[Kint64::SharedPtr msg) {
+      |                                               [01;31m[K^~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::new_tasks_cb(ma_interfaces::msg::Task)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:279:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_curr_time[m[K’ was not declared in this scope; did you mean ‘[01m[Kcurr_time_[m[K’?
+  279 |             double st = max([01;31m[Kget_curr_time[m[K(),-1*std::get<0>(stn.get_feasible_values(slot->etp_)));
+      |                             [01;31m[K^~~~~~~~~~~~~[m[K
+      |                             [32m[Kcurr_time_[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/build/rclcpp/include/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::check_dispatch()[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:318:51:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%f[m[K’ expects argument of type ‘[01m[Kdouble[m[K’, but argument 7 has type ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  318 |         RCLCPP_INFO(rclcpp::get_logger("rclcpp"), [01;35m[K"Attempting to execute between (%f,%f), current time=%f"[m[K,-1*std::get<0>(st),std::get<1>(st),[32m[Kcurr_time_[m[K);
+      |                                                   [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                                    [32m[K~~~~~~~~~~[m[K
+      |                                                                                                                                               [32m[K|[m[K
+      |                                                                                                                                               [32m[Kint[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:318:105:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  318 |         RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Attempting to execute between (%f,%f), current time=[01;36m[K%f[m[K",-1*std::get<0>(st),std::get<1>(st),curr_time_);
+      |                                                                                                        [01;36m[K~^[m[K
+      |                                                                                                         [01;36m[K|[m[K
+      |                                                                                                         [01;36m[Kdouble[m[K
+      |                                                                                                        [32m[K%d[m[K
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/agent.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

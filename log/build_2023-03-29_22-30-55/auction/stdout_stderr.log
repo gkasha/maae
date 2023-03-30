@@ -1,0 +1,21 @@
+[35m[1mConsolidate compiler generated dependencies of target agent[0m
+[  9%] [32mBuilding CXX object CMakeFiles/client.dir/src/client.cpp.o[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/agent.dir/src/agent.cpp.o[0m
+[ 36%] Built target goal_manager
+[ 54%] Built target execution_interface
+[ 72%] Built target clock
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::action_feedback_cb(ma_interfaces::msg::ActionFeedback)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:422:1:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+  422 | [01;31m[K{[m[K
+      | [01;31m[K^[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:434:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  434 | }
+      |  [01;31m[K^[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:387:81:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+  387 | void Agent::action_feedback_cb(const ma_interfaces::msg::ActionFeedback action) [01;36m[K{[m[K
+      |                                                                                 [01;36m[K^[m[K
+[ 81%] [32m[1mLinking CXX executable client[0m
+[ 81%] Built target client
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:197: CMakeFiles/agent.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

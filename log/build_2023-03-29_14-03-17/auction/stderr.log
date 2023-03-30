@@ -1,0 +1,51 @@
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:40:26:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kma_interfaces::msg::Task Agent::build_task_msg(std::string, std::string, int, double, double, double, double)[m[K’
+   40 | ma_interfaces::msg::Task [01;31m[KAgent[m[K::build_task_msg(
+      |                          [01;31m[K^~~~~[m[K
+In file included from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:142:34:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kma_interfaces::msg::Task Agent::build_task_msg(std::string, std::string, int, double, double, double)[m[K’
+  142 |         ma_interfaces::msg::Task [01;36m[Kbuild_task_msg[m[K(
+      |                                  [01;36m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:44:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass Agent[m[K’ defined here
+   44 | class [01;36m[KAgent[m[K : public rclcpp::Node
+      |       [01;36m[K^~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In lambda function:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:101:139:[m[K [01;31m[Kerror: [m[K‘[01m[Ktask[m[K’ is not captured
+  101 |         auto map_overlaps = std::transform(bids.begin(),bids.end(),std::back_inserter(overlaps),[](ma_interfaces::msg::Bid b){b.et = b.st+[01;31m[Ktask[m[K.duration;std::vector<ma_interfaces::msg::Bid> res{b}; return res;});
+      |                                                                                                                                           [01;31m[K^~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:101:98:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+  101 |         auto map_overlaps = std::transform(bids.begin(),bids.end(),std::back_inserter(overlaps),[[01;36m[K][m[K(ma_interfaces::msg::Bid b){b.et = b.st+task.duration;std::vector<ma_interfaces::msg::Bid> res{b}; return res;});
+      |                                                                                                  [01;36m[K^[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:66:85:[m[K [01;36m[Knote: [m[K‘[01m[Kma_interfaces::msg::Task task[m[K’ declared here
+   66 | std::vector<ma_interfaces::msg::Bid> Agent::choose_winners([01;36m[Kma_interfaces::msg::Task task[m[K) {
+      |                                                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::new_goals_cb(ma_interfaces::msg::Goal)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:137:55:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KAgent::build_task_msg(const _id_type&, const char [1], const _num_agents_type&, int, int, int, const _deadline_type&)[m[K’
+  137 |         ma_interfaces::msg::Task task = [01;31m[Kbuild_task_msg(goal.id,"",goal.num_agents,10,10,0,goal.deadline)[m[K;
+      |                                         [01;31m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:142:34:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kma_interfaces::msg::Task Agent::build_task_msg(std::string, std::string, int, double, double, double)[m[K’
+  142 |         ma_interfaces::msg::Task [01;36m[Kbuild_task_msg[m[K(
+      |                                  [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:142:34:[m[K [01;36m[Knote: [m[K  candidate expects 6 arguments, 7 provided
+In file included from [01m[K/home/gkasha/ros2_humble/build/rclcpp/include/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kbool Agent::schedule_task(ma_interfaces::msg::Task)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:225:130:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing Task = struct ma_interfaces::msg::Task_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct ma_interfaces::msg::Task_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kdeadline[m[K’
+  225 |     RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Attempting to schedule task %s for (%f,%f)", task.id.c_str(), task.duration, task.[01;31m[Kdeadline[m[K);
+      |                                                                                                                                  [01;31m[K^~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/agent.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

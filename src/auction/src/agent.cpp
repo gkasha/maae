@@ -1,7 +1,7 @@
 #include "auction/agent.hpp"
 
 bool agent_verbose_1 = true; // Higher-level messages, pub/sub
-bool agent_verbose_2 = false; // Lower-level, searches, etc.
+bool agent_verbose_2 = true; // Lower-level, searches, etc.
 
 /*
  * Code for the agent class of the auction package
@@ -19,33 +19,131 @@ bool agent_verbose_2 = false; // Lower-level, searches, etc.
  * the necessary operations.
  */
 
+ma_interfaces::msg::Bid Agent::build_bid_msg(
+    std::string agent_id, 
+    std::string auction_id,
+    int status,
+    double st,
+    double et,
+    double value
+) {
+    ma_interfaces::msg::Bid bid = ma_interfaces::msg::Bid();
+    bid.agent_id = agent_id;
+    bid.auction_id = auction_id;
+    bid.status = status;
+    bid.st = st;
+    bid.et = et;
+    bid.value = value;
+    return bid;
+}
+
+ma_interfaces::msg::Task Agent::build_task_msg(
+    std::string id,
+    std::string owner,
+    int num_agents,
+    double value,
+    double duration,
+    double st,
+    double et
+) {
+    ma_interfaces::msg::Task task = ma_interfaces::msg::Task();
+    task.id = id;
+    task.owner = owner;
+    task.num_agents = num_agents;
+    task.value = value;
+    task.duration = duration;
+    task.st = st;
+    task.et = et;
+    return task;
+}
+
+void Agent::clock_cb(const std_msgs::msg::Int64::SharedPtr msg) {
+    curr_time_ = msg->data;
+    check_dispatch();
+}
+/*
+ * Determine winners for a task
+ */
+std::vector<ma_interfaces::msg::Bid> Agent::choose_winners(ma_interfaces::msg::Task task) {
+    // First, need to generate all overlapping intervals
+    std::vector<ma_interfaces::msg::Bid> bids;
+    std::vector<std::string> agents;
+
+    std::vector<std::vector<ma_interfaces::msg::Bid>> overlaps;
+
+    for (auto const& elt : bid_map[task.id]) {
+        agents.push_back(elt.first);
+        bids.insert(bids.end(), elt.second.begin(), elt.second.end());
+    }
+
+    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "<inside choose_winners> Task requires %ld agents", task.num_agents);
+
+    if (task.num_agents > 1) {
+        for (std::string agent : agents) {
+            for (ma_interfaces::msg::Bid bid : bid_map[task.id][agent]) {
+                for (ma_interfaces::msg::Bid alt_bid : bids) {
+                    if (alt_bid.agent_id != bid.agent_id && alt_bid.st <= bid.et && alt_bid.et >= bid.st) {
+                        // Overlap
+                        double st = max(bid.st,alt_bid.st);
+                        st = max((double)curr_time_,st);
+                        double et = min(bid.et,alt_bid.et) ;
+                        if (et - st >= task.duration) {
+                            bid.st = st;
+                            bid.et = st+task.duration;
+                            alt_bid.st = st;
+                            alt_bid.et = st+task.duration;
+                            std::vector<ma_interfaces::msg::Bid> overlap{bid,alt_bid};
+                            overlaps.push_back(overlap);
+                        }
+                    }
+                }
+            }
+        }
+    } else {
+        for (ma_interfaces::msg::Bid bid : bids) {
+            bid.st = bid.st;
+            bid.et = bid.st + task.duration;
+            overlaps.push_back({bid});
+        }    
+    }
+    
+
+    // Choose best interval by earliest start time
+    auto cmp = [](
+        std::vector<ma_interfaces::msg::Bid> left,
+        std::vector<ma_interfaces::msg::Bid> right)
+        {return left[0].st < right[0].st;};
+    
+    std::sort(overlaps.begin(),overlaps.end(),cmp);
+
+    // Erase the bid map entry, add the winner map
+    winner_map[task.id] = overlaps;
+    bid_map.erase(task.id);
+
+    return winner_map[task.id][0];
+}
+
 /*
  * Callback function for goals published by goal manager
  * Input: Goal
  * Output: Bid IF Goal unowned, ELSE create and start auction for goal as task
  */
-
 void Agent::new_goals_cb(const ma_interfaces::msg::Goal goal) {
     if (goal.owner == "") {
         // Goal is unowned, formulate a bid
-        ma_interfaces::msg::Bid bid = ma_interfaces::msg::Bid();
-        bid.agent_id = id_;
-        bid.auction_id = goal.id;
-        bid.value = 10; // Default value
-
+        ma_interfaces::msg::Bid bid = build_bid_msg(id_,goal.id,0,0,0,10);
 
         if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing bid for goal %s", goal.id.c_str());
         goal_bid_publisher_->publish(bid);
     } else if (goal.owner == id_) {
         // Agent won the bid, now need to host a task auction
         if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Won goal: %s", goal.id.c_str());
+        if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Goal requires %ld agents", goal.num_agents);
 
-        ma_interfaces::msg::Task task = ma_interfaces::msg::Task();
-        task.id = goal.id;
-        task.owner = "";
-        task.duration = 10; // Default
-        task.value = 10; // Default
-        bid_map[task.id] = std::vector<ma_interfaces::msg::Bid>();
+        ma_interfaces::msg::Task task = build_task_msg(goal.id,"",goal.num_agents,10,10,curr_time_+5,curr_time_+15);
+        std::map<std::string,std::vector<ma_interfaces::msg::Bid>> new_map;
+        bid_map[task.id] = new_map;
+        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Task requires %ld agents", task.num_agents);
 
         // Send out auction
         if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing auction for task %s", task.id.c_str());
@@ -55,79 +153,44 @@ void Agent::new_goals_cb(const ma_interfaces::msg::Goal goal) {
         rclcpp::sleep_for(5s);
 
         // Choose winner -- default is earliest start time
-        int winning_idx = -1;
-        for (size_t i = 0; i < bid_map[task.id].size(); i++) {
-            auto bid = bid_map[task.id][i];
-            if (winning_idx < 0 || bid.st < bid_map[task.id][winning_idx].st) {
-                winning_idx = i;
-            }
-        }
+        std::vector<ma_interfaces::msg::Bid> winning_bids = choose_winners(task);
 
-        ma_interfaces::msg::Bid winning_bid = bid_map[task.id][winning_idx];
-        bid_map[task.id].erase(bid_map[task.id].begin()+winning_idx);
+        // Send out winners
+        for (ma_interfaces::msg::Bid bid : winning_bids) {
+            task.owner = bid.agent_id;
+            task.st = bid.st;
+            task.et = task.st + task.duration;
 
-        // Create winner message
-        if (winning_bid.st >= 0) {
-            ma_interfaces::msg::Task allocated_task = ma_interfaces::msg::Task();
-            allocated_task.id = winning_bid.auction_id;
-            allocated_task.owner = winning_bid.agent_id;
-            allocated_task.duration = task.duration;
-            allocated_task.value = task.value;
-
-            // Send out winner
-            if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing winner for auction %s: agent %s", task.id.c_str(), winning_bid.agent_id.c_str());
-            task_auction_publisher_->publish(allocated_task);
-        } else {
-            if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "No bids, closing auction %s", task.id.c_str());
+            if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing winner for auction %s: agent %s (%f,%f)", task.id.c_str(), task.owner.c_str(), bid.st, bid.et);
+            task_auction_publisher_->publish(task);
         }
     }
 }
 
 /*
- * Function to find a slot on an agent timeline
+ * Function to find all slots on an agent timeline that can accomplish the task
  * Input: Duration representing size of slot
  * Output: TNode curr, where the slot is between curr and curr->next
  */
-TNode* Agent::find_slot(int dur) {
-    print_timeline();
+std::vector<TNode*> Agent::find_slots(int dur) {
+    if (agent_verbose_1) print_timeline();
+
+    std::vector<TNode*> slots;
     TNode* curr = timeline;
 
     while (curr->next) {
-        tuple<double,double> st = stn.get_feasible_values(curr->etp_); 
-        tuple<double,double> et = stn.get_feasible_values(curr->next->stp_);
-
-        if (curr->next->status == TNode::WAITING && std::get<1>(et) + std::get<0>(st) >= dur) {
-            // std::get<0>(tp) is negative, so adding it is correct
+        double st = max((double)curr_time_,-1*std::get<0>(stn.get_feasible_values(curr->etp_))); 
+        double et = std::get<1>(stn.get_feasible_values(curr->next->stp_));
+        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "St: %f, et: %f", st, et);
+        if (curr->next->status == TNode::WAITING && et-st >= dur) {
             // Check that next node on timeline isn't already in execution
-            return curr;
+            slots.push_back(curr);
         }
-
         curr = curr->next;
     }
 
-    return curr;
+    return slots;
 }
-
-// std::vector<TNode*> Agent::find_slots(int dur) {
-//     std::vector<TNode*> slots;
-//     TNode* curr = timeline;
-
-//     while (curr->next) {
-//         tuple<double,double> st = stn.get_feasible_values(curr->etp_); 
-//         tuple<double,double> et = stn.get_feasible_values(curr->next->stp_);
-        
-//         if (curr->next->status == TNode::WAITING && std::get<1>(et) + std::get<0>(st) >= dur) {
-//             // std::get<0>(tp) is negative, so adding it is correct
-//             // Check that next node on timeline isn't already in execution
-//             slots.push_back(curr);
-//         }
-
-//         curr = curr->next;
-//     }
-
-//     return slots;
-
-// }
 
 /*
  * Function to print timeline for agent
@@ -144,6 +207,67 @@ void Agent::print_timeline() {
     }
 }
 
+// Assume task.deadline is when we have to start the task
+bool Agent::schedule_task(ma_interfaces::msg::Task task) {
+    // Search for slot that covers task
+    TNode* curr = timeline;
+    while (curr->next) {
+        double st = max((double)curr_time_,-1*std::get<0>(stn.get_feasible_values(curr->etp_))); 
+        double et = std::get<1>(stn.get_feasible_values(curr->next->stp_));
+        // won task, make sure that task start and end time are within block
+        if (curr->next->status == TNode::WAITING && task.st >= st && task.et <= et) {
+            // Check that next node on timeline isn't already in execution
+            break;
+        }
+        curr = curr->next;
+    }
+
+    if (curr->name_ == "tail"){
+        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Reached end of timeline...");
+        return false;
+    }
+
+    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Attempting to schedule task %s for (%f,%f)", task.id.c_str(), task.st, task.et);
+
+    std::string slot_st = curr->etp_;
+    std::string slot_et = curr->next->stp_;
+
+    stn.del_constraint(slot_st + "_" + slot_et + "_seq");
+
+    // Now, add in the new timepoints and constraints
+    std::string new_stp = task.id + "_st";
+    std::string new_etp = task.id + "_et";
+
+    // task.duration is st
+    constraint start_seq = std::make_tuple("cz", new_stp, task.st - execution_threshold_, task.st + execution_threshold_);
+    constraint task_dur = std::make_tuple(new_stp, new_etp, std::max(0.0,task.duration-execution_threshold_), task.duration+execution_threshold_);
+    constraint head_seq = std::make_tuple(slot_st, new_stp, 0, inf);
+    constraint tail_seq = std::make_tuple(new_etp, slot_et, 0, inf);
+
+    stn.add_timepoint(new_stp);
+    stn.add_timepoint(new_etp);
+
+    bool status = stn.add_constraint("cz_" + new_stp + "_assignment", start_seq);
+    status = status && stn.add_constraint(slot_st + "_" + new_stp + "_seq", head_seq);
+    status = status && stn.add_constraint(new_stp + "_" + new_etp + "_dur", task_dur);
+    status = status && stn.add_constraint(new_etp + "_" + slot_et + "_seq", tail_seq);
+
+    if (!status) {
+        stn.del_all_constraints(new_stp, new_etp);
+        stn.del_all_constraints("cz",new_stp);
+        stn.del_timepoint(new_stp);
+        stn.del_timepoint(new_etp);
+        constraint old_seq = std::make_tuple(slot_st, slot_et, 0, inf);
+        stn.add_constraint(slot_st + "_" + slot_et + "_seq", old_seq);
+    } else {
+        TNode* new_task = new TNode(task.id, new_stp, new_etp);
+        TNode* tmp = curr->next;
+        curr->next = new_task;
+        new_task->next = tmp;
+    }
+
+    return status;
+}
 /*
  * Callback function to process task messages that correspond to auctions
  * Input: Task that represents either an auction or auction winner
@@ -152,94 +276,36 @@ void Agent::print_timeline() {
 void Agent::new_tasks_cb(const ma_interfaces::msg::Task task) {
     if (task.owner == "" && bid_map.find(task.id) == bid_map.end()) {
         // Generate a bid for the unowned task, first by searching for a slot
-
-        TNode* slot_head = find_slot(task.duration);
-        if (slot_head->name_ == "tail") {
-            // Reached end of timeline without finding a slot
-            if (agent_verbose_2) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Couldn't find slot");
-        } else {
-            if (agent_verbose_2) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Found slot: %s=(%s,%s)", slot_head->name_.c_str(),slot_head->stp_.c_str(),slot_head->etp_.c_str());
-
-            // Slot is the earliest finish time of the TNode
-            double st = -1*std::get<0>(stn.get_feasible_values(slot_head->etp_));
-            task_map[task.id] = slot_head;
-
-            // Build bid message
-            ma_interfaces::msg::Bid bid = ma_interfaces::msg::Bid();
-            bid.agent_id = id_;
-            bid.auction_id = task.id;
-            bid.status = 0;
-            bid.st = st;
-            bid.et = st + task.duration;
-            bid.value = 10;
-            
-            // Publish bid
-            if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing bid for auction %s", bid.auction_id.c_str());
-            task_bid_publisher_->publish(bid);
+        std::vector<TNode*> slots = find_slots(task.duration);
+        
+        for (TNode* slot : slots) {
+            double slack = 10;
+            double st = max((double)curr_time_,-1*std::get<0>(stn.get_feasible_values(slot->etp_))) + slack;
+            double et = std::get<1>(stn.get_feasible_values(slot->next->stp_));
+            if (et-st >= task.duration) {
+                // Build bid message
+                ma_interfaces::msg::Bid bid = build_bid_msg(id_,task.id,0,st,et,10);
+                
+                // Publish bid
+                if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing bid for auction %s: (%f,%f)", bid.auction_id.c_str(), bid.st, bid.et);
+                task_bid_publisher_->publish(bid);
+            }
         }
     } else if (task.owner == id_) {
-        // Agent won the bid for the task
-        if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Won the bid for auction %s", task.id.c_str());
+        // Agent won the bid for the task, now want to schedule it
+        if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Won the bid for auction %s, duration = %f, times=(%f,%f)", task.id.c_str(), task.duration, task.st, task.et);
 
-        // Now need to schedule the task
-        TNode* slot_head = task_map[task.id];
-
-        // Try adding task by first deleting the existing sequencing constraint
-        std::string slot_st = slot_head->etp_;
-        std::string slot_et = slot_head->next->stp_;
-
-        stn.del_constraint(slot_st + "_" + slot_et + "_seq");
-
-        // Now, add in the new timepoints and constraints
-        std::string new_stp = task.id + "_st";
-        std::string new_etp = task.id + "_et";
-
-        constraint task_dur = std::make_tuple(new_stp, new_etp, std::max(0.0,task.duration-execution_threshold_), task.duration+execution_threshold_);
-        constraint head_seq = std::make_tuple(slot_st, new_stp, 0, inf);
-        constraint tail_seq = std::make_tuple(new_etp, slot_et, 0, inf);
-
-        stn.add_timepoint(new_stp);
-        stn.add_timepoint(new_etp);
-
-        bool status = stn.add_constraint(slot_st + "_" + new_stp + "_seq", head_seq);
-        status = status && stn.add_constraint(new_stp + "_" + new_etp + "_dur", task_dur);
-        status = status && stn.add_constraint(new_etp + "_" + slot_et + "_seq", tail_seq);
-
-        if (status) {
+        if (schedule_task(task)) {
             // Able to add, send confirmation to auctioneer
             if (agent_verbose_2) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Task added successfully: %s", task.id.c_str());
-            TNode* new_task = new TNode(task.id, new_stp, new_etp);
-            TNode* tmp = slot_head->next;
-            slot_head->next = new_task;
-            new_task->next = tmp;
-            task_map[task.id] = new_task;
             
-            auto msg = ma_interfaces::msg::Bid();
-            msg.auction_id = task.id;
-            msg.status = 1;
-
+            auto msg = build_bid_msg(id_,task.id,1,0,0,0);
             if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing scheduling confirmation of task: %s", task.id.c_str());
             task_bid_publisher_->publish(msg);
             // Check to see if there are any tasks to dispatch
-            print_timeline();
-
-            check_dispatch();
         } else {
-            // Unable to add message, send failur to auctioneer
-            if (agent_verbose_2) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Couldn't add task: %s", task.id.c_str());
-            stn.del_all_constraints(new_stp, new_etp);
-            stn.del_timepoint(new_stp);
-            stn.del_timepoint(new_etp);
-            constraint old_seq = std::make_tuple(slot_st, slot_et, 0, inf);
-            stn.add_constraint(slot_st + "_" + slot_et + "_seq", old_seq);
-
-            auto msg = ma_interfaces::msg::Bid();
-            msg.agent_id = id_;
-            msg.auction_id = task.id;
-            msg.status = -1;
-            msg.st = 0;
-            msg.et = task.duration;
-            msg.value = task.value;
+            // Unable to add message, send failure to auctioneer
+            auto msg = build_bid_msg(id_,task.id,-1,0,task.duration,task.value);
 
             if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing scheduling failure of task: %s", task.id.c_str());
             task_bid_publisher_->publish(msg);
@@ -251,7 +317,8 @@ void Agent::check_dispatch() {
     if (timeline->status == TNode::COMPLETE) {
         // Action exists to dispatch
         TNode* curr = timeline->next;
-        if (curr->status == TNode::WAITING) {
+        auto st = stn.get_feasible_values(curr->stp_);
+        if (curr->name_ != "tail" && curr->status == TNode::WAITING && -1*std::get<0>(st) <= curr_time_ && curr_time_ <= std::get<1>(st)) {
             if (agent_verbose_2) RCLCPP_INFO(this->get_logger(), "Found task to dispatch: %s", curr->name_.c_str());
             ma_interfaces::msg::ActionDispatch msg = ma_interfaces::msg::ActionDispatch();
             msg.action_id = curr->name_;
@@ -262,16 +329,16 @@ void Agent::check_dispatch() {
             auto etp = stn.get_feasible_values(curr->etp_);
 
             msg.duration = -1*(std::get<0>(etp) - std::get<0>(stp));
-            msg.start_time = -1*std::get<0>(stp);
+            msg.start_time = curr_time_;
 
             if (agent_verbose_2) RCLCPP_INFO(this->get_logger(), "Start time: %f, duration: %f", msg.start_time, msg.duration);
 
             if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Dispatching action: %s", msg.action_id.c_str());
             action_dispatch_publisher_->publish(msg);
-            curr->status = TNode::EXECUTING;
 
             // Move timeline so that we are now on the current task
-            timeline = curr;
+            curr->status = TNode::EXECUTING;
+            task_map[curr->name_] = curr;
         }
     }
 }
@@ -279,40 +346,39 @@ void Agent::check_dispatch() {
 void Agent::new_bids_cb(const ma_interfaces::msg::Bid bid) {
     if (bid_map.find(bid.auction_id) != bid_map.end()) {
         if (bid.status < 0) {
-            // Agent was unable to schedule task, choose next best
-            int winning_idx = -1;
-            for (size_t i = 0; i < bid_map[bid.auction_id].size(); i++) {
-                auto alt_bid = bid_map[bid.auction_id][i];
-                if (winning_idx < 0 || alt_bid.st < bid_map[bid.auction_id][winning_idx].st) {
-                    winning_idx = i;
-                }
-            }
+            // Agent was unable to schedule task, cancel current set and choose next
+            // std::vector<ma_interfaces::msg::Bid> invalid_winners = winner_map[bid.auction_id][0];
+            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Agent %s was unable to schedule task %s", bid.agent_id.c_str(), bid.auction_id.c_str());
             
-            if (winning_idx >= 0){
-                // Winner was found
-                ma_interfaces::msg::Bid winning_bid = bid_map[bid.auction_id][winning_idx];
-                bid_map[bid.auction_id].erase(bid_map[bid.auction_id].begin()+winning_idx);
+            // if (winning_idx >= 0){
+            //     // Winner was found
+            //     ma_interfaces::msg::Bid winning_bid = bid_map[bid.auction_id][winning_idx];
+            //     bid_map[bid.auction_id].erase(bid_map[bid.auction_id].begin()+winning_idx);
 
-                ma_interfaces::msg::Task allocated_task = ma_interfaces::msg::Task();
-                allocated_task.id = winning_bid.auction_id;
-                allocated_task.owner = winning_bid.agent_id;
-                allocated_task.duration = winning_bid.et - winning_bid.st; //Duration may change
-                allocated_task.value = winning_bid.value;
+            //     ma_interfaces::msg::Task allocated_task = ma_interfaces::msg::Task();
+            //     allocated_task.id = winning_bid.auction_id;
+            //     allocated_task.owner = winning_bid.agent_id;
+            //     allocated_task.duration = winning_bid.et - winning_bid.st; //Duration may change
+            //     allocated_task.value = winning_bid.value;
 
-                // Send out winner
-                if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing winner for auction %s: agent %s", bid.auction_id.c_str(), winning_bid.agent_id.c_str());
-                task_auction_publisher_->publish(allocated_task);
-            } else {
-                // No valid winners
-                if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "No bids, closing auction %s", bid.auction_id.c_str());
-            }
+            //     // Send out winner
+            //     if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing winner for auction %s: agent %s", bid.auction_id.c_str(), winning_bid.agent_id.c_str());
+            //     task_auction_publisher_->publish(allocated_task);
+            // } else {
+            //     // No valid winners
+            //     if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "No bids, closing auction %s", bid.auction_id.c_str());
+            // }
         } else if (bid.status > 0) {
             // Task was scheduled, can now erase and close auction
-            bid_map.erase(bid.auction_id);
+            // bid_map.erase(bid.auction_id);
             if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Task <%s> was successfuly scheduled by agent %s, closing auction.", bid.auction_id.c_str(), bid.agent_id.c_str());
         } else {
             // Auction is receiving bids
-            bid_map[bid.auction_id].push_back(bid);
+            if (bid_map[bid.auction_id].find(bid.agent_id) == bid_map[bid.auction_id].end()) {
+                bid_map[bid.auction_id][bid.agent_id] = std::vector<ma_interfaces::msg::Bid>();
+            }
+            bid_map[bid.auction_id][bid.agent_id].push_back(bid);
+
             if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Added bid from agent %s to auction %s", bid.agent_id.c_str(), bid.auction_id.c_str());
         }
     }
@@ -323,8 +389,9 @@ void Agent::action_feedback_cb(const ma_interfaces::msg::ActionFeedback action) 
         if (task_map.find(action.action_id) != task_map.end()) {
             TNode* curr = task_map[action.action_id];
             auto end_fv = stn.get_feasible_values(curr->etp_);
-
+            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Checking action status");
             if (action.action_started) {
+                timeline = curr;
                 constraint c = std::make_tuple("cz", curr->stp_, action.time, action.time);
                 bool status = stn.add_constraint(curr->stp_ + "_actual", c);
 
@@ -347,6 +414,7 @@ void Agent::action_feedback_cb(const ma_interfaces::msg::ActionFeedback action) 
             } else if (action.action_failed) {
                 if (agent_verbose_2) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Action failed: %s", action.action_id.c_str());
                 // Do something
+            
             }
         }
     }

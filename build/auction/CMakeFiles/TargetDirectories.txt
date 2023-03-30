@@ -4,6 +4,7 @@
 /home/gkasha/Documents/maae/build/auction/CMakeFiles/client.dir
 /home/gkasha/Documents/maae/build/auction/CMakeFiles/agent.dir
 /home/gkasha/Documents/maae/build/auction/CMakeFiles/goal_manager.dir
+/home/gkasha/Documents/maae/build/auction/CMakeFiles/clock.dir
 /home/gkasha/Documents/maae/build/auction/CMakeFiles/test.dir
 /home/gkasha/Documents/maae/build/auction/CMakeFiles/edit_cache.dir
 /home/gkasha/Documents/maae/build/auction/CMakeFiles/rebuild_cache.dir

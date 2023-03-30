@@ -32,6 +32,8 @@ ma_interfaces__msg__Goal__init(ma_interfaces__msg__Goal * msg)
     ma_interfaces__msg__Goal__fini(msg);
     return false;
   }
+  // num_agents
+  // deadline
   return true;
 }
 
@@ -45,6 +47,8 @@ ma_interfaces__msg__Goal__fini(ma_interfaces__msg__Goal * msg)
   rosidl_runtime_c__String__fini(&msg->id);
   // owner
   rosidl_runtime_c__String__fini(&msg->owner);
+  // num_agents
+  // deadline
 }
 
 bool
@@ -63,6 +67,14 @@ ma_interfaces__msg__Goal__are_equal(const ma_interfaces__msg__Goal * lhs, const 
   if (!rosidl_runtime_c__String__are_equal(
       &(lhs->owner), &(rhs->owner)))
   {
+    return false;
+  }
+  // num_agents
+  if (lhs->num_agents != rhs->num_agents) {
+    return false;
+  }
+  // deadline
+  if (lhs->deadline != rhs->deadline) {
     return false;
   }
   return true;
@@ -88,6 +100,10 @@ ma_interfaces__msg__Goal__copy(
   {
     return false;
   }
+  // num_agents
+  output->num_agents = input->num_agents;
+  // deadline
+  output->deadline = input->deadline;
   return true;
 }
 

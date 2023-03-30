@@ -1,0 +1,94 @@
+-- Found ament_cmake: 1.3.3 (/home/gkasha/ros2_humble/install/ament_cmake/share/ament_cmake/cmake)
+-- Found rclcpp: 16.0.3 (/home/gkasha/ros2_humble/install/rclcpp/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.4 (/home/gkasha/ros2_humble/install/rosidl_generator_c/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.4 (/home/gkasha/ros2_humble/install/rosidl_adapter/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.4 (/home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_introspection_c;rosidl_typesupport_fastrtps_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp;rosidl_typesupport_fastrtps_cpp
+-- Found rmw_implementation_cmake: 6.1.1 (/home/gkasha/ros2_humble/install/rmw_implementation_cmake/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.2 (/home/gkasha/ros2_humble/install/rmw_fastrtps_cpp/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found ma_interfaces: 0.0.0 (/home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake)
+-- Found ament_lint_auto: 0.12.5 (/home/gkasha/ros2_humble/install/ament_lint_auto/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/gkasha/Documents/maae/src/auction/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/gkasha/Documents/maae/build/auction
+[35m[1mConsolidate compiler generated dependencies of target execution_interface[0m
+[35m[1mConsolidate compiler generated dependencies of target agent[0m
+[35m[1mConsolidate compiler generated dependencies of target client[0m
+[35m[1mConsolidate compiler generated dependencies of target goal_manager[0m
+[ 11%] [32mBuilding CXX object CMakeFiles/client.dir/src/client.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/execution_interface.dir/src/execution_interface.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/agent.dir/src/agent.cpp.o[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/goal_manager.dir/src/goal_manager.cpp.o[0m
+In file included from [01m[K/home/gkasha/Documents/maae/src/auction/src/execution_interface.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/execution_interface.hpp:[m[K In member function ‘[01m[Kvoid Monitor::clock_callback(std_msgs::msg::Int64_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/execution_interface.hpp:109:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<std_msgs::msg::Int64_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdata[m[K’
+  109 |             curr_time_ = msg.[01;31m[Kdata[m[K;
+      |                              [01;31m[K^~~~[m[K
+In file included from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:[m[K In constructor ‘[01m[KAgent::Agent(std::string, double, double)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:68:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kcbgs_clock_feedback_[m[K’ was not declared in this scope; did you mean ‘[01m[Kcbgs_action_feedback_[m[K’?
+   68 |             [01;31m[Kcbgs_clock_feedback_[m[K = this->create_callback_group(
+      |             [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+      |             [32m[Kcbgs_action_feedback_[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K At global scope:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:60:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid Agent::clock_cb(std_msgs::msg::Int64_<std::allocator<void> >::SharedPtr)[m[K’
+   60 | void [01;31m[KAgent[m[K::clock_cb(const std_msgs::msg::Int64::SharedPtr msg) {
+      |      [01;31m[K^~~~~[m[K
+In file included from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:195:14:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvoid Agent::clock_cb(std_msgs::msg::Int64)[m[K’
+  195 |         void [01;36m[Kclock_cb[m[K(std_msgs::msg::Int64);
+      |              [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:45:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass Agent[m[K’ defined here
+   45 | class [01;36m[KAgent[m[K : public rclcpp::Node
+      |       [01;36m[K^~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::new_tasks_cb(ma_interfaces::msg::Task)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:279:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kget_curr_time[m[K’ was not declared in this scope; did you mean ‘[01m[Kcurr_time_[m[K’?
+  279 |             double st = max([01;31m[Kget_curr_time[m[K(),-1*std::get<0>(stn.get_feasible_values(slot->etp_)));
+      |                             [01;31m[K^~~~~~~~~~~~~[m[K
+      |                             [32m[Kcurr_time_[m[K
+In file included from [01m[K/home/gkasha/ros2_humble/build/rclcpp/include/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::check_dispatch()[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:318:51:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%f[m[K’ expects argument of type ‘[01m[Kdouble[m[K’, but argument 7 has type ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  318 |         RCLCPP_INFO(rclcpp::get_logger("rclcpp"), [01;35m[K"Attempting to execute between (%f,%f), current time=%f"[m[K,-1*std::get<0>(st),std::get<1>(st),[32m[Kcurr_time_[m[K);
+      |                                                   [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                                    [32m[K~~~~~~~~~~[m[K
+      |                                                                                                                                               [32m[K|[m[K
+      |                                                                                                                                               [32m[Kint[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:318:105:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  318 |         RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Attempting to execute between (%f,%f), current time=[01;36m[K%f[m[K",-1*std::get<0>(st),std::get<1>(st),curr_time_);
+      |                                                                                                        [01;36m[K~^[m[K
+      |                                                                                                         [01;36m[K|[m[K
+      |                                                                                                         [01;36m[Kdouble[m[K
+      |                                                                                                        [32m[K%d[m[K
+[ 55%] [32m[1mLinking CXX executable client[0m
+[ 55%] Built target client
+[ 66%] [32mBuilding CXX object CMakeFiles/agent.dir/src/stn.cpp.o[0m
+gmake[2]: *** [CMakeFiles/execution_interface.dir/build.make:76: CMakeFiles/execution_interface.dir/src/execution_interface.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:143: CMakeFiles/execution_interface.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/agent.dir/all] Error 2
+[ 77%] [32m[1mLinking CXX executable goal_manager[0m
+[ 77%] Built target goal_manager
+gmake: *** [Makefile:146: all] Error 2

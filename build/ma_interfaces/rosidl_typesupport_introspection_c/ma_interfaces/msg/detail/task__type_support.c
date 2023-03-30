@@ -36,7 +36,7 @@ void ma_interfaces__msg__Task__rosidl_typesupport_introspection_c__Task_fini_fun
   ma_interfaces__msg__Task__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember ma_interfaces__msg__Task__rosidl_typesupport_introspection_c__Task_message_member_array[4] = {
+static rosidl_typesupport_introspection_c__MessageMember ma_interfaces__msg__Task__rosidl_typesupport_introspection_c__Task_message_member_array[7] = {
   {
     "id",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
@@ -72,6 +72,40 @@ static rosidl_typesupport_introspection_c__MessageMember ma_interfaces__msg__Tas
     NULL  // resize(index) function pointer
   },
   {
+    "num_agents",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(ma_interfaces__msg__Task, num_agents),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "value",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(ma_interfaces__msg__Task, value),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
     "duration",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
@@ -89,14 +123,31 @@ static rosidl_typesupport_introspection_c__MessageMember ma_interfaces__msg__Tas
     NULL  // resize(index) function pointer
   },
   {
-    "value",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
+    "st",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(ma_interfaces__msg__Task, value),  // bytes offset in struct
+    offsetof(ma_interfaces__msg__Task, st),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "et",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(ma_interfaces__msg__Task, et),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -110,7 +161,7 @@ static rosidl_typesupport_introspection_c__MessageMember ma_interfaces__msg__Tas
 static const rosidl_typesupport_introspection_c__MessageMembers ma_interfaces__msg__Task__rosidl_typesupport_introspection_c__Task_message_members = {
   "ma_interfaces__msg",  // message namespace
   "Task",  // message name
-  4,  // number of fields
+  7,  // number of fields
   sizeof(ma_interfaces__msg__Task),
   ma_interfaces__msg__Task__rosidl_typesupport_introspection_c__Task_message_member_array,  // message members
   ma_interfaces__msg__Task__rosidl_typesupport_introspection_c__Task_init_function,  // function to initialize message memory (memory has to be allocated)

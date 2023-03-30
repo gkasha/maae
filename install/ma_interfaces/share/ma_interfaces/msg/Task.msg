@@ -1,4 +1,7 @@
 string id
 string owner
+int64 num_agents
+float64 value
 float64 duration
-int64 value
+float64 st
+float64 et

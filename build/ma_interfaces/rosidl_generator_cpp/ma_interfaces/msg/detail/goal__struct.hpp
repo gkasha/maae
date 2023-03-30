@@ -40,6 +40,8 @@ struct Goal_
     {
       this->id = "";
       this->owner = "";
+      this->num_agents = 0ll;
+      this->deadline = 0.0;
     }
   }
 
@@ -52,6 +54,8 @@ struct Goal_
     {
       this->id = "";
       this->owner = "";
+      this->num_agents = 0ll;
+      this->deadline = 0.0;
     }
   }
 
@@ -62,6 +66,12 @@ struct Goal_
   using _owner_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _owner_type owner;
+  using _num_agents_type =
+    int64_t;
+  _num_agents_type num_agents;
+  using _deadline_type =
+    double;
+  _deadline_type deadline;
 
   // setters for named parameter idiom
   Type & set__id(
@@ -74,6 +84,18 @@ struct Goal_
     const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
   {
     this->owner = _arg;
+    return *this;
+  }
+  Type & set__num_agents(
+    const int64_t & _arg)
+  {
+    this->num_agents = _arg;
+    return *this;
+  }
+  Type & set__deadline(
+    const double & _arg)
+  {
+    this->deadline = _arg;
     return *this;
   }
 
@@ -123,6 +145,12 @@ struct Goal_
       return false;
     }
     if (this->owner != other.owner) {
+      return false;
+    }
+    if (this->num_agents != other.num_agents) {
+      return false;
+    }
+    if (this->deadline != other.deadline) {
       return false;
     }
     return true;

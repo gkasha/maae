@@ -10,9 +10,15 @@ module ma_interfaces {
 
       string owner;
 
+      int64 num_agents;
+
+      double value;
+
       double duration;
 
-      int64 value;
+      double st;
+
+      double et;
     };
   };
 };

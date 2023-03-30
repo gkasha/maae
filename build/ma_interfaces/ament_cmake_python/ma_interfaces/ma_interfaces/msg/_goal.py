@@ -7,6 +7,8 @@
 
 import builtins  # noqa: E402, I100
 
+import math  # noqa: E402, I100
+
 import rosidl_parser.definition  # noqa: E402, I100
 
 
@@ -57,16 +59,22 @@ class Goal(metaclass=Metaclass_Goal):
     __slots__ = [
         '_id',
         '_owner',
+        '_num_agents',
+        '_deadline',
     ]
 
     _fields_and_field_types = {
         'id': 'string',
         'owner': 'string',
+        'num_agents': 'int64',
+        'deadline': 'double',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
+        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -75,6 +83,8 @@ class Goal(metaclass=Metaclass_Goal):
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.id = kwargs.get('id', str())
         self.owner = kwargs.get('owner', str())
+        self.num_agents = kwargs.get('num_agents', int())
+        self.deadline = kwargs.get('deadline', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -109,6 +119,10 @@ class Goal(metaclass=Metaclass_Goal):
             return False
         if self.owner != other.owner:
             return False
+        if self.num_agents != other.num_agents:
+            return False
+        if self.deadline != other.deadline:
+            return False
         return True
 
     @classmethod
@@ -141,3 +155,33 @@ class Goal(metaclass=Metaclass_Goal):
                 isinstance(value, str), \
                 "The 'owner' field must be of type 'str'"
         self._owner = value
+
+    @builtins.property
+    def num_agents(self):
+        """Message field 'num_agents'."""
+        return self._num_agents
+
+    @num_agents.setter
+    def num_agents(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'num_agents' field must be of type 'int'"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'num_agents' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._num_agents = value
+
+    @builtins.property
+    def deadline(self):
+        """Message field 'deadline'."""
+        return self._deadline
+
+    @deadline.setter
+    def deadline(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'deadline' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'deadline' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._deadline = value

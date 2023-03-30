@@ -6,6 +6,7 @@
 
 #include "ma_interfaces/msg/action_dispatch.hpp"
 #include "ma_interfaces/msg/action_feedback.hpp"
+#include "std_msgs/msg/int64.hpp"
 
 #include <chrono>
 #include <vector>
@@ -31,7 +32,7 @@ class ActionNode
             agent_id_ = action.agent_id;
             name_ = action.name;
             duration_ = action.duration;
-            st_ = std::chrono::steady_clock::now();
+            st_ = action.start_time;
             status_ = WAITING;
         }
 
@@ -47,15 +48,15 @@ class ActionNode
             return status_;
         }
 
-        void set_start_time(std::chrono::steady_clock::time_point tp) {
+        void set_start_time(int tp) {
             st_ = tp;
         }
 
-        std::chrono::steady_clock::time_point get_start_time(){
+        int get_start_time(){
             return st_;
         }
 
-        void set_duration(float x) {
+        void set_duration(double x) {
             duration_ = x;
         }
 
@@ -63,13 +64,12 @@ class ActionNode
             return duration_;
         }
 
-        ma_interfaces::msg::ActionFeedback to_feedback_msg() {
+        ma_interfaces::msg::ActionFeedback to_feedback_msg(int curr_time) {
             auto msg = ma_interfaces::msg::ActionFeedback();
             msg.action_id = action_id_;
             msg.agent_id = agent_id_;
             msg.name = name_;
-            msg.time = std::chrono::duration_cast<std::chrono::duration<double>>(std::chrono::time_point_cast<std::chrono::seconds>(std::chrono::steady_clock::now()).time_since_epoch()).count();
-
+            msg.time = curr_time;
             if (status_ == ActionStatus::EXECUTING) {
                 msg.action_started = 1;
             } else if (status_ == ActionStatus::COMPLETE) {
@@ -85,8 +85,8 @@ class ActionNode
         std::string action_id_;
         std::string agent_id_;
         std::string name_;
-        float duration_;
-        std::chrono::steady_clock::time_point st_;
+        int duration_;
+        int st_;
         ActionStatus status_;
 };
 
@@ -98,47 +98,58 @@ class Monitor : public rclcpp::Node
         Monitor() : Node("MonitorNode")
         {
             publisher_ = this->create_publisher<ma_interfaces::msg::ActionFeedback>("action_feedback_topic", 10);
-            system_start_time_ = std::chrono::steady_clock::now();
 
-            auto timer_callback = 
-                [this]() -> void {
-                    std::vector<std::string> completed_actions;
-                    for (auto const& x : action_map) {
-                        ActionNode* action = x.second;
-                        if (action->get_status() == ActionNode::EXECUTING) {
+            cbgs_clock_ = this->create_callback_group(
+                rclcpp::CallbackGroupType::MutuallyExclusive);
 
-                            std::chrono::duration<float> execution_span = std::chrono::duration_cast<std::chrono::duration<double>>(std::chrono::steady_clock::now() - action->get_start_time());
-                            if (execution_span.count() >= action->get_duration()) {
-                                // Action has completed execution, continue
-                                action->set_status(ActionNode::COMPLETE);
-                                publisher_->publish(action->to_feedback_msg());
-
-                                RCLCPP_INFO(this->get_logger(), "Action completed: %s", action->to_string().c_str());
-                                completed_actions.push_back(action->to_string());
-                            }
-                        } else if (action->get_status() == ActionNode::WAITING) {
-                            action->set_start_time(std::chrono::steady_clock::now());
-                            action->set_status(ActionNode::EXECUTING);
-
-                            publisher_->publish(action->to_feedback_msg());
-                            RCLCPP_INFO(this->get_logger(), "Action started: %s", action->to_string().c_str());
-                        } else if (action->get_status() == ActionNode::FAILED) {
-                            publisher_->publish(action->to_feedback_msg());
-                            RCLCPP_INFO(this->get_logger(), "Action failed: %s", action->to_string().c_str());
-                            completed_actions.push_back(action->to_string());
-                        }
-                    }
-                    for (auto s : completed_actions) {
-                        action_map.erase(s);
-                    }
-                };
-            timer_ = this->create_wall_timer(500ms, timer_callback);
+            auto clock_opt = rclcpp::SubscriptionOptions();
+            clock_opt.callback_group = cbgs_clock_;
+            clock_ = this->create_subscription<std_msgs::msg::Int64>(
+                "clock_topic",
+                rclcpp::QoS(10),
+                std::bind(
+                    &Monitor::clock_cb,
+                    this,
+                    std::placeholders::_1),
+                    clock_opt);
         }
 
     private:
-        rclcpp::TimerBase::SharedPtr timer_;
+        void clock_cb(const std_msgs::msg::Int64::SharedPtr msg) {
+            std::vector<std::string> completed_actions;
+            curr_time_ = msg->data;
+            for (auto const& x : action_map) {
+                ActionNode* action = x.second;
+                if (action->get_status() == ActionNode::EXECUTING) {
+                    int execution_span = curr_time_ - action->get_start_time();
+                    if (execution_span  >= action->get_duration()) {
+                        // Action has completed execution, continue
+                        action->set_status(ActionNode::COMPLETE);
+                        publisher_->publish(action->to_feedback_msg(curr_time_));
+
+                        RCLCPP_INFO(this->get_logger(), "Action completed: %s", action->to_string().c_str());
+                        completed_actions.push_back(action->to_string());
+                    }
+                } else if (action->get_status() == ActionNode::WAITING) {
+                    action->set_start_time(curr_time_);
+                    action->set_status(ActionNode::EXECUTING);
+
+                    publisher_->publish(action->to_feedback_msg(curr_time_));
+                    RCLCPP_INFO(this->get_logger(), "Action started: %s", action->to_string().c_str());
+                } else if (action->get_status() == ActionNode::FAILED) {
+                    publisher_->publish(action->to_feedback_msg(curr_time_));
+                    RCLCPP_INFO(this->get_logger(), "Action failed: %s", action->to_string().c_str());
+                    completed_actions.push_back(action->to_string());
+                }
+            }
+            for (auto s : completed_actions) {
+                action_map.erase(s);
+            }
+        }
+        int curr_time_;
         rclcpp::Publisher<ma_interfaces::msg::ActionFeedback>::SharedPtr publisher_;
-        std::chrono::steady_clock::time_point system_start_time_;
+        rclcpp::CallbackGroup::SharedPtr cbgs_clock_;
+        rclcpp::Subscription<std_msgs::msg::Int64>::SharedPtr clock_;
 };
 
 class Executor : public rclcpp::Node

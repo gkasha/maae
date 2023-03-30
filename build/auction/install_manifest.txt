@@ -5,6 +5,7 @@
 /home/gkasha/Documents/maae/install/auction/lib/auction/client
 /home/gkasha/Documents/maae/install/auction/lib/auction/agent
 /home/gkasha/Documents/maae/install/auction/lib/auction/goal_manager
+/home/gkasha/Documents/maae/install/auction/lib/auction/clock
 /home/gkasha/Documents/maae/install/auction/share/ament_index/resource_index/package_run_dependencies/auction
 /home/gkasha/Documents/maae/install/auction/share/ament_index/resource_index/parent_prefix_path/auction
 /home/gkasha/Documents/maae/install/auction/share/auction/environment/ament_prefix_path.dsv

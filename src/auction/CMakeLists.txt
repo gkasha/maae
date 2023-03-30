@@ -9,6 +9,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(ma_interfaces REQUIRED)
+find_package(std_msgs REQUIRED)
 
 include_directories(include)
 install(DIRECTORY include/${PROJECT_NAME}/ DESTINATION include/${PROJECT_NAME}/)
@@ -16,19 +17,23 @@ ament_export_include_directories(include)
 
 add_executable(execution_interface src/execution_interface.cpp)
 ament_target_dependencies(execution_interface
-  rclcpp ma_interfaces)
+  rclcpp ma_interfaces std_msgs)
 
 add_executable(client src/client.cpp)
 ament_target_dependencies(client
-  rclcpp ma_interfaces)
+  rclcpp ma_interfaces std_msgs)
 
 add_executable(agent src/agent.cpp src/stn.cpp)
 ament_target_dependencies(agent
-  rclcpp ma_interfaces)
+  rclcpp ma_interfaces std_msgs)
 
 add_executable(goal_manager src/goal_manager.cpp)
 ament_target_dependencies(goal_manager
-  rclcpp ma_interfaces)
+  rclcpp ma_interfaces std_msgs)
+
+add_executable(clock src/clock.cpp)
+ament_target_dependencies(clock
+  rclcpp ma_interfaces std_msgs)
 
 
 install(TARGETS
@@ -36,6 +41,7 @@ install(TARGETS
   client
   agent
   goal_manager
+  clock
   DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)

@@ -83,6 +83,24 @@ bool ma_interfaces__msg__goal__convert_from_py(PyObject * _pymsg, void * _ros_me
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
+  {  // num_agents
+    PyObject * field = PyObject_GetAttrString(_pymsg, "num_agents");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->num_agents = PyLong_AsLongLong(field);
+    Py_DECREF(field);
+  }
+  {  // deadline
+    PyObject * field = PyObject_GetAttrString(_pymsg, "deadline");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->deadline = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -133,6 +151,28 @@ PyObject * ma_interfaces__msg__goal__convert_to_py(void * raw_ros_message)
     }
     {
       int rc = PyObject_SetAttrString(_pymessage, "owner", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // num_agents
+    PyObject * field = NULL;
+    field = PyLong_FromLongLong(ros_message->num_agents);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "num_agents", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // deadline
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->deadline);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "deadline", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

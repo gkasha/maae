@@ -9,6 +9,10 @@ module ma_interfaces {
       string id;
 
       string owner;
+
+      int64 num_agents;
+
+      double deadline;
     };
   };
 };

@@ -27,8 +27,11 @@ typedef struct ma_interfaces__msg__Task
 {
   rosidl_runtime_c__String id;
   rosidl_runtime_c__String owner;
+  int64_t num_agents;
+  double value;
   double duration;
-  int64_t value;
+  double st;
+  double et;
 } ma_interfaces__msg__Task;
 
 // Struct for a sequence of ma_interfaces__msg__Task.

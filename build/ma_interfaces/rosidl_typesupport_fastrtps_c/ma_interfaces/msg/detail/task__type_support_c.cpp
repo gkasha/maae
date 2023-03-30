@@ -79,14 +79,29 @@ static bool _Task__cdr_serialize(
     cdr << str->data;
   }
 
-  // Field name: duration
+  // Field name: num_agents
   {
-    cdr << ros_message->duration;
+    cdr << ros_message->num_agents;
   }
 
   // Field name: value
   {
     cdr << ros_message->value;
+  }
+
+  // Field name: duration
+  {
+    cdr << ros_message->duration;
+  }
+
+  // Field name: st
+  {
+    cdr << ros_message->st;
+  }
+
+  // Field name: et
+  {
+    cdr << ros_message->et;
   }
 
   return true;
@@ -133,14 +148,29 @@ static bool _Task__cdr_deserialize(
     }
   }
 
-  // Field name: duration
+  // Field name: num_agents
   {
-    cdr >> ros_message->duration;
+    cdr >> ros_message->num_agents;
   }
 
   // Field name: value
   {
     cdr >> ros_message->value;
+  }
+
+  // Field name: duration
+  {
+    cdr >> ros_message->duration;
+  }
+
+  // Field name: st
+  {
+    cdr >> ros_message->st;
+  }
+
+  // Field name: et
+  {
+    cdr >> ros_message->et;
   }
 
   return true;
@@ -168,15 +198,33 @@ size_t get_serialized_size_ma_interfaces__msg__Task(
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message->owner.size + 1);
-  // field.name duration
+  // field.name num_agents
   {
-    size_t item_size = sizeof(ros_message->duration);
+    size_t item_size = sizeof(ros_message->num_agents);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
   // field.name value
   {
     size_t item_size = sizeof(ros_message->value);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name duration
+  {
+    size_t item_size = sizeof(ros_message->duration);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name st
+  {
+    size_t item_size = sizeof(ros_message->st);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name et
+  {
+    size_t item_size = sizeof(ros_message->et);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -231,7 +279,7 @@ size_t max_serialized_size_ma_interfaces__msg__Task(
         1;
     }
   }
-  // member: duration
+  // member: num_agents
   {
     size_t array_size = 1;
 
@@ -239,6 +287,27 @@ size_t max_serialized_size_ma_interfaces__msg__Task(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
   // member: value
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+  // member: duration
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+  // member: st
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+  // member: et
   {
     size_t array_size = 1;
 
