@@ -36,10 +36,12 @@ class TNode
             status = WAITING;
         };
         TNodeStatus status;
+        ma_interfaces::msg::Task task;
         std::string stp_;
         std::string etp_;
         std::string name_;
         TNode* next;
+        TNode* prev;
 };
 
 class Agent : public rclcpp::Node
@@ -126,7 +128,9 @@ class Agent : public rclcpp::Node
             stn = STN();
             stn.init();
             stn.add_timepoint("start");
+            stn.add_timepoint("now");
             stn.add_timepoint("end");
+            constraint now_c = std::make_tuple("now","end",0,0);
             constraint start_c = std::make_tuple("cz", "start", 0, 0);
             constraint end_c = std::make_tuple("cz", "end", 0, deadline_);
             constraint seq_c = std::make_tuple("start", "end", 0, inf);
@@ -134,6 +138,7 @@ class Agent : public rclcpp::Node
             stn.add_constraint("cz_start_seq", start_c);
             stn.add_constraint("deadline", end_c);
             stn.add_constraint("start_end_seq", seq_c);
+            stn.add_constraint("now_constraint", now_c);
 
             timeline = new TNode("head", "start", "start");
             timeline->status = TNode::COMPLETE;
@@ -198,6 +203,7 @@ class Agent : public rclcpp::Node
         void print_timeline();
         std::vector<ma_interfaces::msg::Bid> choose_winners(ma_interfaces::msg::Task task);
         bool schedule_task(ma_interfaces::msg::Task task);
+        void host_auction(const ma_interfaces::msg::Goal goal);
         void new_goals_cb(const ma_interfaces::msg::Goal goal);
         void new_tasks_cb(const ma_interfaces::msg::Task task);
         void new_bids_cb(const ma_interfaces::msg::Bid bid);

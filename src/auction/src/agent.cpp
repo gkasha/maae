@@ -59,6 +59,47 @@ ma_interfaces::msg::Task Agent::build_task_msg(
 
 void Agent::clock_cb(const std_msgs::msg::Int64::SharedPtr msg) {
     curr_time_ = msg->data;
+
+    // Delete now constraint
+    stn.del_constraint("now_constraint");
+
+    // Get the current time point that we should be looking at
+    TNode* curr = timeline;
+
+    // If curr is executing, add constraint to end. Otherwise, add to start
+    std::string timepoint;
+    if (curr->status == TNode::WAITING) {
+        timepoint = curr->stp_;
+    } else if (curr->status == TNode::EXECUTING) {
+        timepoint = curr->etp_;
+    } else {
+        timepoint = "end";
+    }
+
+    constraint c = std::make_tuple("now", timepoint, curr_time_, std::get<1>(stn.get_feasible_values(timepoint)));
+    bool status = stn.add_constraint("now_constraint", c);
+    if (!status){
+        // if (curr->status == TNode::WAITING) {
+        //     // Remove task frome timeline
+        //     stn.del_all_constraints(curr->stp_,curr->etp_);
+        //     stn.del_timepoint(curr->stp_);
+        //     stn.del_timepoint(curr->etp_);
+            
+        //     c = std::make_tuple(curr->prev->etp_,curr->next->stp_, 0, inf);
+        //     stn.add_constraint(curr->prev->etp_ + "_" + curr->next->stp_ + "_seq", c);
+
+        //     ma_interfaces::msg::goal goal = ma_interfaces::msg::goal();
+        //     goal.id = curr->task.id;
+        //     goal.deadline = curr->task.et;
+        //     goal.num_agents = curr->task.num
+        //     timeline_ = curr->next;
+            
+        //     // stn.add_constraint(curr->prev)
+        // }
+        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Unable to add now constraint");
+    }
+
+
     check_dispatch();
 }
 /*
@@ -131,6 +172,33 @@ std::vector<ma_interfaces::msg::Bid> Agent::choose_winners(ma_interfaces::msg::T
     return winner_map[task.id][0];
 }
 
+void Agent::host_auction(const ma_interfaces::msg::Goal goal) {
+    if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Won goal %s", goal.id.c_str());
+
+    ma_interfaces::msg::Task task = build_task_msg(goal.id,"",goal.num_agents,10,10,curr_time_+5,curr_time_+15);
+    std::map<std::string,std::vector<ma_interfaces::msg::Bid>> new_map;
+    bid_map[task.id] = new_map;
+
+    // Send out auction
+    if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing auction for task %s", task.id.c_str());
+    task_auction_publisher_->publish(task);
+
+    // Wait to collect bids
+    rclcpp::sleep_for(5s);
+
+    // Choose winner -- default is earliest start time
+    std::vector<ma_interfaces::msg::Bid> winning_bids = choose_winners(task);
+
+    // Send out winners
+    for (ma_interfaces::msg::Bid bid : winning_bids) {
+        if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing winner for auction %s: agent %s (%f,%f)", task.id.c_str(), task.owner.c_str(), bid.st, bid.et);
+        task.owner = bid.agent_id;
+        task.st = bid.st;
+        task.et = task.st + task.duration;
+
+        task_auction_publisher_->publish(task);
+    }
+}
 /*
  * Callback function for goals published by goal manager
  *
@@ -145,32 +213,7 @@ void Agent::new_goals_cb(const ma_interfaces::msg::Goal goal) {
         ma_interfaces::msg::Bid bid = build_bid_msg(id_,goal.id,0,0,0,10);
         goal_bid_publisher_->publish(bid);
     } else if (goal.owner == id_) {
-        // Agent won the bid, now need to host a task auction
-        if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Won goal %s", goal.id.c_str());
-
-        ma_interfaces::msg::Task task = build_task_msg(goal.id,"",goal.num_agents,10,10,curr_time_+5,curr_time_+15);
-        std::map<std::string,std::vector<ma_interfaces::msg::Bid>> new_map;
-        bid_map[task.id] = new_map;
-
-        // Send out auction
-        if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing auction for task %s", task.id.c_str());
-        task_auction_publisher_->publish(task);
-
-        // Wait to collect bids
-        rclcpp::sleep_for(5s);
-
-        // Choose winner -- default is earliest start time
-        std::vector<ma_interfaces::msg::Bid> winning_bids = choose_winners(task);
-
-        // Send out winners
-        for (ma_interfaces::msg::Bid bid : winning_bids) {
-            if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing winner for auction %s: agent %s (%f,%f)", task.id.c_str(), task.owner.c_str(), bid.st, bid.et);
-            task.owner = bid.agent_id;
-            task.st = bid.st;
-            task.et = task.st + task.duration;
-
-            task_auction_publisher_->publish(task);
-        }
+        host_auction(goal);
     }
 }
 
