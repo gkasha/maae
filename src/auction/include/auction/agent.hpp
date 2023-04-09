@@ -41,18 +41,20 @@ class TNode
         std::string etp_;
         std::string name_;
         TNode* next;
+        TNode* next_task;
         TNode* prev;
 };
 
 class Agent : public rclcpp::Node
 {
     public:
-        Agent(std::string id, double deadline, double execution_threshold) : Node("agent_"+id)
+        Agent(std::string id, double deadline, double execution_threshold, double speed) : Node("agent_"+id)
         {
             std::string topic = "agent_topic_" + id;
             id_ = id;
             deadline_ = deadline;
             execution_threshold_ = execution_threshold;
+            speed_ = speed;
 
             goal_bid_publisher_ = this->create_publisher<ma_interfaces::msg::Bid>("goal_bids_topic", 10);
             task_auction_publisher_ = this->create_publisher<ma_interfaces::msg::Task>("new_tasks_topic", 10);
@@ -130,7 +132,7 @@ class Agent : public rclcpp::Node
             stn.add_timepoint("start");
             stn.add_timepoint("now");
             stn.add_timepoint("end");
-            constraint now_c = std::make_tuple("now","end",0,0);
+            constraint now_c = std::make_tuple("now","end",0,inf);
             constraint start_c = std::make_tuple("cz", "start", 0, 0);
             constraint end_c = std::make_tuple("cz", "end", 0, deadline_);
             constraint seq_c = std::make_tuple("start", "end", 0, inf);
@@ -140,11 +142,18 @@ class Agent : public rclcpp::Node
             stn.add_constraint("start_end_seq", seq_c);
             stn.add_constraint("now_constraint", now_c);
 
+            timeline->task = build_task_msg("head_task","",0,0,0,0,0,0,0);
             timeline = new TNode("head", "start", "start");
             timeline->status = TNode::COMPLETE;
             TNode* tail = new TNode("tail", "end", "end");
+            tail->task = build_task_msg("tail","",0,0,0,0,0,0,0);
+            tail->prev = timeline;
+            tail->next = nullptr;
+            tail->next_task = nullptr;
     
             timeline->next = tail;
+            timeline->next_task = tail;
+            timeline->prev = nullptr;
 
         }
         
@@ -164,7 +173,9 @@ class Agent : public rclcpp::Node
             double value,
             double duration,
             double st,
-            double et
+            double et,
+            double x,
+            double y
         );
 
         rclcpp::Publisher<ma_interfaces::msg::Bid>::SharedPtr goal_bid_publisher_;
@@ -194,6 +205,7 @@ class Agent : public rclcpp::Node
         double start_time_;
         int curr_time_;
         double deadline_;
+        double speed_;
         STN stn;
         TNode* timeline;
         std::vector<TNode*> plans;

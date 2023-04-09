@@ -44,7 +44,9 @@ ma_interfaces::msg::Task Agent::build_task_msg(
     double value,
     double duration,
     double st,
-    double et
+    double et,
+    double x,
+    double y
 ) {
     ma_interfaces::msg::Task task = ma_interfaces::msg::Task();
     task.id = id;
@@ -54,6 +56,8 @@ ma_interfaces::msg::Task Agent::build_task_msg(
     task.duration = duration;
     task.st = st;
     task.et = et;
+    task.x = x;
+    task.y = y;
     return task;
 }
 
@@ -161,7 +165,7 @@ std::vector<ma_interfaces::msg::Bid> Agent::choose_winners(ma_interfaces::msg::T
     auto cmp = [](
         std::vector<ma_interfaces::msg::Bid> left,
         std::vector<ma_interfaces::msg::Bid> right)
-        {return left[0].st < right[0].st;};
+        {return (left[0].val < right[0].val) || (left[0].val == right[0].val && left[0].st < right[0].st);};
     
     std::sort(overlaps.begin(),overlaps.end(),cmp);
 
@@ -175,7 +179,8 @@ std::vector<ma_interfaces::msg::Bid> Agent::choose_winners(ma_interfaces::msg::T
 void Agent::host_auction(const ma_interfaces::msg::Goal goal) {
     if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Won goal %s", goal.id.c_str());
 
-    ma_interfaces::msg::Task task = build_task_msg(goal.id,"",goal.num_agents,10,10,curr_time_+5,curr_time_+15);
+    double task_duration = 10;
+    ma_interfaces::msg::Task task = build_task_msg(goal.id,"",goal.num_agents,goal.value,task_duration,goal.deadline-task_duration,goal.deadline, goal.x, goal.y);
     std::map<std::string,std::vector<ma_interfaces::msg::Bid>> new_map;
     bid_map[task.id] = new_map;
 
@@ -218,23 +223,105 @@ void Agent::new_goals_cb(const ma_interfaces::msg::Goal goal) {
 }
 
 /*
- * Function to find all slots on an agent timeline that can accomplish the task
+ * Function to compute distance between two tasks. Returns 0 if second task is the tail
+ */
+double Agent::compute_dist(ma_interfaces::msg::Task &t1, ma_interfaces::msg::Task &t2) {
+    if (t2.id == "tail") return 0;
+    
+    return sqrt(pow(t2.x-t1.x,2) + pow(t2.y-t1.y,2));
+}
+
+/*
+ * Function to unschedule a task on the timeline
+ *
+ * Input: TNode t that consists of a start and end timepoint. Function deletes all the constraints
+ * that connect to these timepoints, therefore "unscheduling" the task
+ * 
+ * Output: All relevant constraints that were deleted
+ */
+std::vector<std::tuple<std::string,constraint>> Agent::unschedule_task(TNode* t) {
+    map<string, constraint> constraints = stn.get_constraints();
+    std::vector<constraint> relevant_constraints;
+    for (auto const& elt : constraints) {
+        constraint c = elt.second;
+        if (std::get<0>(c) == t->stp_ || std::get<1>(c) == t->etp_ || std::get<1>(c) == t->stp_ || std::get<0>(c) == t->etp_) {
+            relevant_constraints.push_back(std::make_tuple(elt.first,c));
+            stn.del_constraint(elt.first)
+        }
+    }
+
+    stn.del_timepoint(t->stp_);
+    stn.del_timepoint(t->etp_);
+
+    return relevant_constraints;
+}
+
+
+/*
+ * Function to find a slot that fits the given task, starting at the input
+ * root node
+ */
+TNode* Agent::find_slot(TNode* root, ma_interfaces::msg::Task &task) {
+    TNode* curr = root;
+
+    while (curr->next_task) {
+        TNode* next_task = curr->next_task;
+        TNode* next_travel = curr->next;
+        if (curr->next->name_ != "tail") {
+            std::vector<std::tuple<std::string,constraint>> constraints = unschedule_task(next_travel);
+            double total_dur = compute_dist(curr->task,task) + task.duration + compute_dist(task, next_task->task);
+            constraint temp_c = std::make_tuple(curr->etp_,next_task->stp_,total_dur, inf);
+            std::string temp_c_name = task.id + "_temp_c";
+
+            bool status = stn.add_constraint(temp_c_name, temp_c);
+            // Undo changes
+            stn.del_constraint(temp_c_name);
+            stn.add_timepoint(next_travel->stp_);
+            stn.add_timepoint(next_travel->etp_);
+            for (auto elt : constraints) {
+                if (!stn.add_constraint(std::get<0>(elt), std::get<1>(elt))){
+                    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Error re-adding constraints");
+                }
+            }
+            if (status) break;
+        } else {
+            double st = -1*std::get<0>(stn.get_feasible_values(curr->etp_)); 
+            double et = std::get<1>(stn.get_feasible_values(curr->next->stp_));
+            double total_dur = compute_dist(curr->task,task) + task.duration; // Travel time to task
+            if (et-st >= total_dur) {
+                break;
+            }
+        }
+        curr = curr->next_task;
+    }
+
+    return curr;
+}
+
+/*
+ * Function to find all slots on an agent timeline that can accomplish the task.
+ * Tasks are now located, have to only search between non-travel nodes. In particular,
+ * we search for a slot by looking at a TNode curr, and examining its next and next_travel
+ * nodes. If both exist, then this means that we need to travel from curr->task to curr->next->task,
+ * so to check for a slot we "unschedule" the travel task, and see if a new constraint with lower bound
+ * travel_time + task.duration fits on the timeline. If it does, then we have found a slot,
+ * so we undo our changes and save the slot.
+ * 
+ * As an edge case, if our curr->next is the tail, we do a simple check to see if the task
+ * and travel_to times can fit between our current node and the tail.
  *
  * Input: Duration representing size of slot
  * Output: TNode curr, where the slot is between curr and curr->next
  */
-std::vector<TNode*> Agent::find_slots(int dur) {
+std::vector<TNode*> Agent::find_slots(ma_interfaces::msg::Task &task) {
     std::vector<TNode*> slots;
     TNode* curr = timeline;
 
-    while (curr->next) {
-        double st = max((double)curr_time_,-1*std::get<0>(stn.get_feasible_values(curr->etp_))); 
-        double et = std::get<1>(stn.get_feasible_values(curr->next->stp_));
-        if (curr->next->status == TNode::WAITING && et-st >= dur) {
-            // Check that next node on timeline isn't already in execution
-            slots.push_back(curr);
-        }
-        curr = curr->next;
+    while (curr) {
+        TNode* temp = find_slot(curr,task);
+        if (temp->name_ != "tail") slots.push_back(temp);
+
+        curr = temp->next_task;
     }
 
     return slots;
@@ -255,61 +342,184 @@ void Agent::print_timeline() {
     }
 }
 
-// Assume task.deadline is when we have to start the task
-bool Agent::schedule_task(ma_interfaces::msg::Task task) {
+/*
+ * Function to schedule task.
+ * There are two possiblities: 1) the task has a start time and 2) the task does not.
+ * The two cases are similar, except that in the latter case, we need to
+ * assert that the task can be started at its specified time.
+ * 
+ * Therefore, the search process should be as follows: When looking for a slot
+ * that has a start time, we create a temporary task node that represents
+ * our task. We tie this to "CZ" with a strict constraint of (st-thresh,st+thresh).
+ * We then iterate through the timeline, each time attempting to unschedule
+ * the travel task between two nodes. We then connect these two nodes with
+ * the temporary task node with a (travel_to, inf) bound coming in, and a
+ * (travel_from + dur, inf) bound leaving. If adding these constraints 
+ * is valid, then we have found a slot, and are done.
+ * 
+ * OTOH, if the task does not have a start time, then we can simply
+ * look for a slot that can fit the task, similar to our find_slot
+ * method.
+ *
+ * Input: Task to be scheduled
+ * Output: Boolean value describing whether or not scheduling was successful
+ */
+bool Agent::schedule_task(ma_interfaces::msg::Task &task) {
     // Search for slot that covers task
     TNode* curr = timeline;
-    while (curr->next) {
-        double st = max((double)curr_time_,-1*std::get<0>(stn.get_feasible_values(curr->etp_))); 
-        double et = std::get<1>(stn.get_feasible_values(curr->next->stp_));
-        // won task, make sure that task start and end time are within block
-        if (curr->next->status == TNode::WAITING && task.st >= st && task.et <= et) {
-            // Check that next node on timeline isn't already in execution
-            break;
+    std::vector<std::tuple<std::string, constraint>> constraints;
+
+    while (curr) {
+        TNode* slot = find_slot(curr, task);
+        if (slot->name_ != "tail") {
+            if (task.st >= 0) {
+                // Need to check that slot actually matches start time
+                double to_dur = compute_dist(slot->task, task);
+                double from_dur = task.duration;
+
+                if (slot->next->name_ != "tail") {
+                    TNode* next_travel = slot->next;
+                    constraints = unschedule_task(next_travel);
+                    from_dur += compute_dist(task, slot->next_task->task);
+                }
+
+                std::string temp_tp = "temp_task";
+                stn.add_timepoint(temp_tp);
+                constraint temp_to = std::make_tuple(slot->etp_,temp_tp, to_dur, inf);
+                constraint temp_from = std::make_tuple(temp_tp, slot->next_task->stp_, from_dur, inf);
+                constraint temp_st = std::make_tuple("cz", temp_tp, task.et-execution_threshold_, task.et+execution_threshold_);
+                
+                if (stn.add_constraint("temp_to", temp_to) 
+                    && stn.add_constraint("temp_from", temp_from)
+                    && stn.add_constraint("temp_st", temp_st)) {
+                    // Task can fit within slot, break with this slot
+                    stn.del_timepoint(temp_tp);
+                    break;
+                } else {
+                    // Task can't fit, undo changes and continue
+                    stn.del_timepoint(temp_tp);
+                    stn.add_timepoint(slot->next->stp_);
+                    stn.add_timepoint(slot->next->etp_);
+                    for (auto elt : constraints) {
+                        stn.add_constraint(std::get<0>(elt), std::get<1>(elt));
+                    }
+                }
+            } else {
+                // Just need to unschedule travel task, if it exists
+                if (slot->next->name_ != "tail") {
+                    constraints = unschedule_task(slot->next);
+                }
+                break;
+            }
         }
-        curr = curr->next;
+        curr = slot->next_travel;
     }
 
-    if (curr->name_ == "tail"){
+    // At this point, we either have a pointer to our current slot, or our pointer is null
+    if (!curr){
         RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Unable to find slot to schedule task...");
         return false;
     }
 
-    std::string slot_st = curr->etp_;
-    std::string slot_et = curr->next->stp_;
+    // Attempt to schedule slot. First, create travel to slot
+    std::string new_travel_to_stp = slot->name_ + "_" + task.id + "_travel_st";
+    std::string new_travel_to_etp = slot->name_ + "_" + task.id + "_travel_et";
 
-    stn.del_constraint(slot_st + "_" + slot_et + "_seq");
+    std::string new_task_stp = task.id + "_st";
+    std::string new_task_etp = task.id + "_et";
 
-    // Now, add in the new timepoints and constraints
-    std::string new_stp = task.id + "_st";
-    std::string new_etp = task.id + "_et";
+    std::string new_travel_from_stp = task.id + "_" + slot->next->name_ + "_travel__st";
+    std::string new_travel_from_etp = task.id + "_" + slot->next->name_ + "_travel_et";
 
-    // task.duration is st
-    constraint start_seq = std::make_tuple("cz", new_stp, task.st - execution_threshold_, task.st + execution_threshold_);
-    constraint task_dur = std::make_tuple(new_stp, new_etp, std::max(0.0,task.duration-execution_threshold_), task.duration+execution_threshold_);
-    constraint head_seq = std::make_tuple(slot_st, new_stp, 0, inf);
-    constraint tail_seq = std::make_tuple(new_etp, slot_et, 0, inf);
 
-    stn.add_timepoint(new_stp);
-    stn.add_timepoint(new_etp);
+    stn.add_timepoint(new_travel_to_stp);
+    stn.add_timepoiint(new_travel_to_etp);
+    stn.add_timepoint(new_task_stp);
+    stn.add_timepoint(new_task_etp);
+    stn.add_timepoint(new_travel_from_stp);
+    stn.add_timepoint(new_travel_from_etp);
 
-    bool status = stn.add_constraint("cz_" + new_stp + "_assignment", start_seq);
-    status = status && stn.add_constraint(slot_st + "_" + new_stp + "_seq", head_seq);
-    status = status && stn.add_constraint(new_stp + "_" + new_etp + "_dur", task_dur);
-    status = status && stn.add_constraint(new_etp + "_" + slot_et + "_seq", tail_seq);
+    // At this point, there should only be sequencing constraints between
+    // adjacent timepoints, which we don't really care about
+    double travel_to_dur = compute_dist(slot->task,task)/speed_;
 
-    if (!status) {
-        stn.del_all_constraints(new_stp, new_etp);
-        stn.del_all_constraints("cz",new_stp);
-        stn.del_timepoint(new_stp);
-        stn.del_timepoint(new_etp);
-        constraint old_seq = std::make_tuple(slot_st, slot_et, 0, inf);
-        stn.add_constraint(slot_st + "_" + slot_et + "_seq", old_seq);
+    constraint travel_to_st_c = std::make_tuple(slot->etp_, new_travel_to_stp, 0, inf);
+    constraint travel_to_c = std::make_tuple(new_travel_to_stp, new_travel_to_etp, travel_to_dur);
+    constraint travel_to_et_c = std::make_tuple(new_travel_to_etp, new_task_stp, 0, inf);
+    constraint task_dur_c = std::make_tuple(new_task_stp, new_task_etp, task.duration-execution_threshold_, task.duration+execution_threshold_);
+
+    int status = 0;
+    if (!stn.add_constraint(slot->name_ + "_" + task.id + "_travel_st", travel_to_st_c)
+        || !stn.add_constraint(slot->name_ + "_" + task.id + "_travel_dur", travel_to_c)
+        || !stn.add_constraint(task.id + "_travel_et", travel_to_et_c)
+        || !stn.add_constraint(task.id + "_task_dur", task_dur_c)) 
+    {
+        
+        status = -1;
     } else {
-        TNode* new_task = new TNode(task.id, new_stp, new_etp);
-        TNode* tmp = curr->next;
-        curr->next = new_task;
-        new_task->next = tmp;
+        status = 1;
+    }
+
+    if (status >= 1) {
+        if (task.st >= 0) {
+            constraint start_seq = std::make_tuple("cz", new_task_stp, task.st-execution_threshold_, task.st+execution_threshold_);
+            if (!stn.add_constraint(task.id + "_start_seq", start_seq)) {
+                status = -2;
+            } else {
+                status = 2;
+            }
+        }
+    }
+
+    
+    if (status >= 1){
+        if (slot->next->name_ != "tail") {
+            double travel_from_dur = compute_dist(task, slot->next->task)/speed;
+            constraint travel_from_st_c = std::make_tuple(new_task_etp, new_travel_from_stp, 0, inf);
+            constraint travel_from_c = std::make_tuple(new_travel_from_stp, new_travel_from_etp, travel_from_dur, inf);
+            constraint travel_from_et_c = std::make_tuple(new_travel_from_etp, slot->next->stp_, 0, inf);
+
+            if (!stn.add_constraint(task.id + "_" + slot->next->name_ + "_travel_st", travel_from_st_c)
+                || !stn.add_constraint(task.id + "_" + slot->next->name_ + "travel_dur", travel_from_c)
+                || !stn.add_constraint(task.id + "_" + slot->next->name_ + "_travel_et", travel_from_et_c))
+            {
+                status = -3;
+            } else {
+                status = 3;
+            }
+        }
+    }
+    
+    if (status >= 1) {
+        TNode* travel_to = new TNode(slot->name_ + "_" + task.id + "_travel", new_travel_to_stp, new_travel_to_etp);
+        travel_to->task = build_task_msg(slot->name_ + "_" + task.id + "_travel", "", 0, 0, compute_dist(slot->task,task)/speed_, 0,0,0,0);
+        slot->next = travel_to;
+
+        TNode* new_task = new TNode(task.id, new_task_stp, new_task_etp);
+        new_task->task = task;
+        new_task->next = slot->next_task;
+        new_task->next_task = slot->next_task;
+        travel_to->next = new_task;
+        slot->next_task = new_task;
+
+        if (status >= 3) {
+            TNode* travel_from = new TNode(task.id + "_" + slot->next_task + "_travel", new_travel_from_stp, new_travel_from_etp);
+            travel_to->task = build_task_msg(task.id + "_" + slot->next_task + "_travel", "", 0, 0, compute_dist(task,slot->next_task->task)/speed_,0,0,0,0);
+            new_task->next = travel_from;
+        }
+    } else {
+        stn.del_timepoint(new_travel_to_stp);
+        stn.del_timepoint(new_travel_to_etp);
+        stn.del_timepoint(new_task_stp);
+        stn.del_timepoint(new_task_etp);
+        stn.del_timepoint(new_travel_from_stp);
+        stn.del_timepoint(new_travel_from_etp);
+        
+        stn.add_timepoint(slot->next->stp_);
+        stn.add_timepoint(slot->next->etp_);
+        for (auto elt : constraints) {
+            stn.add_constraint(std::get<0>(elt), std::get<1>(elt));
+        }
     }
 
     return status;
@@ -478,7 +688,7 @@ int main(int argc, char* argv[])
     rclcpp::init(argc, argv);
 
     rclcpp::executors::MultiThreadedExecutor executor;
-    auto agent_node = std::make_shared<Agent>(argv[1], std::stod(argv[2]), std::stod(argv[3]));
+    auto agent_node = std::make_shared<Agent>(argv[1], std::stod(argv[2]), std::stod(argv[3]), std::stod(argv[4]));
 
     RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Agent %s started", argv[1]);
 

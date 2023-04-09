@@ -574,6 +574,7 @@ void STN::del_timepoint(string x) {
     p = nullptr;
 
     while (e != nullptr) {
+        if (constraints.find(e->c_id) != constraints.end()) constraints.erase(e->c_id);
         y_node = graph[e->id];
         y_node->edges_in = del_all_edges(y_node->edges_in, x_node->id, true);
         p = e->next;
