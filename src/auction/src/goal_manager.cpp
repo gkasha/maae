@@ -83,6 +83,8 @@ class ListenerNode : public rclcpp::Node
             new_goal.id = goal.id;
             new_goal.num_agents = goal.num_agents;
             new_goal.owner = winning_bid.agent_id;
+            new_goal.x = goal.x;
+            new_goal.y = goal.y;
             // new_goal.deadline = 
             publisher_->publish(new_goal);
         }

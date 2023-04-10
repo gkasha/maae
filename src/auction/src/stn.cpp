@@ -47,14 +47,15 @@ void STN::print_graph() {
 }
 
 void STN::gen_dot_file(string file_name) {
+    cout << "Printing dot file: " << file_name << endl;
     ofstream fout(file_name);
-    fout << "graph plan {\n";
+    fout << "graph plan {" << std::endl;
     for (int i = 0; i < (int)graph.size(); i++) {
         shared_ptr<Node> x = graph[i];
         if (x != nullptr) {
             fout << to_string(x->id) << "[label=";
             fout << "\"" << x->timepoint_id << "\""
-                 << ",style=filled,fillcolor=black,fontcolor=white];\n";
+                 << ",style=filled,fillcolor=black,fontcolor=white];" << std::endl;
         }
     }
     vector<tuple<string, string, string, string, string>> relations =
@@ -111,8 +112,10 @@ void STN::gen_dot_file(string file_name) {
              << "\"" << get<1>(rel) << "\""
              << "[label="
              << "\"[" << get<2>(rel) << ", " << get<3>(rel) << "]\""
-             << ",penwidth=2,color=black];\n";
-    fout << "}\n";
+             << ",penwidth=2,color=black];" << std::endl;
+    fout << "}" << std::endl;
+    fout.close();
+    cout << "Done creating dot file" << std::endl;
 }
 
 void STN::print_sp_tree() {

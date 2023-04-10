@@ -126,6 +126,8 @@ class Agent : public rclcpp::Node
             
 
             // STN and Timeline info
+
+            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Building STN");
             
             stn = STN();
             stn.init();
@@ -141,9 +143,10 @@ class Agent : public rclcpp::Node
             stn.add_constraint("deadline", end_c);
             stn.add_constraint("start_end_seq", seq_c);
             stn.add_constraint("now_constraint", now_c);
+            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Done, building timeline");
 
-            timeline->task = build_task_msg("head_task","",0,0,0,0,0,0,0);
             timeline = new TNode("head", "start", "start");
+            timeline->task = build_task_msg("head_task","",0,0,0,0,0,0,0);
             timeline->status = TNode::COMPLETE;
             TNode* tail = new TNode("tail", "end", "end");
             tail->task = build_task_msg("tail","",0,0,0,0,0,0,0);
@@ -154,7 +157,7 @@ class Agent : public rclcpp::Node
             timeline->next = tail;
             timeline->next_task = tail;
             timeline->prev = nullptr;
-
+            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Done");
         }
         
     private:
@@ -209,19 +212,25 @@ class Agent : public rclcpp::Node
         STN stn;
         TNode* timeline;
         std::vector<TNode*> plans;
-        void clock_cb(const std_msgs::msg::Int64::SharedPtr msg);
 
-        std::vector<TNode*> find_slots(int dur);
         void print_timeline();
+        double compute_dist(ma_interfaces::msg::Task &t1, ma_interfaces::msg::Task &t2);
+
+        TNode* find_slot(TNode* root, ma_interfaces::msg::Task &task);
+        std::vector<TNode*> find_slots(ma_interfaces::msg::Task &task);
+        std::vector<std::tuple<std::string,constraint>> unschedule_task(TNode* t);
+        bool schedule_task(ma_interfaces::msg::Task &task);
+        
         std::vector<ma_interfaces::msg::Bid> choose_winners(ma_interfaces::msg::Task task);
-        bool schedule_task(ma_interfaces::msg::Task task);
-        void host_auction(const ma_interfaces::msg::Goal goal);
-        void new_goals_cb(const ma_interfaces::msg::Goal goal);
+        void host_auction(ma_interfaces::msg::Goal &goal);
+        void check_dispatch();
+        
+        void clock_cb(const std_msgs::msg::Int64::SharedPtr msg);
+        void new_goals_cb(ma_interfaces::msg::Goal goal);
         void new_tasks_cb(const ma_interfaces::msg::Task task);
         void new_bids_cb(const ma_interfaces::msg::Bid bid);
         void action_feedback_cb(const ma_interfaces::msg::ActionFeedback action);
 
-        void check_dispatch();
 
 };
 

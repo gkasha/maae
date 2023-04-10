@@ -32,6 +32,8 @@ typedef struct ma_interfaces__msg__Task
   double duration;
   double st;
   double et;
+  double x;
+  double y;
 } ma_interfaces__msg__Task;
 
 // Struct for a sequence of ma_interfaces__msg__Task.

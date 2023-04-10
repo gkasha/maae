@@ -21,16 +21,48 @@ namespace msg
 namespace builder
 {
 
+class Init_Task_y
+{
+public:
+  explicit Init_Task_y(::ma_interfaces::msg::Task & msg)
+  : msg_(msg)
+  {}
+  ::ma_interfaces::msg::Task y(::ma_interfaces::msg::Task::_y_type arg)
+  {
+    msg_.y = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::ma_interfaces::msg::Task msg_;
+};
+
+class Init_Task_x
+{
+public:
+  explicit Init_Task_x(::ma_interfaces::msg::Task & msg)
+  : msg_(msg)
+  {}
+  Init_Task_y x(::ma_interfaces::msg::Task::_x_type arg)
+  {
+    msg_.x = std::move(arg);
+    return Init_Task_y(msg_);
+  }
+
+private:
+  ::ma_interfaces::msg::Task msg_;
+};
+
 class Init_Task_et
 {
 public:
   explicit Init_Task_et(::ma_interfaces::msg::Task & msg)
   : msg_(msg)
   {}
-  ::ma_interfaces::msg::Task et(::ma_interfaces::msg::Task::_et_type arg)
+  Init_Task_x et(::ma_interfaces::msg::Task::_et_type arg)
   {
     msg_.et = std::move(arg);
-    return std::move(msg_);
+    return Init_Task_x(msg_);
   }
 
 private:

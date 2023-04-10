@@ -165,7 +165,7 @@ std::vector<ma_interfaces::msg::Bid> Agent::choose_winners(ma_interfaces::msg::T
     auto cmp = [](
         std::vector<ma_interfaces::msg::Bid> left,
         std::vector<ma_interfaces::msg::Bid> right)
-        {return (left[0].val < right[0].val) || (left[0].val == right[0].val && left[0].st < right[0].st);};
+        {return (left[0].value < right[0].value) || (left[0].value == right[0].value && left[0].st < right[0].st);};
     
     std::sort(overlaps.begin(),overlaps.end(),cmp);
 
@@ -176,11 +176,11 @@ std::vector<ma_interfaces::msg::Bid> Agent::choose_winners(ma_interfaces::msg::T
     return winner_map[task.id][0];
 }
 
-void Agent::host_auction(const ma_interfaces::msg::Goal goal) {
-    if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Won goal %s", goal.id.c_str());
+void Agent::host_auction(ma_interfaces::msg::Goal &goal) {
+    if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Won goal %s @ (%f,%f)", goal.id.c_str(), goal.x, goal.y);
 
     double task_duration = 10;
-    ma_interfaces::msg::Task task = build_task_msg(goal.id,"",goal.num_agents,goal.value,task_duration,goal.deadline-task_duration,goal.deadline, goal.x, goal.y);
+    ma_interfaces::msg::Task task = build_task_msg(goal.id,"",goal.num_agents,10,task_duration,-1,goal.deadline, goal.x, goal.y);
     std::map<std::string,std::vector<ma_interfaces::msg::Bid>> new_map;
     bid_map[task.id] = new_map;
 
@@ -210,7 +210,7 @@ void Agent::host_auction(const ma_interfaces::msg::Goal goal) {
  * Input: Goal
  * Output: Bid IF Goal unowned, ELSE create and start auction for goal as task
  */
-void Agent::new_goals_cb(const ma_interfaces::msg::Goal goal) {
+void Agent::new_goals_cb(ma_interfaces::msg::Goal goal) {
     if (goal.owner == "") {
         // Goal is unowned, formulate a bid
         if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing bid for goal %s", goal.id.c_str());
@@ -228,7 +228,7 @@ void Agent::new_goals_cb(const ma_interfaces::msg::Goal goal) {
 double Agent::compute_dist(ma_interfaces::msg::Task &t1, ma_interfaces::msg::Task &t2) {
     if (t2.id == "tail") return 0;
     
-    return sqrt(pow(t2.x-t1.x,2) + pow(t2.y-t1.y,2));
+    return round(sqrt(pow(t2.x-t1.x,2) + pow(t2.y-t1.y,2)));
 }
 
 /*
@@ -241,12 +241,12 @@ double Agent::compute_dist(ma_interfaces::msg::Task &t1, ma_interfaces::msg::Tas
  */
 std::vector<std::tuple<std::string,constraint>> Agent::unschedule_task(TNode* t) {
     map<string, constraint> constraints = stn.get_constraints();
-    std::vector<constraint> relevant_constraints;
+    std::vector<std::tuple<std::string,constraint>> relevant_constraints;
     for (auto const& elt : constraints) {
         constraint c = elt.second;
         if (std::get<0>(c) == t->stp_ || std::get<1>(c) == t->etp_ || std::get<1>(c) == t->stp_ || std::get<0>(c) == t->etp_) {
             relevant_constraints.push_back(std::make_tuple(elt.first,c));
-            stn.del_constraint(elt.first)
+            stn.del_constraint(elt.first);
         }
     }
 
@@ -316,6 +316,7 @@ TNode* Agent::find_slot(TNode* root, ma_interfaces::msg::Task &task) {
 std::vector<TNode*> Agent::find_slots(ma_interfaces::msg::Task &task) {
     std::vector<TNode*> slots;
     TNode* curr = timeline;
+    print_timeline();
 
     while (curr) {
         TNode* temp = find_slot(curr,task);
@@ -334,12 +335,17 @@ std::vector<TNode*> Agent::find_slots(ma_interfaces::msg::Task &task) {
  */
 void Agent::print_timeline() {
     TNode* curr = timeline;
-    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Printing timeline...");
+    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "---------------------\nPrinting timeline...");
 
     while (curr) {
-        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "%s: (%s, %s)->\n", curr->name_.c_str(), curr->stp_.c_str(), curr->etp_.c_str());
+        if (curr->name_ != "tail" && (curr->next != curr->next_task || curr->next_task->name_ == "tail")) {
+            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "%s: (%s, %s) @ (%f,%f)->\n", curr->name_.c_str(), curr->stp_.c_str(), curr->etp_.c_str(), curr->task.x, curr->task.y);
+        } else {
+            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "%s: (%s, %s)->\n", curr->name_.c_str(), curr->stp_.c_str(), curr->etp_.c_str());
+        }
         curr = curr->next;
     }
+    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "---------------------\n");
 }
 
 /*
@@ -368,9 +374,12 @@ bool Agent::schedule_task(ma_interfaces::msg::Task &task) {
     // Search for slot that covers task
     TNode* curr = timeline;
     std::vector<std::tuple<std::string, constraint>> constraints;
-
+    TNode* slot;
+    RCLCPP_INFO(rclcpp::get_logger("rclcpp"),"Attempting to schedule task");
+    print_timeline();
+    stn.gen_dot_file("/home/gkasha/Documents/maae/data/agent_" + id_ + "_t_" + std::to_string(curr_time_) + ".dot");
     while (curr) {
-        TNode* slot = find_slot(curr, task);
+        slot = find_slot(curr, task);
         if (slot->name_ != "tail") {
             if (task.st >= 0) {
                 // Need to check that slot actually matches start time
@@ -412,7 +421,7 @@ bool Agent::schedule_task(ma_interfaces::msg::Task &task) {
                 break;
             }
         }
-        curr = slot->next_travel;
+        curr = slot->next_task;
     }
 
     // At this point, we either have a pointer to our current slot, or our pointer is null
@@ -433,7 +442,7 @@ bool Agent::schedule_task(ma_interfaces::msg::Task &task) {
 
 
     stn.add_timepoint(new_travel_to_stp);
-    stn.add_timepoiint(new_travel_to_etp);
+    stn.add_timepoint(new_travel_to_etp);
     stn.add_timepoint(new_task_stp);
     stn.add_timepoint(new_task_etp);
     stn.add_timepoint(new_travel_from_stp);
@@ -444,7 +453,7 @@ bool Agent::schedule_task(ma_interfaces::msg::Task &task) {
     double travel_to_dur = compute_dist(slot->task,task)/speed_;
 
     constraint travel_to_st_c = std::make_tuple(slot->etp_, new_travel_to_stp, 0, inf);
-    constraint travel_to_c = std::make_tuple(new_travel_to_stp, new_travel_to_etp, travel_to_dur);
+    constraint travel_to_c = std::make_tuple(new_travel_to_stp, new_travel_to_etp, travel_to_dur, inf);
     constraint travel_to_et_c = std::make_tuple(new_travel_to_etp, new_task_stp, 0, inf);
     constraint task_dur_c = std::make_tuple(new_task_stp, new_task_etp, task.duration-execution_threshold_, task.duration+execution_threshold_);
 
@@ -474,7 +483,7 @@ bool Agent::schedule_task(ma_interfaces::msg::Task &task) {
     
     if (status >= 1){
         if (slot->next->name_ != "tail") {
-            double travel_from_dur = compute_dist(task, slot->next->task)/speed;
+            double travel_from_dur = compute_dist(task, slot->next->task)/speed_;
             constraint travel_from_st_c = std::make_tuple(new_task_etp, new_travel_from_stp, 0, inf);
             constraint travel_from_c = std::make_tuple(new_travel_from_stp, new_travel_from_etp, travel_from_dur, inf);
             constraint travel_from_et_c = std::make_tuple(new_travel_from_etp, slot->next->stp_, 0, inf);
@@ -486,6 +495,13 @@ bool Agent::schedule_task(ma_interfaces::msg::Task &task) {
                 status = -3;
             } else {
                 status = 3;
+            }
+        } else {
+            constraint end_seq = std::make_tuple(new_task_etp, slot->next->stp_, 0, inf);
+            if (!stn.add_constraint(new_task_etp + "_" + slot->next->stp_ + "_seq", end_seq)) {
+                status = -2;
+            } else {
+                status = 2;
             }
         }
     }
@@ -500,13 +516,20 @@ bool Agent::schedule_task(ma_interfaces::msg::Task &task) {
         new_task->next = slot->next_task;
         new_task->next_task = slot->next_task;
         travel_to->next = new_task;
+        travel_to->next_task = new_task;
         slot->next_task = new_task;
 
         if (status >= 3) {
-            TNode* travel_from = new TNode(task.id + "_" + slot->next_task + "_travel", new_travel_from_stp, new_travel_from_etp);
-            travel_to->task = build_task_msg(task.id + "_" + slot->next_task + "_travel", "", 0, 0, compute_dist(task,slot->next_task->task)/speed_,0,0,0,0);
+            TNode* travel_from = new TNode(task.id + "_" + slot->next_task->name_ + "_travel", new_travel_from_stp, new_travel_from_etp);
+            travel_from->task = build_task_msg(task.id + "_" + slot->next_task->name_ + "_travel", "", 0, 0, compute_dist(task,slot->next_task->task)/speed_,0,0,0,0);
+            travel_from->next = new_task->next_task;
+            travel_from->next_task = new_task->next_task;
             new_task->next = travel_from;
+        } else {
+            stn.del_timepoint(new_travel_from_stp);
+            stn.del_timepoint(new_travel_from_etp);
         }
+        return true;
     } else {
         stn.del_timepoint(new_travel_to_stp);
         stn.del_timepoint(new_travel_to_etp);
@@ -520,27 +543,28 @@ bool Agent::schedule_task(ma_interfaces::msg::Task &task) {
         for (auto elt : constraints) {
             stn.add_constraint(std::get<0>(elt), std::get<1>(elt));
         }
+        return false;
     }
-
-    return status;
 }
 /*
  * Callback function to process task messages that correspond to auctions
  * Input: Task that represents either an auction or auction winner
  * Output: Bid for task IF unowned, 
  */
-void Agent::new_tasks_cb(const ma_interfaces::msg::Task task) {
+void Agent::new_tasks_cb(ma_interfaces::msg::Task task) {
     if (task.owner == "" && bid_map.find(task.id) == bid_map.end()) {
         // Generate a bid for the unowned task, first by searching for a slot
-        std::vector<TNode*> slots = find_slots(task.duration);
+        std::vector<TNode*> slots = find_slots(task);
         
         for (TNode* slot : slots) {
             double slack = 10;
-            double st = max((double)curr_time_,-1*std::get<0>(stn.get_feasible_values(slot->etp_))) + slack;
-            double et = std::get<1>(stn.get_feasible_values(slot->next->stp_));
+            double travel_to = compute_dist(slot->task,task)/speed_;
+            double travel_from = compute_dist(task,slot->next_task->task)/speed_;
+            double st = max((double)curr_time_,-1*std::get<0>(stn.get_feasible_values(slot->etp_))) + travel_to + slack;
+            double et = std::get<1>(stn.get_feasible_values(slot->next->stp_)) - travel_from;
             if (et-st >= task.duration) {
                 // Build bid message
-                ma_interfaces::msg::Bid bid = build_bid_msg(id_,task.id,0,st,et,10);
+                ma_interfaces::msg::Bid bid = build_bid_msg(id_,task.id,0,st,et,travel_to);
                 
                 // Publish bid
                 if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing bid for auction %s: (%f,%f)", bid.auction_id.c_str(), bid.st, bid.et);

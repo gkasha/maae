@@ -35,6 +35,10 @@ int main(int argc, char** argv)
         g.id = "task" + std::to_string(i);
         g.num_agents = (i%2)+1;
         g.owner = "";
+        g.x = (double)i+1;
+        g.y = (double)i+1;
+
+        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Goal at (%f,%f)", g.x, g.y);
         publisher->publish(g);
     }
 

@@ -29,6 +29,8 @@ typedef struct ma_interfaces__msg__Goal
   rosidl_runtime_c__String owner;
   int64_t num_agents;
   double deadline;
+  double x;
+  double y;
 } ma_interfaces__msg__Goal;
 
 // Struct for a sequence of ma_interfaces__msg__Goal.

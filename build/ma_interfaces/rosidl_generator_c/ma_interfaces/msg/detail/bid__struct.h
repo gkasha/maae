@@ -30,7 +30,7 @@ typedef struct ma_interfaces__msg__Bid
   int32_t status;
   double st;
   double et;
-  int64_t value;
+  double value;
 } ma_interfaces__msg__Bid;
 
 // Struct for a sequence of ma_interfaces__msg__Bid.

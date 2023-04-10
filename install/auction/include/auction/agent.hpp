@@ -41,18 +41,20 @@ class TNode
         std::string etp_;
         std::string name_;
         TNode* next;
+        TNode* next_task;
         TNode* prev;
 };
 
 class Agent : public rclcpp::Node
 {
     public:
-        Agent(std::string id, double deadline, double execution_threshold) : Node("agent_"+id)
+        Agent(std::string id, double deadline, double execution_threshold, double speed) : Node("agent_"+id)
         {
             std::string topic = "agent_topic_" + id;
             id_ = id;
             deadline_ = deadline;
             execution_threshold_ = execution_threshold;
+            speed_ = speed;
 
             goal_bid_publisher_ = this->create_publisher<ma_interfaces::msg::Bid>("goal_bids_topic", 10);
             task_auction_publisher_ = this->create_publisher<ma_interfaces::msg::Task>("new_tasks_topic", 10);
@@ -124,13 +126,15 @@ class Agent : public rclcpp::Node
             
 
             // STN and Timeline info
+
+            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Building STN");
             
             stn = STN();
             stn.init();
             stn.add_timepoint("start");
             stn.add_timepoint("now");
             stn.add_timepoint("end");
-            constraint now_c = std::make_tuple("now","end",0,0);
+            constraint now_c = std::make_tuple("now","end",0,inf);
             constraint start_c = std::make_tuple("cz", "start", 0, 0);
             constraint end_c = std::make_tuple("cz", "end", 0, deadline_);
             constraint seq_c = std::make_tuple("start", "end", 0, inf);
@@ -139,13 +143,21 @@ class Agent : public rclcpp::Node
             stn.add_constraint("deadline", end_c);
             stn.add_constraint("start_end_seq", seq_c);
             stn.add_constraint("now_constraint", now_c);
+            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Done, building timeline");
 
             timeline = new TNode("head", "start", "start");
+            timeline->task = build_task_msg("head_task","",0,0,0,0,0,0,0);
             timeline->status = TNode::COMPLETE;
             TNode* tail = new TNode("tail", "end", "end");
+            tail->task = build_task_msg("tail","",0,0,0,0,0,0,0);
+            tail->prev = timeline;
+            tail->next = nullptr;
+            tail->next_task = nullptr;
     
             timeline->next = tail;
-
+            timeline->next_task = tail;
+            timeline->prev = nullptr;
+            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Done");
         }
         
     private:
@@ -164,7 +176,9 @@ class Agent : public rclcpp::Node
             double value,
             double duration,
             double st,
-            double et
+            double et,
+            double x,
+            double y
         );
 
         rclcpp::Publisher<ma_interfaces::msg::Bid>::SharedPtr goal_bid_publisher_;
@@ -194,22 +208,29 @@ class Agent : public rclcpp::Node
         double start_time_;
         int curr_time_;
         double deadline_;
+        double speed_;
         STN stn;
         TNode* timeline;
         std::vector<TNode*> plans;
-        void clock_cb(const std_msgs::msg::Int64::SharedPtr msg);
 
-        std::vector<TNode*> find_slots(int dur);
         void print_timeline();
+        double compute_dist(ma_interfaces::msg::Task &t1, ma_interfaces::msg::Task &t2);
+
+        TNode* find_slot(TNode* root, ma_interfaces::msg::Task &task);
+        std::vector<TNode*> find_slots(ma_interfaces::msg::Task &task);
+        std::vector<std::tuple<std::string,constraint>> unschedule_task(TNode* t);
+        bool schedule_task(ma_interfaces::msg::Task &task);
+        
         std::vector<ma_interfaces::msg::Bid> choose_winners(ma_interfaces::msg::Task task);
-        bool schedule_task(ma_interfaces::msg::Task task);
-        void host_auction(const ma_interfaces::msg::Goal goal);
-        void new_goals_cb(const ma_interfaces::msg::Goal goal);
+        void host_auction(ma_interfaces::msg::Goal &goal);
+        void check_dispatch();
+        
+        void clock_cb(const std_msgs::msg::Int64::SharedPtr msg);
+        void new_goals_cb(ma_interfaces::msg::Goal goal);
         void new_tasks_cb(const ma_interfaces::msg::Task task);
         void new_bids_cb(const ma_interfaces::msg::Bid bid);
         void action_feedback_cb(const ma_interfaces::msg::ActionFeedback action);
 
-        void check_dispatch();
 
 };
 

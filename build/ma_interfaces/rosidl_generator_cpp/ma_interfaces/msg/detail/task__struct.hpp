@@ -45,6 +45,8 @@ struct Task_
       this->duration = 0.0;
       this->st = 0.0;
       this->et = 0.0;
+      this->x = 0.0;
+      this->y = 0.0;
     }
   }
 
@@ -62,6 +64,8 @@ struct Task_
       this->duration = 0.0;
       this->st = 0.0;
       this->et = 0.0;
+      this->x = 0.0;
+      this->y = 0.0;
     }
   }
 
@@ -87,6 +91,12 @@ struct Task_
   using _et_type =
     double;
   _et_type et;
+  using _x_type =
+    double;
+  _x_type x;
+  using _y_type =
+    double;
+  _y_type y;
 
   // setters for named parameter idiom
   Type & set__id(
@@ -129,6 +139,18 @@ struct Task_
     const double & _arg)
   {
     this->et = _arg;
+    return *this;
+  }
+  Type & set__x(
+    const double & _arg)
+  {
+    this->x = _arg;
+    return *this;
+  }
+  Type & set__y(
+    const double & _arg)
+  {
+    this->y = _arg;
     return *this;
   }
 
@@ -193,6 +215,12 @@ struct Task_
       return false;
     }
     if (this->et != other.et) {
+      return false;
+    }
+    if (this->x != other.x) {
+      return false;
+    }
+    if (this->y != other.y) {
       return false;
     }
     return true;

@@ -125,7 +125,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Bid_message_m
   },
   {
     "value",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT64,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array

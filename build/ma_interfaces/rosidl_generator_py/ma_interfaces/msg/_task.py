@@ -64,6 +64,8 @@ class Task(metaclass=Metaclass_Task):
         '_duration',
         '_st',
         '_et',
+        '_x',
+        '_y',
     ]
 
     _fields_and_field_types = {
@@ -74,12 +76,16 @@ class Task(metaclass=Metaclass_Task):
         'duration': 'double',
         'st': 'double',
         'et': 'double',
+        'x': 'double',
+        'y': 'double',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
@@ -97,6 +103,8 @@ class Task(metaclass=Metaclass_Task):
         self.duration = kwargs.get('duration', float())
         self.st = kwargs.get('st', float())
         self.et = kwargs.get('et', float())
+        self.x = kwargs.get('x', float())
+        self.y = kwargs.get('y', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -140,6 +148,10 @@ class Task(metaclass=Metaclass_Task):
         if self.st != other.st:
             return False
         if self.et != other.et:
+            return False
+        if self.x != other.x:
+            return False
+        if self.y != other.y:
             return False
         return True
 
@@ -248,3 +260,33 @@ class Task(metaclass=Metaclass_Task):
             assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
                 "The 'et' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._et = value
+
+    @builtins.property
+    def x(self):
+        """Message field 'x'."""
+        return self._x
+
+    @x.setter
+    def x(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'x' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'x' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._x = value
+
+    @builtins.property
+    def y(self):
+        """Message field 'y'."""
+        return self._y
+
+    @y.setter
+    def y(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'y' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'y' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._y = value

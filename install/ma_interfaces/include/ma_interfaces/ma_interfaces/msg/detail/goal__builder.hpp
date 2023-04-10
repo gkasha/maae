@@ -21,16 +21,48 @@ namespace msg
 namespace builder
 {
 
+class Init_Goal_y
+{
+public:
+  explicit Init_Goal_y(::ma_interfaces::msg::Goal & msg)
+  : msg_(msg)
+  {}
+  ::ma_interfaces::msg::Goal y(::ma_interfaces::msg::Goal::_y_type arg)
+  {
+    msg_.y = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::ma_interfaces::msg::Goal msg_;
+};
+
+class Init_Goal_x
+{
+public:
+  explicit Init_Goal_x(::ma_interfaces::msg::Goal & msg)
+  : msg_(msg)
+  {}
+  Init_Goal_y x(::ma_interfaces::msg::Goal::_x_type arg)
+  {
+    msg_.x = std::move(arg);
+    return Init_Goal_y(msg_);
+  }
+
+private:
+  ::ma_interfaces::msg::Goal msg_;
+};
+
 class Init_Goal_deadline
 {
 public:
   explicit Init_Goal_deadline(::ma_interfaces::msg::Goal & msg)
   : msg_(msg)
   {}
-  ::ma_interfaces::msg::Goal deadline(::ma_interfaces::msg::Goal::_deadline_type arg)
+  Init_Goal_x deadline(::ma_interfaces::msg::Goal::_deadline_type arg)
   {
     msg_.deadline = std::move(arg);
-    return std::move(msg_);
+    return Init_Goal_x(msg_);
   }
 
 private:
