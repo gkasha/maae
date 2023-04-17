@@ -1,0 +1,15 @@
+[35m[1mConsolidate compiler generated dependencies of target execution_interface[0m
+[35m[1mConsolidate compiler generated dependencies of target agent[0m
+[ 18%] Built target goal_manager
+[ 27%] [32mBuilding CXX object CMakeFiles/agent.dir/src/agent.cpp.o[0m
+[ 45%] Built target execution_interface
+[ 63%] Built target client
+[ 81%] Built target clock
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kbool Agent::schedule_task(ma_interfaces::msg::Task&, TNode*)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:546:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstraints[m[K’ was not declared in this scope; did you mean ‘[01m[Kconstraint[m[K’?
+  546 |         for (auto elt : [01;31m[Kconstraints[m[K) {
+      |                         [01;31m[K^~~~~~~~~~~[m[K
+      |                         [32m[Kconstraint[m[K
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:197: CMakeFiles/agent.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

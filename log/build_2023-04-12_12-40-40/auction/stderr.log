@@ -1,0 +1,20 @@
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::gen_timeline_dot(std::string)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:65:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kfile_name[m[K’ was not declared in this scope; did you mean ‘[01m[Kfilename[m[K’?
+   65 |     cout << "Printing dot file: " << [01;31m[Kfile_name[m[K << endl;
+      |                                      [01;31m[K^~~~~~~~~[m[K
+      |                                      [32m[Kfilename[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:71:44:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kif[m[K’
+   71 |         fout << "\"" << curr->name_ << "\""
+      |                                            [01;31m[K^[m[K
+      |                                            [32m[K;[m[K
+   72 |         [32m[Kif[m[K (curr->status == TNode::EXECUTING) {
+      |         [32m[K~~[m[K                                  
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:74:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kelse[m[K’ without a previous ‘[01m[Kif[m[K’
+   74 |         } [01;31m[Kelse[m[K if (curr->status == TNode::WAITING) {
+      |           [01;31m[K^~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:64:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfilename[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   64 | void Agent::gen_timeline_dot([01;35m[Kstd::string filename[m[K) {
+      |                              [01;35m[K~~~~~~~~~~~~^~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:197: CMakeFiles/agent.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

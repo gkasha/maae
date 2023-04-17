@@ -1,0 +1,21 @@
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[KTNode* Agent::find_slot(TNode*, ma_interfaces::msg::Task&)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:304:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstraints[m[K’ was not declared in this scope; did you mean ‘[01m[Kconstraint[m[K’?
+  304 |             [01;31m[Kconstraints[m[K = unschedule_task(next_travel);
+      |             [01;31m[K^~~~~~~~~~~[m[K
+      |             [32m[Kconstraint[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:317:51:[m[K [01;31m[Kerror: [m[K‘[01m[Ktemp_st[m[K’ was not declared in this scope; did you mean ‘[01m[Ktemp_to[m[K’?
+  317 |                 if (stn.add_constraint("temp_st", [01;31m[Ktemp_st[m[K)) {
+      |                                                   [01;31m[K^~~~~~~[m[K
+      |                                                   [32m[Ktemp_to[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:324:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstraints[m[K’ was not declared in this scope; did you mean ‘[01m[Kconstraint[m[K’?
+  324 |                     for (auto elt : [01;31m[Kconstraints[m[K) {
+      |                                     [01;31m[K^~~~~~~~~~~[m[K
+      |                                     [32m[Kconstraint[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:336:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kconstraints[m[K’ was not declared in this scope; did you mean ‘[01m[Kconstraint[m[K’?
+  336 |             for (auto elt : [01;31m[Kconstraints[m[K) {
+      |                             [01;31m[K^~~~~~~~~~~[m[K
+      |                             [32m[Kconstraint[m[K
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:197: CMakeFiles/agent.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,18 @@
+[35m[1mConsolidate compiler generated dependencies of target execution_interface[0m
+[35m[1mConsolidate compiler generated dependencies of target agent[0m
+[  9%] [32mBuilding CXX object CMakeFiles/execution_interface.dir/src/execution_interface.cpp.o[0m
+[ 27%] Built target goal_manager
+[ 54%] Built target agent
+[ 72%] Built target client
+[ 90%] Built target clock
+In file included from [01m[K/home/gkasha/Documents/maae/src/auction/src/execution_interface.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/execution_interface.hpp:[m[K In constructor ‘[01m[KMonitor::Monitor()[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/execution_interface.hpp:130:26:[m[K [01;31m[Kerror: [m[K‘[01m[KExecutor[m[K’ has not been declared
+  130 |                         &[01;31m[KExecutor[m[K::action_dispatch_cb,
+      |                          [01;31m[K^~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/include/auction/execution_interface.hpp:138:26:[m[K [01;31m[Kerror: [m[K‘[01m[KExecutor[m[K’ has not been declared
+  138 |                         &[01;31m[KExecutor[m[K::action_modification_cb,
+      |                          [01;31m[K^~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/execution_interface.dir/build.make:76: CMakeFiles/execution_interface.dir/src/execution_interface.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:145: CMakeFiles/execution_interface.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
