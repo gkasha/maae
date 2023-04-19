@@ -1,0 +1,8 @@
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kstd::tuple<double, TNode*> Agent::find_slot(TNode*, ma_interfaces::msg::Task&)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:336:77:[m[K [01;31m[Kerror: [m[K‘[01m[Kreplanning_threshold[m[K’ was not declared in this scope; did you mean ‘[01m[Kreplanning_threshold_[m[K’?
+  336 |             if (status && std::get<0>(temp_vals) + std::get<1>(temp_vals) < [01;31m[Kreplanning_threshold[m[K) {
+      |                                                                             [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                             [32m[Kreplanning_threshold_[m[K
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:197: CMakeFiles/agent.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

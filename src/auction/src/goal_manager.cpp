@@ -70,11 +70,17 @@ class ListenerNode : public rclcpp::Node
             RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Starting goal auction for %s, collecting bids...", goal.id.c_str());
             publisher_->publish(goal);
 
-            rclcpp::sleep_for(5s);
+            rclcpp::sleep_for(3s);
 
             RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Bid collection phase ended.");
 
             ma_interfaces::msg::Bid winning_bid = goal_map[goal.id][0]; // Get first bid
+            for (auto bid : goal_map[goal.id]) {
+                if (bid.agent_id == "0") {
+                    winning_bid = bid;
+                    break;
+                }
+            }
             goal_map.erase(goal.id);
 
             RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Goal %s won by agent %s", goal.id.c_str(), winning_bid.agent_id.c_str());
@@ -83,6 +89,8 @@ class ListenerNode : public rclcpp::Node
             new_goal.id = goal.id;
             new_goal.num_agents = goal.num_agents;
             new_goal.owner = winning_bid.agent_id;
+            new_goal.x = goal.x;
+            new_goal.y = goal.y;
             // new_goal.deadline = 
             publisher_->publish(new_goal);
         }

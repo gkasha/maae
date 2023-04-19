@@ -43,7 +43,7 @@ struct Bid_
       this->status = 0l;
       this->st = 0.0;
       this->et = 0.0;
-      this->value = 0ll;
+      this->value = 0.0;
     }
   }
 
@@ -59,7 +59,7 @@ struct Bid_
       this->status = 0l;
       this->st = 0.0;
       this->et = 0.0;
-      this->value = 0ll;
+      this->value = 0.0;
     }
   }
 
@@ -80,7 +80,7 @@ struct Bid_
     double;
   _et_type et;
   using _value_type =
-    int64_t;
+    double;
   _value_type value;
 
   // setters for named parameter idiom
@@ -115,7 +115,7 @@ struct Bid_
     return *this;
   }
   Type & set__value(
-    const int64_t & _arg)
+    const double & _arg)
   {
     this->value = _arg;
     return *this;

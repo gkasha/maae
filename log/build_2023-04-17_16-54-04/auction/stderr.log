@@ -1,0 +1,8 @@
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kbool Agent::schedule_task(ma_interfaces::msg::Task&, TNode*)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:435:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass TNode[m[K’ has no member named ‘[01m[Kname[m[K’; did you mean ‘[01m[Kname_[m[K’?
+  435 |     if (curr->[01;31m[Kname[m[K != "head" && (std::get<0>(now_seq) == curr->stp_ || std::get<1>(now_seq) == curr->stp_
+      |               [01;31m[K^~~~[m[K
+      |               [32m[Kname_[m[K
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:197: CMakeFiles/agent.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

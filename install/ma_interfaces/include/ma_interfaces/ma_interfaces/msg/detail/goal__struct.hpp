@@ -42,6 +42,8 @@ struct Goal_
       this->owner = "";
       this->num_agents = 0ll;
       this->deadline = 0.0;
+      this->x = 0.0;
+      this->y = 0.0;
     }
   }
 
@@ -56,6 +58,8 @@ struct Goal_
       this->owner = "";
       this->num_agents = 0ll;
       this->deadline = 0.0;
+      this->x = 0.0;
+      this->y = 0.0;
     }
   }
 
@@ -72,6 +76,12 @@ struct Goal_
   using _deadline_type =
     double;
   _deadline_type deadline;
+  using _x_type =
+    double;
+  _x_type x;
+  using _y_type =
+    double;
+  _y_type y;
 
   // setters for named parameter idiom
   Type & set__id(
@@ -96,6 +106,18 @@ struct Goal_
     const double & _arg)
   {
     this->deadline = _arg;
+    return *this;
+  }
+  Type & set__x(
+    const double & _arg)
+  {
+    this->x = _arg;
+    return *this;
+  }
+  Type & set__y(
+    const double & _arg)
+  {
+    this->y = _arg;
     return *this;
   }
 
@@ -151,6 +173,12 @@ struct Goal_
       return false;
     }
     if (this->deadline != other.deadline) {
+      return false;
+    }
+    if (this->x != other.x) {
+      return false;
+    }
+    if (this->y != other.y) {
       return false;
     }
     return true;

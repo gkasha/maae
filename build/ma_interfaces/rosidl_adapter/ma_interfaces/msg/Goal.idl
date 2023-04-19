@@ -13,6 +13,10 @@ module ma_interfaces {
       int64 num_agents;
 
       double deadline;
+
+      double x;
+
+      double y;
     };
   };
 };

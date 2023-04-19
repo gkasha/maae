@@ -1,0 +1,150 @@
+-- Found ament_cmake: 1.3.3 (/home/gkasha/ros2_humble/install/ament_cmake/share/ament_cmake/cmake)
+-- Found rclcpp: 16.0.3 (/home/gkasha/ros2_humble/install/rclcpp/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.4 (/home/gkasha/ros2_humble/install/rosidl_generator_c/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.4 (/home/gkasha/ros2_humble/install/rosidl_adapter/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.4 (/home/gkasha/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_introspection_c;rosidl_typesupport_fastrtps_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp;rosidl_typesupport_fastrtps_cpp
+-- Found rmw_implementation_cmake: 6.1.1 (/home/gkasha/ros2_humble/install/rmw_implementation_cmake/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.2 (/home/gkasha/ros2_humble/install/rmw_fastrtps_cpp/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found ma_interfaces: 0.0.0 (/home/gkasha/Documents/maae/install/ma_interfaces/share/ma_interfaces/cmake)
+-- Found ament_lint_auto: 0.12.5 (/home/gkasha/ros2_humble/install/ament_lint_auto/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/gkasha/Documents/maae/src/auction/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/gkasha/Documents/maae/build/auction
+[35m[1mConsolidate compiler generated dependencies of target client[0m
+[35m[1mConsolidate compiler generated dependencies of target execution_interface[0m
+[35m[1mConsolidate compiler generated dependencies of target agent[0m
+[35m[1mConsolidate compiler generated dependencies of target goal_manager[0m
+[  9%] [32mBuilding CXX object CMakeFiles/agent.dir/src/agent.cpp.o[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/execution_interface.dir/src/execution_interface.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/client.dir/src/client.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/goal_manager.dir/src/goal_manager.cpp.o[0m
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In lambda function:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:168:26:[m[K [01;31m[Kerror: [m[K‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<ma_interfaces::msg::Bid_<std::allocator<void> > >, ma_interfaces::msg::Bid_<std::allocator<void> > >::value_type[m[K’ {aka ‘[01m[Kstruct ma_interfaces::msg::Bid_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kval[m[K’; did you mean ‘[01m[Kvalue[m[K’?
+  168 |         {return (left[0].[01;31m[Kval[m[K < right[0].val) || (left[0].val == right[0].val && left[0].st < right[0].st);};
+      |                          [01;31m[K^~~[m[K
+      |                          [32m[Kvalue[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:168:41:[m[K [01;31m[Kerror: [m[K‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<ma_interfaces::msg::Bid_<std::allocator<void> > >, ma_interfaces::msg::Bid_<std::allocator<void> > >::value_type[m[K’ {aka ‘[01m[Kstruct ma_interfaces::msg::Bid_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kval[m[K’; did you mean ‘[01m[Kvalue[m[K’?
+  168 |         {return (left[0].val < right[0].[01;31m[Kval[m[K) || (left[0].val == right[0].val && left[0].st < right[0].st);};
+      |                                         [01;31m[K^~~[m[K
+      |                                         [32m[Kvalue[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:168:58:[m[K [01;31m[Kerror: [m[K‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<ma_interfaces::msg::Bid_<std::allocator<void> > >, ma_interfaces::msg::Bid_<std::allocator<void> > >::value_type[m[K’ {aka ‘[01m[Kstruct ma_interfaces::msg::Bid_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kval[m[K’; did you mean ‘[01m[Kvalue[m[K’?
+  168 |         {return (left[0].val < right[0].val) || (left[0].[01;31m[Kval[m[K == right[0].val && left[0].st < right[0].st);};
+      |                                                          [01;31m[K^~~[m[K
+      |                                                          [32m[Kvalue[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:168:74:[m[K [01;31m[Kerror: [m[K‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<ma_interfaces::msg::Bid_<std::allocator<void> > >, ma_interfaces::msg::Bid_<std::allocator<void> > >::value_type[m[K’ {aka ‘[01m[Kstruct ma_interfaces::msg::Bid_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kval[m[K’; did you mean ‘[01m[Kvalue[m[K’?
+  168 |         {return (left[0].val < right[0].val) || (left[0].val == right[0].[01;31m[Kval[m[K && left[0].st < right[0].st);};
+      |                                                                          [01;31m[K^~~[m[K
+      |                                                                          [32m[Kvalue[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::host_auction(ma_interfaces::msg::Goal)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:183:84:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst Goal[m[K’ {aka ‘[01m[Kconst struct ma_interfaces::msg::Goal_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kvalue[m[K’
+  183 |     ma_interfaces::msg::Task task = build_task_msg(goal.id,"",goal.num_agents,goal.[01;31m[Kvalue[m[K,task_duration,-1,goal.deadline, goal.x, goal.y);
+      |                                                                                    [01;31m[K^~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kstd::vector<std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, double, double> > > Agent::unschedule_task(TNode*)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:248:43:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kstd::vector<std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, double, double> >::push_back(std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, double, double> >)[m[K’
+  248 |             [01;31m[Krelevant_constraints.push_back(std::make_tuple(elt.first,c))[m[K;
+      |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/vector:67[m[K,
+                 from [01m[K/usr/include/c++/11/functional:62[m[K,
+                 from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1187:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, double, double>; _Alloc = std::allocator<std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, double, double> >; std::vector<_Tp, _Alloc>::value_type = std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, double, double>][m[K’
+ 1187 |       [01;36m[Kpush_back[m[K(const value_type& __x)
+      |       [01;36m[K^~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1187:35:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, double, double> >[m[K’ to ‘[01m[Kconst value_type&[m[K’ {aka ‘[01m[Kconst std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, double, double>&[m[K’}
+ 1187 |       push_back([01;36m[Kconst value_type& __x[m[K)
+      |                 [01;36m[K~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1203:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid std::vector<_Tp, _Alloc>::push_back(std::vector<_Tp, _Alloc>::value_type&&) [with _Tp = std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, double, double>; _Alloc = std::allocator<std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, double, double> >; std::vector<_Tp, _Alloc>::value_type = std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, double, double>][m[K’
+ 1203 |       [01;36m[Kpush_back[m[K(value_type&& __x)
+      |       [01;36m[K^~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_vector.h:1203:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, double, double> >[m[K’ to ‘[01m[Kstd::vector<std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, double, double> >::value_type&&[m[K’ {aka ‘[01m[Kstd::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, double, double>&&[m[K’}
+ 1203 |       push_back([01;36m[Kvalue_type&& __x[m[K)
+      |                 [01;36m[K~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:249:42:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  249 |             stn.del_constraint(elt.first)
+      |                                          [01;31m[K^[m[K
+      |                                          [32m[K;[m[K
+  250 |         [32m[K}[m[K
+      |         [32m[K~[m[K                                 
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:256:12:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[Krelevant_constraints[m[K’ from ‘[01m[Kvector<tuple<[01;32m[Kstd::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, double, double[m[K>>[m[K’ to ‘[01m[Kvector<tuple<[01;32m[Kstd::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, double, double>[m[K>>[m[K’
+  256 |     return [01;31m[Krelevant_constraints[m[K;
+      |            [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+      |            [01;31m[K|[m[K
+      |            [01;31m[Kvector<tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, double, double>>[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kbool Agent::schedule_task(ma_interfaces::msg::Task&)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:415:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass TNode[m[K’ has no member named ‘[01m[Knext_travel[m[K’; did you mean ‘[01m[Knext_task[m[K’?
+  415 |         curr = slot->[01;31m[Knext_travel[m[K;
+      |                      [01;31m[K^~~~~~~~~~~[m[K
+      |                      [32m[Knext_task[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:425:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kslot[m[K’ was not declared in this scope
+  425 |     std::string new_travel_to_stp = [01;31m[Kslot[m[K->name_ + "_" + task.id + "_travel_st";
+      |                                     [01;31m[K^~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:436:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass STN[m[K’ has no member named ‘[01m[Kadd_timepoiint[m[K’; did you mean ‘[01m[Kadd_timepoint[m[K’?
+  436 |     stn.[01;31m[Kadd_timepoiint[m[K(new_travel_to_etp);
+      |         [01;31m[K^~~~~~~~~~~~~~[m[K
+      |         [32m[Kadd_timepoint[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:447:45:[m[K [01;31m[Kerror: [m[Kconversion from ‘[01m[Ktuple<[01;32m[Kstd::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, double[m[K>[m[K’ to non-scalar type ‘[01m[Ktuple<[01;32m[Kstd::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, double, double[m[K>[m[K’ requested
+  447 |     constraint travel_to_c = [01;31m[Kstd::make_tuple(new_travel_to_stp, new_travel_to_etp, travel_to_dur)[m[K;
+      |                              [01;31m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:477:75:[m[K [01;31m[Kerror: [m[K‘[01m[Kspeed[m[K’ was not declared in this scope; did you mean ‘[01m[Kspeed_[m[K’?
+  477 |             double travel_from_dur = compute_dist(task, slot->next->task)/[01;31m[Kspeed[m[K;
+      |                                                                           [01;31m[K^~~~~[m[K
+      |                                                                           [32m[Kspeed_[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::new_tasks_cb(ma_interfaces::msg::Task)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:535:53:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kconst _duration_type[m[K’ {aka ‘[01m[Kconst double[m[K’} to ‘[01m[Kma_interfaces::msg::Task&[m[K’ {aka ‘[01m[Kma_interfaces::msg::Task_<std::allocator<void> >&[m[K’}
+  535 |         std::vector<TNode*> slots = find_slots([01;31m[Ktask.duration[m[K);
+      |                                                [01;31m[K~~~~~^~~~~~~~[m[K
+      |                                                     [01;31m[K|[m[K
+      |                                                     [01;31m[Kconst _duration_type {aka const double}[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:316:65:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kstd::vector<TNode*> Agent::find_slots(ma_interfaces::msg::Task&)[m[K’
+  316 | std::vector<TNode*> Agent::find_slots([01;36m[Kma_interfaces::msg::Task &task[m[K) {
+      |                                       [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:539:56:[m[K [01;31m[Kerror: [m[Kbinding reference of type ‘[01m[Kma_interfaces::msg::Task&[m[K’ {aka ‘[01m[Kma_interfaces::msg::Task_<std::allocator<void> >&[m[K’} to ‘[01m[Kconst Task[m[K’ {aka ‘[01m[Kconst ma_interfaces::msg::Task_<std::allocator<void> >[m[K’} discards qualifiers
+  539 |             double travel_to = compute_dist(slot->task,[01;31m[Ktask[m[K)/speed_;
+      |                                                        [01;31m[K^~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:228:84:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[Kdouble Agent::compute_dist(ma_interfaces::msg::Task&, ma_interfaces::msg::Task&)[m[K’
+  228 | double Agent::compute_dist(ma_interfaces::msg::Task &t1, [01;36m[Kma_interfaces::msg::Task &t2[m[K) {
+      |                                                          [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:540:47:[m[K [01;31m[Kerror: [m[Kbinding reference of type ‘[01m[Kma_interfaces::msg::Task&[m[K’ {aka ‘[01m[Kma_interfaces::msg::Task_<std::allocator<void> >&[m[K’} to ‘[01m[Kconst Task[m[K’ {aka ‘[01m[Kconst ma_interfaces::msg::Task_<std::allocator<void> >[m[K’} discards qualifiers
+  540 |             double travel_from = compute_dist([01;31m[Ktask[m[K,slot->next_task->task)/speed_;
+      |                                               [01;31m[K^~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:228:54:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kdouble Agent::compute_dist(ma_interfaces::msg::Task&, ma_interfaces::msg::Task&)[m[K’
+  228 | double Agent::compute_dist([01;36m[Kma_interfaces::msg::Task &t1[m[K, ma_interfaces::msg::Task &t2) {
+      |                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:556:27:[m[K [01;31m[Kerror: [m[Kbinding reference of type ‘[01m[Kma_interfaces::msg::Task&[m[K’ {aka ‘[01m[Kma_interfaces::msg::Task_<std::allocator<void> >&[m[K’} to ‘[01m[Kconst Task[m[K’ {aka ‘[01m[Kconst ma_interfaces::msg::Task_<std::allocator<void> >[m[K’} discards qualifiers
+  556 |         if (schedule_task([01;31m[Ktask[m[K)) {
+      |                           [01;31m[K^~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:367:53:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kbool Agent::schedule_task(ma_interfaces::msg::Task&)[m[K’
+  367 | bool Agent::schedule_task([01;36m[Kma_interfaces::msg::Task &task[m[K) {
+      |                           [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[ 45%] [32m[1mLinking CXX executable client[0m
+[ 45%] Built target client
+[35m[1mConsolidate compiler generated dependencies of target clock[0m
+[ 54%] [32mBuilding CXX object CMakeFiles/clock.dir/src/clock.cpp.o[0m
+[ 63%] [32m[1mLinking CXX executable clock[0m
+[ 63%] Built target clock
+[ 72%] [32mBuilding CXX object CMakeFiles/agent.dir/src/stn.cpp.o[0m
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:197: CMakeFiles/agent.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[ 81%] [32m[1mLinking CXX executable goal_manager[0m
+[ 81%] Built target goal_manager
+[ 90%] [32m[1mLinking CXX executable execution_interface[0m
+[ 90%] Built target execution_interface
+gmake: *** [Makefile:146: all] Error 2

@@ -19,6 +19,10 @@ module ma_interfaces {
       double st;
 
       double et;
+
+      double x;
+
+      double y;
     };
   };
 };

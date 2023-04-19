@@ -5,3 +5,5 @@ float64 value
 float64 duration
 float64 st
 float64 et
+float64 x
+float64 y

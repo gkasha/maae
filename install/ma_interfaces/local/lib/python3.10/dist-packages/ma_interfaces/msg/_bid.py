@@ -71,7 +71,7 @@ class Bid(metaclass=Metaclass_Bid):
         'status': 'int32',
         'st': 'double',
         'et': 'double',
-        'value': 'int64',
+        'value': 'double',
     }
 
     SLOT_TYPES = (
@@ -80,7 +80,7 @@ class Bid(metaclass=Metaclass_Bid):
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
-        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -92,7 +92,7 @@ class Bid(metaclass=Metaclass_Bid):
         self.status = kwargs.get('status', int())
         self.st = kwargs.get('st', float())
         self.et = kwargs.get('et', float())
-        self.value = kwargs.get('value', int())
+        self.value = kwargs.get('value', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -222,8 +222,8 @@ class Bid(metaclass=Metaclass_Bid):
     def value(self, value):
         if __debug__:
             assert \
-                isinstance(value, int), \
-                "The 'value' field must be of type 'int'"
-            assert value >= -9223372036854775808 and value < 9223372036854775808, \
-                "The 'value' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+                isinstance(value, float), \
+                "The 'value' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'value' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._value = value

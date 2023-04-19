@@ -16,7 +16,7 @@ module ma_interfaces {
 
       double et;
 
-      int64 value;
+      double value;
     };
   };
 };

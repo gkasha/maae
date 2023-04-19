@@ -47,72 +47,85 @@ void STN::print_graph() {
 }
 
 void STN::gen_dot_file(string file_name) {
+    cout << "Printing dot file: " << file_name << endl;
     ofstream fout(file_name);
-    fout << "graph plan {\n";
+    fout << "digraph plan {" << std::endl;
     for (int i = 0; i < (int)graph.size(); i++) {
         shared_ptr<Node> x = graph[i];
         if (x != nullptr) {
             fout << to_string(x->id) << "[label=";
             fout << "\"" << x->timepoint_id << "\""
-                 << ",style=filled,fillcolor=black,fontcolor=white];\n";
+                 << ",style=filled,fillcolor=black,fontcolor=white];" << std::endl;
         }
     }
-    vector<tuple<string, string, string, string, string>> relations =
-        vector<tuple<string, string, string, string, string>>();
+    // vector<tuple<string, string, string, string, string>> relations =
+    //     vector<tuple<string, string, string, string, string>>();
 
-    for (int i = 0; i < (int)graph.size(); i++) {
-        shared_ptr<Node> x = graph[i];
-        if (x == nullptr) continue;
-        shared_ptr<Edge> e = x->edges_out;
-        while (e != nullptr) {
-            shared_ptr<Node> y = graph[e->id];
-            string e_weight = to_string(e->weight);
+    // for (int i = 0; i < (int)graph.size(); i++) {
+    //     shared_ptr<Node> x = graph[i];
+    //     if (x == nullptr) continue;
+    //     shared_ptr<Edge> e = x->edges_out;
+    //     while (e != nullptr) {
+    //         shared_ptr<Node> y = graph[e->id];
+    //         string e_weight = to_string(e->weight);
 
-            bool lower_bound = false, upper_bound = false;
-            if (e_weight.at(0) == '-')
-                lower_bound = true;
-            else
-                upper_bound = true;
+    //         bool lower_bound = false, upper_bound = false;
+    //         if (e_weight.at(0) == '-')
+    //             lower_bound = true;
+    //         else
+    //             upper_bound = true;
 
-            if (upper_bound && e_weight != "inf")
-                e_weight = e_weight.substr(0, e_weight.find(".") + 3);
-            else if (lower_bound && e_weight != "-inf")
-                e_weight = e_weight.substr(0, e_weight.find(".") + 3);
+    //         if (upper_bound && e_weight != "inf")
+    //             e_weight = e_weight.substr(0, e_weight.find(".") + 3);
+    //         else if (lower_bound && e_weight != "-inf")
+    //             e_weight = e_weight.substr(0, e_weight.find(".") + 3);
 
-            bool found = false;
-            for (auto it = relations.begin(); it != relations.end(); it++)
-                if (get<4>(*it) == e->c_id) {
-                    if (lower_bound)
-                        get<2>(*it) = e_weight.substr(1);
-                    else
-                        get<3>(*it) = e_weight;
-                    found = true;
-                    break;
-                }
+    //         bool found = false;
+    //         for (auto it = relations.begin(); it != relations.end(); it++)
+    //             if (get<4>(*it) == e->c_id) {
+    //                 if (lower_bound)
+    //                     get<2>(*it) = e_weight.substr(1);
+    //                 else
+    //                     get<3>(*it) = e_weight;
+    //                 found = true;
+    //                 break;
+    //             }
 
-            if (!found) {
-                tuple<string, string, string, string, string> rel =
-                    tuple<string, string, string, string, string>();
-                if (lower_bound)
-                    rel = make_tuple(to_string(x->id), to_string(y->id),
-                                     e_weight.substr(1), "", e->c_id);
-                else if (upper_bound)
-                    rel = make_tuple(to_string(x->id), to_string(y->id), "",
-                                     e_weight, e->c_id);
-                relations.push_back(rel);
-            }
-            e = e->next;
-        }
-    }
+    //         if (!found) {
+    //             tuple<string, string, string, string, string> rel =
+    //                 tuple<string, string, string, string, string>();
+    //             if (lower_bound)
+    //                 rel = make_tuple(to_string(x->id), to_string(y->id),
+    //                                  e_weight.substr(1), "", e->c_id);
+    //             else if (upper_bound)
+    //                 rel = make_tuple(to_string(x->id), to_string(y->id), "",
+    //                                  e_weight, e->c_id);
+    //             relations.push_back(rel);
+    //         }
+    //         e = e->next;
+    //     }
+    // }
 
-    for (tuple<string, string, string, string, string> rel : relations)
-        fout << "\"" << get<0>(rel) << "\""
-             << "--"
-             << "\"" << get<1>(rel) << "\""
+    for (auto const& elt : constraints) {
+        constraint c = elt.second;
+        fout << "\"" << to_string(get_tp_id(get<0>(c))) << "\""
+             << "->"
+             << "\"" << to_string(get_tp_id(get<1>(c))) << "\""
              << "[label="
-             << "\"[" << get<2>(rel) << ", " << get<3>(rel) << "]\""
-             << ",penwidth=2,color=black];\n";
-    fout << "}\n";
+             << "\"[" << get<2>(c) << ", " << get<3>(c) << "]\""
+             << ",penwidth=2,color=black];" << std::endl;
+    }
+
+    // for (tuple<string, string, string, string, string> rel : relations)
+    //     fout << "\"" << get<0>(rel) << "\""
+    //          << "->"
+    //          << "\"" << get<1>(rel) << "\""
+    //          << "[label="
+    //          << "\"[" << get<2>(rel) << ", " << get<3>(rel) << "]\""
+    //          << ",penwidth=2,color=black];" << std::endl;
+    fout << "}" << std::endl;
+    fout.close();
+    cout << "Done creating dot file" << std::endl;
 }
 
 void STN::print_sp_tree() {
@@ -574,6 +587,7 @@ void STN::del_timepoint(string x) {
     p = nullptr;
 
     while (e != nullptr) {
+        if (constraints.find(e->c_id) != constraints.end()) constraints.erase(e->c_id);
         y_node = graph[e->id];
         y_node->edges_in = del_all_edges(y_node->edges_in, x_node->id, true);
         p = e->next;

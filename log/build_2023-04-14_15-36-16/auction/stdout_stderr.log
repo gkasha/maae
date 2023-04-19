@@ -1,0 +1,15 @@
+[35m[1mConsolidate compiler generated dependencies of target agent[0m
+[ 18%] Built target client
+[ 27%] [32mBuilding CXX object CMakeFiles/agent.dir/src/agent.cpp.o[0m
+[ 45%] Built target goal_manager
+[ 63%] Built target execution_interface
+[ 72%] [32mBuilding CXX object CMakeFiles/agent.dir/src/stn.cpp.o[0m
+[ 90%] Built target clock
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::action_feedback_cb(ma_interfaces::msg::ActionFeedback)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:746:52:[m[K [01;31m[Kerror: [m[K‘[01m[Know_seq[m[K’ was not declared in this scope; did you mean ‘[01m[Know_c[m[K’?
+  746 |                 if (!stn.add_constraint("now_seq", [01;31m[Know_seq[m[K)) {
+      |                                                    [01;31m[K^~~~~~~[m[K
+      |                                                    [32m[Know_c[m[K
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:197: CMakeFiles/agent.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

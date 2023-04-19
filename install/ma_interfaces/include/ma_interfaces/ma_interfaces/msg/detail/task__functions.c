@@ -37,6 +37,8 @@ ma_interfaces__msg__Task__init(ma_interfaces__msg__Task * msg)
   // duration
   // st
   // et
+  // x
+  // y
   return true;
 }
 
@@ -55,6 +57,8 @@ ma_interfaces__msg__Task__fini(ma_interfaces__msg__Task * msg)
   // duration
   // st
   // et
+  // x
+  // y
 }
 
 bool
@@ -95,6 +99,14 @@ ma_interfaces__msg__Task__are_equal(const ma_interfaces__msg__Task * lhs, const 
   if (lhs->et != rhs->et) {
     return false;
   }
+  // x
+  if (lhs->x != rhs->x) {
+    return false;
+  }
+  // y
+  if (lhs->y != rhs->y) {
+    return false;
+  }
   return true;
 }
 
@@ -128,6 +140,10 @@ ma_interfaces__msg__Task__copy(
   output->st = input->st;
   // et
   output->et = input->et;
+  // x
+  output->x = input->x;
+  // y
+  output->y = input->y;
   return true;
 }
 

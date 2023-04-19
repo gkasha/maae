@@ -90,8 +90,6 @@ class ActionNode
         ActionStatus status_;
 };
 
-std::map<std::string, ActionNode*> action_map;
-
 class Monitor : public rclcpp::Node
 {
     public:
@@ -101,6 +99,11 @@ class Monitor : public rclcpp::Node
 
             cbgs_clock_ = this->create_callback_group(
                 rclcpp::CallbackGroupType::MutuallyExclusive);
+            cbgs_action_dispatch_ = this->create_callback_group(
+                    rclcpp::CallbackGroupType::MutuallyExclusive);
+            cbgs_action_modification_ = this->create_callback_group(
+                    rclcpp::CallbackGroupType::MutuallyExclusive);
+
 
             auto clock_opt = rclcpp::SubscriptionOptions();
             clock_opt.callback_group = cbgs_clock_;
@@ -112,6 +115,28 @@ class Monitor : public rclcpp::Node
                     this,
                     std::placeholders::_1),
                     clock_opt);
+            
+            auto action_dispatch_opt = rclcpp::SubscriptionOptions();
+            action_dispatch_opt.callback_group = cbgs_action_dispatch_;
+            auto action_modification_opt = rclcpp::SubscriptionOptions();
+            action_modification_opt.callback_group = cbgs_action_modification_;
+
+            action_dispatch_ = this->create_subscription<ma_interfaces::msg::ActionDispatch>(
+                    "action_dispatch_topic",
+                    rclcpp::QoS(10),
+                    std::bind(
+                        &Monitor::action_dispatch_cb,
+                        this,
+                        std::placeholders::_1),
+                    action_dispatch_opt);
+            action_modification_ = this->create_subscription<ma_interfaces::msg::ActionFeedback>(
+                    "action_modification_topic",
+                    rclcpp::QoS(10),
+                    std::bind(
+                        &Monitor::action_modification_cb,
+                        this,
+                        std::placeholders::_1),
+                    action_modification_opt);
         }
 
     private:
@@ -127,15 +152,15 @@ class Monitor : public rclcpp::Node
                         action->set_status(ActionNode::COMPLETE);
                         publisher_->publish(action->to_feedback_msg(curr_time_));
 
-                        RCLCPP_INFO(this->get_logger(), "Action completed: %s", action->to_string().c_str());
+                        RCLCPP_INFO(this->get_logger(), "[%d] Action completed: %s", curr_time_, action->to_string().c_str());
                         completed_actions.push_back(action->to_string());
                     }
-                } else if (action->get_status() == ActionNode::WAITING) {
-                    action->set_start_time(curr_time_);
-                    action->set_status(ActionNode::EXECUTING);
+                } else if (action->get_status() == ActionNode::WAITING && action->get_start_time() <= curr_time_) {
+                    // action->set_start_time(curr_time_);
+                    // action->set_status(ActionNode::EXECUTING);
 
-                    publisher_->publish(action->to_feedback_msg(curr_time_));
-                    RCLCPP_INFO(this->get_logger(), "Action started: %s", action->to_string().c_str());
+                    // publisher_->publish(action->to_feedback_msg(curr_time_));
+                    // RCLCPP_INFO(this->get_logger(), "Action started: %s", action->to_string().c_str());
                 } else if (action->get_status() == ActionNode::FAILED) {
                     publisher_->publish(action->to_feedback_msg(curr_time_));
                     RCLCPP_INFO(this->get_logger(), "Action failed: %s", action->to_string().c_str());
@@ -146,47 +171,14 @@ class Monitor : public rclcpp::Node
                 action_map.erase(s);
             }
         }
-        int curr_time_;
+
+        std::map<std::string, ActionNode*> action_map;
+
         rclcpp::Publisher<ma_interfaces::msg::ActionFeedback>::SharedPtr publisher_;
         rclcpp::CallbackGroup::SharedPtr cbgs_clock_;
         rclcpp::Subscription<std_msgs::msg::Int64>::SharedPtr clock_;
-};
+        int curr_time_;
 
-class Executor : public rclcpp::Node
-{
-    public:
-        Executor() : Node("executor")
-        {
-            cbgs_action_dispatch_ = this->create_callback_group(
-                    rclcpp::CallbackGroupType::MutuallyExclusive);
-            cbgs_action_modification_ = this->create_callback_group(
-                    rclcpp::CallbackGroupType::MutuallyExclusive);
-
-            auto action_dispatch_opt = rclcpp::SubscriptionOptions();
-            action_dispatch_opt.callback_group = cbgs_action_dispatch_;
-            auto action_modification_opt = rclcpp::SubscriptionOptions();
-            action_modification_opt.callback_group = cbgs_action_modification_;
-
-            action_dispatch_ = this->create_subscription<ma_interfaces::msg::ActionDispatch>(
-                    "action_dispatch_topic",
-                    rclcpp::QoS(10),
-                    std::bind(
-                        &Executor::action_dispatch_cb,
-                        this,
-                        std::placeholders::_1),
-                    action_dispatch_opt);
-            action_modification_ = this->create_subscription<ma_interfaces::msg::ActionFeedback>(
-                    "action_modification_topic",
-                    rclcpp::QoS(10),
-                    std::bind(
-                        &Executor::action_modification_cb,
-                        this,
-                        std::placeholders::_1),
-                    action_modification_opt);
-
-        }
-
-    private:
         rclcpp::Subscription<ma_interfaces::msg::ActionDispatch>::SharedPtr action_dispatch_;
         rclcpp::Subscription<ma_interfaces::msg::ActionFeedback>::SharedPtr action_modification_;
 
@@ -196,5 +188,6 @@ class Executor : public rclcpp::Node
         void action_dispatch_cb(const ma_interfaces::msg::ActionDispatch action);
         void action_modification_cb(const ma_interfaces::msg::ActionFeedback action);
 };
+
 
 #endif
