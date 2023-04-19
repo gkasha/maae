@@ -61,6 +61,7 @@ class Agent : public rclcpp::Node
             replanning_threshold_ = replanning_threshold;
             speed_ = speed;
 
+            goal_auction_publisher_ = this->create_publisher<ma_interfaces::msg::Goal>("new_goals_topic", 10);
             goal_bid_publisher_ = this->create_publisher<ma_interfaces::msg::Bid>("goal_bids_topic", 10);
             task_auction_publisher_ = this->create_publisher<ma_interfaces::msg::Task>("new_tasks_topic", 10);
             task_bid_publisher_ = this->create_publisher<ma_interfaces::msg::Bid>("task_bids_topic", 10);
@@ -139,7 +140,7 @@ class Agent : public rclcpp::Node
             stn.add_timepoint("start");
             stn.add_timepoint("now");
             stn.add_timepoint("end");
-            constraint now_c = std::make_tuple("now", "cz", 0, inf);
+            constraint now_c = std::make_tuple("cz", "now", 0, inf);
             constraint now_seq_c = std::make_tuple("now","start",0,inf);
             constraint start_c = std::make_tuple("cz", "start", 0, inf);
             constraint end_c = std::make_tuple("cz", "end", 0, deadline_);
@@ -191,6 +192,9 @@ class Agent : public rclcpp::Node
             double y
         );
 
+        std::mutex mtx;
+
+        rclcpp::Publisher<ma_interfaces::msg::Goal>::SharedPtr goal_auction_publisher_;
         rclcpp::Publisher<ma_interfaces::msg::Bid>::SharedPtr goal_bid_publisher_;
         rclcpp::Publisher<ma_interfaces::msg::Task>::SharedPtr task_auction_publisher_;
         rclcpp::Publisher<ma_interfaces::msg::Bid>::SharedPtr task_bid_publisher_;
