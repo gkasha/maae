@@ -1,0 +1,34 @@
+[35m[1mConsolidate compiler generated dependencies of target agent[0m
+[ 18%] Built target client
+[ 36%] Built target goal_manager
+[ 45%] [32mBuilding CXX object CMakeFiles/agent.dir/src/agent.cpp.o[0m
+[ 63%] Built target execution_interface
+[ 81%] Built target clock
+In file included from [01m[K/home/gkasha/ros2_humble/build/rclcpp/include/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/include/auction/agent.hpp:5[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:1[m[K:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:[m[K In member function ‘[01m[Kvoid Agent::check_dispatch()[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:646:55:[m[K [01;35m[Kwarning: [m[Ktoo many arguments for format [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-extra-args-Wformat-extra-args]8;;[m[K]
+  646 |             RCLCPP_INFO(rclcpp::get_logger("rclcpp"), [01;35m[K"Bound is tight, starting auction to replan"[m[K, timeline->name_.c_str(), curr->name_.c_str(), -1*std::get<0>(st), std::get<1>(st));
+      |                                                       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:651:43:[m[K [01;31m[Kerror: [m[K‘[01m[Ktail[m[K’ was not declared in this scope; did you mean ‘[01m[Ktanl[m[K’?
+  651 |             if (curr->next_task->name_ != [01;31m[Ktail[m[K) {
+      |                                           [01;31m[K^~~~[m[K
+      |                                           [32m[Ktanl[m[K
+[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:652:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kunschedule[m[K’ was not declared in this scope; did you mean ‘[01m[Kunschedule_task[m[K’?
+  652 |                 constraints_from = [01;31m[Kunschedule[m[K(curr->next);
+      |                                    [01;31m[K^~~~~~~~~~[m[K
+      |                                    [32m[Kunschedule_task[m[K
+gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:197: CMakeFiles/agent.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

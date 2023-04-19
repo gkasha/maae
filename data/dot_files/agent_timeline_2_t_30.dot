@@ -1,9 +1,0 @@
-digraph timeline {
-head[label="head",style=filled,fillcolor=green,fontcolor=black];
-head_task2_travel[label="head_task2_travel",style=filled,fillcolor=green,fontcolor=black];
-task2[label="task2",style=filled,fillcolor=gray,fontcolor=black];
-tail[label="tail",style=filled,fillcolor=gray,fontcolor=black];
-"head"->"head_task2_travel"[color=black];
-"head_task2_travel"->"task2"[color=black];
-"task2"->"tail"[color=black];
-}

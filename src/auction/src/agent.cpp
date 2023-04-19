@@ -99,7 +99,7 @@ void Agent::clock_cb(const std_msgs::msg::Int64::SharedPtr msg) {
     stn.del_constraint("now_constraint");
     constraint c = std::make_tuple("cz", "now", curr_time_, inf);
     if (!stn.add_constraint("now_constraint", c)) {
-        RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "[%d] Unable to add now constraint", curr_time_);
+        RCLCPP_ERROR(this->get_logger(), "[%d] Unable to add now constraint", curr_time_);
     }
 
     check_dispatch();
@@ -185,7 +185,7 @@ std::vector<ma_interfaces::msg::Bid> Agent::choose_winners(ma_interfaces::msg::T
 }
 
 void Agent::host_auction(ma_interfaces::msg::Goal &goal) {
-    if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Won goal %s @ (%f,%f)", goal.id.c_str(), goal.x, goal.y);
+    if (agent_verbose_1) RCLCPP_INFO(this->get_logger(), "Won goal %s @ (%f,%f)", goal.id.c_str(), goal.x, goal.y);
 
     double task_duration = 10;
     ma_interfaces::msg::Task task = build_task_msg(goal.id,"",goal.num_agents,10,task_duration,-1,goal.deadline, goal.x, goal.y);
@@ -193,7 +193,7 @@ void Agent::host_auction(ma_interfaces::msg::Goal &goal) {
     bid_map[task.id] = new_map;
 
     // Send out auction
-    if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing auction for task %s", task.id.c_str());
+    if (agent_verbose_1) RCLCPP_INFO(this->get_logger(), "Publishing auction for task %s", task.id.c_str());
     task_auction_publisher_->publish(task);
 
     // Wait to collect bids
@@ -204,8 +204,8 @@ void Agent::host_auction(ma_interfaces::msg::Goal &goal) {
 
     // Send out winners
     for (ma_interfaces::msg::Bid bid : winning_bids) {
-        if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing winner for auction %s: agent %s (%f,%f)", task.id.c_str(), task.owner.c_str(), bid.st, bid.et);
         task.owner = bid.agent_id;
+        if (agent_verbose_1) RCLCPP_INFO(this->get_logger(), "Publishing winner for auction %s: agent %s (%f,%f)", task.id.c_str(), task.owner.c_str(), bid.st, bid.et);
         if (task.num_agents > 1) {
             task.st = bid.st;
             task.et = task.st + task.duration;
@@ -222,7 +222,7 @@ void Agent::host_auction(ma_interfaces::msg::Goal &goal) {
 void Agent::new_goals_cb(ma_interfaces::msg::Goal goal) {
     if (goal.owner == "") {
         // Goal is unowned, formulate a bid
-        if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing bid for goal %s", goal.id.c_str());
+        if (agent_verbose_1) RCLCPP_INFO(this->get_logger(), "Publishing bid for goal %s", goal.id.c_str());
 
         ma_interfaces::msg::Bid bid = build_bid_msg(id_,goal.id,0,0,0,10);
         goal_bid_publisher_->publish(bid);
@@ -239,7 +239,7 @@ double Agent::compute_dist(ma_interfaces::msg::Task &t1, ma_interfaces::msg::Tas
 
     double res = round(sqrt(pow(t2.x-t1.x,2) + pow(t2.y-t1.y,2)));
 
-    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Distance from task %s to task %s is %f", t1.id.c_str(), t2.id.c_str(), res);
+    RCLCPP_INFO(this->get_logger(), "Distance from task %s to task %s is %f", t1.id.c_str(), t2.id.c_str(), res);
     
     return res;
 }
@@ -263,7 +263,7 @@ std::vector<std::tuple<std::string,constraint>> Agent::unschedule_task(TNode* t)
         }
     }
 
-    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Deleting timepoints for task %s", t->name_.c_str());
+    RCLCPP_INFO(this->get_logger(), "Deleting timepoints for task %s", t->name_.c_str());
     stn.del_timepoint(t->stp_);
     stn.del_timepoint(t->etp_);
 
@@ -279,7 +279,7 @@ std::tuple<double,TNode*> Agent::find_slot(TNode* root, ma_interfaces::msg::Task
     TNode* curr = root;
     
     while (curr && !curr->located) {
-        curr = curr->next;
+        curr = curr->next_task;
     }
 
     if (!curr) return std::tuple(inf,nullptr);
@@ -289,6 +289,9 @@ std::tuple<double,TNode*> Agent::find_slot(TNode* root, ma_interfaces::msg::Task
     while (curr->next_task) {
         double to_dur = compute_dist(curr->task, task);
         double from_dur = task.duration;
+
+        constraint now_seq = stn.get_constraint("now_seq");
+
 
         if (curr->next->located) {
             TNode* next_travel = curr->next;
@@ -300,10 +303,21 @@ std::tuple<double,TNode*> Agent::find_slot(TNode* root, ma_interfaces::msg::Task
         stn.add_timepoint(temp_tp);
         constraint temp_to = std::make_tuple(curr->etp_,temp_tp, to_dur, inf);
         constraint temp_from = std::make_tuple(temp_tp, curr->next_task->stp_, from_dur, inf);
-
         bool status = true;
 
-        if (stn.add_constraint("temp_to", temp_to)
+        if (std::get<0>(now_seq) == curr->next->stp_ || std::get<1>(now_seq) == curr->next->etp_) {
+            constraint temp_now_seq;
+            if (curr->status == TNode::COMPLETE) {
+                temp_now_seq = std::make_tuple("now", temp_tp, 0, inf);
+            } else {
+                temp_now_seq = std::make_tuple("now", curr->etp_, 0, inf);
+            }
+            status = stn.add_constraint("now_seq", temp_now_seq);
+        }
+
+
+        if (status 
+            && stn.add_constraint("temp_to", temp_to)
             && stn.add_constraint("temp_from", temp_from)) {
             
             if (task.st >= 0) {
@@ -359,7 +373,7 @@ std::vector<std::tuple<double,TNode*>> Agent::find_slots(ma_interfaces::msg::Tas
     while (curr) {
         std::tuple<double,TNode*> temp = find_slot(curr,task);
         if (!std::get<1>(temp)) {
-            RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Slot could not be found");
+            RCLCPP_ERROR(this->get_logger(), "Slot could not be found");
             break;
         } else {
             if (std::get<1>(temp)->located) slots.push_back(temp);
@@ -378,17 +392,17 @@ std::vector<std::tuple<double,TNode*>> Agent::find_slots(ma_interfaces::msg::Tas
  */
 void Agent::print_timeline() {
     TNode* curr = timeline;
-    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "---------------------\nPrinting timeline...");
+    RCLCPP_INFO(this->get_logger(), "---------------------\nPrinting timeline...");
 
     while (curr) {
         if (curr->name_ != "tail" && (curr->next != curr->next_task || curr->next_task->name_ == "tail")) {
-            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "%s: (%s, %s) @ (%f,%f)->\n", curr->name_.c_str(), curr->stp_.c_str(), curr->etp_.c_str(), curr->task.x, curr->task.y);
+            RCLCPP_INFO(this->get_logger(), "%s: (%s, %s) @ (%f,%f)->\n", curr->name_.c_str(), curr->stp_.c_str(), curr->etp_.c_str(), curr->task.x, curr->task.y);
         } else {
-            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "%s: (%s, %s)->\n", curr->name_.c_str(), curr->stp_.c_str(), curr->etp_.c_str());
+            RCLCPP_INFO(this->get_logger(), "%s: (%s, %s)->\n", curr->name_.c_str(), curr->stp_.c_str(), curr->etp_.c_str());
         }
         curr = curr->next;
     }
-    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "---------------------\n");
+    RCLCPP_INFO(this->get_logger(), "---------------------\n");
 }
 
 /*
@@ -416,12 +430,20 @@ void Agent::print_timeline() {
 bool Agent::schedule_task(ma_interfaces::msg::Task &task, TNode* slot=nullptr) {
     // Search for slot that covers task
     TNode* curr = timeline;
+    constraint now_seq = stn.get_constraint("now_seq");
+
+    if (curr->name_ != "head" && curr->next_task->name_ != "tail" 
+        && (std::get<0>(now_seq) == curr->stp_ || std::get<1>(now_seq) == curr->stp_ 
+        || std::get<0>(now_seq) == curr->etp_ || std::get<1>(now_seq) == curr->etp_)) {
+        curr = curr->next_task;
+    }
+
     if (curr->next->name_ != "tail" && !curr->located) {
         // Currently at a travel task, jump to next task
         curr = curr->next_task;
     }
 
-    RCLCPP_INFO(rclcpp::get_logger("rclcpp"),"Attempting to schedule task");
+    RCLCPP_INFO(this->get_logger(),"Attempting to schedule task");
     std::vector<std::tuple<double,TNode*>> slots = find_slots(task);
 
     auto cmp = [](std::tuple<double,TNode*> left, std::tuple<double,TNode*> right){
@@ -431,7 +453,7 @@ bool Agent::schedule_task(ma_interfaces::msg::Task &task, TNode* slot=nullptr) {
     if (!slot) slot = std::get<1>(*std::min_element(slots.begin(),slots.end(),cmp));
 
     if (slot->name_ == "tail") {
-        RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Unable to find slot");
+        RCLCPP_ERROR(this->get_logger(), "Unable to find slot");
         return false;
     }
 
@@ -467,7 +489,7 @@ bool Agent::schedule_task(ma_interfaces::msg::Task &task, TNode* slot=nullptr) {
     constraint travel_to_et_c = std::make_tuple(new_travel_to_etp, new_task_stp, 0, inf);
     constraint task_dur_c = std::make_tuple(new_task_stp, new_task_etp, task.duration, inf);
 
-    RCLCPP_INFO(rclcpp::get_logger("rclcpp"),"[schedule_task] Travel duration from %s to %s is %f", new_travel_to_stp.c_str(), new_travel_to_etp.c_str(), travel_to_dur);
+    RCLCPP_INFO(this->get_logger(),"[schedule_task] Travel duration from %s to %s is %f", new_travel_to_stp.c_str(), new_travel_to_etp.c_str(), travel_to_dur);
 
     int status = 0;
     if (!stn.add_constraint(slot->name_ + "_" + task.id + "_travel_st", travel_to_st_c)
@@ -499,7 +521,7 @@ bool Agent::schedule_task(ma_interfaces::msg::Task &task, TNode* slot=nullptr) {
             constraint travel_from_st_c = std::make_tuple(new_task_etp, new_travel_from_stp, 0, inf);
             constraint travel_from_c = std::make_tuple(new_travel_from_stp, new_travel_from_etp, travel_from_dur, inf);
             constraint travel_from_et_c = std::make_tuple(new_travel_from_etp, slot->next_task->stp_, 0, inf);
-            RCLCPP_INFO(rclcpp::get_logger("rclcpp"),"[schedule_task] Travel duration from %s to %s is %f", new_travel_from_stp.c_str(), new_travel_from_etp.c_str(), travel_from_dur);
+            RCLCPP_INFO(this->get_logger(),"[schedule_task] Travel duration from %s to %s is %f", new_travel_from_stp.c_str(), new_travel_from_etp.c_str(), travel_from_dur);
 
             if (!stn.add_constraint(task.id + "_" + slot->next_task->name_ + "_travel_st", travel_from_st_c)
                 || !stn.add_constraint(task.id + "_" + slot->next_task->name_ + "travel_dur", travel_from_c)
@@ -568,11 +590,11 @@ bool Agent::schedule_task(ma_interfaces::msg::Task &task, TNode* slot=nullptr) {
  * Output: Bid for task IF unowned, 
  */
 void Agent::new_tasks_cb(ma_interfaces::msg::Task task) {
-    if (task.owner == "" && bid_map.find(task.id) == bid_map.end()) {
+    if (task.owner == "") {
         // Generate a bid for the unowned task, first by searching for a slot
         std::vector<std::tuple<double,TNode*>> slots = find_slots(task);
 
-        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Found %ld slots", slots.size());
+        RCLCPP_INFO(this->get_logger(), "Found %ld slots", slots.size());
         
         for (std::tuple<double,TNode*> slot_tuple : slots) {
             TNode* slot = std::get<1>(slot_tuple);
@@ -586,27 +608,27 @@ void Agent::new_tasks_cb(ma_interfaces::msg::Task task) {
                 ma_interfaces::msg::Bid bid = build_bid_msg(id_,task.id,0,st,et,travel_to);
                 
                 // Publish bid
-                if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "[%d] Publishing bid for auction %s: (%f,%f) = %f", curr_time_, bid.auction_id.c_str(), bid.st, bid.et, bid.value);
+                if (agent_verbose_1) RCLCPP_INFO(this->get_logger(), "[%d] Publishing bid for auction %s: (%f,%f) = %f", curr_time_, bid.auction_id.c_str(), bid.st, bid.et, bid.value);
                 task_bid_publisher_->publish(bid);
             }
         }
     } else if (task.owner == id_) {
         // Agent won the bid for the task, now want to schedule it
-        if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Won the bid for auction %s, duration = %f, times=(%f,%f)", task.id.c_str(), task.duration, task.st, task.et);
+        if (agent_verbose_1) RCLCPP_INFO(this->get_logger(), "Won the bid for auction %s, duration = %f, times=(%f,%f)", task.id.c_str(), task.duration, task.st, task.et);
 
         if (schedule_task(task)) {
             stn.gen_dot_file("/home/gkasha/Documents/maae/data/dot_files/agent_stn_" + id_ + "_t_" + std::to_string(curr_time_) + ".dot");
 
             // Able to add, send confirmation to auctioneer            
             auto msg = build_bid_msg(id_,task.id,1,0,0,0);
-            if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing scheduling confirmation of task: %s", task.id.c_str());
+            if (agent_verbose_1) RCLCPP_INFO(this->get_logger(), "Publishing scheduling confirmation of task: %s", task.id.c_str());
             task_bid_publisher_->publish(msg);
             // Check to see if there are any tasks to dispatch
         } else {
             // Unable to add message, send failure to auctioneer
             auto msg = build_bid_msg(id_,task.id,-1,0,task.duration,task.value);
 
-            if (agent_verbose_1) RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Publishing scheduling failure of task: %s", task.id.c_str());
+            if (agent_verbose_1) RCLCPP_ERROR(this->get_logger(), "Publishing scheduling failure of task: %s", task.id.c_str());
             task_bid_publisher_->publish(msg);
         }
     }
@@ -632,7 +654,7 @@ void Agent::check_dispatch() {
             msg.duration = curr->task.duration;
             msg.start_time = curr_time_;
 
-            if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Dispatching action: %s, duration=%f", msg.action_id.c_str(), msg.duration);
+            if (agent_verbose_1) RCLCPP_INFO(this->get_logger(), "Dispatching action: %s, duration=%f", msg.action_id.c_str(), msg.duration);
             action_dispatch_publisher_->publish(msg);
 
             // Move timeline so that we are now on the current task
@@ -642,57 +664,99 @@ void Agent::check_dispatch() {
         TNode* curr = timeline->next_task;
         auto st = stn.get_feasible_values(curr->stp_);
 
-        if (std::get<1>(st) + std::get<0>(st) < replanning_threshold_) {
-            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Bound is tight, attempting to shift timelines: %s --> %s : (%f, %f)", timeline->name_.c_str(), curr->name_.c_str(), -1*std::get<0>(st), std::get<1>(st));
-
-            // Bound is too tight, may be unable to achieve next task
-            if (curr->name_ != "tail" && curr->task.st < 0) {
-                // Task doesn't have a specified start time, we can try to reshuffle
-                TNode* slot = std::get<1>(find_slot(curr, curr->task));
-                if (slot->name_ != "tail") {
-                    // Unschedule task and its relevant travel activities
-                    TNode* travel_to = timeline->next;
-                    std::vector<std::tuple<std::string,constraint>> constraints_to = unschedule_task(travel_to);
-                    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Travel to task: %s = (%f,%f)", travel_to->name_.c_str(), std::get<0>(stn.get_feasible_values(travel_to->stp_)), std::get<1>(stn.get_feasible_values(travel_to->etp_)));
-                    std::vector<std::tuple<std::string,constraint>> constraints = unschedule_task(curr);
-                    std::vector<std::tuple<std::string,constraint>> constraints_from;
-                    if (curr->next->name_ != "tail") {
-                        constraints_from = unschedule_task(curr->next);
-                    }
-
-                    timeline->next_task = curr->next_task;
-
-                    // Schedule new travel task
-                    std::string stp = timeline->name_ + "_" + timeline->next_task->name_ + "_travel_st"; 
-                    std::string etp = timeline->name_ + "_" + timeline->next_task->name_ + "_travel_et";
-                    stn.add_timepoint(stp);
-                    stn.add_timepoint(etp);
-
-                    constraint st_c = std::make_tuple(timeline->etp_,stp,0,inf);
-                    constraint travel_c = std::make_tuple(stp, etp, compute_dist(timeline->task,timeline->next_task->task)/speed_,inf);
-                    constraint et_c = std::make_tuple(etp, timeline->next_task->stp_, 0, inf);
-                    bool status = stn.add_constraint(timeline->name_ + "_" + timeline->next_task->name_ + "_travel_st", st_c);
-                    status &= stn.add_constraint(timeline->name_ + "_" + timeline->next_task->name_ + "_travel_dur", travel_c);
-                    status &= stn.add_constraint(timeline->name_ + "_" + timeline->next_task->name_ + "_travel_et", et_c);
-                    
-                    if (!status) {
-                        RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Unable to add travel constraint between new tasks [%d]", curr_time_);
-                    }
-
-                    if (schedule_task(curr->task, slot)) {
-                        TNode* new_travel = new TNode(timeline->name_ + "_" + timeline->next_task->name_ + "_travel", stp,etp);
-                        new_travel->task = build_task_msg(timeline->name_ + "_" + timeline->next_task->name_ + "_travel", "", 0, 0, compute_dist(timeline->task,timeline->next_task->task)/speed_,0,0,0,0);
-                        timeline->next = new_travel;
-                        new_travel->next = timeline->next_task;
-                        new_travel->next_task = timeline->next_task;
-
-                        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Moved task down the timeline");
-                        gen_timeline_dot("/home/gkasha/Documents/maae/data/dot_files/agent_timeline_shuffle_" + id_ + "_t_" + std::to_string(curr_time_) + ".dot");
-                    } else {
-                        RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Unable to move task down timeline");
-                    }
-                }
+        if (std::get<1>(st) + std::get<0>(st) < replanning_threshold_ && curr->name_ != "tail" && curr->task.st < 0) {
+            RCLCPP_INFO(this->get_logger(), "Bound is tight (%f,%f), starting auction to replan for task %s", -1*std::get<0>(st), std::get<1>(st), curr->name_.c_str());
+            // Bound is too tight, may be unable to achieve next task. First, unschedule task
+            std::vector<std::tuple<std::string,constraint>> constraints_to = unschedule_task(timeline->next);
+            std::vector<std::tuple<std::string,constraint>> constraints = unschedule_task(curr);
+            std::vector<std::tuple<std::string,constraint>> constraints_from;
+            if (curr->next_task->name_ != "tail") {
+                constraints_from = unschedule_task(curr->next);
             }
+
+            timeline->next_task = curr->next_task;
+
+            // Schedule new travel task
+            std::string stp = timeline->name_ + "_" + timeline->next_task->name_ + "_travel_st"; 
+            std::string etp = timeline->name_ + "_" + timeline->next_task->name_ + "_travel_et";
+            stn.add_timepoint(stp);
+            stn.add_timepoint(etp);
+
+            constraint st_c = std::make_tuple(timeline->etp_,stp,0,inf);
+            constraint travel_c = std::make_tuple(stp, etp, compute_dist(timeline->task,timeline->next_task->task)/speed_,inf);
+            constraint et_c = std::make_tuple(etp, timeline->next_task->stp_, 0, inf);
+            bool status = stn.add_constraint(timeline->name_ + "_" + timeline->next_task->name_ + "_travel_st", st_c);
+            status &= stn.add_constraint(timeline->name_ + "_" + timeline->next_task->name_ + "_travel_dur", travel_c);
+            status &= stn.add_constraint(timeline->name_ + "_" + timeline->next_task->name_ + "_travel_et", et_c);
+            
+            if (!status) {
+                RCLCPP_ERROR(this->get_logger(), "Unable to add travel constraint between new tasks [%d]", curr_time_);
+            }
+
+            TNode* new_travel = new TNode(timeline->name_ + "_" + timeline->next_task->name_ + "_travel", stp,etp);
+            new_travel->task = build_task_msg(timeline->name_ + "_" + timeline->next_task->name_ + "_travel", "", 0, 0, compute_dist(timeline->task,timeline->next_task->task)/speed_,0,0,0,0);
+            timeline->next = new_travel;
+            new_travel->next = timeline->next_task;
+            new_travel->next_task = timeline->next_task;
+
+
+            ma_interfaces::msg::Goal goal = ma_interfaces::msg::Goal();
+            goal.id = curr->task.id;
+            goal.num_agents = 1;
+            goal.deadline = curr->task.st;
+            goal.x = curr->task.x;
+            goal.y = curr->task.y;
+
+            host_auction(goal);
+
+
+            // if (curr->name_ != "tail" && curr->task.st < 0) {
+            //     // Task doesn't have a specified start time, we can try to reshuffle
+            //     TNode* slot = std::get<1>(find_slot(curr, curr->task));
+            //     if (slot->name_ != "tail") {
+            //         // Unschedule task and its relevant travel activities
+            //         TNode* travel_to = timeline->next;
+            //         std::vector<std::tuple<std::string,constraint>> constraints_to = unschedule_task(travel_to);
+            //         RCLCPP_INFO(this->get_logger(), "Travel to task: %s = (%f,%f)", travel_to->name_.c_str(), std::get<0>(stn.get_feasible_values(travel_to->stp_)), std::get<1>(stn.get_feasible_values(travel_to->etp_)));
+            //         std::vector<std::tuple<std::string,constraint>> constraints = unschedule_task(curr);
+            //         std::vector<std::tuple<std::string,constraint>> constraints_from;
+            //         if (curr->next->name_ != "tail") {
+            //             constraints_from = unschedule_task(curr->next);
+            //         }
+
+            //         timeline->next_task = curr->next_task;
+
+            //         // Schedule new travel task
+            //         std::string stp = timeline->name_ + "_" + timeline->next_task->name_ + "_travel_st"; 
+            //         std::string etp = timeline->name_ + "_" + timeline->next_task->name_ + "_travel_et";
+            //         stn.add_timepoint(stp);
+            //         stn.add_timepoint(etp);
+
+            //         constraint st_c = std::make_tuple(timeline->etp_,stp,0,inf);
+            //         constraint travel_c = std::make_tuple(stp, etp, compute_dist(timeline->task,timeline->next_task->task)/speed_,inf);
+            //         constraint et_c = std::make_tuple(etp, timeline->next_task->stp_, 0, inf);
+            //         bool status = stn.add_constraint(timeline->name_ + "_" + timeline->next_task->name_ + "_travel_st", st_c);
+            //         status &= stn.add_constraint(timeline->name_ + "_" + timeline->next_task->name_ + "_travel_dur", travel_c);
+            //         status &= stn.add_constraint(timeline->name_ + "_" + timeline->next_task->name_ + "_travel_et", et_c);
+                    
+            //         if (!status) {
+            //             RCLCPP_ERROR(this->get_logger(), "Unable to add travel constraint between new tasks [%d]", curr_time_);
+            //         }
+
+            //         if (schedule_task(curr->task, slot)) {
+            //             TNode* new_travel = new TNode(timeline->name_ + "_" + timeline->next_task->name_ + "_travel", stp,etp);
+            //             new_travel->task = build_task_msg(timeline->name_ + "_" + timeline->next_task->name_ + "_travel", "", 0, 0, compute_dist(timeline->task,timeline->next_task->task)/speed_,0,0,0,0);
+            //             timeline->next = new_travel;
+            //             new_travel->next = timeline->next_task;
+            //             new_travel->next_task = timeline->next_task;
+
+            //             RCLCPP_INFO(this->get_logger(), "Moved task down the timeline");
+            //             gen_timeline_dot("/home/gkasha/Documents/maae/data/dot_files/agent_timeline_shuffle_" + id_ + "_t_" + std::to_string(curr_time_) + ".dot");
+            //         } else {
+            //             RCLCPP_ERROR(this->get_logger(), "Unable to move task down timeline");
+            //         }
+            //     }
+            // }
         }
     }
 }
@@ -702,7 +766,7 @@ void Agent::new_bids_cb(const ma_interfaces::msg::Bid bid) {
         if (bid.status < 0) {
             // Agent was unable to schedule task, cancel current set and choose next
             // std::vector<ma_interfaces::msg::Bid> invalid_winners = winner_map[bid.auction_id][0];
-            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Agent %s was unable to schedule task %s", bid.agent_id.c_str(), bid.auction_id.c_str());
+            RCLCPP_INFO(this->get_logger(), "Agent %s was unable to schedule task %s", bid.agent_id.c_str(), bid.auction_id.c_str());
             
             if (winner_map.find(bid.auction_id) != winner_map.end()) {
                 for (ma_interfaces::msg::Bid wbid : winner_map[bid.auction_id][0]) {
@@ -711,7 +775,7 @@ void Agent::new_bids_cb(const ma_interfaces::msg::Bid bid) {
                     task.st = bid.st;
                     task.duration = bid.et - bid.st;
                     task.et = bid.et;
-                    if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Publishing new winner for auction %s: agent %s (%f,%f)", task.id.c_str(), task.owner.c_str(), bid.st, bid.et);
+                    if (agent_verbose_1) RCLCPP_INFO(this->get_logger(), "Publishing new winner for auction %s: agent %s (%f,%f)", task.id.c_str(), task.owner.c_str(), bid.st, bid.et);
 
                     task_auction_publisher_->publish(task);
                 }
@@ -724,7 +788,7 @@ void Agent::new_bids_cb(const ma_interfaces::msg::Bid bid) {
                 ma_interfaces::msg::Bid wbid = winner_map[bid.auction_id][0][i];
                 if (wbid.status < 0){
                     if (wbid.agent_id == bid.agent_id){
-                        if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Task <%s> was successfuly scheduled by agent %s, closing auction.", bid.auction_id.c_str(), bid.agent_id.c_str());
+                        if (agent_verbose_1) RCLCPP_INFO(this->get_logger(), "Task <%s> was successfuly scheduled by agent %s, closing auction.", bid.auction_id.c_str(), bid.agent_id.c_str());
                         wbid.status = bid.status;
                     } else {
                         all_scheduled = false;
@@ -732,7 +796,7 @@ void Agent::new_bids_cb(const ma_interfaces::msg::Bid bid) {
                 }
             }
             if (all_scheduled) {
-                if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Task <%s> was successfully scheduled by all agents, closing auction", bid.auction_id.c_str());
+                if (agent_verbose_1) RCLCPP_INFO(this->get_logger(), "Task <%s> was successfully scheduled by all agents, closing auction", bid.auction_id.c_str());
                 winner_map.erase(bid.auction_id);
             } else {
                 winner_map[bid.auction_id].erase(winner_map[bid.auction_id].begin());
@@ -744,7 +808,7 @@ void Agent::new_bids_cb(const ma_interfaces::msg::Bid bid) {
             }
             bid_map[bid.auction_id][bid.agent_id].push_back(bid);
 
-            if (agent_verbose_1) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Added bid from agent %s to auction %s", bid.agent_id.c_str(), bid.auction_id.c_str());
+            if (agent_verbose_1) RCLCPP_INFO(this->get_logger(), "Added bid from agent %s to auction %s", bid.agent_id.c_str(), bid.auction_id.c_str());
         }
     }
 }
@@ -758,7 +822,7 @@ void Agent::action_feedback_cb(const ma_interfaces::msg::ActionFeedback action) 
                 stn.del_constraint("now_seq");
                 constraint now_c = std::make_tuple("now", curr->etp_, 0, inf);
                 if (!stn.add_constraint("now_seq", now_c)) {
-                    RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "[%d] Unable to add now_seq constraint", curr_time_);
+                    RCLCPP_ERROR(this->get_logger(), "[%d] Unable to add now_seq constraint", curr_time_);
                 }
 
                 timeline = curr;
@@ -767,15 +831,15 @@ void Agent::action_feedback_cb(const ma_interfaces::msg::ActionFeedback action) 
                 if (status) {
                     curr->status = TNode::EXECUTING;
                     gen_timeline_dot("/home/gkasha/Documents/maae/data/dot_files/agent_timeline_" + id_ + "_t_" + std::to_string(curr_time_) + ".dot");
-                    if (agent_verbose_2) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Action executing: %s", action.action_id.c_str());
+                    if (agent_verbose_2) RCLCPP_INFO(this->get_logger(), "Action executing: %s", action.action_id.c_str());
                 } else {
-                    if (agent_verbose_2) RCLCPP_INFO(rclcpp::get_logger("rclcpp"),"Unable to add start constraint to timeline for action %s", action.action_id.c_str());
+                    if (agent_verbose_2) RCLCPP_INFO(this->get_logger(),"Unable to add start constraint to timeline for action %s", action.action_id.c_str());
                 }
             } else if (action.action_completed) {
                 stn.del_constraint("now_seq");
                 constraint now_seq = std::make_tuple("now", curr->next->stp_, 0, inf);
                 if (!stn.add_constraint("now_seq", now_seq)) {
-                    RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "[%d] Unable to add now_seq constraint", curr_time_);
+                    RCLCPP_ERROR(this->get_logger(), "[%d] Unable to add now_seq constraint", curr_time_);
                 }
 
                 constraint c = std::make_tuple("cz", curr->etp_, action.time, action.time);
@@ -784,13 +848,13 @@ void Agent::action_feedback_cb(const ma_interfaces::msg::ActionFeedback action) 
                     curr->status = TNode::COMPLETE;
                     stn.gen_dot_file("/home/gkasha/Documents/maae/data/dot_files/agent_stn_" + id_ + "_t_" + std::to_string(curr_time_) + ".dot");
                     gen_timeline_dot("/home/gkasha/Documents/maae/data/dot_files/agent_timeline_" + id_ + "_t_" + std::to_string(curr_time_) + ".dot");
-                    if (agent_verbose_2) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Action complete: %s", action.action_id.c_str());
+                    if (agent_verbose_2) RCLCPP_INFO(this->get_logger(), "Action complete: %s", action.action_id.c_str());
                 } else {
-                    if (agent_verbose_2) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Unable to add end constraint to timeline for action %s, expected: (%f, %f),  actual: %f", 
+                    if (agent_verbose_2) RCLCPP_INFO(this->get_logger(), "Unable to add end constraint to timeline for action %s, expected: (%f, %f),  actual: %f", 
                             action.action_id.c_str(), std::get<0>(end_fv), std::get<1>(end_fv), action.time);
                 }
             } else if (action.action_failed) {
-                if (agent_verbose_2) RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Action failed: %s", action.action_id.c_str());
+                if (agent_verbose_2) RCLCPP_INFO(this->get_logger(), "Action failed: %s", action.action_id.c_str());
                 // Do something
             
             }
@@ -805,7 +869,7 @@ int main(int argc, char* argv[])
     rclcpp::executors::MultiThreadedExecutor executor;
     auto agent_node = std::make_shared<Agent>(argv[1], std::stod(argv[2]), std::stod(argv[3]), std::stod(argv[4]), std::stod(argv[5]));
 
-    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Agent %s started", argv[1]);
+    RCLCPP_INFO(agent_node->get_logger(), "Agent %s started", argv[1]);
 
     executor.add_node(agent_node);
     executor.spin();
