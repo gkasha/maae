@@ -10,6 +10,15 @@
 
 using namespace std::chrono_literals;
 
+ma_interfaces::msg::Goal build_goal_msg(std::string id, int num_agents, double x, double y) {
+    ma_interfaces::msg::Goal g = ma_interfaces::msg::Goal();
+    g.id = id;
+    g.num_agents = num_agents;
+    g.x = x;
+    g.y = y;
+    return g;
+}
+
 int main(int argc, char** argv)
 {
     rclcpp::init(argc, argv);
@@ -25,19 +34,22 @@ int main(int argc, char** argv)
     rclcpp::Publisher<ma_interfaces::msg::Goal>::SharedPtr publisher = 
         node->create_publisher<ma_interfaces::msg::Goal>("add_goals_topic", 10);
 
-    int num_tasks = 6;
+    // int num_tasks = std::stod(argv[1]);
+
+    ma_interfaces::msg::Goal g1 = build_goal_msg("task1", 1, 1.0, 1.0);
+    ma_interfaces::msg::Goal g2 = build_goal_msg("task2", 1, 1.0, -1.0);
+    ma_interfaces::msg::Goal g3 = build_goal_msg("task3", 1, 2.0, 0.0);
+    ma_interfaces::msg::Goal g4 = build_goal_msg("task4", 1, 2.0, 1.0);
+    ma_interfaces::msg::Goal g5 = build_goal_msg("task5", 2, 3.0, 1.0);
+    ma_interfaces::msg::Goal g6 = build_goal_msg("task6", 1, 6.0, 2.0);
+
+    std::vector<ma_interfaces::msg::Goal> goals{g1,g2,g3,g4,g5,g6};
 
 
-    for (int i = 0; i < num_tasks; i++) {
-        rclcpp::sleep_for(5s);
-        ma_interfaces::msg::Goal g;
 
-        g.id = "task" + std::to_string(i);
-        g.num_agents = 1;
-        if ((i+1)%3 == 0) g.num_agents++; 
-        g.owner = "";
-        g.x = (double)i+1;
-        g.y = (double)i+1;
+    for (size_t i = 0; i < goals.size(); i++) {
+        rclcpp::sleep_for(3s);
+        ma_interfaces::msg::Goal g = goals[i];
 
         RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Goal at (%f,%f)", g.x, g.y);
         publisher->publish(g);

@@ -98,6 +98,15 @@ bool ma_interfaces__msg__action_dispatch__convert_from_py(PyObject * _pymsg, voi
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
+  {  // num_agents
+    PyObject * field = PyObject_GetAttrString(_pymsg, "num_agents");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->num_agents = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
   {  // duration
     PyObject * field = PyObject_GetAttrString(_pymsg, "duration");
     if (!field) {
@@ -183,6 +192,17 @@ PyObject * ma_interfaces__msg__action_dispatch__convert_to_py(void * raw_ros_mes
     }
     {
       int rc = PyObject_SetAttrString(_pymessage, "name", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // num_agents
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->num_agents);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "num_agents", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

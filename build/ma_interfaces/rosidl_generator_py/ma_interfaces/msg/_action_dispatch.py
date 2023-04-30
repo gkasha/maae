@@ -60,6 +60,7 @@ class ActionDispatch(metaclass=Metaclass_ActionDispatch):
         '_action_id',
         '_agent_id',
         '_name',
+        '_num_agents',
         '_duration',
         '_start_time',
     ]
@@ -68,6 +69,7 @@ class ActionDispatch(metaclass=Metaclass_ActionDispatch):
         'action_id': 'string',
         'agent_id': 'string',
         'name': 'string',
+        'num_agents': 'int32',
         'duration': 'double',
         'start_time': 'double',
     }
@@ -76,6 +78,7 @@ class ActionDispatch(metaclass=Metaclass_ActionDispatch):
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
     )
@@ -87,6 +90,7 @@ class ActionDispatch(metaclass=Metaclass_ActionDispatch):
         self.action_id = kwargs.get('action_id', str())
         self.agent_id = kwargs.get('agent_id', str())
         self.name = kwargs.get('name', str())
+        self.num_agents = kwargs.get('num_agents', int())
         self.duration = kwargs.get('duration', float())
         self.start_time = kwargs.get('start_time', float())
 
@@ -124,6 +128,8 @@ class ActionDispatch(metaclass=Metaclass_ActionDispatch):
         if self.agent_id != other.agent_id:
             return False
         if self.name != other.name:
+            return False
+        if self.num_agents != other.num_agents:
             return False
         if self.duration != other.duration:
             return False
@@ -174,6 +180,21 @@ class ActionDispatch(metaclass=Metaclass_ActionDispatch):
                 isinstance(value, str), \
                 "The 'name' field must be of type 'str'"
         self._name = value
+
+    @builtins.property
+    def num_agents(self):
+        """Message field 'num_agents'."""
+        return self._num_agents
+
+    @num_agents.setter
+    def num_agents(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'num_agents' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'num_agents' field must be an integer in [-2147483648, 2147483647]"
+        self._num_agents = value
 
     @builtins.property
     def duration(self):

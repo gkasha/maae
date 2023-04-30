@@ -53,16 +53,32 @@ private:
   ::ma_interfaces::msg::ActionDispatch msg_;
 };
 
+class Init_ActionDispatch_num_agents
+{
+public:
+  explicit Init_ActionDispatch_num_agents(::ma_interfaces::msg::ActionDispatch & msg)
+  : msg_(msg)
+  {}
+  Init_ActionDispatch_duration num_agents(::ma_interfaces::msg::ActionDispatch::_num_agents_type arg)
+  {
+    msg_.num_agents = std::move(arg);
+    return Init_ActionDispatch_duration(msg_);
+  }
+
+private:
+  ::ma_interfaces::msg::ActionDispatch msg_;
+};
+
 class Init_ActionDispatch_name
 {
 public:
   explicit Init_ActionDispatch_name(::ma_interfaces::msg::ActionDispatch & msg)
   : msg_(msg)
   {}
-  Init_ActionDispatch_duration name(::ma_interfaces::msg::ActionDispatch::_name_type arg)
+  Init_ActionDispatch_num_agents name(::ma_interfaces::msg::ActionDispatch::_name_type arg)
   {
     msg_.name = std::move(arg);
-    return Init_ActionDispatch_duration(msg_);
+    return Init_ActionDispatch_num_agents(msg_);
   }
 
 private:

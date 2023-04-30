@@ -38,6 +38,7 @@ ma_interfaces__msg__ActionDispatch__init(ma_interfaces__msg__ActionDispatch * ms
     ma_interfaces__msg__ActionDispatch__fini(msg);
     return false;
   }
+  // num_agents
   // duration
   // start_time
   return true;
@@ -55,6 +56,7 @@ ma_interfaces__msg__ActionDispatch__fini(ma_interfaces__msg__ActionDispatch * ms
   rosidl_runtime_c__String__fini(&msg->agent_id);
   // name
   rosidl_runtime_c__String__fini(&msg->name);
+  // num_agents
   // duration
   // start_time
 }
@@ -81,6 +83,10 @@ ma_interfaces__msg__ActionDispatch__are_equal(const ma_interfaces__msg__ActionDi
   if (!rosidl_runtime_c__String__are_equal(
       &(lhs->name), &(rhs->name)))
   {
+    return false;
+  }
+  // num_agents
+  if (lhs->num_agents != rhs->num_agents) {
     return false;
   }
   // duration
@@ -120,6 +126,8 @@ ma_interfaces__msg__ActionDispatch__copy(
   {
     return false;
   }
+  // num_agents
+  output->num_agents = input->num_agents;
   // duration
   output->duration = input->duration;
   // start_time

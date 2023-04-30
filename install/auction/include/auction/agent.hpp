@@ -241,6 +241,8 @@ class Agent : public rclcpp::Node
         std::vector<ma_interfaces::msg::Bid> choose_winners(ma_interfaces::msg::Task task);
         void host_auction(ma_interfaces::msg::Goal &goal);
         void check_dispatch();
+        void single_agent_replan(TNode* curr);
+        void multi_agent_replan(TNode* curr);
         
         void clock_cb(const std_msgs::msg::Int64::SharedPtr msg);
         void new_goals_cb(ma_interfaces::msg::Goal goal);

@@ -70,7 +70,7 @@ class ListenerNode : public rclcpp::Node
             RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Starting goal auction for %s, collecting bids...", goal.id.c_str());
             publisher_->publish(goal);
 
-            rclcpp::sleep_for(3s);
+            rclcpp::sleep_for(2s);
 
             RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Bid collection phase ended.");
 

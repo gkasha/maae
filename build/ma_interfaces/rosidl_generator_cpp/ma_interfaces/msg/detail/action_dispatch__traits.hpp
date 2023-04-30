@@ -46,6 +46,13 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
+  // member: num_agents
+  {
+    out << "num_agents: ";
+    rosidl_generator_traits::value_to_yaml(msg.num_agents, out);
+    out << ", ";
+  }
+
   // member: duration
   {
     out << "duration: ";
@@ -92,6 +99,16 @@ inline void to_block_style_yaml(
     }
     out << "name: ";
     rosidl_generator_traits::value_to_yaml(msg.name, out);
+    out << "\n";
+  }
+
+  // member: num_agents
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "num_agents: ";
+    rosidl_generator_traits::value_to_yaml(msg.num_agents, out);
     out << "\n";
   }
 

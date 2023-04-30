@@ -37,7 +37,7 @@ void ma_interfaces__msg__ActionDispatch__rosidl_typesupport_introspection_c__Act
   ma_interfaces__msg__ActionDispatch__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember ma_interfaces__msg__ActionDispatch__rosidl_typesupport_introspection_c__ActionDispatch_message_member_array[5] = {
+static rosidl_typesupport_introspection_c__MessageMember ma_interfaces__msg__ActionDispatch__rosidl_typesupport_introspection_c__ActionDispatch_message_member_array[6] = {
   {
     "action_id",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
@@ -90,6 +90,23 @@ static rosidl_typesupport_introspection_c__MessageMember ma_interfaces__msg__Act
     NULL  // resize(index) function pointer
   },
   {
+    "num_agents",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(ma_interfaces__msg__ActionDispatch, num_agents),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
     "duration",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
@@ -128,7 +145,7 @@ static rosidl_typesupport_introspection_c__MessageMember ma_interfaces__msg__Act
 static const rosidl_typesupport_introspection_c__MessageMembers ma_interfaces__msg__ActionDispatch__rosidl_typesupport_introspection_c__ActionDispatch_message_members = {
   "ma_interfaces__msg",  // message namespace
   "ActionDispatch",  // message name
-  5,  // number of fields
+  6,  // number of fields
   sizeof(ma_interfaces__msg__ActionDispatch),
   ma_interfaces__msg__ActionDispatch__rosidl_typesupport_introspection_c__ActionDispatch_message_member_array,  // message members
   ma_interfaces__msg__ActionDispatch__rosidl_typesupport_introspection_c__ActionDispatch_init_function,  // function to initialize message memory (memory has to be allocated)

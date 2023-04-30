@@ -41,6 +41,7 @@ struct ActionDispatch_
       this->action_id = "";
       this->agent_id = "";
       this->name = "";
+      this->num_agents = 0l;
       this->duration = 0.0;
       this->start_time = 0.0;
     }
@@ -57,6 +58,7 @@ struct ActionDispatch_
       this->action_id = "";
       this->agent_id = "";
       this->name = "";
+      this->num_agents = 0l;
       this->duration = 0.0;
       this->start_time = 0.0;
     }
@@ -72,6 +74,9 @@ struct ActionDispatch_
   using _name_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _name_type name;
+  using _num_agents_type =
+    int32_t;
+  _num_agents_type num_agents;
   using _duration_type =
     double;
   _duration_type duration;
@@ -96,6 +101,12 @@ struct ActionDispatch_
     const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
   {
     this->name = _arg;
+    return *this;
+  }
+  Type & set__num_agents(
+    const int32_t & _arg)
+  {
+    this->num_agents = _arg;
     return *this;
   }
   Type & set__duration(
@@ -160,6 +171,9 @@ struct ActionDispatch_
       return false;
     }
     if (this->name != other.name) {
+      return false;
+    }
+    if (this->num_agents != other.num_agents) {
       return false;
     }
     if (this->duration != other.duration) {

@@ -61,6 +61,8 @@ class Goal(metaclass=Metaclass_Goal):
         '_owner',
         '_num_agents',
         '_deadline',
+        '_x',
+        '_y',
     ]
 
     _fields_and_field_types = {
@@ -68,12 +70,16 @@ class Goal(metaclass=Metaclass_Goal):
         'owner': 'string',
         'num_agents': 'int64',
         'deadline': 'double',
+        'x': 'double',
+        'y': 'double',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
     )
 
@@ -85,6 +91,8 @@ class Goal(metaclass=Metaclass_Goal):
         self.owner = kwargs.get('owner', str())
         self.num_agents = kwargs.get('num_agents', int())
         self.deadline = kwargs.get('deadline', float())
+        self.x = kwargs.get('x', float())
+        self.y = kwargs.get('y', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -122,6 +130,10 @@ class Goal(metaclass=Metaclass_Goal):
         if self.num_agents != other.num_agents:
             return False
         if self.deadline != other.deadline:
+            return False
+        if self.x != other.x:
+            return False
+        if self.y != other.y:
             return False
         return True
 
@@ -185,3 +197,33 @@ class Goal(metaclass=Metaclass_Goal):
             assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
                 "The 'deadline' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._deadline = value
+
+    @builtins.property
+    def x(self):
+        """Message field 'x'."""
+        return self._x
+
+    @x.setter
+    def x(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'x' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'x' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._x = value
+
+    @builtins.property
+    def y(self):
+        """Message field 'y'."""
+        return self._y
+
+    @y.setter
+    def y(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'y' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'y' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._y = value

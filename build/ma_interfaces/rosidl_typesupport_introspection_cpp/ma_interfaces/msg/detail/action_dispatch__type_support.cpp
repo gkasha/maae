@@ -37,7 +37,7 @@ void ActionDispatch_fini_function(void * message_memory)
   typed_message->~ActionDispatch();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember ActionDispatch_message_member_array[5] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember ActionDispatch_message_member_array[6] = {
   {
     "action_id",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
@@ -90,6 +90,23 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ActionDispatc
     nullptr  // resize(index) function pointer
   },
   {
+    "num_agents",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(ma_interfaces::msg::ActionDispatch, num_agents),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
     "duration",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
@@ -128,7 +145,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ActionDispatc
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers ActionDispatch_message_members = {
   "ma_interfaces::msg",  // message namespace
   "ActionDispatch",  // message name
-  5,  // number of fields
+  6,  // number of fields
   sizeof(ma_interfaces::msg::ActionDispatch),
   ActionDispatch_message_member_array,  // message members
   ActionDispatch_init_function,  // function to initialize message memory (memory has to be allocated)

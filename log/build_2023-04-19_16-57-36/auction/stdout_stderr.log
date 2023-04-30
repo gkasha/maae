@@ -1,0 +1,26 @@
+[35m[1mConsolidate compiler generated dependencies of target agent[0m
+[35m[1mConsolidate compiler generated dependencies of target goal_manager[0m
+[  9%] [32mBuilding CXX object CMakeFiles/client.dir/src/client.cpp.o[0m
+[ 27%] Built target execution_interface
+[ 54%] Built target agent
+[ 72%] Built target goal_manager
+[ 90%] Built target clock
+[01m[K/home/gkasha/Documents/maae/src/auction/src/client.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/gkasha/Documents/maae/src/auction/src/client.cpp:28:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kstod[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::__cxx11::stod[m[K’?
+   28 |     int num_tasks = [01;31m[Kstod[m[K(argv[1]);
+      |                     [01;31m[K^~~~[m[K
+      |                     [32m[Kstd::__cxx11::stod[m[K
+In file included from [01m[K/usr/include/c++/11/string:55[m[K,
+                 from [01m[K/usr/include/c++/11/stdexcept:39[m[K,
+                 from [01m[K/usr/include/c++/11/system_error:41[m[K,
+                 from [01m[K/usr/include/c++/11/mutex:42[m[K,
+                 from [01m[K/usr/include/c++/11/future:38[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/home/gkasha/ros2_humble/install/rclcpp/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/gkasha/Documents/maae/src/auction/src/client.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/basic_string.h:6780:3:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::__cxx11::stod[m[K’ declared here
+ 6780 |   [01;36m[Kstod[m[K(const wstring& __str, size_t* __idx = 0)
+      |   [01;36m[K^~~~[m[K
+gmake[2]: *** [CMakeFiles/client.dir/build.make:76: CMakeFiles/client.dir/src/client.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:171: CMakeFiles/client.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

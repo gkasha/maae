@@ -18,21 +18,29 @@ class CentralClock : public rclcpp::Node
     : Node("central_clock"), count_(0)
     {
       publisher_ = this->create_publisher<std_msgs::msg::Int64>("clock_topic", 10);
+      flip = false;
       timer_ = this->create_wall_timer(
-      1000ms, std::bind(&CentralClock::timer_callback, this));
+      500ms, std::bind(&CentralClock::timer_callback, this));
     }
 
   private:
     void timer_callback()
     {
       auto message = std_msgs::msg::Int64();
-      message.data = count_++;
+      if (flip) {
+        message.data = count_++;
+      } else {
+        message.data = count_;
+      }
+      flip = !flip;
+      
       RCLCPP_INFO(this->get_logger(), "Publishing: '%ld'", message.data);
       publisher_->publish(message);
     }
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Publisher<std_msgs::msg::Int64>::SharedPtr publisher_;
     size_t count_;
+    bool flip;
 };
 
 int main(int argc, char * argv[])

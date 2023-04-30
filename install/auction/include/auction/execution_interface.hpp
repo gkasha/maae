@@ -173,6 +173,7 @@ class Monitor : public rclcpp::Node
         }
 
         std::map<std::string, ActionNode*> action_map;
+        std::map<std::string, std::vector<ActionNode*>> joint_map;
 
         rclcpp::Publisher<ma_interfaces::msg::ActionFeedback>::SharedPtr publisher_;
         rclcpp::CallbackGroup::SharedPtr cbgs_clock_;

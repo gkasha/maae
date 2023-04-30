@@ -12,6 +12,8 @@ module ma_interfaces {
 
       string name;
 
+      int32 num_agents;
+
       double duration;
 
       double start_time;
