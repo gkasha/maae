@@ -38,6 +38,10 @@ cdr_serialize(
   cdr << ros_message.owner;
   // Member: num_agents
   cdr << ros_message.num_agents;
+  // Member: duration
+  cdr << ros_message.duration;
+  // Member: execution_range
+  cdr << ros_message.execution_range;
   // Member: deadline
   cdr << ros_message.deadline;
   // Member: x
@@ -61,6 +65,12 @@ cdr_deserialize(
 
   // Member: num_agents
   cdr >> ros_message.num_agents;
+
+  // Member: duration
+  cdr >> ros_message.duration;
+
+  // Member: execution_range
+  cdr >> ros_message.execution_range;
 
   // Member: deadline
   cdr >> ros_message.deadline;
@@ -98,6 +108,18 @@ get_serialized_size(
   // Member: num_agents
   {
     size_t item_size = sizeof(ros_message.num_agents);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: duration
+  {
+    size_t item_size = sizeof(ros_message.duration);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: execution_range
+  {
+    size_t item_size = sizeof(ros_message.execution_range);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -168,6 +190,22 @@ max_serialized_size_Goal(
   }
 
   // Member: num_agents
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: duration
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: execution_range
   {
     size_t array_size = 1;
 

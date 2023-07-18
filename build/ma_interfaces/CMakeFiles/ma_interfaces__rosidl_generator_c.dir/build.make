@@ -88,6 +88,7 @@ rosidl_generator_c/ma_interfaces/msg/action_dispatch.h: rosidl_adapter/ma_interf
 rosidl_generator_c/ma_interfaces/msg/action_dispatch.h: rosidl_adapter/ma_interfaces/msg/Bid.idl
 rosidl_generator_c/ma_interfaces/msg/action_dispatch.h: rosidl_adapter/ma_interfaces/msg/Task.idl
 rosidl_generator_c/ma_interfaces/msg/action_dispatch.h: rosidl_adapter/ma_interfaces/msg/Goal.idl
+rosidl_generator_c/ma_interfaces/msg/action_dispatch.h: rosidl_adapter/ma_interfaces/msg/Slot.idl
 rosidl_generator_c/ma_interfaces/msg/action_dispatch.h: rosidl_adapter/ma_interfaces/srv/Register.idl
 rosidl_generator_c/ma_interfaces/msg/action_dispatch.h: rosidl_adapter/ma_interfaces/srv/AuctionSrv.idl
 rosidl_generator_c/ma_interfaces/msg/action_dispatch.h: rosidl_adapter/ma_interfaces/srv/AuctionResult.idl
@@ -165,6 +166,18 @@ rosidl_generator_c/ma_interfaces/msg/detail/goal__struct.h: rosidl_generator_c/m
 
 rosidl_generator_c/ma_interfaces/msg/detail/goal__type_support.h: rosidl_generator_c/ma_interfaces/msg/action_dispatch.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ma_interfaces/msg/detail/goal__type_support.h
+
+rosidl_generator_c/ma_interfaces/msg/slot.h: rosidl_generator_c/ma_interfaces/msg/action_dispatch.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ma_interfaces/msg/slot.h
+
+rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.h: rosidl_generator_c/ma_interfaces/msg/action_dispatch.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.h
+
+rosidl_generator_c/ma_interfaces/msg/detail/slot__struct.h: rosidl_generator_c/ma_interfaces/msg/action_dispatch.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ma_interfaces/msg/detail/slot__struct.h
+
+rosidl_generator_c/ma_interfaces/msg/detail/slot__type_support.h: rosidl_generator_c/ma_interfaces/msg/action_dispatch.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ma_interfaces/msg/detail/slot__type_support.h
 
 rosidl_generator_c/ma_interfaces/srv/register.h: rosidl_generator_c/ma_interfaces/msg/action_dispatch.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ma_interfaces/srv/register.h
@@ -255,6 +268,9 @@ rosidl_generator_c/ma_interfaces/msg/detail/task__functions.c: rosidl_generator_
 
 rosidl_generator_c/ma_interfaces/msg/detail/goal__functions.c: rosidl_generator_c/ma_interfaces/msg/action_dispatch.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ma_interfaces/msg/detail/goal__functions.c
+
+rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c: rosidl_generator_c/ma_interfaces/msg/action_dispatch.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c
 
 rosidl_generator_c/ma_interfaces/srv/detail/register__functions.c: rosidl_generator_c/ma_interfaces/msg/action_dispatch.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/ma_interfaces/srv/detail/register__functions.c
@@ -358,10 +374,24 @@ CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interface
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/goal__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_generator_c/ma_interfaces/msg/detail/goal__functions.c -o CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/goal__functions.c.s
 
+CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.o: CMakeFiles/ma_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.o: rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c
+CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.o: CMakeFiles/ma_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.o -MF CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.o.d -o CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c
+
+CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c > CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.i
+
+CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c -o CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.s
+
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/register__functions.c.o: CMakeFiles/ma_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/register__functions.c.o: rosidl_generator_c/ma_interfaces/srv/detail/register__functions.c
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/register__functions.c.o: CMakeFiles/ma_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/register__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/register__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/register__functions.c.o -MF CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/register__functions.c.o.d -o CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/register__functions.c.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_generator_c/ma_interfaces/srv/detail/register__functions.c
 
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/register__functions.c.i: cmake_force
@@ -375,7 +405,7 @@ CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interface
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/auction_srv__functions.c.o: CMakeFiles/ma_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/auction_srv__functions.c.o: rosidl_generator_c/ma_interfaces/srv/detail/auction_srv__functions.c
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/auction_srv__functions.c.o: CMakeFiles/ma_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/auction_srv__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/auction_srv__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/auction_srv__functions.c.o -MF CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/auction_srv__functions.c.o.d -o CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/auction_srv__functions.c.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_generator_c/ma_interfaces/srv/detail/auction_srv__functions.c
 
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/auction_srv__functions.c.i: cmake_force
@@ -389,7 +419,7 @@ CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interface
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/auction_result__functions.c.o: CMakeFiles/ma_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/auction_result__functions.c.o: rosidl_generator_c/ma_interfaces/srv/detail/auction_result__functions.c
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/auction_result__functions.c.o: CMakeFiles/ma_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/auction_result__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/auction_result__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/auction_result__functions.c.o -MF CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/auction_result__functions.c.o.d -o CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/auction_result__functions.c.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_generator_c/ma_interfaces/srv/detail/auction_result__functions.c
 
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/auction_result__functions.c.i: cmake_force
@@ -403,7 +433,7 @@ CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interface
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/get_goal__functions.c.o: CMakeFiles/ma_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/get_goal__functions.c.o: rosidl_generator_c/ma_interfaces/srv/detail/get_goal__functions.c
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/get_goal__functions.c.o: CMakeFiles/ma_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/get_goal__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/get_goal__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/get_goal__functions.c.o -MF CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/get_goal__functions.c.o.d -o CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/get_goal__functions.c.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_generator_c/ma_interfaces/srv/detail/get_goal__functions.c
 
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/get_goal__functions.c.i: cmake_force
@@ -417,7 +447,7 @@ CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interface
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/get_bid__functions.c.o: CMakeFiles/ma_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/get_bid__functions.c.o: rosidl_generator_c/ma_interfaces/srv/detail/get_bid__functions.c
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/get_bid__functions.c.o: CMakeFiles/ma_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/get_bid__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/get_bid__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/get_bid__functions.c.o -MF CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/get_bid__functions.c.o.d -o CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/get_bid__functions.c.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_generator_c/ma_interfaces/srv/detail/get_bid__functions.c
 
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/get_bid__functions.c.i: cmake_force
@@ -431,7 +461,7 @@ CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interface
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/add_goal__functions.c.o: CMakeFiles/ma_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/add_goal__functions.c.o: rosidl_generator_c/ma_interfaces/srv/detail/add_goal__functions.c
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/add_goal__functions.c.o: CMakeFiles/ma_interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/add_goal__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/add_goal__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/add_goal__functions.c.o -MF CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/add_goal__functions.c.o.d -o CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/add_goal__functions.c.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_generator_c/ma_interfaces/srv/detail/add_goal__functions.c
 
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/add_goal__functions.c.i: cmake_force
@@ -450,6 +480,7 @@ ma_interfaces__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/bid__functions.c.o" \
 "CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/task__functions.c.o" \
 "CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/goal__functions.c.o" \
+"CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.o" \
 "CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/register__functions.c.o" \
 "CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/auction_srv__functions.c.o" \
 "CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/auction_result__functions.c.o" \
@@ -466,6 +497,7 @@ libma_interfaces__rosidl_generator_c.so: CMakeFiles/ma_interfaces__rosidl_genera
 libma_interfaces__rosidl_generator_c.so: CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/bid__functions.c.o
 libma_interfaces__rosidl_generator_c.so: CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/task__functions.c.o
 libma_interfaces__rosidl_generator_c.so: CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/goal__functions.c.o
+libma_interfaces__rosidl_generator_c.so: CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.o
 libma_interfaces__rosidl_generator_c.so: CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/register__functions.c.o
 libma_interfaces__rosidl_generator_c.so: CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/auction_srv__functions.c.o
 libma_interfaces__rosidl_generator_c.so: CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/srv/detail/auction_result__functions.c.o
@@ -476,7 +508,7 @@ libma_interfaces__rosidl_generator_c.so: CMakeFiles/ma_interfaces__rosidl_genera
 libma_interfaces__rosidl_generator_c.so: /home/gkasha/ros2_humble/install/rosidl_runtime_c/lib/librosidl_runtime_c.so
 libma_interfaces__rosidl_generator_c.so: /home/gkasha/ros2_humble/install/rcutils/lib/librcutils.so
 libma_interfaces__rosidl_generator_c.so: CMakeFiles/ma_interfaces__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C shared library libma_interfaces__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking C shared library libma_interfaces__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ma_interfaces__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -510,12 +542,17 @@ CMakeFiles/ma_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ma_i
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ma_interfaces/msg/detail/node__functions.h
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ma_interfaces/msg/detail/node__struct.h
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ma_interfaces/msg/detail/node__type_support.h
+CMakeFiles/ma_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c
+CMakeFiles/ma_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.h
+CMakeFiles/ma_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ma_interfaces/msg/detail/slot__struct.h
+CMakeFiles/ma_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ma_interfaces/msg/detail/slot__type_support.h
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ma_interfaces/msg/detail/task__functions.c
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ma_interfaces/msg/detail/task__functions.h
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ma_interfaces/msg/detail/task__struct.h
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ma_interfaces/msg/detail/task__type_support.h
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ma_interfaces/msg/goal.h
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ma_interfaces/msg/node.h
+CMakeFiles/ma_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ma_interfaces/msg/slot.h
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ma_interfaces/msg/task.h
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ma_interfaces/srv/add_goal.h
 CMakeFiles/ma_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/ma_interfaces/srv/auction_result.h

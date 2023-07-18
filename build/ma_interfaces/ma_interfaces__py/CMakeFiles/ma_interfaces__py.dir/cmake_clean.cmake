@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/ma_interfaces/msg/_goal_s.c"
   "../rosidl_generator_py/ma_interfaces/msg/_node.py"
   "../rosidl_generator_py/ma_interfaces/msg/_node_s.c"
+  "../rosidl_generator_py/ma_interfaces/msg/_slot.py"
+  "../rosidl_generator_py/ma_interfaces/msg/_slot_s.c"
   "../rosidl_generator_py/ma_interfaces/msg/_task.py"
   "../rosidl_generator_py/ma_interfaces/msg/_task_s.c"
   "../rosidl_generator_py/ma_interfaces/srv/__init__.py"

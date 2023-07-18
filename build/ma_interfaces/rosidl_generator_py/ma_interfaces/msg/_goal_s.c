@@ -92,6 +92,24 @@ bool ma_interfaces__msg__goal__convert_from_py(PyObject * _pymsg, void * _ros_me
     ros_message->num_agents = PyLong_AsLongLong(field);
     Py_DECREF(field);
   }
+  {  // duration
+    PyObject * field = PyObject_GetAttrString(_pymsg, "duration");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->duration = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // execution_range
+    PyObject * field = PyObject_GetAttrString(_pymsg, "execution_range");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->execution_range = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
   {  // deadline
     PyObject * field = PyObject_GetAttrString(_pymsg, "deadline");
     if (!field) {
@@ -180,6 +198,28 @@ PyObject * ma_interfaces__msg__goal__convert_to_py(void * raw_ros_message)
     field = PyLong_FromLongLong(ros_message->num_agents);
     {
       int rc = PyObject_SetAttrString(_pymessage, "num_agents", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // duration
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->duration);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "duration", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // execution_range
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->execution_range);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "execution_range", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

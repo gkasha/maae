@@ -41,6 +41,8 @@ struct Goal_
       this->id = "";
       this->owner = "";
       this->num_agents = 0ll;
+      this->duration = 0.0;
+      this->execution_range = 0.0;
       this->deadline = 0.0;
       this->x = 0.0;
       this->y = 0.0;
@@ -57,6 +59,8 @@ struct Goal_
       this->id = "";
       this->owner = "";
       this->num_agents = 0ll;
+      this->duration = 0.0;
+      this->execution_range = 0.0;
       this->deadline = 0.0;
       this->x = 0.0;
       this->y = 0.0;
@@ -73,6 +77,12 @@ struct Goal_
   using _num_agents_type =
     int64_t;
   _num_agents_type num_agents;
+  using _duration_type =
+    double;
+  _duration_type duration;
+  using _execution_range_type =
+    double;
+  _execution_range_type execution_range;
   using _deadline_type =
     double;
   _deadline_type deadline;
@@ -100,6 +110,18 @@ struct Goal_
     const int64_t & _arg)
   {
     this->num_agents = _arg;
+    return *this;
+  }
+  Type & set__duration(
+    const double & _arg)
+  {
+    this->duration = _arg;
+    return *this;
+  }
+  Type & set__execution_range(
+    const double & _arg)
+  {
+    this->execution_range = _arg;
     return *this;
   }
   Type & set__deadline(
@@ -170,6 +192,12 @@ struct Goal_
       return false;
     }
     if (this->num_agents != other.num_agents) {
+      return false;
+    }
+    if (this->duration != other.duration) {
+      return false;
+    }
+    if (this->execution_range != other.execution_range) {
       return false;
     }
     if (this->deadline != other.deadline) {

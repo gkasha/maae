@@ -11,6 +11,7 @@
 #include <chrono>
 #include <vector>
 #include <string>
+#include <random>
 
 using namespace std::chrono_literals;
 
@@ -38,6 +39,14 @@ class ActionNode
 
         std::string to_string() {
             return action_id_ + "_" + agent_id_ + "_" + name_;
+        }
+
+        std::string get_action_id() {
+            return action_id_;
+        }
+
+        std::string get_agent_id() {
+            return agent_id_;
         }
 
         void set_status(ActionStatus status) {
@@ -141,8 +150,10 @@ class Monitor : public rclcpp::Node
 
     private:
         void clock_cb(const std_msgs::msg::Int64::SharedPtr msg) {
+            mtx.lock();
             std::vector<std::string> completed_actions;
             curr_time_ = msg->data;
+            mtx.unlock();
             for (auto const& x : action_map) {
                 ActionNode* action = x.second;
                 if (action->get_status() == ActionNode::EXECUTING) {
@@ -152,7 +163,26 @@ class Monitor : public rclcpp::Node
                         action->set_status(ActionNode::COMPLETE);
                         publisher_->publish(action->to_feedback_msg(curr_time_));
 
-                        RCLCPP_INFO(this->get_logger(), "[%d] Action completed: %s", curr_time_, action->to_string().c_str());
+                        RCLCPP_INFO(this->get_logger(), "\n\t[%d] Action completed: %s", curr_time_, action->to_string().c_str());
+                        bool travel = action->get_action_id().find("travel") != std::string::npos;
+
+                        if (action_counter.find(action->get_agent_id()) != action_counter.end()) {
+                            action_counter[action->get_agent_id()][1] = curr_time_;
+                            if (travel) {
+                                action_counter[action->get_agent_id()][2] += execution_span;
+                            } else {
+                                action_counter[action->get_agent_id()][0]++;
+                            }
+                        } else {
+                            std::vector<int> tmp{0,0,0};
+                            if (travel) {
+                                tmp[2] = execution_span;
+                            } else {
+                                tmp[0] = 1;
+                            }
+                            action_counter[action->get_agent_id()] = tmp;
+                        }
+                        print_action_counter();
                         completed_actions.push_back(action->to_string());
                     }
                 } else if (action->get_status() == ActionNode::WAITING && action->get_start_time() <= curr_time_) {
@@ -172,6 +202,9 @@ class Monitor : public rclcpp::Node
             }
         }
 
+        std::mutex mtx;
+
+        std::map<std::string, std::vector<int>> action_counter;
         std::map<std::string, ActionNode*> action_map;
         std::map<std::string, std::vector<ActionNode*>> joint_map;
 
@@ -185,6 +218,8 @@ class Monitor : public rclcpp::Node
 
         rclcpp::CallbackGroup::SharedPtr cbgs_action_dispatch_;
         rclcpp::CallbackGroup::SharedPtr cbgs_action_modification_;
+
+        void print_action_counter();
         
         void action_dispatch_cb(const ma_interfaces::msg::ActionDispatch action);
         void action_modification_cb(const ma_interfaces::msg::ActionFeedback action);

@@ -107,6 +107,15 @@ bool ma_interfaces__msg__action_dispatch__convert_from_py(PyObject * _pymsg, voi
     ros_message->num_agents = (int32_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
+  {  // execution_range
+    PyObject * field = PyObject_GetAttrString(_pymsg, "execution_range");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->execution_range = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
   {  // duration
     PyObject * field = PyObject_GetAttrString(_pymsg, "duration");
     if (!field) {
@@ -203,6 +212,17 @@ PyObject * ma_interfaces__msg__action_dispatch__convert_to_py(void * raw_ros_mes
     field = PyLong_FromLong(ros_message->num_agents);
     {
       int rc = PyObject_SetAttrString(_pymessage, "num_agents", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // execution_range
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->execution_range);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "execution_range", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

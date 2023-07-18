@@ -61,6 +61,7 @@ class ActionDispatch(metaclass=Metaclass_ActionDispatch):
         '_agent_id',
         '_name',
         '_num_agents',
+        '_execution_range',
         '_duration',
         '_start_time',
     ]
@@ -70,6 +71,7 @@ class ActionDispatch(metaclass=Metaclass_ActionDispatch):
         'agent_id': 'string',
         'name': 'string',
         'num_agents': 'int32',
+        'execution_range': 'double',
         'duration': 'double',
         'start_time': 'double',
     }
@@ -79,6 +81,7 @@ class ActionDispatch(metaclass=Metaclass_ActionDispatch):
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
     )
@@ -91,6 +94,7 @@ class ActionDispatch(metaclass=Metaclass_ActionDispatch):
         self.agent_id = kwargs.get('agent_id', str())
         self.name = kwargs.get('name', str())
         self.num_agents = kwargs.get('num_agents', int())
+        self.execution_range = kwargs.get('execution_range', float())
         self.duration = kwargs.get('duration', float())
         self.start_time = kwargs.get('start_time', float())
 
@@ -130,6 +134,8 @@ class ActionDispatch(metaclass=Metaclass_ActionDispatch):
         if self.name != other.name:
             return False
         if self.num_agents != other.num_agents:
+            return False
+        if self.execution_range != other.execution_range:
             return False
         if self.duration != other.duration:
             return False
@@ -195,6 +201,21 @@ class ActionDispatch(metaclass=Metaclass_ActionDispatch):
             assert value >= -2147483648 and value < 2147483648, \
                 "The 'num_agents' field must be an integer in [-2147483648, 2147483647]"
         self._num_agents = value
+
+    @builtins.property
+    def execution_range(self):
+        """Message field 'execution_range'."""
+        return self._execution_range
+
+    @execution_range.setter
+    def execution_range(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'execution_range' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'execution_range' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._execution_range = value
 
     @builtins.property
     def duration(self):

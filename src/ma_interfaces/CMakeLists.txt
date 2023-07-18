@@ -19,6 +19,7 @@ set(msg_files
   "msg/Bid.msg"
   "msg/Task.msg"
   "msg/Goal.msg"
+  "msg/Slot.msg"
   )
 
 set(srv_files

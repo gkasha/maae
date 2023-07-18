@@ -42,6 +42,7 @@ struct ActionDispatch_
       this->agent_id = "";
       this->name = "";
       this->num_agents = 0l;
+      this->execution_range = 0.0;
       this->duration = 0.0;
       this->start_time = 0.0;
     }
@@ -59,6 +60,7 @@ struct ActionDispatch_
       this->agent_id = "";
       this->name = "";
       this->num_agents = 0l;
+      this->execution_range = 0.0;
       this->duration = 0.0;
       this->start_time = 0.0;
     }
@@ -77,6 +79,9 @@ struct ActionDispatch_
   using _num_agents_type =
     int32_t;
   _num_agents_type num_agents;
+  using _execution_range_type =
+    double;
+  _execution_range_type execution_range;
   using _duration_type =
     double;
   _duration_type duration;
@@ -107,6 +112,12 @@ struct ActionDispatch_
     const int32_t & _arg)
   {
     this->num_agents = _arg;
+    return *this;
+  }
+  Type & set__execution_range(
+    const double & _arg)
+  {
+    this->execution_range = _arg;
     return *this;
   }
   Type & set__duration(
@@ -174,6 +185,9 @@ struct ActionDispatch_
       return false;
     }
     if (this->num_agents != other.num_agents) {
+      return false;
+    }
+    if (this->execution_range != other.execution_range) {
       return false;
     }
     if (this->duration != other.duration) {

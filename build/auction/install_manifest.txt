@@ -8,7 +8,9 @@
 /home/gkasha/Documents/maae/install/auction/lib/auction/clock
 /home/gkasha/Documents/maae/install/auction/share/ament_index/resource_index/package_run_dependencies/auction
 /home/gkasha/Documents/maae/install/auction/share/ament_index/resource_index/parent_prefix_path/auction
+/home/gkasha/Documents/maae/install/auction/share/auction/environment/ament_prefix_path.sh
 /home/gkasha/Documents/maae/install/auction/share/auction/environment/ament_prefix_path.dsv
+/home/gkasha/Documents/maae/install/auction/share/auction/environment/path.sh
 /home/gkasha/Documents/maae/install/auction/share/auction/environment/path.dsv
 /home/gkasha/Documents/maae/install/auction/share/auction/local_setup.bash
 /home/gkasha/Documents/maae/install/auction/share/auction/local_setup.sh

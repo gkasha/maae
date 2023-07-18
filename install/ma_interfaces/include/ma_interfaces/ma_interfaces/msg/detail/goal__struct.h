@@ -28,6 +28,8 @@ typedef struct ma_interfaces__msg__Goal
   rosidl_runtime_c__String id;
   rosidl_runtime_c__String owner;
   int64_t num_agents;
+  double duration;
+  double execution_range;
   double deadline;
   double x;
   double y;

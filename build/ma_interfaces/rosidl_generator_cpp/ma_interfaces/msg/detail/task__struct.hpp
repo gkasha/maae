@@ -42,6 +42,7 @@ struct Task_
       this->owner = "";
       this->num_agents = 0ll;
       this->value = 0.0;
+      this->execution_range = 0.0;
       this->duration = 0.0;
       this->st = 0.0;
       this->et = 0.0;
@@ -61,6 +62,7 @@ struct Task_
       this->owner = "";
       this->num_agents = 0ll;
       this->value = 0.0;
+      this->execution_range = 0.0;
       this->duration = 0.0;
       this->st = 0.0;
       this->et = 0.0;
@@ -82,6 +84,9 @@ struct Task_
   using _value_type =
     double;
   _value_type value;
+  using _execution_range_type =
+    double;
+  _execution_range_type execution_range;
   using _duration_type =
     double;
   _duration_type duration;
@@ -121,6 +126,12 @@ struct Task_
     const double & _arg)
   {
     this->value = _arg;
+    return *this;
+  }
+  Type & set__execution_range(
+    const double & _arg)
+  {
+    this->execution_range = _arg;
     return *this;
   }
   Type & set__duration(
@@ -206,6 +217,9 @@ struct Task_
       return false;
     }
     if (this->value != other.value) {
+      return false;
+    }
+    if (this->execution_range != other.execution_range) {
       return false;
     }
     if (this->duration != other.duration) {

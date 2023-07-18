@@ -34,6 +34,7 @@ ma_interfaces__msg__Task__init(ma_interfaces__msg__Task * msg)
   }
   // num_agents
   // value
+  // execution_range
   // duration
   // st
   // et
@@ -54,6 +55,7 @@ ma_interfaces__msg__Task__fini(ma_interfaces__msg__Task * msg)
   rosidl_runtime_c__String__fini(&msg->owner);
   // num_agents
   // value
+  // execution_range
   // duration
   // st
   // et
@@ -85,6 +87,10 @@ ma_interfaces__msg__Task__are_equal(const ma_interfaces__msg__Task * lhs, const 
   }
   // value
   if (lhs->value != rhs->value) {
+    return false;
+  }
+  // execution_range
+  if (lhs->execution_range != rhs->execution_range) {
     return false;
   }
   // duration
@@ -134,6 +140,8 @@ ma_interfaces__msg__Task__copy(
   output->num_agents = input->num_agents;
   // value
   output->value = input->value;
+  // execution_range
+  output->execution_range = input->execution_range;
   // duration
   output->duration = input->duration;
   // st

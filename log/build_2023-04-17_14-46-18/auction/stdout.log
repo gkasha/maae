@@ -1,6 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target agent[0m
-[ 27%] Built target goal_manager
-[ 36%] Built target client
-[ 63%] [32mBuilding CXX object CMakeFiles/agent.dir/src/agent.cpp.o[0m
-[ 63%] Built target execution_interface
-[ 81%] Built target clock

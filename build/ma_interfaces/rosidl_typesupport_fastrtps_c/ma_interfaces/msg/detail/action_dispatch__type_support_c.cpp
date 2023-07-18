@@ -98,6 +98,11 @@ static bool _ActionDispatch__cdr_serialize(
     cdr << ros_message->num_agents;
   }
 
+  // Field name: execution_range
+  {
+    cdr << ros_message->execution_range;
+  }
+
   // Field name: duration
   {
     cdr << ros_message->duration;
@@ -173,6 +178,11 @@ static bool _ActionDispatch__cdr_deserialize(
     cdr >> ros_message->num_agents;
   }
 
+  // Field name: execution_range
+  {
+    cdr >> ros_message->execution_range;
+  }
+
   // Field name: duration
   {
     cdr >> ros_message->duration;
@@ -215,6 +225,12 @@ size_t get_serialized_size_ma_interfaces__msg__ActionDispatch(
   // field.name num_agents
   {
     size_t item_size = sizeof(ros_message->num_agents);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name execution_range
+  {
+    size_t item_size = sizeof(ros_message->execution_range);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -299,6 +315,13 @@ size_t max_serialized_size_ma_interfaces__msg__ActionDispatch(
 
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: execution_range
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
   // member: duration
   {

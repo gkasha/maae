@@ -1,8 +1,0 @@
-[01m[K/home/gkasha/Documents/maae/src/auction/src/agent.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Kstn.hpp: No such file or directory
-    2 | #include [01;31m[K"stn.hpp"[m[K
-      |          [01;31m[K^~~~~~~~~[m[K
-compilation terminated.
-gmake[2]: *** [CMakeFiles/agent.dir/build.make:76: CMakeFiles/agent.dir/src/agent.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/agent.dir/all] Error 2
-gmake[1]: *** Waiting for unfinished jobs....
-gmake: *** [Makefile:146: all] Error 2

@@ -53,6 +53,13 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
+  // member: execution_range
+  {
+    out << "execution_range: ";
+    rosidl_generator_traits::value_to_yaml(msg.execution_range, out);
+    out << ", ";
+  }
+
   // member: duration
   {
     out << "duration: ";
@@ -130,6 +137,16 @@ inline void to_block_style_yaml(
     }
     out << "value: ";
     rosidl_generator_traits::value_to_yaml(msg.value, out);
+    out << "\n";
+  }
+
+  // member: execution_range
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "execution_range: ";
+    rosidl_generator_traits::value_to_yaml(msg.execution_range, out);
     out << "\n";
   }
 

@@ -61,6 +61,7 @@ class Task(metaclass=Metaclass_Task):
         '_owner',
         '_num_agents',
         '_value',
+        '_execution_range',
         '_duration',
         '_st',
         '_et',
@@ -73,6 +74,7 @@ class Task(metaclass=Metaclass_Task):
         'owner': 'string',
         'num_agents': 'int64',
         'value': 'double',
+        'execution_range': 'double',
         'duration': 'double',
         'st': 'double',
         'et': 'double',
@@ -90,6 +92,7 @@ class Task(metaclass=Metaclass_Task):
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -100,6 +103,7 @@ class Task(metaclass=Metaclass_Task):
         self.owner = kwargs.get('owner', str())
         self.num_agents = kwargs.get('num_agents', int())
         self.value = kwargs.get('value', float())
+        self.execution_range = kwargs.get('execution_range', float())
         self.duration = kwargs.get('duration', float())
         self.st = kwargs.get('st', float())
         self.et = kwargs.get('et', float())
@@ -142,6 +146,8 @@ class Task(metaclass=Metaclass_Task):
         if self.num_agents != other.num_agents:
             return False
         if self.value != other.value:
+            return False
+        if self.execution_range != other.execution_range:
             return False
         if self.duration != other.duration:
             return False
@@ -215,6 +221,21 @@ class Task(metaclass=Metaclass_Task):
             assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
                 "The 'value' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._value = value
+
+    @builtins.property
+    def execution_range(self):
+        """Message field 'execution_range'."""
+        return self._execution_range
+
+    @execution_range.setter
+    def execution_range(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'execution_range' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'execution_range' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._execution_range = value
 
     @builtins.property
     def duration(self):

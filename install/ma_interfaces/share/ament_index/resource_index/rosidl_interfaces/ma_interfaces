@@ -8,6 +8,8 @@ msg/Goal.idl
 msg/Goal.msg
 msg/Node.idl
 msg/Node.msg
+msg/Slot.idl
+msg/Slot.msg
 msg/Task.idl
 msg/Task.msg
 srv/AddGoal.idl

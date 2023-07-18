@@ -525,6 +525,30 @@ rosidl_generator_c/ma_interfaces/msg/detail/node__functions.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/node__functions.c.s
 .PHONY : rosidl_generator_c/ma_interfaces/msg/detail/node__functions.c.s
 
+rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.o: rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.o
+.PHONY : rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.o
+
+# target to build an object file
+rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.o
+.PHONY : rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.o
+
+rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.i: rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.i
+.PHONY : rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.i
+
+# target to preprocess a source file
+rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.i
+.PHONY : rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.i
+
+rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.s: rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.s
+.PHONY : rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.s
+
+# target to generate assembly for a file
+rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_c.dir/rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.s
+.PHONY : rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.c.s
+
 rosidl_generator_c/ma_interfaces/msg/detail/task__functions.o: rosidl_generator_c/ma_interfaces/msg/detail/task__functions.c.o
 .PHONY : rosidl_generator_c/ma_interfaces/msg/detail/task__functions.o
 
@@ -885,6 +909,30 @@ rosidl_generator_py/ma_interfaces/msg/_node_s.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_node_s.c.s
 .PHONY : rosidl_generator_py/ma_interfaces/msg/_node_s.c.s
 
+rosidl_generator_py/ma_interfaces/msg/_slot_s.o: rosidl_generator_py/ma_interfaces/msg/_slot_s.c.o
+.PHONY : rosidl_generator_py/ma_interfaces/msg/_slot_s.o
+
+# target to build an object file
+rosidl_generator_py/ma_interfaces/msg/_slot_s.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_slot_s.c.o
+.PHONY : rosidl_generator_py/ma_interfaces/msg/_slot_s.c.o
+
+rosidl_generator_py/ma_interfaces/msg/_slot_s.i: rosidl_generator_py/ma_interfaces/msg/_slot_s.c.i
+.PHONY : rosidl_generator_py/ma_interfaces/msg/_slot_s.i
+
+# target to preprocess a source file
+rosidl_generator_py/ma_interfaces/msg/_slot_s.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_slot_s.c.i
+.PHONY : rosidl_generator_py/ma_interfaces/msg/_slot_s.c.i
+
+rosidl_generator_py/ma_interfaces/msg/_slot_s.s: rosidl_generator_py/ma_interfaces/msg/_slot_s.c.s
+.PHONY : rosidl_generator_py/ma_interfaces/msg/_slot_s.s
+
+# target to generate assembly for a file
+rosidl_generator_py/ma_interfaces/msg/_slot_s.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_generator_py.dir/build.make CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_slot_s.c.s
+.PHONY : rosidl_generator_py/ma_interfaces/msg/_slot_s.c.s
+
 rosidl_generator_py/ma_interfaces/msg/_task_s.o: rosidl_generator_py/ma_interfaces/msg/_task_s.c.o
 .PHONY : rosidl_generator_py/ma_interfaces/msg/_task_s.o
 
@@ -1172,6 +1220,30 @@ rosidl_typesupport_c/ma_interfaces/msg/node__type_support.s: rosidl_typesupport_
 rosidl_typesupport_c/ma_interfaces/msg/node__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/node__type_support.cpp.s
 .PHONY : rosidl_typesupport_c/ma_interfaces/msg/node__type_support.cpp.s
+
+rosidl_typesupport_c/ma_interfaces/msg/slot__type_support.o: rosidl_typesupport_c/ma_interfaces/msg/slot__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/ma_interfaces/msg/slot__type_support.o
+
+# target to build an object file
+rosidl_typesupport_c/ma_interfaces/msg/slot__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/slot__type_support.cpp.o
+.PHONY : rosidl_typesupport_c/ma_interfaces/msg/slot__type_support.cpp.o
+
+rosidl_typesupport_c/ma_interfaces/msg/slot__type_support.i: rosidl_typesupport_c/ma_interfaces/msg/slot__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/ma_interfaces/msg/slot__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_c/ma_interfaces/msg/slot__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/slot__type_support.cpp.i
+.PHONY : rosidl_typesupport_c/ma_interfaces/msg/slot__type_support.cpp.i
+
+rosidl_typesupport_c/ma_interfaces/msg/slot__type_support.s: rosidl_typesupport_c/ma_interfaces/msg/slot__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/ma_interfaces/msg/slot__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_c/ma_interfaces/msg/slot__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/ma_interfaces/msg/slot__type_support.cpp.s
+.PHONY : rosidl_typesupport_c/ma_interfaces/msg/slot__type_support.cpp.s
 
 rosidl_typesupport_c/ma_interfaces/msg/task__type_support.o: rosidl_typesupport_c/ma_interfaces/msg/task__type_support.cpp.o
 .PHONY : rosidl_typesupport_c/ma_interfaces/msg/task__type_support.o
@@ -1461,6 +1533,30 @@ rosidl_typesupport_cpp/ma_interfaces/msg/node__type_support.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/msg/node__type_support.cpp.s
 .PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/node__type_support.cpp.s
 
+rosidl_typesupport_cpp/ma_interfaces/msg/slot__type_support.o: rosidl_typesupport_cpp/ma_interfaces/msg/slot__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/slot__type_support.o
+
+# target to build an object file
+rosidl_typesupport_cpp/ma_interfaces/msg/slot__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/msg/slot__type_support.cpp.o
+.PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/slot__type_support.cpp.o
+
+rosidl_typesupport_cpp/ma_interfaces/msg/slot__type_support.i: rosidl_typesupport_cpp/ma_interfaces/msg/slot__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/slot__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_cpp/ma_interfaces/msg/slot__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/msg/slot__type_support.cpp.i
+.PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/slot__type_support.cpp.i
+
+rosidl_typesupport_cpp/ma_interfaces/msg/slot__type_support.s: rosidl_typesupport_cpp/ma_interfaces/msg/slot__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/slot__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_cpp/ma_interfaces/msg/slot__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/ma_interfaces/msg/slot__type_support.cpp.s
+.PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/slot__type_support.cpp.s
+
 rosidl_typesupport_cpp/ma_interfaces/msg/task__type_support.o: rosidl_typesupport_cpp/ma_interfaces/msg/task__type_support.cpp.o
 .PHONY : rosidl_typesupport_cpp/ma_interfaces/msg/task__type_support.o
 
@@ -1748,6 +1844,30 @@ rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/node__type_support_c.s: r
 rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/node__type_support_c.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/node__type_support_c.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/node__type_support_c.cpp.s
+
+rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.o: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.o
+
+rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.i: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.i
+
+rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.s: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.s
 
 rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/task__type_support_c.o: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/task__type_support_c.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/task__type_support_c.o
@@ -2037,6 +2157,30 @@ rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/node__type
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/node__type_support.cpp.s
 .PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/node__type_support.cpp.s
 
+rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/slot__type_support.o: rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/slot__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/slot__type_support.o
+
+# target to build an object file
+rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/slot__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/slot__type_support.cpp.o
+.PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/slot__type_support.cpp.o
+
+rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/slot__type_support.i: rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/slot__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/slot__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/slot__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/slot__type_support.cpp.i
+.PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/slot__type_support.cpp.i
+
+rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/slot__type_support.s: rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/slot__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/slot__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/slot__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/slot__type_support.cpp.s
+.PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/slot__type_support.cpp.s
+
 rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/task__type_support.o: rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/task__type_support.cpp.o
 .PHONY : rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/task__type_support.o
 
@@ -2324,6 +2468,30 @@ rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/node__type_support.s
 rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/node__type_support.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/node__type_support.c.s
 .PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/node__type_support.c.s
+
+rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/slot__type_support.o: rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/slot__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/slot__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/slot__type_support.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/slot__type_support.c.o
+.PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/slot__type_support.c.o
+
+rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/slot__type_support.i: rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/slot__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/slot__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/slot__type_support.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/slot__type_support.c.i
+.PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/slot__type_support.c.i
+
+rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/slot__type_support.s: rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/slot__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/slot__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/slot__type_support.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/slot__type_support.c.s
+.PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/slot__type_support.c.s
 
 rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/task__type_support.o: rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/task__type_support.c.o
 .PHONY : rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/task__type_support.o
@@ -2613,6 +2781,30 @@ rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/node__type_support
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/node__type_support.cpp.s
 .PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/node__type_support.cpp.s
 
+rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/slot__type_support.o: rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/slot__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/slot__type_support.o
+
+# target to build an object file
+rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/slot__type_support.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/slot__type_support.cpp.o
+.PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/slot__type_support.cpp.o
+
+rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/slot__type_support.i: rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/slot__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/slot__type_support.i
+
+# target to preprocess a source file
+rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/slot__type_support.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/slot__type_support.cpp.i
+.PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/slot__type_support.cpp.i
+
+rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/slot__type_support.s: rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/slot__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/slot__type_support.s
+
+# target to generate assembly for a file
+rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/slot__type_support.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make CMakeFiles/ma_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/slot__type_support.cpp.s
+.PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/slot__type_support.cpp.s
+
 rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/task__type_support.o: rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/task__type_support.cpp.o
 .PHONY : rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/task__type_support.o
 
@@ -2827,6 +3019,9 @@ help:
 	@echo "... rosidl_generator_c/ma_interfaces/msg/detail/node__functions.o"
 	@echo "... rosidl_generator_c/ma_interfaces/msg/detail/node__functions.i"
 	@echo "... rosidl_generator_c/ma_interfaces/msg/detail/node__functions.s"
+	@echo "... rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.o"
+	@echo "... rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.i"
+	@echo "... rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.s"
 	@echo "... rosidl_generator_c/ma_interfaces/msg/detail/task__functions.o"
 	@echo "... rosidl_generator_c/ma_interfaces/msg/detail/task__functions.i"
 	@echo "... rosidl_generator_c/ma_interfaces/msg/detail/task__functions.s"
@@ -2872,6 +3067,9 @@ help:
 	@echo "... rosidl_generator_py/ma_interfaces/msg/_node_s.o"
 	@echo "... rosidl_generator_py/ma_interfaces/msg/_node_s.i"
 	@echo "... rosidl_generator_py/ma_interfaces/msg/_node_s.s"
+	@echo "... rosidl_generator_py/ma_interfaces/msg/_slot_s.o"
+	@echo "... rosidl_generator_py/ma_interfaces/msg/_slot_s.i"
+	@echo "... rosidl_generator_py/ma_interfaces/msg/_slot_s.s"
 	@echo "... rosidl_generator_py/ma_interfaces/msg/_task_s.o"
 	@echo "... rosidl_generator_py/ma_interfaces/msg/_task_s.i"
 	@echo "... rosidl_generator_py/ma_interfaces/msg/_task_s.s"
@@ -2908,6 +3106,9 @@ help:
 	@echo "... rosidl_typesupport_c/ma_interfaces/msg/node__type_support.o"
 	@echo "... rosidl_typesupport_c/ma_interfaces/msg/node__type_support.i"
 	@echo "... rosidl_typesupport_c/ma_interfaces/msg/node__type_support.s"
+	@echo "... rosidl_typesupport_c/ma_interfaces/msg/slot__type_support.o"
+	@echo "... rosidl_typesupport_c/ma_interfaces/msg/slot__type_support.i"
+	@echo "... rosidl_typesupport_c/ma_interfaces/msg/slot__type_support.s"
 	@echo "... rosidl_typesupport_c/ma_interfaces/msg/task__type_support.o"
 	@echo "... rosidl_typesupport_c/ma_interfaces/msg/task__type_support.i"
 	@echo "... rosidl_typesupport_c/ma_interfaces/msg/task__type_support.s"
@@ -2944,6 +3145,9 @@ help:
 	@echo "... rosidl_typesupport_cpp/ma_interfaces/msg/node__type_support.o"
 	@echo "... rosidl_typesupport_cpp/ma_interfaces/msg/node__type_support.i"
 	@echo "... rosidl_typesupport_cpp/ma_interfaces/msg/node__type_support.s"
+	@echo "... rosidl_typesupport_cpp/ma_interfaces/msg/slot__type_support.o"
+	@echo "... rosidl_typesupport_cpp/ma_interfaces/msg/slot__type_support.i"
+	@echo "... rosidl_typesupport_cpp/ma_interfaces/msg/slot__type_support.s"
 	@echo "... rosidl_typesupport_cpp/ma_interfaces/msg/task__type_support.o"
 	@echo "... rosidl_typesupport_cpp/ma_interfaces/msg/task__type_support.i"
 	@echo "... rosidl_typesupport_cpp/ma_interfaces/msg/task__type_support.s"
@@ -2980,6 +3184,9 @@ help:
 	@echo "... rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/node__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/node__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/node__type_support_c.s"
+	@echo "... rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.o"
+	@echo "... rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.i"
+	@echo "... rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.s"
 	@echo "... rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/task__type_support_c.o"
 	@echo "... rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/task__type_support_c.i"
 	@echo "... rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/task__type_support_c.s"
@@ -3016,6 +3223,9 @@ help:
 	@echo "... rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/node__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/node__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/node__type_support.s"
+	@echo "... rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/slot__type_support.o"
+	@echo "... rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/slot__type_support.i"
+	@echo "... rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/slot__type_support.s"
 	@echo "... rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/task__type_support.o"
 	@echo "... rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/task__type_support.i"
 	@echo "... rosidl_typesupport_fastrtps_cpp/ma_interfaces/msg/detail/dds_fastrtps/task__type_support.s"
@@ -3052,6 +3262,9 @@ help:
 	@echo "... rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/node__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/node__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/node__type_support.s"
+	@echo "... rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/slot__type_support.o"
+	@echo "... rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/slot__type_support.i"
+	@echo "... rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/slot__type_support.s"
 	@echo "... rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/task__type_support.o"
 	@echo "... rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/task__type_support.i"
 	@echo "... rosidl_typesupport_introspection_c/ma_interfaces/msg/detail/task__type_support.s"
@@ -3088,6 +3301,9 @@ help:
 	@echo "... rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/node__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/node__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/node__type_support.s"
+	@echo "... rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/slot__type_support.o"
+	@echo "... rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/slot__type_support.i"
+	@echo "... rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/slot__type_support.s"
 	@echo "... rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/task__type_support.o"
 	@echo "... rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/task__type_support.i"
 	@echo "... rosidl_typesupport_introspection_cpp/ma_interfaces/msg/detail/task__type_support.s"

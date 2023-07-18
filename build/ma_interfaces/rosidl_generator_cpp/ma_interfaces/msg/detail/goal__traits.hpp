@@ -46,6 +46,20 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
+  // member: duration
+  {
+    out << "duration: ";
+    rosidl_generator_traits::value_to_yaml(msg.duration, out);
+    out << ", ";
+  }
+
+  // member: execution_range
+  {
+    out << "execution_range: ";
+    rosidl_generator_traits::value_to_yaml(msg.execution_range, out);
+    out << ", ";
+  }
+
   // member: deadline
   {
     out << "deadline: ";
@@ -99,6 +113,26 @@ inline void to_block_style_yaml(
     }
     out << "num_agents: ";
     rosidl_generator_traits::value_to_yaml(msg.num_agents, out);
+    out << "\n";
+  }
+
+  // member: duration
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "duration: ";
+    rosidl_generator_traits::value_to_yaml(msg.duration, out);
+    out << "\n";
+  }
+
+  // member: execution_range
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "execution_range: ";
+    rosidl_generator_traits::value_to_yaml(msg.execution_range, out);
     out << "\n";
   }
 

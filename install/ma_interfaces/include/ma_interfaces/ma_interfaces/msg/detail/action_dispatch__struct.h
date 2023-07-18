@@ -30,6 +30,7 @@ typedef struct ma_interfaces__msg__ActionDispatch
   rosidl_runtime_c__String agent_id;
   rosidl_runtime_c__String name;
   int32_t num_agents;
+  double execution_range;
   double duration;
   double start_time;
 } ma_interfaces__msg__ActionDispatch;

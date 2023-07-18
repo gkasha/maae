@@ -60,6 +60,8 @@ class Goal(metaclass=Metaclass_Goal):
         '_id',
         '_owner',
         '_num_agents',
+        '_duration',
+        '_execution_range',
         '_deadline',
         '_x',
         '_y',
@@ -69,6 +71,8 @@ class Goal(metaclass=Metaclass_Goal):
         'id': 'string',
         'owner': 'string',
         'num_agents': 'int64',
+        'duration': 'double',
+        'execution_range': 'double',
         'deadline': 'double',
         'x': 'double',
         'y': 'double',
@@ -81,6 +85,8 @@ class Goal(metaclass=Metaclass_Goal):
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -90,6 +96,8 @@ class Goal(metaclass=Metaclass_Goal):
         self.id = kwargs.get('id', str())
         self.owner = kwargs.get('owner', str())
         self.num_agents = kwargs.get('num_agents', int())
+        self.duration = kwargs.get('duration', float())
+        self.execution_range = kwargs.get('execution_range', float())
         self.deadline = kwargs.get('deadline', float())
         self.x = kwargs.get('x', float())
         self.y = kwargs.get('y', float())
@@ -128,6 +136,10 @@ class Goal(metaclass=Metaclass_Goal):
         if self.owner != other.owner:
             return False
         if self.num_agents != other.num_agents:
+            return False
+        if self.duration != other.duration:
+            return False
+        if self.execution_range != other.execution_range:
             return False
         if self.deadline != other.deadline:
             return False
@@ -182,6 +194,36 @@ class Goal(metaclass=Metaclass_Goal):
             assert value >= -9223372036854775808 and value < 9223372036854775808, \
                 "The 'num_agents' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._num_agents = value
+
+    @builtins.property
+    def duration(self):
+        """Message field 'duration'."""
+        return self._duration
+
+    @duration.setter
+    def duration(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'duration' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'duration' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._duration = value
+
+    @builtins.property
+    def execution_range(self):
+        """Message field 'execution_range'."""
+        return self._execution_range
+
+    @execution_range.setter
+    def execution_range(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'execution_range' field must be of type 'float'"
+            assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
+                "The 'execution_range' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
+        self._execution_range = value
 
     @builtins.property
     def deadline(self):

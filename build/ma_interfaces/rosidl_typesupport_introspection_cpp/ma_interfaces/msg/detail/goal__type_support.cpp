@@ -37,7 +37,7 @@ void Goal_fini_function(void * message_memory)
   typed_message->~Goal();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember Goal_message_member_array[6] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember Goal_message_member_array[8] = {
   {
     "id",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
@@ -81,6 +81,40 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Goal_message_
     0,  // array size
     false,  // is upper bound
     offsetof(ma_interfaces::msg::Goal, num_agents),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "duration",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(ma_interfaces::msg::Goal, duration),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "execution_range",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(ma_interfaces::msg::Goal, execution_range),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -145,7 +179,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Goal_message_
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers Goal_message_members = {
   "ma_interfaces::msg",  // message namespace
   "Goal",  // message name
-  6,  // number of fields
+  8,  // number of fields
   sizeof(ma_interfaces::msg::Goal),
   Goal_message_member_array,  // message members
   Goal_init_function,  // function to initialize message memory (memory has to be allocated)

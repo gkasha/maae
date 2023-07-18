@@ -69,16 +69,48 @@ private:
   ::ma_interfaces::msg::Goal msg_;
 };
 
+class Init_Goal_execution_range
+{
+public:
+  explicit Init_Goal_execution_range(::ma_interfaces::msg::Goal & msg)
+  : msg_(msg)
+  {}
+  Init_Goal_deadline execution_range(::ma_interfaces::msg::Goal::_execution_range_type arg)
+  {
+    msg_.execution_range = std::move(arg);
+    return Init_Goal_deadline(msg_);
+  }
+
+private:
+  ::ma_interfaces::msg::Goal msg_;
+};
+
+class Init_Goal_duration
+{
+public:
+  explicit Init_Goal_duration(::ma_interfaces::msg::Goal & msg)
+  : msg_(msg)
+  {}
+  Init_Goal_execution_range duration(::ma_interfaces::msg::Goal::_duration_type arg)
+  {
+    msg_.duration = std::move(arg);
+    return Init_Goal_execution_range(msg_);
+  }
+
+private:
+  ::ma_interfaces::msg::Goal msg_;
+};
+
 class Init_Goal_num_agents
 {
 public:
   explicit Init_Goal_num_agents(::ma_interfaces::msg::Goal & msg)
   : msg_(msg)
   {}
-  Init_Goal_deadline num_agents(::ma_interfaces::msg::Goal::_num_agents_type arg)
+  Init_Goal_duration num_agents(::ma_interfaces::msg::Goal::_num_agents_type arg)
   {
     msg_.num_agents = std::move(arg);
-    return Init_Goal_deadline(msg_);
+    return Init_Goal_duration(msg_);
   }
 
 private:

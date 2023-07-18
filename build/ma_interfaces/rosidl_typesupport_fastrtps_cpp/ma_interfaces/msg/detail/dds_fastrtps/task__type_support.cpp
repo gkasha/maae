@@ -40,6 +40,8 @@ cdr_serialize(
   cdr << ros_message.num_agents;
   // Member: value
   cdr << ros_message.value;
+  // Member: execution_range
+  cdr << ros_message.execution_range;
   // Member: duration
   cdr << ros_message.duration;
   // Member: st
@@ -70,6 +72,9 @@ cdr_deserialize(
 
   // Member: value
   cdr >> ros_message.value;
+
+  // Member: execution_range
+  cdr >> ros_message.execution_range;
 
   // Member: duration
   cdr >> ros_message.duration;
@@ -119,6 +124,12 @@ get_serialized_size(
   // Member: value
   {
     size_t item_size = sizeof(ros_message.value);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: execution_range
+  {
+    size_t item_size = sizeof(ros_message.execution_range);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -209,6 +220,14 @@ max_serialized_size_Task(
   }
 
   // Member: value
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: execution_range
   {
     size_t array_size = 1;
 

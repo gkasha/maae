@@ -380,6 +380,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ma_interfaces/msg" TYPE FILE FILES "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces/msg/Slot.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ma_interfaces/srv" TYPE FILE FILES "/home/gkasha/Documents/maae/build/ma_interfaces/rosidl_adapter/ma_interfaces/srv/Register.idl")
 endif()
 
@@ -425,6 +429,10 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ma_interfaces/msg" TYPE FILE FILES "/home/gkasha/Documents/maae/src/ma_interfaces/msg/Goal.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ma_interfaces/msg" TYPE FILE FILES "/home/gkasha/Documents/maae/src/ma_interfaces/msg/Slot.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

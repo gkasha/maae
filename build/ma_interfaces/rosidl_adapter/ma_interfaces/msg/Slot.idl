@@ -1,0 +1,30 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from ma_interfaces/msg/Slot.msg
+// generated code does not contain a copyright notice
+
+
+module ma_interfaces {
+  module msg {
+    struct Slot {
+      string agent_id;
+
+      string owner_id;
+
+      string task_id;
+
+      double st;
+
+      double et;
+
+      double x1;
+
+      double y1;
+
+      double x2;
+
+      double y2;
+
+      double speed;
+    };
+  };
+};

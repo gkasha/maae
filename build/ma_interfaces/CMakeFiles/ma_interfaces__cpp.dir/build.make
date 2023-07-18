@@ -90,6 +90,10 @@ CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/goal.hpp
 CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/goal__builder.hpp
 CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/goal__struct.hpp
 CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/goal__traits.hpp
+CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/slot.hpp
+CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/slot__builder.hpp
+CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/slot__struct.hpp
+CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/slot__traits.hpp
 CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/srv/register.hpp
 CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/srv/detail/register__builder.hpp
 CMakeFiles/ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/srv/detail/register__struct.hpp
@@ -136,6 +140,7 @@ rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: rosidl_adapter/ma_in
 rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: rosidl_adapter/ma_interfaces/msg/Bid.idl
 rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: rosidl_adapter/ma_interfaces/msg/Task.idl
 rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: rosidl_adapter/ma_interfaces/msg/Goal.idl
+rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: rosidl_adapter/ma_interfaces/msg/Slot.idl
 rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: rosidl_adapter/ma_interfaces/srv/Register.idl
 rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: rosidl_adapter/ma_interfaces/srv/AuctionSrv.idl
 rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp: rosidl_adapter/ma_interfaces/srv/AuctionResult.idl
@@ -213,6 +218,18 @@ rosidl_generator_cpp/ma_interfaces/msg/detail/goal__struct.hpp: rosidl_generator
 
 rosidl_generator_cpp/ma_interfaces/msg/detail/goal__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/goal__traits.hpp
+
+rosidl_generator_cpp/ma_interfaces/msg/slot.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/slot.hpp
+
+rosidl_generator_cpp/ma_interfaces/msg/detail/slot__builder.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/slot__builder.hpp
+
+rosidl_generator_cpp/ma_interfaces/msg/detail/slot__struct.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/slot__struct.hpp
+
+rosidl_generator_cpp/ma_interfaces/msg/detail/slot__traits.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/msg/detail/slot__traits.hpp
 
 rosidl_generator_cpp/ma_interfaces/srv/register.hpp: rosidl_generator_cpp/ma_interfaces/msg/action_dispatch.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/ma_interfaces/srv/register.hpp
@@ -305,11 +322,15 @@ ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/goal__traits.h
 ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/node__builder.hpp
 ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/node__struct.hpp
 ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/node__traits.hpp
+ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/slot__builder.hpp
+ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/slot__struct.hpp
+ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/slot__traits.hpp
 ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/task__builder.hpp
 ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/task__struct.hpp
 ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/detail/task__traits.hpp
 ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/goal.hpp
 ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/node.hpp
+ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/slot.hpp
 ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/msg/task.hpp
 ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/srv/add_goal.hpp
 ma_interfaces__cpp: rosidl_generator_cpp/ma_interfaces/srv/auction_result.hpp

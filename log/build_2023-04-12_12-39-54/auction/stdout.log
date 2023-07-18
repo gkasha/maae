@@ -1,5 +1,0 @@
-[ 18%] Built target goal_manager
-[ 36%] Built target execution_interface
-[ 45%] [32mBuilding CXX object CMakeFiles/agent.dir/src/agent.cpp.o[0m
-[ 63%] Built target client
-[ 81%] Built target clock

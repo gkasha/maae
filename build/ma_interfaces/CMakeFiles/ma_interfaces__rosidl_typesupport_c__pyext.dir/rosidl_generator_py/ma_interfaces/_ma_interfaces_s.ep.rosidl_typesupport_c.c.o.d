@@ -222,6 +222,9 @@ CMakeFiles/ma_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/ma
  /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_generator_c/ma_interfaces/msg/detail/goal__type_support.h \
  /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_generator_c/ma_interfaces/msg/detail/goal__struct.h \
  /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_generator_c/ma_interfaces/msg/detail/goal__functions.h \
+ /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_generator_c/ma_interfaces/msg/detail/slot__type_support.h \
+ /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_generator_c/ma_interfaces/msg/detail/slot__struct.h \
+ /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_generator_c/ma_interfaces/msg/detail/slot__functions.h \
  /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_generator_c/ma_interfaces/srv/detail/register__type_support.h \
  /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_generator_c/ma_interfaces/srv/detail/register__struct.h \
  /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_generator_c/ma_interfaces/srv/detail/register__functions.h \

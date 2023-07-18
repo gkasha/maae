@@ -14,6 +14,8 @@ module ma_interfaces {
 
       int32 num_agents;
 
+      double execution_range;
+
       double duration;
 
       double start_time;

@@ -626,6 +626,10 @@ CMakeFiles/agent.dir/src/agent.cpp.o: \
  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__struct.hpp \
  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__builder.hpp \
  /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/bid__traits.hpp \
+ /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/slot.hpp \
+ /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/slot__struct.hpp \
+ /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/slot__builder.hpp \
+ /home/gkasha/Documents/maae/install/ma_interfaces/include/ma_interfaces/ma_interfaces/msg/detail/slot__traits.hpp \
  /home/gkasha/ros2_humble/install/std_msgs/include/std_msgs/std_msgs/msg/int64.hpp \
  /home/gkasha/ros2_humble/install/std_msgs/include/std_msgs/std_msgs/msg/detail/int64__struct.hpp \
  /home/gkasha/ros2_humble/install/std_msgs/include/std_msgs/std_msgs/msg/detail/int64__builder.hpp \

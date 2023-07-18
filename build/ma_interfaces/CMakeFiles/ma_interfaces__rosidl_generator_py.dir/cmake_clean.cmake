@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_goal_s.c.o.d"
   "CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_node_s.c.o"
   "CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_node_s.c.o.d"
+  "CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_slot_s.c.o"
+  "CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_slot_s.c.o.d"
   "CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_task_s.c.o"
   "CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/msg/_task_s.c.o.d"
   "CMakeFiles/ma_interfaces__rosidl_generator_py.dir/rosidl_generator_py/ma_interfaces/srv/_add_goal_s.c.o"

@@ -7,6 +7,7 @@
     "/home/gkasha/Documents/maae/src/ma_interfaces:msg/Bid.msg",
     "/home/gkasha/Documents/maae/src/ma_interfaces:msg/Task.msg",
     "/home/gkasha/Documents/maae/src/ma_interfaces:msg/Goal.msg",
+    "/home/gkasha/Documents/maae/src/ma_interfaces:msg/Slot.msg",
     "/home/gkasha/Documents/maae/src/ma_interfaces:srv/Register.srv",
     "/home/gkasha/Documents/maae/src/ma_interfaces:srv/AuctionSrv.srv",
     "/home/gkasha/Documents/maae/src/ma_interfaces:srv/AuctionResult.srv",

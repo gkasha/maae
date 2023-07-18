@@ -72,6 +72,7 @@ CMakeFiles/ma_interfaces: /home/gkasha/Documents/maae/src/ma_interfaces/msg/Node
 CMakeFiles/ma_interfaces: /home/gkasha/Documents/maae/src/ma_interfaces/msg/Bid.msg
 CMakeFiles/ma_interfaces: /home/gkasha/Documents/maae/src/ma_interfaces/msg/Task.msg
 CMakeFiles/ma_interfaces: /home/gkasha/Documents/maae/src/ma_interfaces/msg/Goal.msg
+CMakeFiles/ma_interfaces: /home/gkasha/Documents/maae/src/ma_interfaces/msg/Slot.msg
 CMakeFiles/ma_interfaces: /home/gkasha/Documents/maae/src/ma_interfaces/srv/Register.srv
 CMakeFiles/ma_interfaces: rosidl_cmake/srv/Register_Request.msg
 CMakeFiles/ma_interfaces: rosidl_cmake/srv/Register_Response.msg

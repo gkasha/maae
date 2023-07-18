@@ -83,6 +83,7 @@ rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__rosidl_t
 rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/ma_interfaces/msg/Bid.idl
 rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/ma_interfaces/msg/Task.idl
 rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/ma_interfaces/msg/Goal.idl
+rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/ma_interfaces/msg/Slot.idl
 rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/ma_interfaces/srv/Register.idl
 rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/ma_interfaces/srv/AuctionSrv.idl
 rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/ma_interfaces/srv/AuctionResult.idl
@@ -124,6 +125,12 @@ rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/goal__rosidl_typesupport_
 
 rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/goal__type_support_c.cpp: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__rosidl_typesupport_fastrtps_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/goal__type_support_c.cpp
+
+rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__rosidl_typesupport_fastrtps_c.h
+
+rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp
 
 rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/register__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/action_dispatch__rosidl_typesupport_fastrtps_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/register__rosidl_typesupport_fastrtps_c.h
@@ -245,10 +252,24 @@ CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_f
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/goal__type_support_c.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/goal__type_support_c.cpp -o CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/goal__type_support_c.cpp.s
 
+CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/flags.make
+CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp
+CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.o -MF CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.o.d -o CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp
+
+CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp > CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.i
+
+CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp -o CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.s
+
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/register__type_support_c.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/register__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/register__type_support_c.cpp
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/register__type_support_c.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/register__type_support_c.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/register__type_support_c.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/register__type_support_c.cpp.o -MF CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/register__type_support_c.cpp.o.d -o CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/register__type_support_c.cpp.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/register__type_support_c.cpp
 
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/register__type_support_c.cpp.i: cmake_force
@@ -262,7 +283,7 @@ CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_f
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_srv__type_support_c.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_srv__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_srv__type_support_c.cpp
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_srv__type_support_c.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_srv__type_support_c.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_srv__type_support_c.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_srv__type_support_c.cpp.o -MF CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_srv__type_support_c.cpp.o.d -o CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_srv__type_support_c.cpp.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_srv__type_support_c.cpp
 
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_srv__type_support_c.cpp.i: cmake_force
@@ -276,7 +297,7 @@ CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_f
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_result__type_support_c.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_result__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_result__type_support_c.cpp
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_result__type_support_c.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_result__type_support_c.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_result__type_support_c.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_result__type_support_c.cpp.o -MF CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_result__type_support_c.cpp.o.d -o CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_result__type_support_c.cpp.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_result__type_support_c.cpp
 
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_result__type_support_c.cpp.i: cmake_force
@@ -290,7 +311,7 @@ CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_f
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/get_goal__type_support_c.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/get_goal__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/get_goal__type_support_c.cpp
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/get_goal__type_support_c.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/get_goal__type_support_c.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/get_goal__type_support_c.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/get_goal__type_support_c.cpp.o -MF CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/get_goal__type_support_c.cpp.o.d -o CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/get_goal__type_support_c.cpp.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/get_goal__type_support_c.cpp
 
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/get_goal__type_support_c.cpp.i: cmake_force
@@ -304,7 +325,7 @@ CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_f
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/get_bid__type_support_c.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/get_bid__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/get_bid__type_support_c.cpp
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/get_bid__type_support_c.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/get_bid__type_support_c.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/get_bid__type_support_c.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/get_bid__type_support_c.cpp.o -MF CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/get_bid__type_support_c.cpp.o.d -o CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/get_bid__type_support_c.cpp.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/get_bid__type_support_c.cpp
 
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/get_bid__type_support_c.cpp.i: cmake_force
@@ -318,7 +339,7 @@ CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_f
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/add_goal__type_support_c.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/add_goal__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/add_goal__type_support_c.cpp
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/add_goal__type_support_c.cpp.o: CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/add_goal__type_support_c.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/add_goal__type_support_c.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/add_goal__type_support_c.cpp.o -MF CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/add_goal__type_support_c.cpp.o.d -o CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/add_goal__type_support_c.cpp.o -c /home/gkasha/Documents/maae/build/ma_interfaces/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/add_goal__type_support_c.cpp
 
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/add_goal__type_support_c.cpp.i: cmake_force
@@ -337,6 +358,7 @@ ma_interfaces__rosidl_typesupport_fastrtps_c_OBJECTS = \
 "CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/bid__type_support_c.cpp.o" \
 "CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/task__type_support_c.cpp.o" \
 "CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/goal__type_support_c.cpp.o" \
+"CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.o" \
 "CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/register__type_support_c.cpp.o" \
 "CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_srv__type_support_c.cpp.o" \
 "CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_result__type_support_c.cpp.o" \
@@ -353,6 +375,7 @@ libma_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/ma_interfaces__ro
 libma_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/bid__type_support_c.cpp.o
 libma_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/task__type_support_c.cpp.o
 libma_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/goal__type_support_c.cpp.o
+libma_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp.o
 libma_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/register__type_support_c.cpp.o
 libma_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_srv__type_support_c.cpp.o
 libma_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/auction_result__type_support_c.cpp.o
@@ -368,7 +391,7 @@ libma_interfaces__rosidl_typesupport_fastrtps_c.so: /home/gkasha/ros2_humble/ins
 libma_interfaces__rosidl_typesupport_fastrtps_c.so: /home/gkasha/ros2_humble/install/rosidl_runtime_c/lib/librosidl_runtime_c.so
 libma_interfaces__rosidl_typesupport_fastrtps_c.so: /home/gkasha/ros2_humble/install/rcutils/lib/librcutils.so
 libma_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX shared library libma_interfaces__rosidl_typesupport_fastrtps_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gkasha/Documents/maae/build/ma_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX shared library libma_interfaces__rosidl_typesupport_fastrtps_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -389,6 +412,8 @@ CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_types
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/goal__type_support_c.cpp
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/node__rosidl_typesupport_fastrtps_c.h
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/node__type_support_c.cpp
+CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__rosidl_typesupport_fastrtps_c.h
+CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/slot__type_support_c.cpp
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/task__rosidl_typesupport_fastrtps_c.h
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/ma_interfaces/msg/detail/task__type_support_c.cpp
 CMakeFiles/ma_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/ma_interfaces/srv/detail/add_goal__rosidl_typesupport_fastrtps_c.h

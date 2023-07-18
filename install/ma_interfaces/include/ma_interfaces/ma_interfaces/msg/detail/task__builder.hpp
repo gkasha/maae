@@ -101,16 +101,32 @@ private:
   ::ma_interfaces::msg::Task msg_;
 };
 
+class Init_Task_execution_range
+{
+public:
+  explicit Init_Task_execution_range(::ma_interfaces::msg::Task & msg)
+  : msg_(msg)
+  {}
+  Init_Task_duration execution_range(::ma_interfaces::msg::Task::_execution_range_type arg)
+  {
+    msg_.execution_range = std::move(arg);
+    return Init_Task_duration(msg_);
+  }
+
+private:
+  ::ma_interfaces::msg::Task msg_;
+};
+
 class Init_Task_value
 {
 public:
   explicit Init_Task_value(::ma_interfaces::msg::Task & msg)
   : msg_(msg)
   {}
-  Init_Task_duration value(::ma_interfaces::msg::Task::_value_type arg)
+  Init_Task_execution_range value(::ma_interfaces::msg::Task::_value_type arg)
   {
     msg_.value = std::move(arg);
-    return Init_Task_duration(msg_);
+    return Init_Task_execution_range(msg_);
   }
 
 private:

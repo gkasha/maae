@@ -36,7 +36,7 @@ void ma_interfaces__msg__Goal__rosidl_typesupport_introspection_c__Goal_fini_fun
   ma_interfaces__msg__Goal__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember ma_interfaces__msg__Goal__rosidl_typesupport_introspection_c__Goal_message_member_array[6] = {
+static rosidl_typesupport_introspection_c__MessageMember ma_interfaces__msg__Goal__rosidl_typesupport_introspection_c__Goal_message_member_array[8] = {
   {
     "id",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
@@ -80,6 +80,40 @@ static rosidl_typesupport_introspection_c__MessageMember ma_interfaces__msg__Goa
     0,  // array size
     false,  // is upper bound
     offsetof(ma_interfaces__msg__Goal, num_agents),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "duration",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(ma_interfaces__msg__Goal, duration),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "execution_range",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(ma_interfaces__msg__Goal, execution_range),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -144,7 +178,7 @@ static rosidl_typesupport_introspection_c__MessageMember ma_interfaces__msg__Goa
 static const rosidl_typesupport_introspection_c__MessageMembers ma_interfaces__msg__Goal__rosidl_typesupport_introspection_c__Goal_message_members = {
   "ma_interfaces__msg",  // message namespace
   "Goal",  // message name
-  6,  // number of fields
+  8,  // number of fields
   sizeof(ma_interfaces__msg__Goal),
   ma_interfaces__msg__Goal__rosidl_typesupport_introspection_c__Goal_message_member_array,  // message members
   ma_interfaces__msg__Goal__rosidl_typesupport_introspection_c__Goal_init_function,  // function to initialize message memory (memory has to be allocated)

@@ -29,6 +29,7 @@ typedef struct ma_interfaces__msg__Task
   rosidl_runtime_c__String owner;
   int64_t num_agents;
   double value;
+  double execution_range;
   double duration;
   double st;
   double et;

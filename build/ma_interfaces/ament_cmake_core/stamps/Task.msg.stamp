@@ -2,6 +2,7 @@ string id
 string owner
 int64 num_agents
 float64 value
+float64 execution_range
 float64 duration
 float64 st
 float64 et

@@ -1,0 +1,21 @@
+digraph timeline {
+head[label="head",style=filled,fillcolor=green,fontcolor=black];
+head_task0_travel[label="head_task0_travel",style=filled,fillcolor=green,fontcolor=black];
+task0[label="task0",style=filled,fillcolor=green,fontcolor=black];
+task0_task20_travel[label="task0_task20_travel",style=filled,fillcolor=orange,fontcolor=black];
+task20[label="task20",style=filled,fillcolor=gray,fontcolor=black];
+task20_task19_travel[label="task20_task19_travel",style=filled,fillcolor=gray,fontcolor=black];
+task19[label="task19",style=filled,fillcolor=gray,fontcolor=black];
+task19_task12_travel[label="task19_task12_travel",style=filled,fillcolor=gray,fontcolor=black];
+task12[label="task12",style=filled,fillcolor=gray,fontcolor=black];
+tail[label="tail",style=filled,fillcolor=gray,fontcolor=black];
+"head"->"head_task0_travel"[color=black];
+"head_task0_travel"->"task0"[color=black];
+"task0"->"task0_task20_travel"[color=black];
+"task0_task20_travel"->"task20"[color=black];
+"task20"->"task20_task19_travel"[color=black];
+"task20_task19_travel"->"task19"[color=black];
+"task19"->"task19_task12_travel"[color=black];
+"task19_task12_travel"->"task12"[color=black];
+"task12"->"tail"[color=black];
+}
